@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp
+Game.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.h
+SFML/Graphics.hpp
+-
+SFML/System.hpp
+-
+SFML/Window.hpp
+-
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/main.cpp
+Game.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.h
+
