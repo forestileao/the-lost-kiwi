@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Enemy.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Enemy.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entity.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entity.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o"
+  "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Player.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Player.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/main.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

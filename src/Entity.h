@@ -5,14 +5,16 @@
 
 class Entity
 {
-private:
+protected:
 	sf::RectangleShape body;
-	int x;
-	int y;
+	sf::RenderWindow* window;
 
 public:
 	Entity();
 	~Entity();
+
+	void setWindow(sf::RenderWindow* window) { this->window = window; }
+	void draw() { window->draw(body); }
 };
 
 

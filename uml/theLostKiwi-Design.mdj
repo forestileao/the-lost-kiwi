@@ -532,9 +532,9 @@
 											"lineColor": "#800000",
 											"fillColor": "#FFFFB9",
 											"font": "Arial;11;0",
-											"left": 401,
+											"left": 349,
 											"top": 649,
-											"width": 85,
+											"width": 215,
 											"height": 11,
 											"text": "«PRINCIPAL»"
 										},
@@ -547,11 +547,11 @@
 											"lineColor": "#800000",
 											"fillColor": "#FFFFB9",
 											"font": "Arial;11;1",
-											"left": 401,
+											"left": 349,
 											"top": 662,
-											"width": 85,
+											"width": 215,
 											"height": 11,
-											"text": "Jogo"
+											"text": "Game"
 										},
 										{
 											"_type": "LabelView",
@@ -583,9 +583,9 @@
 									"lineColor": "#800000",
 									"fillColor": "#FFFFB9",
 									"font": "Arial;11;0",
-									"left": 396,
+									"left": 344,
 									"top": 644,
-									"width": 95,
+									"width": 225,
 									"height": 34,
 									"stereotypeLabel": {
 										"$ref": "ve7AkLL+LkKxZjQ9C98gEQAA"
@@ -609,13 +609,34 @@
 									"model": {
 										"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF6eV0xO7rXlXY=",
+											"_parent": {
+												"$ref": "IaJFkyAe50SZhIxwA9jfdgAA"
+											},
+											"model": {
+												"$ref": "AAAAAAF6eV0xCbrUWnA="
+											},
+											"lineColor": "#800000",
+											"fillColor": "#FFFFB9",
+											"font": "Arial;11;0",
+											"left": 349,
+											"top": 683,
+											"width": 215,
+											"height": 11,
+											"text": "-window: RenderWindow",
+											"horizontalAlignment": 0
+										}
+									],
 									"lineColor": "#800000",
 									"fillColor": "#FFFFB9",
 									"font": "Arial;11;0",
-									"left": 396,
+									"left": 344,
 									"top": 678,
-									"width": 95,
-									"height": 10
+									"width": 225,
+									"height": 21
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -626,13 +647,110 @@
 									"model": {
 										"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 									},
+									"subViews": [
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF6eV5vAsCHhgI=",
+											"_parent": {
+												"$ref": "l0dIPb+HgUSxU1UCHdKJSwAA"
+											},
+											"model": {
+												"$ref": "AAAAAAF6eV5u58CE1ZU="
+											},
+											"lineColor": "#800000",
+											"fillColor": "#FFFFB9",
+											"font": "Arial;11;0",
+											"left": 349,
+											"top": 704,
+											"width": 215,
+											"height": 11,
+											"text": "«Create»+Game()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF6eV6+KMPCZTc=",
+											"_parent": {
+												"$ref": "l0dIPb+HgUSxU1UCHdKJSwAA"
+											},
+											"model": {
+												"$ref": "AAAAAAF6eV6+HcO/xQ4="
+											},
+											"lineColor": "#800000",
+											"fillColor": "#FFFFB9",
+											"font": "Arial;11;0",
+											"left": 349,
+											"top": 717,
+											"width": 215,
+											"height": 11,
+											"text": "«Destroy»+Game()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF6eV8ubsb98oY=",
+											"_parent": {
+												"$ref": "l0dIPb+HgUSxU1UCHdKJSwAA"
+											},
+											"model": {
+												"$ref": "AAAAAAF6eV8uZMb66rk="
+											},
+											"lineColor": "#800000",
+											"fillColor": "#FFFFB9",
+											"font": "Arial;11;0",
+											"left": 349,
+											"top": 730,
+											"width": 215,
+											"height": 11,
+											"text": "+update()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF6eV+2Lcu9loQ=",
+											"_parent": {
+												"$ref": "l0dIPb+HgUSxU1UCHdKJSwAA"
+											},
+											"model": {
+												"$ref": "AAAAAAF6eV+2G8u6vdM="
+											},
+											"lineColor": "#800000",
+											"fillColor": "#FFFFB9",
+											"font": "Arial;11;0",
+											"left": 349,
+											"top": 743,
+											"width": 215,
+											"height": 11,
+											"text": "+draw()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF6eWAZrc2/ENQ=",
+											"_parent": {
+												"$ref": "l0dIPb+HgUSxU1UCHdKJSwAA"
+											},
+											"model": {
+												"$ref": "AAAAAAF6eWAZo828kJE="
+											},
+											"lineColor": "#800000",
+											"fillColor": "#FFFFB9",
+											"font": "Arial;11;0",
+											"left": 349,
+											"top": 756,
+											"width": 215,
+											"height": 11,
+											"text": "+render()",
+											"horizontalAlignment": 0
+										}
+									],
 									"lineColor": "#800000",
 									"fillColor": "#FFFFB9",
 									"font": "Arial;11;0",
-									"left": 396,
-									"top": 688,
-									"width": 95,
-									"height": 10
+									"left": 344,
+									"top": 699,
+									"width": 225,
+									"height": 73
 								},
 								{
 									"_type": "UMLTemplateParameterCompartmentView",
@@ -654,10 +772,10 @@
 							"lineColor": "#800000",
 							"fillColor": "#FFFFB9",
 							"font": "Arial;11;0",
-							"left": 396,
+							"left": 344,
 							"top": 644,
-							"width": 95,
-							"height": 56,
+							"width": 225,
+							"height": 157,
 							"showProperty": false,
 							"nameCompartment": {
 								"$ref": "DtryVLDTzkuirJaNbmsocAAA"
@@ -831,7 +949,7 @@
 											"top": 465,
 											"width": 167,
 											"height": 11,
-											"text": "+excutar(): void",
+											"text": "+execute(): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2047,7 +2165,7 @@
 											"top": 226,
 											"width": 135,
 											"height": 11,
-											"text": "Entidade"
+											"text": "Entity"
 										},
 										{
 											"_type": "LabelView",
@@ -2108,12 +2226,12 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAF6eMef9jD3DFM=",
+											"_id": "AAAAAAF6ebleGBlJU78=",
 											"_parent": {
 												"$ref": "yvVjF5B8V0+N3vCVTq8qrgAA"
 											},
 											"model": {
-												"$ref": "W6iWkERqGUifofLrNzYD7AAA"
+												"$ref": "AAAAAAF6ebleBxlAVcA="
 											},
 											"lineColor": "#800000",
 											"fillColor": "#FFFFB9",
@@ -2122,17 +2240,17 @@
 											"top": 247,
 											"width": 135,
 											"height": 11,
-											"text": "#x: int",
+											"text": "-body: Rectangle",
 											"horizontalAlignment": 0
 										},
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAF6eMef9jD6jX0=",
+											"_id": "AAAAAAF6ebp3ciqvfls=",
 											"_parent": {
 												"$ref": "yvVjF5B8V0+N3vCVTq8qrgAA"
 											},
 											"model": {
-												"$ref": "MrQnWlQxHkm8whtuEHwwxQAA"
+												"$ref": "AAAAAAF6ebp3WSqmr4Q="
 											},
 											"lineColor": "#800000",
 											"fillColor": "#FFFFB9",
@@ -2141,7 +2259,7 @@
 											"top": 260,
 											"width": 135,
 											"height": 11,
-											"text": "#y: int",
+											"text": "-window: RenderWindow*",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2179,7 +2297,26 @@
 											"top": 281,
 											"width": 135,
 											"height": 11,
-											"text": "+executar(): void",
+											"text": "«Create»+Entity()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF6ebi7/BYOOCE=",
+											"_parent": {
+												"$ref": "IUf/Qp0VdEC43pypue5SXgAA"
+											},
+											"model": {
+												"$ref": "AAAAAAF6ebi74hYFDIM="
+											},
+											"lineColor": "#800000",
+											"fillColor": "#FFFFB9",
+											"font": "Arial;11;0",
+											"left": 765,
+											"top": 294,
+											"width": 135,
+											"height": 11,
+											"text": "«Destroy»+Entity()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2195,10 +2332,10 @@
 											"fillColor": "#FFFFB9",
 											"font": "Arial;11;0",
 											"left": 765,
-											"top": 294,
+											"top": 307,
 											"width": 135,
 											"height": 11,
-											"text": "+imprimir-se(): void",
+											"text": "+draw(): void",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2208,7 +2345,7 @@
 									"left": 760,
 									"top": 276,
 									"width": 145,
-									"height": 34
+									"height": 47
 								},
 								{
 									"_type": "UMLTemplateParameterCompartmentView",
@@ -2233,7 +2370,7 @@
 							"left": 760,
 							"top": 208,
 							"width": 145,
-							"height": 108,
+							"height": 115,
 							"showProperty": false,
 							"nameCompartment": {
 								"$ref": "r9qn/z1AaUGWqmsTWvM7rwAA"
@@ -2513,7 +2650,7 @@
 							"tail": {
 								"$ref": "HY20WsOMWEewpvyEKNC50AAA"
 							},
-							"points": "1152:448;1152:352;880:352;880:315",
+							"points": "1152:448;1152:352;880:352;880:322",
 							"showProperty": false,
 							"nameLabel": {
 								"$ref": "f6iKKwjj/0i+ylCO3YUhrAAA"
@@ -2808,7 +2945,7 @@
 							"tail": {
 								"$ref": "qSgHWigJW028w5YTt9AWIQAA"
 							},
-							"points": "779:452;816:452;816:315",
+							"points": "779:452;816:452;816:322",
 							"showProperty": false,
 							"nameLabel": {
 								"$ref": "gGXSpj63W0+TrSAB3sCtlQAA"
@@ -3145,7 +3282,7 @@
 											"top": 531,
 											"width": 70,
 											"height": 11,
-											"text": "Jogador"
+											"text": "Player"
 										},
 										{
 											"_type": "LabelView",
@@ -4393,7 +4530,7 @@
 									"visible": null,
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 324,
+									"left": 298,
 									"top": 637,
 									"height": 11,
 									"alpha": 1.5707963267949,
@@ -4412,7 +4549,7 @@
 									"visible": false,
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 324,
+									"left": 298,
 									"top": 652,
 									"height": 11,
 									"alpha": 1.5707963267949,
@@ -4431,7 +4568,7 @@
 									"visible": false,
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 324,
+									"left": 298,
 									"top": 682,
 									"height": 11,
 									"alpha": -1.5707963267949,
@@ -4450,7 +4587,7 @@
 									"visible": false,
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 370,
+									"left": 318,
 									"top": 651,
 									"height": 11,
 									"alpha": -0.523598775598299,
@@ -4486,7 +4623,7 @@
 									},
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 371,
+									"left": 319,
 									"top": 679,
 									"width": 6.11767578125,
 									"height": 11,
@@ -4526,7 +4663,7 @@
 									"visible": false,
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 367,
+									"left": 315,
 									"top": 638,
 									"height": 11,
 									"alpha": -0.785398163397448,
@@ -4597,7 +4734,7 @@
 							"tail": {
 								"$ref": "USQsYXrjY06BcV8wTY1RAwAA"
 							},
-							"points": "255:672;396:672",
+							"points": "255:672;344:672",
 							"showVisibility": true,
 							"showProperty": false,
 							"nameLabel": {
@@ -6075,7 +6212,7 @@
 							"tail": {
 								"$ref": "okQpZrMdG0WRaccaO0K9wwAA"
 							},
-							"points": "520:416;520:360;792:360;792:315",
+							"points": "520:416;520:360;792:360;792:322",
 							"showProperty": false,
 							"nameLabel": {
 								"$ref": "zVTND/TSU0GlbYUe0C5voQAA"
@@ -6146,7 +6283,7 @@
 							"fillColor": "#FFFFB9",
 							"font": "Arial;11;0",
 							"left": 108,
-							"top": 732,
+							"top": 848,
 							"width": 534,
 							"height": 30,
 							"text": "Eis um diagrama que começa a atender os requisitos postos e deve ser extendido e finalizado para tal.\n"
@@ -6166,7 +6303,7 @@
 							"tail": {
 								"$ref": "7KiWjkb/uE2/VQW0WY0irQAA"
 							},
-							"points": "596:732;596:716;459:716;459:699"
+							"points": "596:848;596:716;568:716"
 						},
 						{
 							"_type": "UMLClassView",
@@ -6801,7 +6938,7 @@
 									"visible": false,
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 515,
+									"left": 593,
 									"top": 681,
 									"height": 11,
 									"alpha": -0.523598775598299,
@@ -6837,7 +6974,7 @@
 									},
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 508,
+									"left": 586,
 									"top": 653,
 									"width": 6.11767578125,
 									"height": 11,
@@ -6877,7 +7014,7 @@
 									"visible": false,
 									"fillColor": "#FFFFFF",
 									"font": "Arial;11;0",
-									"left": 518,
+									"left": 596,
 									"top": 694,
 									"height": 11,
 									"alpha": -0.785398163397448,
@@ -6948,7 +7085,7 @@
 							"tail": {
 								"$ref": "GKACx6Vi80ijVxgr678YdwAA"
 							},
-							"points": "648:548;584:548;584:671;490:671",
+							"points": "648:548;584:548;584:671;568:671",
 							"showVisibility": true,
 							"showProperty": false,
 							"nameLabel": {
@@ -8957,7 +9094,7 @@
 							"tail": {
 								"$ref": "aJxzI+yEjEK7l5Sz+aI3OQAA"
 							},
-							"points": "892:441;848:441;848:315",
+							"points": "892:441;848:441;848:322",
 							"showProperty": false,
 							"nameLabel": {
 								"$ref": "wC+rSRa7ukq3IvSpsU1g0wAA"
@@ -9241,8 +9378,64 @@
 					"_parent": {
 						"$ref": "IoH8RzmxEE6xOc9zvj2jawAA"
 					},
-					"name": "Jogo",
-					"stereotype": "PRINCIPAL"
+					"name": "Game",
+					"stereotype": "PRINCIPAL",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF6eV0xCbrUWnA=",
+							"_parent": {
+								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
+							},
+							"name": "window",
+							"visibility": "private",
+							"type": "RenderWindow"
+						}
+					],
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF6eV5u58CE1ZU=",
+							"_parent": {
+								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
+							},
+							"name": "Game",
+							"stereotype": "Create"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF6eV6+HcO/xQ4=",
+							"_parent": {
+								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
+							},
+							"name": "Game",
+							"stereotype": "Destroy"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF6eV8uZMb66rk=",
+							"_parent": {
+								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
+							},
+							"name": "update"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF6eV+2G8u6vdM=",
+							"_parent": {
+								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
+							},
+							"name": "draw"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF6eWAZo828kJE=",
+							"_parent": {
+								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
+							},
+							"name": "render"
+						}
+					]
 				},
 				{
 					"_type": "UMLClass",
@@ -9259,7 +9452,7 @@
 							"_parent": {
 								"$ref": "ODk2x5mvlkqaWx4w1r8H2QAA"
 							},
-							"name": "excutar",
+							"name": "execute",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -9407,28 +9600,28 @@
 					"_parent": {
 						"$ref": "IoH8RzmxEE6xOc9zvj2jawAA"
 					},
-					"name": "Entidade",
+					"name": "Entity",
 					"stereotype": "Abstrata",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
-							"_id": "W6iWkERqGUifofLrNzYD7AAA",
+							"_id": "AAAAAAF6ebleBxlAVcA=",
 							"_parent": {
 								"$ref": "XPko6I3/y0iS6fo0kSrTyAAA"
 							},
-							"name": "x",
-							"visibility": "protected",
-							"type": "int"
+							"name": "body",
+							"visibility": "private",
+							"type": "Rectangle"
 						},
 						{
 							"_type": "UMLAttribute",
-							"_id": "MrQnWlQxHkm8whtuEHwwxQAA",
+							"_id": "AAAAAAF6ebp3WSqmr4Q=",
 							"_parent": {
 								"$ref": "XPko6I3/y0iS6fo0kSrTyAAA"
 							},
-							"name": "y",
-							"visibility": "protected",
-							"type": "int"
+							"name": "window",
+							"visibility": "private",
+							"type": "RenderWindow*"
 						}
 					],
 					"operations": [
@@ -9438,19 +9631,18 @@
 							"_parent": {
 								"$ref": "XPko6I3/y0iS6fo0kSrTyAAA"
 							},
-							"name": "executar",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "bcu3RWMG40ieYaVe5sQzCwAA",
-									"_parent": {
-										"$ref": "f67b2CZufUqlmyDOuSHRfQAA"
-									},
-									"type": "void",
-									"direction": "return"
-								}
-							],
+							"name": "Entity",
+							"stereotype": "Create",
 							"isAbstract": true
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF6ebi74hYFDIM=",
+							"_parent": {
+								"$ref": "XPko6I3/y0iS6fo0kSrTyAAA"
+							},
+							"name": "Entity",
+							"stereotype": "Destroy"
 						},
 						{
 							"_type": "UMLOperation",
@@ -9458,7 +9650,7 @@
 							"_parent": {
 								"$ref": "XPko6I3/y0iS6fo0kSrTyAAA"
 							},
-							"name": "imprimir-se",
+							"name": "draw",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -10126,7 +10318,7 @@
 							"_parent": {
 								"$ref": "WmMPnOmkFUaEn4CHmyLHQAAA"
 							},
-							"name": "Jogador"
+							"name": "Player"
 						},
 						{
 							"_type": "UMLClass",

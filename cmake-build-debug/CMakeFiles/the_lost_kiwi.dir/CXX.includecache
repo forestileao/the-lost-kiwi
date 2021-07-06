@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Enemy.h
+Entity.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entity.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entity.h
+SFML/Graphics.hpp
+-
+
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp
 Game.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.h
@@ -17,8 +25,12 @@ SFML/System.hpp
 -
 SFML/Window.hpp
 -
+Player.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Player.h
+Enemy.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Enemy.h
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/main.cpp
-Game.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Player.h
+Entity.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entity.h
 
