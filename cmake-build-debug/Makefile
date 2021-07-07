@@ -223,6 +223,33 @@ src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/List.o: src/List.cpp.o
+
+.PHONY : src/List.o
+
+# target to build an object file
+src/List.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/List.cpp.o
+.PHONY : src/List.cpp.o
+
+src/List.i: src/List.cpp.i
+
+.PHONY : src/List.i
+
+# target to preprocess a source file
+src/List.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/List.cpp.i
+.PHONY : src/List.cpp.i
+
+src/List.s: src/List.cpp.s
+
+.PHONY : src/List.s
+
+# target to generate assembly for a file
+src/List.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/List.cpp.s
+.PHONY : src/List.cpp.s
+
 src/Player.o: src/Player.cpp.o
 
 .PHONY : src/Player.o
@@ -295,6 +322,9 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/List.o"
+	@echo "... src/List.i"
+	@echo "... src/List.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
