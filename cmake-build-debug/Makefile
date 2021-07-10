@@ -58,10 +58,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /var/lib/snapd/snap/clion/152/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /var/lib/snapd/snap/clion/158/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /var/lib/snapd/snap/clion/152/bin/cmake/linux/bin/cmake -E rm -f
+RM = /var/lib/snapd/snap/clion/158/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmak
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/var/lib/snapd/snap/clion/152/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/var/lib/snapd/snap/clion/158/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -89,7 +89,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/var/lib/snapd/snap/clion/152/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/var/lib/snapd/snap/clion/158/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -196,6 +196,33 @@ src/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entity.cpp.s
 .PHONY : src/Entity.cpp.s
 
+src/EntityList.o: src/EntityList.cpp.o
+
+.PHONY : src/EntityList.o
+
+# target to build an object file
+src/EntityList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.o
+.PHONY : src/EntityList.cpp.o
+
+src/EntityList.i: src/EntityList.cpp.i
+
+.PHONY : src/EntityList.i
+
+# target to preprocess a source file
+src/EntityList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.i
+.PHONY : src/EntityList.cpp.i
+
+src/EntityList.s: src/EntityList.cpp.s
+
+.PHONY : src/EntityList.s
+
+# target to generate assembly for a file
+src/EntityList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.s
+.PHONY : src/EntityList.cpp.s
+
 src/Game.o: src/Game.cpp.o
 
 .PHONY : src/Game.o
@@ -223,33 +250,6 @@ src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
-src/List.o: src/List.cpp.o
-
-.PHONY : src/List.o
-
-# target to build an object file
-src/List.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/List.cpp.o
-.PHONY : src/List.cpp.o
-
-src/List.i: src/List.cpp.i
-
-.PHONY : src/List.i
-
-# target to preprocess a source file
-src/List.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/List.cpp.i
-.PHONY : src/List.cpp.i
-
-src/List.s: src/List.cpp.s
-
-.PHONY : src/List.s
-
-# target to generate assembly for a file
-src/List.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/List.cpp.s
-.PHONY : src/List.cpp.s
-
 src/Player.o: src/Player.cpp.o
 
 .PHONY : src/Player.o
@@ -276,6 +276,33 @@ src/Player.s: src/Player.cpp.s
 src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
+
+src/Stage.o: src/Stage.cpp.o
+
+.PHONY : src/Stage.o
+
+# target to build an object file
+src/Stage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.o
+.PHONY : src/Stage.cpp.o
+
+src/Stage.i: src/Stage.cpp.i
+
+.PHONY : src/Stage.i
+
+# target to preprocess a source file
+src/Stage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.i
+.PHONY : src/Stage.cpp.i
+
+src/Stage.s: src/Stage.cpp.s
+
+.PHONY : src/Stage.s
+
+# target to generate assembly for a file
+src/Stage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.s
+.PHONY : src/Stage.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -319,15 +346,18 @@ help:
 	@echo "... src/Entity.o"
 	@echo "... src/Entity.i"
 	@echo "... src/Entity.s"
+	@echo "... src/EntityList.o"
+	@echo "... src/EntityList.i"
+	@echo "... src/EntityList.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
-	@echo "... src/List.o"
-	@echo "... src/List.i"
-	@echo "... src/List.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/Stage.o"
+	@echo "... src/Stage.i"
+	@echo "... src/Stage.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

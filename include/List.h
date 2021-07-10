@@ -1,4 +1,25 @@
-#include "List.h"
+#ifndef LIST_H
+#define LIST_H
+
+#include "Element.h"
+
+template <class T> class List
+{
+private:
+	Element<T>* pFirst;
+	Element<T>* pLast;
+
+	int len;
+
+public:
+	List();
+	~List();
+
+	int getLen() { return len; }
+	T* getItem(int pos);
+	void push(T* item);
+	void pop(T* item);
+};
 
 template<class T>
 List<T>::~List()
@@ -9,17 +30,17 @@ List<T>::~List()
 }
 
 template<class T>
-List<T>::List()
+List<T>::List():
+	len(0)
 {
 	pFirst = nullptr;
 	pLast = nullptr;
-	len = 0;
 }
 
 template<class T>
 T* List<T>::getItem(int pos)
 {
-Element<T> temp = pFirst;
+	Element<T>* temp = pFirst;
 
 	if (pos == 0)
 		return temp->getItem();
@@ -63,7 +84,7 @@ void List<T>::pop(T* item)
 	// First element in the list
 	if (temp == pFirst)
 		pFirst = temp->getPNext();
-	 // Last element in the list
+		// Last element in the list
 	else if (temp == pLast)
 	{
 		tempBack->setProx(nullptr);
@@ -75,3 +96,6 @@ void List<T>::pop(T* item)
 	delete temp;
 	len--;
 }
+
+#endif //LIST_H
+

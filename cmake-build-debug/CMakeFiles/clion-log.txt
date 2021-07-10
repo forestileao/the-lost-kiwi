@@ -1,4 +1,4 @@
-/var/lib/snapd/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi
+/var/lib/snapd/snap/clion/158/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi
 -- Found SFML 2.5.1 in /usr/lib64/cmake/SFML
 -- SFML_INCLUDE_DIR: 
 -- SFML_LIBRARIES: 

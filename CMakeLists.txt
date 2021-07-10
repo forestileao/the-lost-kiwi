@@ -14,5 +14,5 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
-add_executable(the_lost_kiwi src/main.cpp src/Game.cpp src/Game.h src/Entity.cpp src/Entity.h src/Player.cpp src/Player.h src/Enemy.cpp src/Enemy.h src/Element.h src/List.cpp src/List.h)
+add_executable(the_lost_kiwi include/List.h src/main.cpp src/Game.cpp include/Game.h src/Entity.cpp include/Entity.h src/Player.cpp include/Player.h src/Enemy.cpp include/Enemy.h include/Element.h src/EntityList.cpp include/EntityList.h src/Stage.cpp include/Stage.h)
 target_link_libraries (the_lost_kiwi sfml-graphics sfml-window sfml-system)
