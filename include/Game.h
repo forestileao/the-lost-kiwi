@@ -11,17 +11,17 @@
 
 #include "Player.h"
 #include "Enemy.h"
-
+#include "EntityList.h"
+#include "Stage.h"
 
 class Game
 {
 private:
 	sf::RenderWindow window;
+	Player* player1;
+	EntityList* entityList;
+	Stage* stage1;
 
-	// Entities
-	Player player1;
-
-	Enemy enemy;
 public:
 	// Constructors / Destructors
 	Game();

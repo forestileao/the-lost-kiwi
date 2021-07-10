@@ -2,17 +2,21 @@
 // Created by forestileao on 05/07/2021.
 //
 
-#include "Game.h"
+#include "../include/Game.h"
+#include "iostream"
 
 Game::Game():
-	window(sf::VideoMode(800, 600), "The Lost Kiwi", sf::Style::Close | sf::Style::Titlebar),
-	player1(),
-	enemy()
+	window(sf::VideoMode(800, 600), "The Lost Kiwi", sf::Style::Close | sf::Style::Titlebar)
 {
 	window.setFramerateLimit(60);
 
-	player1.setWindow(&window);
-	enemy.setWindow(&window);
+	player1 = new Player();
+	player1->setWindow(&window);
+
+	stage1 = new Stage(&window, player1);
+	entityList = stage1->getEntityList();
+
+
 	execute();
 }
 
@@ -23,13 +27,16 @@ Game::~Game()
 
 void Game::update()
 {
-	player1.move();
+	player1->move();
 }
 
 void Game::draw()
 {
-	enemy.draw();
-	player1.draw();
+	for (int i = 0; i < entityList->mainList.getLen(); i++)
+	{
+		Entity* temp = entityList->mainList.getItem(i);
+		temp->draw();
+	}
 }
 
 void Game::execute()

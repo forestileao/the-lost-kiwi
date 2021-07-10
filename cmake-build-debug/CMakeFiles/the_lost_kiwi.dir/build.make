@@ -53,10 +53,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /var/lib/snapd/snap/clion/152/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /var/lib/snapd/snap/clion/158/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /var/lib/snapd/snap/clion/152/bin/cmake/linux/bin/cmake -E rm -f
+RM = /var/lib/snapd/snap/clion/158/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -141,13 +141,41 @@ CMakeFiles/the_lost_kiwi.dir/src/Enemy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Enemy.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Enemy.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Enemy.cpp.s
 
+CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
+CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.o: ../src/EntityList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.o -c /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/EntityList.cpp
+
+CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/EntityList.cpp > CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.i
+
+CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/EntityList.cpp -o CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.s
+
+CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
+CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.o: ../src/Stage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.o -c /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stage.cpp
+
+CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stage.cpp > CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.i
+
+CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stage.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.s
+
 # Object files for target the_lost_kiwi
 the_lost_kiwi_OBJECTS = \
 "CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Entity.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Player.cpp.o" \
-"CMakeFiles/the_lost_kiwi.dir/src/Enemy.cpp.o"
+"CMakeFiles/the_lost_kiwi.dir/src/Enemy.cpp.o" \
+"CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.o" \
+"CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.o"
 
 # External object files for target the_lost_kiwi
 the_lost_kiwi_EXTERNAL_OBJECTS =
@@ -157,12 +185,14 @@ the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entity.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Player.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Enemy.cpp.o
+the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/EntityList.cpp.o
+the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Stage.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/build.make
 the_lost_kiwi: /usr/lib/libsfml-graphics.so.2.5.1
 the_lost_kiwi: /usr/lib/libsfml-window.so.2.5.1
 the_lost_kiwi: /usr/lib/libsfml-system.so.2.5.1
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable the_lost_kiwi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable the_lost_kiwi"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/the_lost_kiwi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
