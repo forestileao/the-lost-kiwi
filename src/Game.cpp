@@ -22,7 +22,8 @@ Game::Game():
 
 Game::~Game()
 {
-
+ 	delete player1;
+ 	delete stage1;
 }
 
 void Game::update()
