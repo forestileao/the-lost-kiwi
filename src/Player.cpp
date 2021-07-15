@@ -4,24 +4,40 @@
 
 #include "../include/Player.h"
 
-Player::Player()
+Player::Player(int life, bool firstPlayer):
+	Character(life),
+	isFirstPlayer(firstPlayer)
 {
-	window = NULL;
+	window = nullptr;
 }
 
 Player::~Player()
 {
-	window = NULL;
+	window = nullptr;
 }
 
-void Player::move()
+void Player::execute()
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		body.move(sf::Vector2f(2.f, 0.f));
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-		body.move(sf::Vector2f(0.f, -2.f));
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-		body.move(sf::Vector2f(-2.f, 0.f));
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-		body.move(sf::Vector2f(0.f, 2.f));
+	if (isFirstPlayer)
+	{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+			body.move(sf::Vector2f(2.f, 0.f));
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+			body.move(sf::Vector2f(0.f, -2.f));
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+			body.move(sf::Vector2f(-2.f, 0.f));
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+			body.move(sf::Vector2f(0.f, 2.f));
+	}
+	else
+	{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+			body.move(sf::Vector2f(2.f, 0.f));
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+			body.move(sf::Vector2f(0.f, -2.f));
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+			body.move(sf::Vector2f(-2.f, 0.f));
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+			body.move(sf::Vector2f(0.f, 2.f));
+	}
 }

@@ -6,16 +6,17 @@
 #define PLAYER_H
 
 #include "Entity.h"
+#include "Character.h"
 
-class Player : public Entity
+class Player : public Character
 {
 private:
-
+	bool isFirstPlayer;
 public:
-	Player();
+	Player(int life, bool firstPlayer = true);
 	~Player();
 
-	void move();
+	void execute();
 };
 
 

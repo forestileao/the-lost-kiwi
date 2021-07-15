@@ -12,13 +12,14 @@ private:
 
 	EntityList* entityList;
 	Player* player1;
+	Player* player2;
 
 	Enemy* enemy1;
 
 	void initializeElements();
 
 public:
-	Stage(sf::RenderWindow* renderWindow, Player* p1);
+	Stage(sf::RenderWindow* renderWindow, Player* p1, Player* p2=NULL);
 	~Stage();
 
 	EntityList* getEntityList();

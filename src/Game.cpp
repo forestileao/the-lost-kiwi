@@ -10,10 +10,13 @@ Game::Game():
 {
 	window.setFramerateLimit(60);
 
-	player1 = new Player();
+	player1 = new Player(10);
 	player1->setWindow(&window);
+	// second player
+	player2 = new Player(10, false);
+	player2->setWindow(&window);
 
-	stage1 = new Stage(&window, player1);
+	stage1 = new Stage(&window, player1, player2);
 	entityList = stage1->getEntityList();
 
 
@@ -28,7 +31,8 @@ Game::~Game()
 
 void Game::update()
 {
-	player1->move();
+	player1->execute();
+	player2->execute();
 }
 
 void Game::draw()
