@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Element.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Enemy.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Character.h
 Entity.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h
 
@@ -16,71 +14,13 @@ Entity.h
 SFML/Graphics.hpp
 -
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/EntityList.h
-List.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List.h
-Entity.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h
-SFML/Graphics.hpp
--
-SFML/System.hpp
--
-SFML/Window.hpp
--
-Player.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Player.h
-Enemy.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Enemy.h
-EntityList.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/EntityList.h
-Stage.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stage.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List.h
-Element.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Element.h
-
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Player.h
 Entity.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stage.h
-Player.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Player.h
-Enemy.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Enemy.h
-EntityList.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/EntityList.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Enemy.cpp
-../include/Enemy.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Enemy.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entity.cpp
-../include/Entity.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/EntityList.cpp
-../include/EntityList.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/EntityList.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp
-../include/Game.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h
-iostream
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/iostream
+Character.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Character.h
 
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Player.cpp
 ../include/Player.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Player.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stage.cpp
-../include/Stage.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stage.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/main.cpp
-../include/Game.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h
 

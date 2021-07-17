@@ -4,7 +4,8 @@
 
 #include "../include/Enemy.h"
 
-Enemy::Enemy()
+Enemy::Enemy(int life):
+	Character(life)
 {
 	window = NULL;
 
@@ -15,4 +16,8 @@ Enemy::Enemy()
 Enemy::~Enemy()
 {
 	window = NULL;
+}
+void Enemy::execute()
+{
+	// TODO: Implement actions here
 }

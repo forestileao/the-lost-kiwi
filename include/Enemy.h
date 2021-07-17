@@ -5,16 +5,17 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
-#include "Entity.h"
-
-class Enemy : public Entity
+#include "Character.h"
+class Enemy : public Character
 {
 private:
 
 
 public:
-	Enemy();
+	Enemy(int life);
 	~Enemy();
+
+	void execute();
 };
 
 

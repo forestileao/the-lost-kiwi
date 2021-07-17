@@ -19,6 +19,7 @@ class Game
 private:
 	sf::RenderWindow window;
 	Player* player1;
+	Player* player2;
 	EntityList* entityList;
 	Stage* stage1;
 

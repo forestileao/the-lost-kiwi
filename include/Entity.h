@@ -11,10 +11,13 @@ protected:
 
 public:
 	Entity();
-	~Entity();
+	virtual ~Entity();
 
 	void setWindow(sf::RenderWindow* window) { this->window = window; }
 	void draw() { window->draw(body); }
+
+	// Pure virtual function to execute entity action (if it exists)
+	virtual void execute() = 0;
 };
 
 
