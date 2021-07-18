@@ -2,7 +2,7 @@
 // Created by forestileao on 05/07/2021.
 //
 
-#include "../include/Player.h"
+#include "../../include/Entities/Player.h"
 
 Player::Player(int life, bool firstPlayer):
 	Character(life),

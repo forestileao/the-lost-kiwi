@@ -1,8 +1,8 @@
 #ifndef STAGE_H
 #define STAGE_H
 
-#include "Player.h"
-#include "Enemy.h"
+#include "Entities/Player.h"
+#include "Entities/Enemy.h"
 #include "EntityList.h"
 
 class Stage

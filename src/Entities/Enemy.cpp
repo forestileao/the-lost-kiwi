@@ -2,7 +2,7 @@
 // Created by forestileao on 05/07/2021.
 //
 
-#include "../include/Enemy.h"
+#include "../../include/Entities/Enemy.h"
 
 Enemy::Enemy(int life):
 	Character(life)

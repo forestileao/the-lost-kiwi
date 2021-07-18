@@ -84,16 +84,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Character.h">
-			<Option target="the_lost_kiwi"/>
-		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Element.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Enemy.h">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Enemy.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Player.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/EntityList.h">
@@ -105,19 +108,31 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Player.h">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stage.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Character.cpp">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Enemy.cpp">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entity.cpp">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Character.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Enemy.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Entity.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Player.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/EntityList.cpp">
@@ -126,10 +141,19 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Player.cpp">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/EventManager.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicManager.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stage.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/State.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/StateMachine.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/main.cpp">

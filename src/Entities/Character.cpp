@@ -2,7 +2,7 @@
 // Created by forestileao on 15/07/2021.
 //
 
-#include "../include/Character.h"
+#include "../../include/Entities/Character.h"
 Character::Character(int life) :
 	Entity(),
 	lifePoints(life)

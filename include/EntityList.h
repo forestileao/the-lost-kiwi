@@ -2,7 +2,7 @@
 #define ENTITYLIST_H
 
 #include "List.h"
-#include "Entity.h"
+#include "Entities/Entity.h"
 
 class EntityList
 {

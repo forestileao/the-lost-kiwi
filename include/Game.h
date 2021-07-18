@@ -9,8 +9,8 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
-#include "Player.h"
-#include "Enemy.h"
+#include "Entities/Player.h"
+#include "Entities/Enemy.h"
 #include "EntityList.h"
 #include "Stage.h"
 
