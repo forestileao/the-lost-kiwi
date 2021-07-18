@@ -6,12 +6,12 @@
 #define GAMESTATEMACHINE_H
 
 #include "StateMachine.h"
-#include "../Managers/GraphicsManager.h"
+#include "../Managers/GraphicManager.h"
 
 class GameStateMachine : public States::StateMachine
 {
 public:
-	GameStateMachine(Managers::GraphicsManager* graphicManager = nullptr);
+	GameStateMachine(Managers::GraphicManager* graphicManager = nullptr);
 	~GameStateMachine();
 };
 

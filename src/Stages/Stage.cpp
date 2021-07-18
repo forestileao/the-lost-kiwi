@@ -1,21 +1,23 @@
 #include "../../include/Stages/Stage.h"
 using namespace Stages;
 
-Stage::Stage(Managers::GraphicsManager *pGraphicManager):
+Stage::Stage(Managers::GraphicManager *pGraphicManager):
 	entities()
 {
 	this->pGraphicsManager = pGraphicsManager;
+	p1 = new Entities::Player(10);
+	p1->setWindow(pGraphicManager->getWindowPointer());
 	initializeElements();
 }
 
 Stage::~Stage()
 {
-
+	delete p1;
 }
 
 void Stage::initializeElements()
 {
-
+	addEntity(p1);
 }
 
 
@@ -46,7 +48,7 @@ void Stage::removeEntity(Managers::uniqueId id)
 {
 	entities.mainList.pop(entities.mainList.getItem(id));
 }
-Managers::GraphicsManager *Stage::getGraphicsManager()
+Managers::GraphicManager *Stage::getGraphicsManager()
 {
 	return pGraphicsManager;
 }

@@ -5,7 +5,7 @@
 #include "../../include/States/GameStateMachine.h"
 #include "../../include/States/PlayState.h"
 
-GameStateMachine::GameStateMachine(Managers::GraphicsManager *graphicManager)
+GameStateMachine::GameStateMachine(Managers::GraphicManager *graphicManager)
 {
 	States::State* state = static_cast<States::State*>(new PlayState(static_cast<States::StateMachine*>(this), graphicManager));
 	addState(state, "PlayState");

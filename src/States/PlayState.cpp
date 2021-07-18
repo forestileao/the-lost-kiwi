@@ -4,12 +4,12 @@
 
 #include "../../include/States/PlayState.h"
 
-PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicsManager* pGraphicsManager):
+PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManager* pGraphicsManager):
 	States::State(pStateMachine), score(0)
 {
 	this->pGraphicManager = pGraphicsManager;
 	pStage = nullptr;
-
+	pStage = new Stages::Stage(pGraphicsManager);
 	scoreText = pGraphicsManager->createText(0, "Score: 0", 20);
 	pGraphicsManager->setTextPosition(scoreText, 255, 20);
 	pGraphicsManager->setTextColor(scoreText, 255, 255, 0, 255);
@@ -64,7 +64,7 @@ void PlayState::update(float dt, Managers::EventManager* pEventManager)
 	 */
 }
 
-void PlayState::draw(Managers::GraphicsManager* pGraphicsManager)
+void PlayState::draw(Managers::GraphicManager* pGraphicsManager)
 {
 	pStage->draw();
 	pGraphicsManager->drawText(scoreText);

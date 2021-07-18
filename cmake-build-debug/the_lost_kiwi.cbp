@@ -108,7 +108,7 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h">
@@ -147,7 +147,7 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/EventManager.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicsManager.cpp">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicManager.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/EntityList.cpp">

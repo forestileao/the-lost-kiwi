@@ -11,18 +11,18 @@
 class PlayState : public States::State
 {
 private:
-	Managers::GraphicsManager* pGraphicManager;
+	Managers::GraphicManager* pGraphicManager;
 	Stages::Stage* pStage;
 	Managers::uniqueId scoreText;
 
 	int score;
 
 public:
-	PlayState(States::StateMachine* pStateMachine = NULL, Managers::GraphicsManager* pGraphicsManager = NULL);
+	PlayState(States::StateMachine* pStateMachine = NULL, Managers::GraphicManager* pGraphicsManager = NULL);
 	~PlayState();
 
 	virtual void update(float dt, Managers::EventManager* eventManager);
-	virtual void draw(Managers::GraphicsManager* graphicsManager);
+	virtual void draw(Managers::GraphicManager* graphicsManager);
 
 	virtual void enter(void* arg);
 	virtual void exit();

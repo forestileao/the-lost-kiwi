@@ -27,7 +27,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/GameStateMachine.h
@@ -37,9 +37,9 @@ CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o
 CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/EventManager.cpp
-CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicsManager.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicManager.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
@@ -54,7 +54,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/Stage.cpp
@@ -66,7 +66,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/GameStateMachine.h
@@ -82,7 +82,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/PlayState.h
@@ -90,12 +90,12 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/PlayState.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/State.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/StateMachine.cpp
@@ -108,7 +108,7 @@ CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicsManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h

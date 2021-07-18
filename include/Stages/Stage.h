@@ -4,7 +4,7 @@
 #include "../Entities/Player.h"
 #include "../Entities/Enemy.h"
 #include "EntityList.h"
-#include "../Managers/GraphicsManager.h"
+#include "../Managers/GraphicManager.h"
 #include "../Managers/EventManager.h"
 
 namespace Stages
@@ -18,14 +18,16 @@ namespace Stages
 			Castle
 		};
 
-		Managers::GraphicsManager *pGraphicsManager;
+		Managers::GraphicManager *pGraphicsManager;
 		EntityList entities;
 		//Stages::PhysicMachine physics;
+
+		Entities::Player* p1;
 
 		void initializeElements();
 
 	public:
-		Stage(Managers::GraphicsManager *pGraphicManager);
+		Stage(Managers::GraphicManager *pGraphicManager);
 		~Stage();
 
 		// Adds and removes the Entity Body from the Physic Machine
@@ -38,7 +40,7 @@ namespace Stages
 		
 		//Stages::PhysicMachine *getPhysics();
 
-		Managers::GraphicsManager *getGraphicsManager();
+		Managers::GraphicManager *getGraphicsManager();
 
 		void update(float dt, Managers::EventManager *pEvents);
 		// Draws all entities

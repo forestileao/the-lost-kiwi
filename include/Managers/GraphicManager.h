@@ -9,7 +9,7 @@ namespace Managers
 	typedef sf::Rect<int> spriteRect;
 	typedef int uniqueId;
 
-	class GraphicsManager
+	class GraphicManager
 	{
 
 	private:
@@ -25,8 +25,8 @@ namespace Managers
 		uniqueId backgroundSprite;
 
 	public:
-		GraphicsManager(int screenWidth = 800, int screenHeight = 600, const char* windowTitle = "Some Game");
-		~GraphicsManager();
+		GraphicManager(int screenWidth = 800, int screenHeight = 600, const char* windowTitle = "Some Game");
+		~GraphicManager();
 
 		sf::RenderWindow* getWindowPointer();
 

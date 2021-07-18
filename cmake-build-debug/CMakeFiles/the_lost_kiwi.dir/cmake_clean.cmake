@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o"
-  "CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o"
+  "CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o"

@@ -26,7 +26,7 @@ namespace States
 		void changeState(std::string nextStateName, void* arg);
 
 		void update(float dt, Managers::EventManager* pEventsManager);
-		void draw(Managers::GraphicsManager* pGraphicsManager);
+		void draw(Managers::GraphicManager* pGraphicsManager);
 
 		const std::string getCurrentState() const;
 

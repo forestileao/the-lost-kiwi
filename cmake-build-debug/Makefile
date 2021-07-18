@@ -304,32 +304,32 @@ src/Managers/EventManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.s
 .PHONY : src/Managers/EventManager.cpp.s
 
-src/Managers/GraphicsManager.o: src/Managers/GraphicsManager.cpp.o
+src/Managers/GraphicManager.o: src/Managers/GraphicManager.cpp.o
 
-.PHONY : src/Managers/GraphicsManager.o
+.PHONY : src/Managers/GraphicManager.o
 
 # target to build an object file
-src/Managers/GraphicsManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o
-.PHONY : src/Managers/GraphicsManager.cpp.o
+src/Managers/GraphicManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o
+.PHONY : src/Managers/GraphicManager.cpp.o
 
-src/Managers/GraphicsManager.i: src/Managers/GraphicsManager.cpp.i
+src/Managers/GraphicManager.i: src/Managers/GraphicManager.cpp.i
 
-.PHONY : src/Managers/GraphicsManager.i
+.PHONY : src/Managers/GraphicManager.i
 
 # target to preprocess a source file
-src/Managers/GraphicsManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.i
-.PHONY : src/Managers/GraphicsManager.cpp.i
+src/Managers/GraphicManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.i
+.PHONY : src/Managers/GraphicManager.cpp.i
 
-src/Managers/GraphicsManager.s: src/Managers/GraphicsManager.cpp.s
+src/Managers/GraphicManager.s: src/Managers/GraphicManager.cpp.s
 
-.PHONY : src/Managers/GraphicsManager.s
+.PHONY : src/Managers/GraphicManager.s
 
 # target to generate assembly for a file
-src/Managers/GraphicsManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.s
-.PHONY : src/Managers/GraphicsManager.cpp.s
+src/Managers/GraphicManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.s
+.PHONY : src/Managers/GraphicManager.cpp.s
 
 src/Stages/EntityList.o: src/Stages/EntityList.cpp.o
 
@@ -547,9 +547,9 @@ help:
 	@echo "... src/Managers/EventManager.o"
 	@echo "... src/Managers/EventManager.i"
 	@echo "... src/Managers/EventManager.s"
-	@echo "... src/Managers/GraphicsManager.o"
-	@echo "... src/Managers/GraphicsManager.i"
-	@echo "... src/Managers/GraphicsManager.s"
+	@echo "... src/Managers/GraphicManager.o"
+	@echo "... src/Managers/GraphicManager.i"
+	@echo "... src/Managers/GraphicManager.s"
 	@echo "... src/Stages/EntityList.o"
 	@echo "... src/Stages/EntityList.i"
 	@echo "... src/Stages/EntityList.s"

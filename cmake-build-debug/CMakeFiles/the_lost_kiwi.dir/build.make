@@ -219,18 +219,18 @@ CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/EventManager.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.s
 
-CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
-CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o: ../src/Managers/GraphicsManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o -c /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicsManager.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
+CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o: ../src/Managers/GraphicManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o -c /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicManager.cpp
 
-CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicsManager.cpp > CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.i
+CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicManager.cpp > CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.i
 
-CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicsManager.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.s
+CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicManager.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.s
 
 CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
 CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: ../src/States/GameStateMachine.cpp
@@ -271,7 +271,7 @@ the_lost_kiwi_OBJECTS = \
 "CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o" \
-"CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o" \
+"CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o"
 
@@ -289,7 +289,7 @@ the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o
-the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicsManager.cpp.o
+the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/build.make

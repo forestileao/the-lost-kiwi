@@ -7,11 +7,13 @@
 
 Game::Game()
 {
-	graphicManager = new Managers::GraphicsManager(WINDOW_WIDTH, WINDOW_HEIGHT, "The Lost Kiwi");
+	graphicManager = new Managers::GraphicManager(WINDOW_WIDTH, WINDOW_HEIGHT, "The Lost Kiwi");
 
 	eventManager = new Managers::EventManager(graphicManager->getWindowPointer());
-	graphicManager->loadFont("../assets/fonts/general-font.ttf");
+	graphicManager->loadFont("../assets/fonts/seagram-tfb.ttf");
 	stateMachine = new GameStateMachine(graphicManager);
+
+
 
 	execute();
 }

@@ -20,11 +20,11 @@ Player::~Player()
 void Player::execute()
 {
 	if (sf::Keyboard::isKeyPressed(isFirstPlayer ? sf::Keyboard::D : sf::Keyboard::Right))
-		body.move(sf::Vector2f(2.f, 0.f));
+		body.move(sf::Vector2f(0.1f, 0.f));
 	if (sf::Keyboard::isKeyPressed(isFirstPlayer ? sf::Keyboard::W : sf::Keyboard::Up))
-		body.move(sf::Vector2f(0.f, -2.f));
+		body.move(sf::Vector2f(0.f, -0.1f));
 	if (sf::Keyboard::isKeyPressed(isFirstPlayer ? sf::Keyboard::A : sf::Keyboard::Left))
-		body.move(sf::Vector2f(-2.f, 0.f));
+		body.move(sf::Vector2f(-0.1f, 0.f));
 	if (sf::Keyboard::isKeyPressed(isFirstPlayer ? sf::Keyboard::S : sf::Keyboard::Down))
-		body.move(sf::Vector2f(0.f, 2.f));
+		body.move(sf::Vector2f(0.f, 0.1f));
 }

@@ -37,7 +37,7 @@ void StateMachine::update(float dt, Managers::EventManager* pEventsManager)
 	states[currentState]->update(dt, pEventsManager);
 }
 
-void StateMachine::draw(Managers::GraphicsManager* pGraphicsManager)
+void StateMachine::draw(Managers::GraphicManager* pGraphicsManager)
 {
 	states[currentState]->draw(pGraphicsManager);
 }

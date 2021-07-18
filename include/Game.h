@@ -21,7 +21,7 @@
 class Game
 {
 private:
-	Managers::GraphicsManager* graphicManager;
+	Managers::GraphicManager* graphicManager;
 	Managers::EventManager* eventManager;
 	States::StateMachine* stateMachine;
 
