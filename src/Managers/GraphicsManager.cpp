@@ -2,18 +2,17 @@
 // Created by forestileao on 18/07/2021.
 //
 
-#include "../../include/Managers/GraphicManager.h"
-
+#include "../../include/Managers/GraphicsManager.h"
 using namespace Managers;
 
-GraphicManager::GraphicManager(int screenWidth, int screenHeight, const char* windowTitle):
+GraphicsManager::GraphicsManager(int screenWidth, int screenHeight, const char* windowTitle):
 	screenWidth(screenWidth), screenHeight(screenHeight)
 	{
 	window.create(sf::VideoMode(screenWidth, screenHeight), windowTitle);
 	backgroundSprite = -1;
 
 }
-GraphicManager::~GraphicManager()
+GraphicsManager::~GraphicsManager()
 {
 	for(int i = 0; i < fonts.size(); i++)
 		delete fonts[i];
@@ -28,21 +27,21 @@ GraphicManager::~GraphicManager()
 		delete sprites[i];
 }
 
-sf::RenderWindow* GraphicManager::getWindowPointer()
+sf::RenderWindow* GraphicsManager::getWindowPointer()
 {
 	return &window;
 }
 
-const bool GraphicManager::isWindowOpen()const{
+const bool GraphicsManager::isWindowOpen()const{
 	return window.isOpen();
 }
 
-void GraphicManager::closeWindow()
+void GraphicsManager::closeWindow()
 {
 	window.close();
 }
 
-const uniqueId GraphicManager::loadTexture(const char* file)
+const uniqueId GraphicsManager::loadTexture(const char* file)
 {
 
 	auto it = loadedTextures.find(file);
@@ -66,7 +65,7 @@ const uniqueId GraphicManager::loadTexture(const char* file)
 	}
 }
 
-const uniqueId GraphicManager::createSprite(uniqueId baseTexture)
+const uniqueId GraphicsManager::createSprite(uniqueId baseTexture)
 {
 
 	if(baseTexture >= textures.size())
@@ -94,7 +93,7 @@ const uniqueId GraphicManager::createSprite(uniqueId baseTexture)
 	}
 }
 
-void GraphicManager::removeSprite(uniqueId sprite)
+void GraphicsManager::removeSprite(uniqueId sprite)
 {
 
 	if(sprite >= sprites.size())
@@ -111,7 +110,7 @@ void GraphicManager::removeSprite(uniqueId sprite)
 	}
 }
 
-void GraphicManager::setSpriteRect(uniqueId sprite, const spriteRect& rect)
+void GraphicsManager::setSpriteRect(uniqueId sprite, const spriteRect& rect)
 {
 
 	if(sprite >= sprites.size())
@@ -121,7 +120,7 @@ void GraphicManager::setSpriteRect(uniqueId sprite, const spriteRect& rect)
 
 }
 
-void GraphicManager::setSpritePosition(uniqueId sprite, float x, float y)
+void GraphicsManager::setSpritePosition(uniqueId sprite, float x, float y)
 {
 
 	if(sprite >= sprites.size())
@@ -132,7 +131,7 @@ void GraphicManager::setSpritePosition(uniqueId sprite, float x, float y)
 	}
 }
 
-void GraphicManager::drawSprite(uniqueId sprite)
+void GraphicsManager::drawSprite(uniqueId sprite)
 {
 
 	if(sprite >= sprites.size())
@@ -142,7 +141,7 @@ void GraphicManager::drawSprite(uniqueId sprite)
 
 }
 
-void GraphicManager::setBackground(uniqueId sprite)
+void GraphicsManager::setBackground(uniqueId sprite)
 {
 	if(sprite >= sprites.size())
 		printf("ERROR: sprite id out of range\n");
@@ -155,7 +154,7 @@ void GraphicManager::setBackground(uniqueId sprite)
 	}
 }
 
-const uniqueId GraphicManager::loadFont(const char* file)
+const uniqueId GraphicsManager::loadFont(const char* file)
 {
 	sf::Font* newFont = new sf::Font();
 
@@ -167,7 +166,7 @@ const uniqueId GraphicManager::loadFont(const char* file)
 
 }
 
-const uniqueId GraphicManager::createText(uniqueId baseFont, std::string text, int size)
+const uniqueId GraphicsManager::createText(uniqueId baseFont, std::string text, int size)
 {
 	sf::Text* newText = new sf::Text(text, *fonts[baseFont], size);
 
@@ -175,31 +174,31 @@ const uniqueId GraphicManager::createText(uniqueId baseFont, std::string text, i
 	return texts.size()-1;
 }
 
-void GraphicManager::setTextColor(uniqueId text, int red, int green, int blue, int alpha)
+void GraphicsManager::setTextColor(uniqueId text, int red, int green, int blue, int alpha)
 {
 
 	texts[text]->setFillColor(sf::Color(red, green, blue, alpha));
 }
 
-void GraphicManager::setString(uniqueId text, std::string newText)
+void GraphicsManager::setString(uniqueId text, std::string newText)
 {
 	texts[text]->setString(newText);
 }
 
-void GraphicManager::drawText(uniqueId text)
+void GraphicsManager::drawText(uniqueId text)
 {
 	window.draw(*texts[text]);
 
 }
 
-void GraphicManager::setTextPosition(uniqueId text, float x, float y)
+void GraphicsManager::setTextPosition(uniqueId text, float x, float y)
 {
 
 	sf::Vector2f pos(x, y);
 	texts[text]->setPosition(pos);
 }
 
-void GraphicManager::render()
+void GraphicsManager::draw()
 {
 	if(window.isOpen())
 	{

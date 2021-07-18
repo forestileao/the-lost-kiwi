@@ -5,6 +5,8 @@
 #ifndef STATEMACHINE_H
 #define STATEMACHINE_H
 
+#include <iostream>
+#include <map>
 #include "State.h"
 
 namespace States
@@ -13,22 +15,23 @@ namespace States
 	{
 
 	protected:
-		std::map<string,State*> states;
-		string currentState;
+		std::map<std::string, State*> states;
+		std::string currentState;
 
 	public:
 		StateMachine();
 		virtual ~StateMachine();
 
-		void addState(State* state, string stateName);
-		void changeState(string nextStateID, void* arg);
+		void addState(State* state, std::string stateName);
+		void changeState(std::string nextStateName, void* arg);
 
 		void update(float dt, Managers::EventManager* pEventsManager);
-		void render(Managers::GraphicManager* pGraphicsManager);
+		void draw(Managers::GraphicsManager* pGraphicsManager);
 
-		const string getCurrentState() const;
+		const std::string getCurrentState() const;
 
-		void setCurrentState(const string state);
+		void setCurrentState(std::string state);
 	};
 }
+
 #endif //STATEMACHINE_H

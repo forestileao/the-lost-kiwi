@@ -5842,7 +5842,7 @@
 											"top": 2674,
 											"width": 239.96435546875,
 											"height": 11,
-											"text": "GraphicManager"
+											"text": "GraphicsManager"
 										},
 										{
 											"_type": "LabelView",
@@ -5990,7 +5990,7 @@
 											"top": 2731,
 											"width": 239.96435546875,
 											"height": 11,
-											"text": "«create»+GraphicManager()",
+											"text": "«create»+GraphicsManager()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6008,7 +6008,7 @@
 											"top": 2744,
 											"width": 239.96435546875,
 											"height": 11,
-											"text": "«destroy»+GraphicManager()",
+											"text": "«destroy»+GraphicsManager()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -10808,7 +10808,7 @@
 											"top": 1175,
 											"width": 831,
 											"height": 16,
-											"text": "+render(graphics: GraphicManager*): void",
+											"text": "+draw(graphics: GraphicsManager*): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11405,7 +11405,7 @@
 											"top": 1498,
 											"width": 239.96435546875,
 											"height": 11,
-											"text": "GraphicManager"
+											"text": "GraphicsManager"
 										},
 										{
 											"_type": "LabelView",
@@ -11553,7 +11553,7 @@
 											"top": 1555,
 											"width": 239.96435546875,
 											"height": 11,
-											"text": "«create»+GraphicManager()",
+											"text": "«create»+GraphicsManager()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11571,7 +11571,7 @@
 											"top": 1568,
 											"width": 239.96435546875,
 											"height": 11,
-											"text": "«destroy»+GraphicManager()",
+											"text": "«destroy»+GraphicsManager()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11995,7 +11995,7 @@
 											"top": 1711,
 											"width": 215,
 											"height": 11,
-											"text": "+render()",
+											"text": "+draw()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -13480,7 +13480,7 @@
 							"_parent": {
 								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 							},
-							"name": "render"
+							"name": "draw"
 						}
 					]
 				},
@@ -14042,7 +14042,7 @@
 					"_parent": {
 						"$ref": "IoH8RzmxEE6xOc9zvj2jawAA"
 					},
-					"name": "GraphicManager",
+					"name": "GraphicsManager",
 					"stereotype": "Infraestructure",
 					"attributes": [
 						{
@@ -14092,7 +14092,7 @@
 							"_parent": {
 								"$ref": "Bpx+ok2YEUa/BXA19tWAowAA"
 							},
-							"name": "GraphicManager",
+							"name": "GraphicsManager",
 							"stereotype": "create"
 						},
 						{
@@ -14101,7 +14101,7 @@
 							"_parent": {
 								"$ref": "Bpx+ok2YEUa/BXA19tWAowAA"
 							},
-							"name": "GraphicManager",
+							"name": "GraphicsManager",
 							"stereotype": "destroy"
 						},
 						{
@@ -15437,7 +15437,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF6mPh5ir3BLI8="
 							},
-							"name": "render",
+							"name": "draw",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15446,7 +15446,7 @@
 										"$ref": "AAAAAAF6nbSdiwEVjWM="
 									},
 									"name": "graphics",
-									"type": "GraphicManager*"
+									"type": "GraphicsManager*"
 								},
 								{
 									"_type": "UMLParameter",

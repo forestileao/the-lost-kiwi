@@ -1,4 +1,5 @@
-#include "../include/EntityList.h"
+#include "../../include/Stages/EntityList.h"
+using namespace Stages;
 
 EntityList::EntityList():
 	mainList()

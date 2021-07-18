@@ -19,7 +19,8 @@ public:
 	T* getItem(int pos);
 	void push(T* item);
 	void pop(T* item);
-	
+
+	Element<T>* operator[](int i);
 };
 
 template<class T>
@@ -64,7 +65,7 @@ void List<T>::push(T* item)
 	{
 		Element<T>* temp = new Element<T>;
 		temp->setItem(item);
-		pLast->setProx(temp);
+		pLast->setNext(temp);
 		pLast = temp;
 	}
 	len++;
@@ -88,14 +89,20 @@ void List<T>::pop(T* item)
 		// Last element in the list
 	else if (temp == pLast)
 	{
-		tempBack->setProx(nullptr);
+		tempBack->setNext(nullptr);
 		pLast = tempBack;
 	} // In the middle of the list
 	else
-		tempBack->setProx(temp->getPNext());
+		tempBack->setNext(temp->getPNext());
 
 	delete temp;
 	len--;
+}
+
+template<class T>
+Element<T>* List<T>::operator[](int i)
+{
+	return this->getItem(i);
 }
 
 #endif //LIST_H

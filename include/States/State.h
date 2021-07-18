@@ -6,7 +6,7 @@
 #define STATE_H
 
 #include "../Managers/EventManager.h"
-#include "../Managers/GraphicManager.h"
+#include "../Managers/GraphicsManager.h"
 
 #include <vector>
 #include <iostream>
@@ -31,7 +31,7 @@ namespace States
 		{}
 
 		virtual void update(float dt, Managers::EventManager *pEventsManager) = 0;
-		virtual void render(Managers::GraphicManager *pGraphicsManager) = 0;
+		virtual void draw(Managers::GraphicsManager *pGraphicsManager) = 0;
 
 		void setStateMachine(StateMachine *pStateMachine);
 		StateMachine *getStateMachine();

@@ -3,6 +3,7 @@
 //
 
 #include "../../include/Entities/Enemy.h"
+using namespace Entities;
 
 Enemy::Enemy(int life):
 	Character(life)

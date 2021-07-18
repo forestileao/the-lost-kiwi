@@ -3,6 +3,7 @@
 //
 
 #include "../../include/Entities/Entity.h"
+using namespace Entities;
 
 Entity::Entity():
 	body(sf::Vector2f(20.f, 20.f))

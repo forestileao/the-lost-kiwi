@@ -3,6 +3,8 @@
 //
 
 #include "../../include/Entities/Character.h"
+using namespace Entities;
+
 Character::Character(int life) :
 	Entity(),
 	lifePoints(life)

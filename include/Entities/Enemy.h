@@ -6,17 +6,19 @@
 #define ENEMY_H
 
 #include "Character.h"
-class Enemy : public Character
+namespace Entities
 {
-private:
+	class Enemy: public Character
+	{
+	private:
 
 
-public:
-	Enemy(int life);
-	~Enemy();
+	public:
+		Enemy(int life);
+		~Enemy();
 
-	void execute();
-};
-
+		void execute();
+	};
+}
 
 #endif //ENEMY_H

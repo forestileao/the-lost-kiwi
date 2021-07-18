@@ -8,16 +8,18 @@
 #include "Entity.h"
 #include "Character.h"
 
-class Player : public Character
+namespace Entities
 {
-private:
-	bool isFirstPlayer;
-public:
-	Player(int life, bool firstPlayer = true);
-	~Player();
+	class Player: public Character
+	{
+	private:
+		bool isFirstPlayer;
+	public:
+		Player(int life, bool firstPlayer = true);
+		~Player();
 
-	void execute();
-};
-
+		void execute();
+	};
+}
 
 #endif //PLAYER_H

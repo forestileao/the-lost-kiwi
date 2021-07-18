@@ -1,3 +1,5 @@
+#pragma once
+
 #include <SFML/Graphics.hpp>
 #include <map>
 #include <vector>
@@ -5,17 +7,15 @@
 namespace Managers
 {
 	typedef sf::Rect<int> spriteRect;
-
 	typedef int uniqueId;
 
-	class GraphicManager{
+	class GraphicsManager
+	{
 
 	private:
 		std::map<const char*, uniqueId> loadedTextures;
 		sf::RenderWindow window;
 		const int screenWidth, screenHeight;
-
-		void createWindow(int screenWidth, int screenHeight, const char* windowName);
 
 		std::vector<sf::Texture*> textures;
 		std::vector<sf::Sprite*> sprites;
@@ -25,8 +25,8 @@ namespace Managers
 		uniqueId backgroundSprite;
 
 	public:
-		GraphicManager(int screenWidth = 800, int screenHeight = 600, const char* windowTitle = "Some Game");
-		~GraphicManager();
+		GraphicsManager(int screenWidth = 800, int screenHeight = 600, const char* windowTitle = "Some Game");
+		~GraphicsManager();
 
 		sf::RenderWindow* getWindowPointer();
 
@@ -50,6 +50,6 @@ namespace Managers
 
 		void setBackground(uniqueId sprite);
 
-		void render();
+		void draw();
 	};
 }

@@ -3,6 +3,7 @@
 //
 
 #include "../../include/Entities/Player.h"
+using namespace Entities;
 
 Player::Player(int life, bool firstPlayer):
 	Character(life),

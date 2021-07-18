@@ -3,22 +3,26 @@
 
 #include <SFML/Graphics.hpp>
 
-class Entity
+namespace Entities
 {
-protected:
-	sf::RectangleShape body;
-	sf::RenderWindow* window;
+	class Entity
+	{
+	protected:
+		sf::RectangleShape body;
+		sf::RenderWindow *window;
 
-public:
-	Entity();
-	virtual ~Entity();
+	public:
+		Entity();
+		virtual ~Entity();
 
-	void setWindow(sf::RenderWindow* window) { this->window = window; }
-	void draw() { window->draw(body); }
+		void setWindow(sf::RenderWindow *window)
+		{ this->window = window; }
+		void draw()
+		{ window->draw(body); }
 
-	// Pure virtual function to execute entity action (if it exists)
-	virtual void execute() = 0;
-};
-
+		// Pure virtual function to execute entity action (if it exists)
+		virtual void execute() = 0;
+	};
+}
 
 #endif //ENTITY_H

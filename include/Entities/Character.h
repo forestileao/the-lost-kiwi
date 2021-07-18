@@ -7,19 +7,21 @@
 
 
 #include "Entity.h"
-class Character : public Entity
+namespace Entities
 {
-protected:
-	int lifePoints;
-public:
-	Character(int life);
-	virtual ~Character();
-	virtual void execute() = 0;
+	class Character: public Entity
+	{
+	protected:
+		int lifePoints;
+	public:
+		Character(int life);
+		virtual ~Character();
+		virtual void execute() = 0;
 
-	bool isAlive();
-	void setLife(int life);
-	void addLifePoints(int points);
-};
-
+		bool isAlive();
+		void setLife(int life);
+		void addLifePoints(int points);
+	};
+}
 
 #endif //CHARACTER_H
