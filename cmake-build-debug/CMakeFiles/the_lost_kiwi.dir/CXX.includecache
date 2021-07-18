@@ -6,21 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Character.h
-Entity.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h
-SFML/Graphics.hpp
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+SFML/Graphics/RenderWindow.hpp
+-
+SFML/Window/Keyboard.hpp
 -
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Player.h
-Entity.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entity.h
-Character.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Character.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Player.cpp
-../include/Player.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Player.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
+../Managers/EventManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+../Managers/GraphicManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
+vector
+-
+iostream
+-
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
+State.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/StateMachine.cpp
+../../include/States/StateMachine.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
 

@@ -5,15 +5,23 @@
 #ifndef STATE_H
 #define STATE_H
 
+#include "../Managers/EventManager.h"
+#include "../Managers/GraphicManager.h"
+
 #include <vector>
 #include <iostream>
 using std::string;
 
-class StateMachine;
 namespace States
 {
+	class StateMachine;
 	class State
 	{
+	protected:
+		// Pointer to the State Machine that it belongs
+		StateMachine* pStateMachine;
+
+	public:
 		State(StateMachine *pStateMachine = nullptr);
 		virtual ~State();
 

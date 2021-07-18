@@ -1,7 +1,7 @@
 #ifndef ENTITYLIST_H
 #define ENTITYLIST_H
 
-#include "List.h"
+#include "List/List.h"
 #include "Entities/Entity.h"
 
 class EntityList

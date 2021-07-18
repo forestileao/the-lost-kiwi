@@ -19,6 +19,7 @@ public:
 	T* getItem(int pos);
 	void push(T* item);
 	void pop(T* item);
+	
 };
 
 template<class T>

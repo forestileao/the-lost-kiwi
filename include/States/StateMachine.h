@@ -5,30 +5,30 @@
 #ifndef STATEMACHINE_H
 #define STATEMACHINE_H
 
-
 #include "State.h"
+
 namespace States
 {
-class StateMachine
-{
+	class StateMachine
+	{
 
-protected:
-	std::vector<State*> states;
-	string currentState;
+	protected:
+		std::map<string,State*> states;
+		string currentState;
 
-public:
-	StateMachine();
-	virtual ~StateMachine();
+	public:
+		StateMachine();
+		virtual ~StateMachine();
 
-	void addState(State* state);
-	void changeState(string nextStateID, void* arg);
+		void addState(State* state, string stateName);
+		void changeState(string nextStateID, void* arg);
 
-	void update(float dt, Managers::Events* pEventsManager);
-	void render(Managers::Graphics* pGraphicsManager);
+		void update(float dt, Managers::EventManager* pEventsManager);
+		void render(Managers::GraphicManager* pGraphicsManager);
 
-	const string getCurrentState() const;
+		const string getCurrentState() const;
 
-	void setCurrentState(const string state);
-};
+		void setCurrentState(const string state);
+	};
 }
 #endif //STATEMACHINE_H

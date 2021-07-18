@@ -84,9 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Element.h">
-			<Option target="the_lost_kiwi"/>
-		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -105,7 +102,10 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List.h">
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h">

@@ -5,12 +5,12 @@
 #ifndef EVENTMANAGER_H
 #define EVENTMANAGER_H
 
-#include <SFML/Graphics/RenderWindow.hpp>
-#include <SFML/Window/Keyboard.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 
 namespace Managers
 {
-	class Events
+	class EventManager
 	{
 
 	public: typedef sf::Keyboard::Key keyCode;
@@ -25,12 +25,15 @@ namespace Managers
 
 		bool closeEvent; // Marks if the used tried to close the window
 
+		void initKeysDown();
+		void resetLoopKeys();
+
 	public:
-		Events(sf::RenderWindow* window);
-		Events();
+		EventManager(sf::RenderWindow* window);
+		EventManager();
 
 		// Destructor
-		~Events();
+		~EventManager();
 
 		/* Basic methods */
 		void setWindow(sf::RenderWindow* window);
@@ -42,7 +45,7 @@ namespace Managers
 		const bool keyDown(const keyCode key) const; // Searches for a down key in list
 
 		const std::string getStringInput();
-		const bool isWindowCLosed() const;
+		const bool isWindowClosing() const;
 	};
 }
 

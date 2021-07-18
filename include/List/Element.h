@@ -11,7 +11,7 @@ public:
 	Element();
 	~Element();
 
-	void setProx(Element<T>* pNext) { this->pNext = pNext; }
+	void setNext(Element<T>* pNext) { this->pNext = pNext; }
 	void setItem(T* item) { this->item = item; }
 	Element<T>* getPNext() { return pNext; }
 	T* getItem() { return item; }
