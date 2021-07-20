@@ -9,19 +9,27 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
-#include "Player.h"
-#include "Enemy.h"
-#include "EntityList.h"
-#include "Stage.h"
+#include "Entities/Player.h"
+#include "Entities/Enemy.h"
+#include "Stages/EntityList.h"
+#include "Stages/Stage.h"
+#include "States/StateMachine.h"
+
+#define WINDOW_HEIGHT   480
+#define WINDOW_WIDTH    640
 
 class Game
 {
 private:
+	Managers::GraphicManager* graphicManager;
+	Managers::EventManager* eventManager;
+	States::StateMachine* stateMachine;
+
 	sf::RenderWindow window;
-	Player* player1;
-	Player* player2;
-	EntityList* entityList;
-	Stage* stage1;
+
+	// private Functions
+	void update(float dt);
+	void draw();
 
 public:
 	// Constructors / Destructors
@@ -29,8 +37,6 @@ public:
 	~Game();
 
 	// Functions
-	void update();
-	void draw();
 	void execute();
 };
 

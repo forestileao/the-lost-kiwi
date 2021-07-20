@@ -10808,7 +10808,7 @@
 											"top": 1175,
 											"width": 831,
 											"height": 16,
-											"text": "+render(graphics: GraphicManager*): void",
+											"text": "+draw(graphics: GraphicManager*): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11995,7 +11995,7 @@
 											"top": 1711,
 											"width": 215,
 											"height": 11,
-											"text": "+render()",
+											"text": "+draw()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -13480,7 +13480,7 @@
 							"_parent": {
 								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 							},
-							"name": "render"
+							"name": "draw"
 						}
 					]
 				},
@@ -15437,7 +15437,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF6mPh5ir3BLI8="
 							},
-							"name": "render",
+							"name": "draw",
 							"parameters": [
 								{
 									"_type": "UMLParameter",

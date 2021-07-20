@@ -3,21 +3,16 @@
 //
 
 #include "../include/Game.h"
-#include "iostream"
+#include "../include/States/GameStateMachine.h"
 
-Game::Game():
-	window(sf::VideoMode(800, 600), "The Lost Kiwi", sf::Style::Close | sf::Style::Titlebar)
+Game::Game()
 {
-	window.setFramerateLimit(60);
+	graphicManager = new Managers::GraphicManager(WINDOW_WIDTH, WINDOW_HEIGHT, "The Lost Kiwi");
 
-	player1 = new Player(10);
-	player1->setWindow(&window);
-	// second player
-	player2 = new Player(10, false);
-	player2->setWindow(&window);
+	eventManager = new Managers::EventManager(graphicManager->getWindowPointer());
+	graphicManager->loadFont("../assets/fonts/seagram-tfb.ttf");
+	stateMachine = new GameStateMachine(graphicManager);
 
-	stage1 = new Stage(&window, player1, player2);
-	entityList = stage1->getEntityList();
 
 
 	execute();
@@ -25,50 +20,38 @@ Game::Game():
 
 Game::~Game()
 {
- 	delete player1;
- 	delete stage1;
+ 	delete graphicManager;
+ 	delete eventManager;
+ 	delete stateMachine;
 }
 
-void Game::update()
+void Game::update(float dt)
 {
-	player1->execute();
-	player2->execute();
+	eventManager->pollAll();
+
+	if (eventManager->isWindowClosing())
+		graphicManager->closeWindow();
+
+	stateMachine->update(dt, eventManager);
 }
 
 void Game::draw()
 {
-	for (int i = 0; i < entityList->mainList.getLen(); i++)
-	{
-		Entity* temp = entityList->mainList.getItem(i);
-		temp->draw();
-	}
+	stateMachine->draw(graphicManager);
+	graphicManager->draw();
 }
 
 void Game::execute()
 {
-	// Game loop
-	while(window.isOpen())
+	sf::Clock clock;
+	float dt;
+
+	while(graphicManager->isWindowOpen())
 	{
-		sf::Event event;
-		// Event Polling: verifies every time if it needs to start an event
-		while (window.pollEvent(event))
-		{
-			switch (event.type)
-			{
-			case sf::Event::Closed:
-				window.close();
-				break;
-			}
-		}
+		dt = clock.getElapsedTime().asSeconds();
+		clock.restart();
 
-		// Updates entities positions
-		update();
-
-		window.clear(sf::Color(0x282A36ff)); // clear old frame
-
-		// Draw all entities
+		update(dt);
 		draw();
-
-		window.display(); // display the drawing changes
 	}
 }
