@@ -14,7 +14,7 @@ namespace Stages
 	private:
 		enum Stages
 		{
-			Graveyard,
+			Hall,
 			Castle
 		};
 
@@ -40,7 +40,7 @@ namespace Stages
 		
 		//Stages::PhysicMachine *getPhysics();
 
-		Managers::GraphicManager *getGraphicsManager();
+		Managers::GraphicManager *getGraphicManager();
 
 		void update(float dt, Managers::EventManager *pEvents);
 		// Draws all entities

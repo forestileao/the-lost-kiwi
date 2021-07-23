@@ -25,7 +25,7 @@ namespace States
 		State(StateMachine *pStateMachine = nullptr);
 		virtual ~State();
 
-		virtual void enter(void *arg)
+		virtual void init(void *arg)
 		{}
 		virtual void exit()
 		{}

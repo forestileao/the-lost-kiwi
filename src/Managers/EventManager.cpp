@@ -71,17 +71,17 @@ void EventManager::pollAll()
 	}
 }
 
-const bool EventManager::keyDown(const keyCode key)const
+const bool EventManager::isKeyDown(const keyCode key)const
 {
 	return keysDown[key];
 }
 
-const bool EventManager::keyPressed(const keyCode key)const
+const bool EventManager::isKeyPressed(const keyCode key)const
 {
 	return keysPressed[key];
 }
 
-const bool EventManager::keyReleased(const keyCode key)const
+const bool EventManager::isKeyReleased(const keyCode key)const
 {
 	return keysReleased[key];
 }

@@ -12,7 +12,7 @@ PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManag
 	pStage = new Stages::Stage(pGraphicsManager);
 	scoreText = pGraphicsManager->createText(0, "Score: 0", 20);
 	pGraphicsManager->setTextPosition(scoreText, 255, 20);
-	pGraphicsManager->setTextColor(scoreText, 255, 255, 0, 255);
+	pGraphicsManager->setTextColor(scoreText, 0xffff00ff);
 }
 
 PlayState::~PlayState()
@@ -20,7 +20,7 @@ PlayState::~PlayState()
 	delete pStage;
 }
 
-void PlayState::enter(void* arg)
+void PlayState::init(void* arg)
 {
 	printf("Entrando no jogo\n");
 	if(arg)

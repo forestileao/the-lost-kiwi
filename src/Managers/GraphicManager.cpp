@@ -174,10 +174,10 @@ const uniqueId GraphicManager::createText(uniqueId baseFont, std::string text, i
 	return texts.size()-1;
 }
 
-void GraphicManager::setTextColor(uniqueId text, int red, int green, int blue, int alpha)
+void GraphicManager::setTextColor(uniqueId text, const unsigned int hexColor)
 {
 
-	texts[text]->setFillColor(sf::Color(red, green, blue, alpha));
+	texts[text]->setFillColor(sf::Color(hexColor));
 }
 
 void GraphicManager::setString(uniqueId text, std::string newText)

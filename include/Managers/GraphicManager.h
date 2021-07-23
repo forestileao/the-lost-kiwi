@@ -44,7 +44,7 @@ namespace Managers
 		const uniqueId loadFont(const char* file);
 		const uniqueId createText(uniqueId baseFont, std::string text, int size);
 		void setTextPosition(uniqueId text, float x, float y);
-		void setTextColor(uniqueId text, int red, int green, int blue, int alpha);
+		void setTextColor(uniqueId text, const unsigned int hexColor=0xffffffff);
 		void setString(uniqueId text, std::string newText);
 		void drawText(uniqueId text);
 

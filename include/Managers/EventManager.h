@@ -40,9 +40,9 @@ namespace Managers
 		void pollAll(); // Process all events
 
 		/* Functions to search for keys interaction */
-		const bool keyPressed(const keyCode key) const; // Searches for a pressed key in list
-		const bool keyReleased(const keyCode key) const;// Searches for a released keu int list
-		const bool keyDown(const keyCode key) const; // Searches for a down key in list
+		const bool isKeyPressed(const keyCode key) const; // Searches for a pressed key in list
+		const bool isKeyReleased(const keyCode key) const;// Searches for a released keu int list
+		const bool isKeyDown(const keyCode key) const; // Searches for a down key in list
 
 		const std::string getStringInput();
 		const bool isWindowClosing() const;

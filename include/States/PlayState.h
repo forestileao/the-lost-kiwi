@@ -21,11 +21,11 @@ public:
 	PlayState(States::StateMachine* pStateMachine = NULL, Managers::GraphicManager* pGraphicsManager = NULL);
 	~PlayState();
 
-	virtual void update(float dt, Managers::EventManager* eventManager);
-	virtual void draw(Managers::GraphicManager* graphicsManager);
+	void update(float dt, Managers::EventManager* eventManager);
+	void draw(Managers::GraphicManager* graphicsManager);
 
-	virtual void enter(void* arg);
-	virtual void exit();
+	void init(void* arg);
+	void exit();
 };
 
 

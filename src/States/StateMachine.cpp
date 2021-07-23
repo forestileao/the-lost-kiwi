@@ -29,7 +29,7 @@ void StateMachine::changeState(std::string nextStateName, void* arg){
 
 	// else it sets the state
 	currentState = nextStateName;
-	states[currentState]->enter(arg);
+	states[currentState]->init(arg);
 }
 
 void StateMachine::update(float dt, Managers::EventManager* pEventsManager)

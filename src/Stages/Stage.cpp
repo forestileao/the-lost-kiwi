@@ -48,7 +48,7 @@ void Stage::removeEntity(Managers::uniqueId id)
 {
 	entities.mainList.pop(entities.mainList.getItem(id));
 }
-Managers::GraphicManager *Stage::getGraphicsManager()
+Managers::GraphicManager *Stage::getGraphicManager()
 {
 	return pGraphicsManager;
 }
