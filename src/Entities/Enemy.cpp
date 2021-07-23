@@ -18,7 +18,7 @@ Enemy::~Enemy()
 {
 	window = NULL;
 }
-void Enemy::execute()
+void Enemy::execute(float dt)
 {
 	// TODO: Implement actions here
 }

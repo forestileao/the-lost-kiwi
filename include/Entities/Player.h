@@ -7,18 +7,27 @@
 
 #include "Entity.h"
 #include "Character.h"
+#include "../States/StateMachine.h"
 
 namespace Entities
 {
 	class Player: public Character
 	{
 	private:
+		sf::Clock cronometer;
+
 		bool isFirstPlayer;
+		bool isColliding;
+		bool isTakingDamage;
+		bool isAttacking;
+		bool isWalking;
+		bool isJumping;
+		bool isIdle;
 	public:
 		Player(int life, bool firstPlayer = true);
 		~Player();
 
-		void execute();
+		void execute(float dt);
 	};
 }
 

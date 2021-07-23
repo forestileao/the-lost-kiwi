@@ -16,11 +16,12 @@ namespace Entities
 	public:
 		Character(int life);
 		virtual ~Character();
-		virtual void execute() = 0;
+		virtual void execute(float dt) = 0;
 
 		bool isAlive();
 		void setLife(int life);
 		void addLifePoints(int points);
+		void decrementLifePoints(int points);
 	};
 }
 

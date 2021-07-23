@@ -17,7 +17,7 @@ namespace Entities
 		Enemy(int life);
 		~Enemy();
 
-		void execute();
+		void execute(float dt);
 	};
 }
 

@@ -21,7 +21,7 @@ namespace Entities
 		{ window->draw(body); }
 
 		// Pure virtual function to execute entity action (if it exists)
-		virtual void execute() = 0;
+		virtual void execute(float dt) = 0;
 	};
 }
 

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/EntityList.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/Stage.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/GameStateMachine.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o"
+  "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/MainMenuState.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/PlayState.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/State.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/StateMachine.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o"

@@ -32,3 +32,7 @@ void Character::addLifePoints(int points)
 {
 	lifePoints += points;
 }
+void Character::decrementLifePoints(int points)
+{
+	lifePoints -= points;
+}

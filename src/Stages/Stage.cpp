@@ -35,7 +35,7 @@ void Stage::update(float dt, Managers::EventManager *pEvents)
 {
 	for (int i = 0; i < entities.mainList.getLen(); ++i)
 	{
-		entities.mainList.getItem(i)->execute();
+		entities.mainList.getItem(i)->execute(dt);
 	}
 }
 

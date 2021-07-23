@@ -412,6 +412,33 @@ src/States/GameStateMachine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.s
 .PHONY : src/States/GameStateMachine.cpp.s
 
+src/States/MainMenuState.o: src/States/MainMenuState.cpp.o
+
+.PHONY : src/States/MainMenuState.o
+
+# target to build an object file
+src/States/MainMenuState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o
+.PHONY : src/States/MainMenuState.cpp.o
+
+src/States/MainMenuState.i: src/States/MainMenuState.cpp.i
+
+.PHONY : src/States/MainMenuState.i
+
+# target to preprocess a source file
+src/States/MainMenuState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.i
+.PHONY : src/States/MainMenuState.cpp.i
+
+src/States/MainMenuState.s: src/States/MainMenuState.cpp.s
+
+.PHONY : src/States/MainMenuState.s
+
+# target to generate assembly for a file
+src/States/MainMenuState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.s
+.PHONY : src/States/MainMenuState.cpp.s
+
 src/States/PlayState.o: src/States/PlayState.cpp.o
 
 .PHONY : src/States/PlayState.o
@@ -559,6 +586,9 @@ help:
 	@echo "... src/States/GameStateMachine.o"
 	@echo "... src/States/GameStateMachine.i"
 	@echo "... src/States/GameStateMachine.s"
+	@echo "... src/States/MainMenuState.o"
+	@echo "... src/States/MainMenuState.i"
+	@echo "... src/States/MainMenuState.s"
 	@echo "... src/States/PlayState.o"
 	@echo "... src/States/PlayState.i"
 	@echo "... src/States/PlayState.s"
