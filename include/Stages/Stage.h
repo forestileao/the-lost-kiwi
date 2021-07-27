@@ -7,6 +7,7 @@
 #include "../Managers/GraphicManager.h"
 #include "../Managers/EventManager.h"
 
+
 namespace Stages
 {
 	class Stage
@@ -18,11 +19,17 @@ namespace Stages
 			Castle
 		};
 
-		Managers::GraphicManager *pGraphicsManager;
+		Managers::uniqueId backgroundSprite;
+		Managers::GraphicManager *pGraphicManager;
 		EntityList entities;
 		//Stages::PhysicMachine physics;
-
 		Entities::Player* p1;
+
+		int currentLevel;
+		int players;
+		int totalPlayers;
+		bool changeStage;
+		int stageScore;
 
 		void initializeElements();
 

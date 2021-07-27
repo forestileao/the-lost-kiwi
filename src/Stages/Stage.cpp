@@ -2,11 +2,14 @@
 using namespace Stages;
 
 Stage::Stage(Managers::GraphicManager *pGraphicManager):
-	entities()
+	entities(),
+	backgroundSprite(-1),
+	currentLevel(-1),
+	players(-1),
+	changeStage(false),
+	stageScore(0)
 {
-	this->pGraphicsManager = pGraphicsManager;
-	p1 = new Entities::Player(10);
-	p1->setWindow(pGraphicManager->getWindowPointer());
+	this->pGraphicManager = pGraphicManager;
 	initializeElements();
 }
 
@@ -17,6 +20,13 @@ Stage::~Stage()
 
 void Stage::initializeElements()
 {
+	//currentLevel = n;
+	totalPlayers = players;
+
+	p1 = new Entities::Player(10, this, true, pGraphicManager);
+
+	p1->setPosition(100, 100);
+	p1->setWindow(pGraphicManager->getWindowPointer());
 	addEntity(p1);
 }
 
@@ -35,7 +45,7 @@ void Stage::update(float dt, Managers::EventManager *pEvents)
 {
 	for (int i = 0; i < entities.mainList.getLen(); ++i)
 	{
-		entities.mainList.getItem(i)->execute(dt);
+		entities.mainList.getItem(i)->execute(dt, pEvents);
 	}
 }
 
@@ -50,5 +60,5 @@ void Stage::removeEntity(Managers::uniqueId id)
 }
 Managers::GraphicManager *Stage::getGraphicManager()
 {
-	return pGraphicsManager;
+	return pGraphicManager;
 }

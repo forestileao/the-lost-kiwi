@@ -3,14 +3,20 @@
 
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: ../include/Entities/Character.h
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: ../include/Entities/Entity.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: ../include/Managers/EventManager.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: ../include/Managers/GraphicManager.h
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: ../src/Entities/Character.cpp
 
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: ../include/Entities/Character.h
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: ../include/Entities/Enemy.h
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: ../include/Entities/Entity.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: ../include/Managers/EventManager.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: ../include/Managers/GraphicManager.h
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: ../src/Entities/Enemy.cpp
 
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o: ../include/Entities/Entity.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o: ../include/Managers/EventManager.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o: ../include/Managers/GraphicManager.h
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o: ../src/Entities/Entity.cpp
 
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: ../include/Entities/Character.h
@@ -47,6 +53,8 @@ CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o: ../src/Managers/
 CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: ../include/Entities/Entity.h
 CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: ../include/List/Element.h
 CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: ../include/List/List.h
+CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: ../include/Managers/EventManager.h
+CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: ../include/Managers/GraphicManager.h
 CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: ../include/Stages/EntityList.h
 CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: ../src/Stages/EntityList.cpp
 

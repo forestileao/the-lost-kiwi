@@ -20,6 +20,8 @@ MainMenuState::MainMenuState(States::StateMachine* pStateMachine, Managers::Grap
 	pGraphicManager->setTextColor(gameNameText, 0xff0000ff);
 	pGraphicManager->setTextColor(startGameText, 0xffff00ff);
 	pGraphicManager->setTextColor(quitGameText, 0xffffffff);
+
+	background = pGraphicManager->createSprite(pGraphicManager->loadTexture(MENU_BACKGROUND_FILE));
 }
 
 MainMenuState::~MainMenuState()
@@ -30,6 +32,7 @@ MainMenuState::~MainMenuState()
 void MainMenuState::init(void* arg)
 {
 	printf("Entrando no Menu\n");
+	pGraphicManager->setBackground(background);
 }
 
 void MainMenuState::exit()
@@ -50,7 +53,10 @@ void MainMenuState::update(float dt, Managers::EventManager* pEventManager)
 		pGraphicManager->setTextColor(quitGameText, 0xffffffff);
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-			((GameStateMachine*)getStateMachine())->changeState("PlayState", NULL);
+		{
+			int loadingArg = 1;
+			((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&loadingArg));
+		}
 	}
 	else if ( selected == 1)
 	{

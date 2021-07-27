@@ -37,7 +37,7 @@ namespace Managers
 
 		const uniqueId createSprite(uniqueId baseTexture);
 		void removeSprite(uniqueId sprite);
-		void setSpriteRect(uniqueId sprite, const spriteRect& rect);
+		void setSpriteRect(uniqueId sprite, spriteRect& rect);
 		void setSpritePosition(uniqueId sprite, float x, float y);
 		void drawSprite(uniqueId sprite);
 

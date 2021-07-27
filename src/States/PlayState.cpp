@@ -9,7 +9,6 @@ PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManag
 {
 	this->pGraphicManager = pGraphicsManager;
 	pStage = nullptr;
-	pStage = new Stages::Stage(pGraphicsManager);
 	scoreText = pGraphicsManager->createText(0, "Score: 0", 20);
 	pGraphicsManager->setTextPosition(scoreText, 255, 20);
 	pGraphicsManager->setTextColor(scoreText, 0xffff00ff);
@@ -28,10 +27,9 @@ void PlayState::init(void* arg)
 		if (pStage)
 			delete pStage;
 
-		printf("loading level\n");
+		std::cout << "Stage is loading...\n";
 
 		pStage = new Stages::Stage(pGraphicManager);
-		int* rArgs = (int*)(arg);
 
 		// TODO: Implement Pause State
 	}
@@ -49,19 +47,10 @@ void PlayState::exit()
 void PlayState::update(float dt, Managers::EventManager* pEventManager)
 {
 	pStage->update(dt, pEventManager);
-
 	// score = pStage->getScore();
 	std::string text = "Score: " + std::to_string(static_cast<unsigned long int>(score));
 
 	pGraphicManager->setString(scoreText, text);
-
-	// If Game Over
-	/*if(!pStage->getPlayers())
-	{
-		int finalScore = score;
-		pStateMachine->changeState("GameOverState", (void*)&finalScore);
-	}
-	 */
 }
 
 void PlayState::draw(Managers::GraphicManager* pGraphicsManager)

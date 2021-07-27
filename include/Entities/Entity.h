@@ -2,26 +2,45 @@
 #define ENTITY_H
 
 #include <SFML/Graphics.hpp>
+#include "../Managers/EventManager.h"
+#include "../Managers/GraphicManager.h"
+
+namespace Stages
+{
+	class Stage;
+}
 
 namespace Entities
 {
 	class Entity
 	{
 	protected:
-		sf::RectangleShape body;
+		sf::Sprite body;
 		sf::RenderWindow *window;
+		Stages::Stage* pStage;
+
+		bool vulnerability;
+
+		Managers::GraphicManager* pGraphicManager;
+
+		int id;
+		Managers::uniqueId textureId;
+		Managers::uniqueId spriteId;
+		Managers::spriteRect frame;
 
 	public:
-		Entity();
+		Entity(Managers::GraphicManager* pGraphicsManager = nullptr,Stages::Stage* pStage = nullptr);
 		virtual ~Entity();
 
 		void setWindow(sf::RenderWindow *window)
 		{ this->window = window; }
-		void draw()
-		{ window->draw(body); }
+		void setPosition(float x, float y)
+		{ body.setPosition(x, y);}
+
+		void draw();
 
 		// Pure virtual function to execute entity action (if it exists)
-		virtual void execute(float dt) = 0;
+		virtual void execute(float dt, Managers::EventManager* pEventManager) = 0;
 	};
 }
 

@@ -7,9 +7,12 @@
 
 #include "State.h"
 
+#define MENU_BACKGROUND_FILE "../assets/moon.png"
+
 class MainMenuState : public States::State
 {
 private:
+	Managers::uniqueId background;
 	Managers::GraphicManager* pGraphicManager;
 	Managers::uniqueId gameNameText;
 	Managers::uniqueId startGameText;

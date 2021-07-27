@@ -4,14 +4,20 @@
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Character.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Enemy.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Enemy.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Entity.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h
@@ -48,6 +54,8 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/EntityList.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
