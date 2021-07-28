@@ -35,7 +35,7 @@ Player::PlayerJumpState::~PlayerJumpState()
 void Player::PlayerJumpState::init(void* arg)
 {
 	std::cout << "PLAYER: Jumped\n";
-	//p->double_jump = (bool&&)arg;
+	//pPlayer->double_jump = (bool&&)arg;
 	p->vel.y = -p->jumpVel;
 }
 
@@ -43,7 +43,6 @@ void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventMan
 {
 	if(p)
 	{
-		// LEFT Side
 		if(pEventManager->isKeyDown(p->leftKey))
 		{
 			p->rightDirection = false;
@@ -59,21 +58,21 @@ void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventMan
 			if(p->vel.x > p->velMax)
 				p->vel.x = p->velMax;
 		}
-		p->frame = p->vel.x > 0 ? Managers::spriteRect(JUMP): Managers::spriteRect(JUMP_L);
+
+		p->frame = Managers::spriteRect((p->vel.x >= 0)?JUMP_X:JUMP_X+JUMP_SIZE_X,JUMP_Y,(p->vel.x >= 0)?JUMP_SIZE_X:JUMP_SIZE_X*(-1),JUMP_SIZE_Y);
 
 		if(p->getGrounded())
-		{//jogador atingiu o chao
-			pStateMachine->changeState(PLAYER_REST_STATE, NULL); //ESTADO PARADO
+		{
+			pStateMachine->changeState(PLAYER_REST_STATE, NULL);
 			p->vel.x = 0;
 
-			//muda o retangulo do sprite
-			p->frame = Managers::spriteRect(DEFAULT);
+			p->frame = Managers::spriteRect((p->rightDirection)?REST_R:REST_L);
 		}
 		if(p->double_jump)
-		{ //PULO DUPLO
+		{
 			if(pEventManager->isKeyPressed(p->jumpKey))
 			{
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);//chama o pulo sem possibilidade de double jump
+				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
 			}
 		}
 	}
@@ -106,20 +105,25 @@ void Player::PlayerRestState::update(float dt, Managers::EventManager* pEventMan
 			if(p->isGrounded)
 			{
 				p->setGrounded(false);
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)true);//chama o pulo com possibilidade de double jump
-				//muda o retangulo do sprite
+				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)true);
+
+				// Replaces to the jump State
 				p->frame = Managers::spriteRect(JUMP);
 			}
-			else{
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);//chama o pulo sem possibilidade de double jump
-				//muda o retangulo do sprite
+			else
+			{
+				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
 				p->frame = Managers::spriteRect(JUMP);
 			}
 		}
 
-			//ESTADO ANDANDO
 		else if(pEventManager->isKeyDown(p->rightKey) || pEventManager->isKeyDown(p->leftKey))
 			pStateMachine->changeState(PLAYER_WALK_STATE, NULL);
+
+		if (p->rightDirection)
+			p->frame = Managers::spriteRect(REST_R);
+		else
+			p->frame = Managers::spriteRect(REST_L);
 	}
 }
 
@@ -131,7 +135,7 @@ void Player::PlayerRestState::draw(Managers::GraphicManager* pGraphicManager)
 //PlayerWalkState-------------------
 Player::PlayerWalkState::PlayerWalkState(States::StateMachine* pStateMachine, Player *p):State(pStateMachine)
 {
-	this->p = p;
+	this->pPlayer = p;
 }
 
 Player::PlayerWalkState::~PlayerWalkState()
@@ -140,77 +144,75 @@ Player::PlayerWalkState::~PlayerWalkState()
 
 void Player::PlayerWalkState::update(float dt, Managers::EventManager* pEventManager)
 {
-	if(p)
+	if(pPlayer)
 	{
-		if (p->body.getPosition().y >= p->pGraphicManager->getWindowPointer()->getSize().y)
+		if (pPlayer->body.getPosition().y >= pPlayer->pGraphicManager->getWindowPointer()->getSize().y)
+			pPlayer->setGrounded(true);
+
+
+		if(pPlayer->vel.y*pPlayer->vel.y > 5.0f)
+			pPlayer->setGrounded(false);
+
+		if(pEventManager->isKeyDown(pPlayer->rightKey))
 		{
-			p->setGrounded(true);
-		}
+			pPlayer->rightDirection = true;
 
-		if(p->vel.y*p->vel.y > 5.0f)
-			p->setGrounded(false);
-		if(pEventManager->isKeyDown(p->rightKey))
-		{ //DIREITA
-			p->rightDirection = true;
-			//atualiza velocidades
-			p->vel.x += p->groundAcceleration;
-			if(p->vel.x > p->velMax)
-				p->vel.x = p->velMax;
+			pPlayer->vel.x += pPlayer->groundAcceleration;
+			if(pPlayer->vel.x > pPlayer->velMax)
+				pPlayer->vel.x = pPlayer->velMax;
 
-			//muda o retangulo do sprite
-			p->frame = (p->nRect) ? Managers::spriteRect(WALK_R1): Managers::spriteRect(WALK_R2);
+			pPlayer->frameTime += dt;
+			pPlayer->frame = Managers::spriteRect(sf::Rect<int>(WALK_X* (pPlayer->numRect), WALK_Y,WALK_SIZE_X,WALK_SIZE_Y));
 
-			p->frameTime += dt;
-			if(p->frameTime > WALK_ANIMATION_FRAME_TIME)
+			if(pPlayer->frameTime > WALK_ANIMATION_FRAME_TIME)
 			{
-				p->frameTime = 0;
-				p->nRect = !p->nRect;
+				pPlayer->frameTime = 0;
+				pPlayer->numRect = ((pPlayer->numRect)+1)%8;
 			}
 		}
 
-		if(pEventManager->isKeyDown(p->leftKey))
-		{ //ESQUERDA
-			p->rightDirection = false;
-			//atualiza velocidades
-			p->vel.x -= p->groundAcceleration;
-			if(p->vel.x < -p->velMax)
-				p->vel.x = -p->velMax;
+		if(pEventManager->isKeyDown(pPlayer->leftKey))
+		{
+			pPlayer->rightDirection = false;
+			pPlayer->vel.x -= pPlayer->groundAcceleration;
+			if(pPlayer->vel.x < -pPlayer->velMax)
+				pPlayer->vel.x = -pPlayer->velMax;
 
-			//muda o retangulo do sprite
-			p->frame = (p->nRect) ? Managers::spriteRect(WALK_L1): Managers::spriteRect(WALK_L2);
-			p->frameTime += dt;
-			if(p->frameTime > WALK_ANIMATION_FRAME_TIME)
+			pPlayer->frameTime += dt;
+			pPlayer->frame = Managers::spriteRect(sf::Rect<int>(WALK_X * (pPlayer->numRect) + WALK_SIZE_X, WALK_Y,-WALK_SIZE_X,WALK_SIZE_Y));
+
+			if(pPlayer->frameTime > WALK_ANIMATION_FRAME_TIME)
 			{
-				p->frameTime = 0;
-				p->nRect = !p->nRect;
+				pPlayer->frameTime = 0;
+				pPlayer->numRect = ((pPlayer->numRect)+1)%8;
 			}
 		}
 
-		//ESTADO PARADO
-		if(!pEventManager->isKeyDown(p->rightKey) && !pEventManager->isKeyDown(p->leftKey))
+		// Jumping State
+		if(pEventManager->isKeyPressed(pPlayer->jumpKey))
+		{
+			if(pPlayer->isGrounded)
+			{
+				pPlayer->setGrounded(false);
+				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)true);
+
+				pPlayer->frame = Managers::spriteRect(JUMP_X,JUMP_Y,(pPlayer->vel.x >= 0)?JUMP_SIZE_X:-JUMP_SIZE_X,JUMP_SIZE_Y);
+			}
+			else
+			{
+				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
+
+				//muda o retangulo do sprite
+				pPlayer->frame = Managers::spriteRect(JUMP_X,JUMP_Y,(pPlayer->vel.x >= 0)?JUMP_SIZE_X:-JUMP_SIZE_X,JUMP_SIZE_Y);
+			}
+		}
+
+		// Resting State
+		if(!pEventManager->isKeyDown(pPlayer->rightKey) && !pEventManager->isKeyDown(pPlayer->leftKey))
 		{
 			pStateMachine->changeState(PLAYER_REST_STATE, NULL);
-			p->vel.x = 0;
-			p->frame = Managers::spriteRect(DEFAULT);
-		}
-
-		//ESTADO PULO
-		if(pEventManager->isKeyPressed(p->jumpKey))
-		{
-			if(p->isGrounded)
-			{
-				p->setGrounded(false);
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)true);//chama o pulo com possibilidade de pulo duplo
-
-				//muda o retangulo do sprite
-				p->frame = (p->vel.x > 0) ? Managers::spriteRect(JUMP): Managers::spriteRect(JUMP_L);
-			}
-			else{
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);//chama o pulo sem possibilidade de pulo duplo
-
-				//muda o retangulo do sprite
-				p->frame = (p->vel.x > 0) ? Managers::spriteRect(JUMP): Managers::spriteRect(JUMP_L);
-			}
+			pPlayer->vel.x = 0;
+			pPlayer->frame = Managers::spriteRect((pPlayer->rightDirection)?REST_R:REST_L);
 		}
 	}
 }
@@ -226,11 +228,12 @@ void Player::PlayerWalkState::draw(Managers::GraphicManager* pGraphicManager)
 
 Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::GraphicManager* pGraphicManager):
 	Character(life, pGraphicManager, pStage),
-	rightDirection(),
+	rightDirection(true),
 	vulnerability_timer(),
 	attackTimer(),
 	double_jump(),
-	frameTime()
+	frameTime(),
+	numRect(0)
 {
 	vel.x = 0;
 	vel.y = 0;
@@ -240,7 +243,7 @@ Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::Grap
 	this->pGraphicManager = pGraphicManager;
 	this->pStage = pStage;
 
-	frame = Managers::spriteRect(DEFAULT);
+	frame = Managers::spriteRect(REST_R);
 	textureId = pGraphicManager->loadTexture(firstPlayer ? PLAYER1_TEXTURE_FILE : PLAYER2_TEXTURE_FILE);
 	spriteId = pGraphicManager->createSprite(textureId);
 	pGraphicManager->setSpriteRect(spriteId, frame);

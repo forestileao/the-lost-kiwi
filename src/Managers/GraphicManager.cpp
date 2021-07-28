@@ -10,6 +10,8 @@ GraphicManager::GraphicManager(int screenWidth, int screenHeight, const char* wi
 	screenWidth(screenWidth), screenHeight(screenHeight)
 	{
 	window.create(sf::VideoMode(screenWidth, screenHeight), windowTitle);
+	window.setFramerateLimit(60);
+
 	backgroundSprite = -1;
 
 }
@@ -134,9 +136,6 @@ void GraphicManager::drawSprite(uniqueId sprite)
 		printf("ERROR: sprite id out of range\n");
 	else
 		window.draw(*sprites[sprite]);
-
-	std::cout << "posição sprite:" << sprites[sprite]->getPosition().x
-	<< " " << sprites[sprite]->getPosition().y << '\n';
 }
 
 void GraphicManager::setBackground(uniqueId sprite)

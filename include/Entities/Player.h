@@ -14,18 +14,30 @@
 //PlayerFireStateName,
 #define PLAYER_WALK_STATE "PlayerWalkState"
 
-#define DEFAULT   0, 0,  30, 45
-#define JUMP     64, 0,  16, 20
-#define JUMP_L   80, 0, -16, 20
-#define WALK_R1 144, 0,  16, 20
-#define WALK_R2 160, 0,  16, 20
+#define REST_R   0, 0,  21, 43
+#define REST_L   21, 0,  -21, 43
+
+#define JUMP     0, 133,  26, 44
+
+#define JUMP_X 0
+#define JUMP_Y 133
+#define JUMP_SIZE_X 26
+#define JUMP_SIZE_Y 44
+
+// Jumping Pixels
+#define WALK_X 36
+#define WALK_Y 44
+#define WALK_SIZE_X 33
+#define WALK_SIZE_Y 44
+
+
 #define WALK_L1 160, 0, -16, 20
 #define WALK_L2 176, 0, -16, 20
 
 #define WALK_ANIMATION_FRAME_TIME 0.1
 
-#define PLAYER1_TEXTURE_FILE   "../assets/zombie-boy.png"
-#define PLAYER2_TEXTURE_FILE  "../assets/zombie-boy.png"
+#define PLAYER1_TEXTURE_FILE   "../assets/tileset_player.png"
+#define PLAYER2_TEXTURE_FILE  "../assets/tileset_player.png"
 
 #define VULNERABILITY_MAX 0.5f
 
@@ -77,12 +89,12 @@ namespace Entities
 		class PlayerWalkState: public States::State
 		{
 		private:
-			Player *p;
+			Player *pPlayer;
 		public:
 			PlayerWalkState(States::StateMachine* pStateMachine = NULL, Player *p = NULL);
 			virtual ~PlayerWalkState();
 
-			void init(void* arg){std::cout << "WALK\n"; p->nRect = false; p->frameTime = 0.0f;}
+			void init(void* arg){std::cout << "WALK\n"; pPlayer->numRect = false; pPlayer->frameTime = 0.0f;}
 
 			void update(float dt, Managers::EventManager* pEventManager);
 			void draw(Managers::GraphicManager* pGraphicManager);
@@ -105,7 +117,7 @@ namespace Entities
 
 		bool rightDirection;
 		bool double_jump;
-		bool nRect;
+		int numRect;
 
 		Stages::Stage* pStage;
 
