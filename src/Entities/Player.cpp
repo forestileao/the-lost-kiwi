@@ -5,7 +5,7 @@
 #include "../../include/Entities/Player.h"
 using namespace Entities;
 
-//PlayerStateMachine----------------
+/*********************************** Player State Manegement Start *****************************/
 Player::PlayerStateMachine::PlayerStateMachine(Player *p)
 {
 	States::State* state = static_cast<States::State*>(new PlayerJumpState(static_cast<States::StateMachine*>(this), p));
@@ -21,7 +21,6 @@ Player::PlayerStateMachine::~PlayerStateMachine()
 {
 }
 
-//PlayerJumpState-------------------
 Player::PlayerJumpState::PlayerJumpState(States::StateMachine* pStateMachine, Player *p)
 :State(pStateMachine)
 {
@@ -46,7 +45,7 @@ void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventMan
 		if(pEventManager->isKeyDown(p->leftKey))
 		{
 			p->isLookingToTheRight = false;
-			p->vel.x -= p->airAcceleration;
+			p->vel.x -= p->JumpingAcceleration;
 			if(p->vel.x < -p->maxVel)
 				p->vel.x = -p->maxVel;
 		}
@@ -54,7 +53,7 @@ void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventMan
 		if(pEventManager->isKeyDown(p->rightKey))
 		{
 			p->isLookingToTheRight = true;
-			p->vel.x += p->airAcceleration;
+			p->vel.x += p->JumpingAcceleration;
 			if(p->vel.x > p->maxVel)
 				p->vel.x = p->maxVel;
 		}
@@ -217,6 +216,9 @@ void Player::PlayerWalkState::update(float dt, Managers::EventManager* pEventMan
 void Player::PlayerWalkState::draw(Managers::GraphicManager* pGraphicManager)
 {
 }
+
+/*********************************** Player State Manegement End *****************************/
+
 /********************************************************************************************
  *
  *  Player Development
