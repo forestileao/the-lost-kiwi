@@ -15,7 +15,7 @@ namespace Entities
 	class Entity
 	{
 	protected:
-		sf::Sprite body;
+		sf::RectangleShape body;
 		sf::RenderWindow *window;
 		Stages::Stage* pStage;
 

@@ -34,7 +34,7 @@ Player::PlayerJumpState::~PlayerJumpState()
 
 void Player::PlayerJumpState::init(void* arg)
 {
-	std::cout << "PLAYER: Jumped\n";
+	std::cout << "PLAYER: JUMPED\n";
 	//pPlayer->double_jump = (bool&&)arg;
 	p->vel.y = -p->jumpVel;
 }
@@ -45,18 +45,18 @@ void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventMan
 	{
 		if(pEventManager->isKeyDown(p->leftKey))
 		{
-			p->rightDirection = false;
+			p->isLookingToTheRight = false;
 			p->vel.x -= p->airAcceleration;
-			if(p->vel.x < -p->velMax)
-				p->vel.x = -p->velMax;
+			if(p->vel.x < -p->maxVel)
+				p->vel.x = -p->maxVel;
 		}
 
 		if(pEventManager->isKeyDown(p->rightKey))
 		{
-			p->rightDirection = true;
+			p->isLookingToTheRight = true;
 			p->vel.x += p->airAcceleration;
-			if(p->vel.x > p->velMax)
-				p->vel.x = p->velMax;
+			if(p->vel.x > p->maxVel)
+				p->vel.x = p->maxVel;
 		}
 
 		p->frame = Managers::spriteRect((p->vel.x >= 0)?JUMP_X:JUMP_X+JUMP_SIZE_X,JUMP_Y,(p->vel.x >= 0)?JUMP_SIZE_X:JUMP_SIZE_X*(-1),JUMP_SIZE_Y);
@@ -66,7 +66,7 @@ void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventMan
 			pStateMachine->changeState(PLAYER_REST_STATE, NULL);
 			p->vel.x = 0;
 
-			p->frame = Managers::spriteRect((p->rightDirection)?REST_R:REST_L);
+			p->frame = Managers::spriteRect((p->isLookingToTheRight) ? REST_R : REST_L);
 		}
 		if(p->double_jump)
 		{
@@ -83,7 +83,6 @@ void Player::PlayerJumpState::draw(Managers::GraphicManager* pGraphicManager)
 
 }
 
-//PlayerRestState-------------------
 Player::PlayerRestState::PlayerRestState(States::StateMachine* pStateMachine, Player *p):State(pStateMachine)
 {
 	this->p = p;
@@ -120,7 +119,7 @@ void Player::PlayerRestState::update(float dt, Managers::EventManager* pEventMan
 		else if(pEventManager->isKeyDown(p->rightKey) || pEventManager->isKeyDown(p->leftKey))
 			pStateMachine->changeState(PLAYER_WALK_STATE, NULL);
 
-		if (p->rightDirection)
+		if (p->isLookingToTheRight)
 			p->frame = Managers::spriteRect(REST_R);
 		else
 			p->frame = Managers::spriteRect(REST_L);
@@ -132,7 +131,6 @@ void Player::PlayerRestState::draw(Managers::GraphicManager* pGraphicManager)
 
 }
 
-//PlayerWalkState-------------------
 Player::PlayerWalkState::PlayerWalkState(States::StateMachine* pStateMachine, Player *p):State(pStateMachine)
 {
 	this->pPlayer = p;
@@ -155,11 +153,11 @@ void Player::PlayerWalkState::update(float dt, Managers::EventManager* pEventMan
 
 		if(pEventManager->isKeyDown(pPlayer->rightKey))
 		{
-			pPlayer->rightDirection = true;
+			pPlayer->isLookingToTheRight = true;
 
-			pPlayer->vel.x += pPlayer->groundAcceleration;
-			if(pPlayer->vel.x > pPlayer->velMax)
-				pPlayer->vel.x = pPlayer->velMax;
+			pPlayer->vel.x += pPlayer->acceleration;
+			if(pPlayer->vel.x > pPlayer->maxVel)
+				pPlayer->vel.x = pPlayer->maxVel;
 
 			pPlayer->frameTime += dt;
 			pPlayer->frame = Managers::spriteRect(sf::Rect<int>(WALK_X* (pPlayer->numRect), WALK_Y,WALK_SIZE_X,WALK_SIZE_Y));
@@ -173,10 +171,10 @@ void Player::PlayerWalkState::update(float dt, Managers::EventManager* pEventMan
 
 		if(pEventManager->isKeyDown(pPlayer->leftKey))
 		{
-			pPlayer->rightDirection = false;
-			pPlayer->vel.x -= pPlayer->groundAcceleration;
-			if(pPlayer->vel.x < -pPlayer->velMax)
-				pPlayer->vel.x = -pPlayer->velMax;
+			pPlayer->isLookingToTheRight = false;
+			pPlayer->vel.x -= pPlayer->acceleration;
+			if(pPlayer->vel.x < -pPlayer->maxVel)
+				pPlayer->vel.x = -pPlayer->maxVel;
 
 			pPlayer->frameTime += dt;
 			pPlayer->frame = Managers::spriteRect(sf::Rect<int>(WALK_X * (pPlayer->numRect) + WALK_SIZE_X, WALK_Y,-WALK_SIZE_X,WALK_SIZE_Y));
@@ -202,7 +200,6 @@ void Player::PlayerWalkState::update(float dt, Managers::EventManager* pEventMan
 			{
 				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
 
-				//muda o retangulo do sprite
 				pPlayer->frame = Managers::spriteRect(JUMP_X,JUMP_Y,(pPlayer->vel.x >= 0)?JUMP_SIZE_X:-JUMP_SIZE_X,JUMP_SIZE_Y);
 			}
 		}
@@ -212,7 +209,7 @@ void Player::PlayerWalkState::update(float dt, Managers::EventManager* pEventMan
 		{
 			pStateMachine->changeState(PLAYER_REST_STATE, NULL);
 			pPlayer->vel.x = 0;
-			pPlayer->frame = Managers::spriteRect((pPlayer->rightDirection)?REST_R:REST_L);
+			pPlayer->frame = Managers::spriteRect((pPlayer->isLookingToTheRight) ? REST_R : REST_L);
 		}
 	}
 }
@@ -228,22 +225,24 @@ void Player::PlayerWalkState::draw(Managers::GraphicManager* pGraphicManager)
 
 Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::GraphicManager* pGraphicManager):
 	Character(life, pGraphicManager, pStage),
-	rightDirection(true),
-	vulnerability_timer(),
+	isLookingToTheRight(true),
+	vulnerabilityTimer(),
 	attackTimer(),
 	double_jump(),
 	frameTime(),
 	numRect(0)
 {
+	this->pGraphicManager = pGraphicManager;
+	this->pStage = pStage;
+
 	vel.x = 0;
 	vel.y = 0;
 	setWindow(pGraphicManager->getWindowPointer());
 	setControls(firstPlayer);
 
-	this->pGraphicManager = pGraphicManager;
-	this->pStage = pStage;
-
+	// Set RESTING as the first sprite
 	frame = Managers::spriteRect(REST_R);
+
 	textureId = pGraphicManager->loadTexture(firstPlayer ? PLAYER1_TEXTURE_FILE : PLAYER2_TEXTURE_FILE);
 	spriteId = pGraphicManager->createSprite(textureId);
 	pGraphicManager->setSpriteRect(spriteId, frame);
@@ -252,13 +251,14 @@ Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::Grap
 
 Player::~Player()
 {
+	pGraphicManager = nullptr;
+	pStage = nullptr;
 	window = nullptr;
 	delete stateMachine;
 }
 
 void Player::execute(float dt, Managers::EventManager* pEventManager)
 {
-
 	if(stateMachine)
 		stateMachine->update(dt, pEventManager);
 
@@ -269,12 +269,12 @@ void Player::execute(float dt, Managers::EventManager* pEventManager)
 
 	if(!vulnerability)
 	{
-		if(vulnerability_timer > VULNERABILITY_MAX)
+		if(vulnerabilityTimer > VULNERABILITY_MAX_TIME)
 		{
 			vulnerability = true;
-			vulnerability_timer = 0;
+			vulnerabilityTimer = 0;
 		}
-		vulnerability_timer += dt;
+		vulnerabilityTimer += dt;
 	}
 
 	attackTimer += dt;
@@ -286,14 +286,14 @@ void Player::setControls(bool isPlayerOne)
 		leftKey = Managers::EventManager::keyCode::A;
 		rightKey = Managers::EventManager::keyCode::D;
 		jumpKey = Managers::EventManager::keyCode::W;
-		attackKey = Managers::EventManager::keyCode::G;
+		attackKey = Managers::EventManager::keyCode::Space;
 	}
 	else
 	{
 		leftKey = Managers::EventManager::keyCode::Left;
 		rightKey = Managers::EventManager::keyCode::Right;
 		jumpKey = Managers::EventManager::keyCode::Up;
-		attackKey = Managers::EventManager::keyCode::RShift;
+		attackKey = Managers::EventManager::keyCode::Num0;
 	}
 }
 /*

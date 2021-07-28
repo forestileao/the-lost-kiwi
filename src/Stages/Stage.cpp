@@ -23,9 +23,9 @@ void Stage::initializeElements()
 	//currentLevel = n;
 	totalPlayers = players;
 
-	p1 = new Entities::Player(10, this, true, pGraphicManager);
+	p1 = new Entities::Player(10, this, false, pGraphicManager);
 
-	p1->setPosition(100, 100);
+	p1->setPosition(100, 400);
 	p1->setWindow(pGraphicManager->getWindowPointer());
 	addEntity(p1);
 }

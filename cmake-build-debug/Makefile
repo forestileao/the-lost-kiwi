@@ -250,6 +250,33 @@ src/Entities/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.s
 .PHONY : src/Entities/Player.cpp.s
 
+src/Entities/Projectile.o: src/Entities/Projectile.cpp.o
+
+.PHONY : src/Entities/Projectile.o
+
+# target to build an object file
+src/Entities/Projectile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o
+.PHONY : src/Entities/Projectile.cpp.o
+
+src/Entities/Projectile.i: src/Entities/Projectile.cpp.i
+
+.PHONY : src/Entities/Projectile.i
+
+# target to preprocess a source file
+src/Entities/Projectile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.i
+.PHONY : src/Entities/Projectile.cpp.i
+
+src/Entities/Projectile.s: src/Entities/Projectile.cpp.s
+
+.PHONY : src/Entities/Projectile.s
+
+# target to generate assembly for a file
+src/Entities/Projectile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.s
+.PHONY : src/Entities/Projectile.cpp.s
+
 src/Game.o: src/Game.cpp.o
 
 .PHONY : src/Game.o
@@ -568,6 +595,9 @@ help:
 	@echo "... src/Entities/Player.o"
 	@echo "... src/Entities/Player.i"
 	@echo "... src/Entities/Player.s"
+	@echo "... src/Entities/Projectile.o"
+	@echo "... src/Entities/Projectile.i"
+	@echo "... src/Entities/Projectile.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"

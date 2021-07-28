@@ -30,16 +30,12 @@
 #define WALK_SIZE_X 33
 #define WALK_SIZE_Y 44
 
-
-#define WALK_L1 160, 0, -16, 20
-#define WALK_L2 176, 0, -16, 20
-
 #define WALK_ANIMATION_FRAME_TIME 0.1
 
 #define PLAYER1_TEXTURE_FILE   "../assets/tileset_player.png"
-#define PLAYER2_TEXTURE_FILE  "../assets/tileset_player.png"
+#define PLAYER2_TEXTURE_FILE  "../assets/tileset_player2.png"
 
-#define VULNERABILITY_MAX 0.5f
+#define VULNERABILITY_MAX_TIME 0.5f
 
 namespace Stages
 {
@@ -101,9 +97,9 @@ namespace Entities
 		};
 
 	private:
-		const float groundAcceleration = 9;
+		const float acceleration = 9;
 		const float airAcceleration = 0.5;
-		const float velMax = 100;
+		const float maxVel = 100;
 		const float jumpVel = 300;
 
 		States::StateMachine *stateMachine;
@@ -115,14 +111,14 @@ namespace Entities
 		Managers::EventManager::keyCode jumpKey;
 		Managers::EventManager::keyCode attackKey;
 
-		bool rightDirection;
+		bool isLookingToTheRight;
 		bool double_jump;
 		int numRect;
 
 		Stages::Stage* pStage;
 
 		float frameTime;
-		float vulnerability_timer;
+		float vulnerabilityTimer;
 		const float attackInterval = 0.5f;
 		float attackTimer;
 

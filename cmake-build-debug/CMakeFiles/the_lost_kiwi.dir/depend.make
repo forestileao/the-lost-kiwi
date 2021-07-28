@@ -28,6 +28,12 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: ../include/States/State.
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: ../include/States/StateMachine.h
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: ../src/Entities/Player.cpp
 
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: ../include/Entities/Entity.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: ../include/Entities/Projectile.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: ../include/Managers/EventManager.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: ../include/Managers/GraphicManager.h
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: ../src/Entities/Projectile.cpp
+
 CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o: ../include/Entities/Character.h
 CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o: ../include/Entities/Enemy.h
 CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o: ../include/Entities/Entity.h

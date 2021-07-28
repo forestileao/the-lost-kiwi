@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o"
+  "CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o"

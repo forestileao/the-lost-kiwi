@@ -28,6 +28,12 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Player.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Projectile.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
+ /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Projectile.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h
  /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Enemy.h
