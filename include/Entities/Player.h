@@ -77,7 +77,7 @@ namespace Entities
 			PlayerRestState(States::StateMachine* pStateMachine = NULL, Player *p = NULL);
 			virtual ~PlayerRestState();
 
-			void init(void* arg){std::cout << "REST\n";}
+			void init(void* arg){std::cout << "PLAYER: Resting\n";}
 
 			void update(float dt, Managers::EventManager* pEventManager);
 			void draw(Managers::GraphicManager* pGraphicManager);
@@ -90,26 +90,25 @@ namespace Entities
 			PlayerWalkState(States::StateMachine* pStateMachine = NULL, Player *p = NULL);
 			virtual ~PlayerWalkState();
 
-			void init(void* arg){std::cout << "WALK\n"; pPlayer->numRect = false; pPlayer->frameTime = 0.0f;}
+			void init(void* arg){std::cout << "PLAYER: Walking\n"; pPlayer->numRect = false; pPlayer->frameTime = 0.0f;}
 
 			void update(float dt, Managers::EventManager* pEventManager);
 			void draw(Managers::GraphicManager* pGraphicManager);
 		};
 
 	private:
-		const float acceleration = 9;
-		const float airAcceleration = 0.5;
-		const float maxVel = 100;
-		const float jumpVel = 300;
-
-		States::StateMachine *stateMachine;
-
-		Managers::GraphicManager* pGraphicManager;
-
 		Managers::EventManager::keyCode leftKey;
 		Managers::EventManager::keyCode rightKey;
 		Managers::EventManager::keyCode jumpKey;
 		Managers::EventManager::keyCode attackKey;
+
+		const float acceleration = 9;
+		const float JumpingAcceleration = 0.5;
+		const float maxVel = 100;
+		const float jumpVel = 300;
+
+		States::StateMachine *stateMachine;
+		Managers::GraphicManager* pGraphicManager;
 
 		bool isLookingToTheRight;
 		bool double_jump;

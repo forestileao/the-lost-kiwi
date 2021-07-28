@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h
+Entity.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+../Managers/EventManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
 SFML/Graphics.hpp
 -
@@ -13,6 +19,14 @@ SFML/Graphics.hpp
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
 ../Managers/GraphicManager.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Player.h
+Entity.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+Character.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h
+../States/StateMachine.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
 
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Projectile.h
 Entity.h
@@ -31,6 +45,28 @@ map
 -
 vector
 -
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
+../Managers/EventManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+../Managers/GraphicManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
+vector
+-
+iostream
+-
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
+iostream
+-
+map
+-
+State.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Player.cpp
+../../include/Entities/Player.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Player.h
 
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Projectile.cpp
 ../../include/Entities/Projectile.h
