@@ -5,9 +5,10 @@
 #include "../../include/Entities/Character.h"
 using namespace Entities;
 
-Character::Character(int life) :
-	Entity(),
-	lifePoints(life)
+Character::Character(int life, Managers::GraphicManager* pGraphicsManager,Stages::Stage* pStage) :
+	Entity(pGraphicsManager, pStage),
+	lifePoints(life),
+	vulnerability(false)
 {
 
 }
@@ -31,4 +32,21 @@ void Character::setLife(int life)
 void Character::addLifePoints(int points)
 {
 	lifePoints += points;
+}
+void Character::decrementLifePoints(int points)
+{
+	lifePoints -= points;
+}
+void Character::move(float x, float y)
+{
+	body.move(x, y);
+}
+void Character::setGrounded(bool ground)
+{
+	isGrounded = ground;
+}
+
+bool Character::getGrounded()
+{
+	return isGrounded;
 }

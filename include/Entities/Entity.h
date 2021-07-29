@@ -1,7 +1,14 @@
+namespace Stages
+{
+	class Stage;
+}
+
 #ifndef ENTITY_H
 #define ENTITY_H
 
 #include <SFML/Graphics.hpp>
+#include "../Managers/EventManager.h"
+#include "../Managers/GraphicManager.h"
 
 namespace Entities
 {
@@ -10,19 +17,34 @@ namespace Entities
 	protected:
 		sf::RectangleShape body;
 		sf::RenderWindow *window;
+		Stages::Stage* pStage;
+
+		bool vulnerability;
+
+		Managers::GraphicManager* pGraphicManager;
+
+		int id;
+		Managers::uniqueId textureId;
+		Managers::uniqueId spriteId;
+		Managers::spriteRect frame;
 
 	public:
-		Entity();
+		static int entityCount;
+		static void decrementEntityCount();
+
+		Entity(Managers::GraphicManager* pGraphicsManager = nullptr,Stages::Stage* pStage = nullptr);
 		virtual ~Entity();
 
 		void setWindow(sf::RenderWindow *window)
 		{ this->window = window; }
-		void draw()
-		{ window->draw(body); }
+		void setPosition(float x, float y)
+		{ body.setPosition(x, y);}
+
+		void draw();
 
 		// Pure virtual function to execute entity action (if it exists)
-		virtual void execute() = 0;
+		virtual void execute(float dt, Managers::EventManager* pEventManager) = 0;
 	};
 }
-
+static int entityCount = 0;
 #endif //ENTITY_H

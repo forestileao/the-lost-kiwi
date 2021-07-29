@@ -96,6 +96,9 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Player.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Projectile.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -120,6 +123,9 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/GameStateMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/MainMenuState.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/PlayState.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -141,6 +147,9 @@
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Player.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Projectile.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -157,6 +166,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/GameStateMachine.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/MainMenuState.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/PlayState.cpp">

@@ -3,6 +3,7 @@
 
 #include "../List/List.h"
 #include "../Entities/Entity.h"
+
 namespace Stages
 {
 	class EntityList

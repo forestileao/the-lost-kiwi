@@ -18,7 +18,7 @@ private:
 	int score;
 
 public:
-	PlayState(States::StateMachine* pStateMachine = NULL, Managers::GraphicManager* pGraphicsManager = NULL);
+	PlayState(States::StateMachine* pStateMachine = nullptr, Managers::GraphicManager* pGraphicsManager = nullptr);
 	~PlayState();
 
 	void update(float dt, Managers::EventManager* eventManager);

@@ -1,3 +1,7 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "CXX"
@@ -8,12 +12,14 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Enemy.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Entity.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Player.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o"
+  "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Projectile.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/EventManager.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Managers/GraphicManager.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/EntityList.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/Stage.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/GameStateMachine.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o"
+  "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/MainMenuState.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/PlayState.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/State.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o"
   "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/States/StateMachine.cpp" "/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o"
@@ -24,6 +30,10 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../SFML_INCLUDE_DIR"
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
   )
 
 # Targets to which this target links.

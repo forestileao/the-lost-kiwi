@@ -13,8 +13,6 @@ Game::Game()
 	graphicManager->loadFont("../assets/fonts/seagram-tfb.ttf");
 	stateMachine = new GameStateMachine(graphicManager);
 
-
-
 	execute();
 }
 

@@ -5,16 +5,33 @@
 #include "../../include/Entities/Entity.h"
 using namespace Entities;
 
-Entity::Entity():
-	body(sf::Vector2f(20.f, 20.f))
+Entity::Entity(Managers::GraphicManager* pGraphicsManager, Stages::Stage* pStage):
+	body(),
+	pGraphicManager(pGraphicsManager),
+	vulnerability(false),
+	id(::entityCount++)
 {
+	this->pStage = pStage;
+	spriteId = -1;
+	textureId = -1;
 	window = nullptr;
-
-	body.setFillColor(sf::Color().Red);
-	body.setPosition(0, 0);
 }
 
 Entity::~Entity()
 {
 	window = nullptr;
+	pStage = nullptr;
+
+	if(spriteId >= 0)
+		pGraphicManager->removeSprite(spriteId);
+}
+void Entity::draw()
+{
+	pGraphicManager->setSpriteRect(spriteId, frame);
+	pGraphicManager->setSpritePosition(spriteId, body.getPosition().x, body.getPosition().y);
+	pGraphicManager->drawSprite(spriteId);
+}
+void Entity::decrementEntityCount()
+{
+	::entityCount--;
 }
