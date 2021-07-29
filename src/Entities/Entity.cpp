@@ -9,7 +9,7 @@ Entity::Entity(Managers::GraphicManager* pGraphicsManager, Stages::Stage* pStage
 	body(),
 	pGraphicManager(pGraphicsManager),
 	vulnerability(false),
-	id(-1)
+	id(::entityCount++)
 {
 	this->pStage = pStage;
 	spriteId = -1;
@@ -30,4 +30,8 @@ void Entity::draw()
 	pGraphicManager->setSpriteRect(spriteId, frame);
 	pGraphicManager->setSpritePosition(spriteId, body.getPosition().x, body.getPosition().y);
 	pGraphicManager->drawSprite(spriteId);
+}
+void Entity::decrementEntityCount()
+{
+	::entityCount--;
 }

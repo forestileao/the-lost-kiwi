@@ -1,7 +1,3 @@
-//
-// Created by forestileao on 15/07/2021.
-//
-
 #ifndef CHARACTER_H
 #define CHARACTER_H
 

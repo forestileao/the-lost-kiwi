@@ -1,12 +1,12 @@
 #ifndef STAGE_H
 #define STAGE_H
 
-#include "../Entities/Player.h"
-#include "../Entities/Enemy.h"
 #include "EntityList.h"
+#include "../Entities/Entity.h"
 #include "../Managers/GraphicManager.h"
 #include "../Managers/EventManager.h"
-
+#include "../Entities/Player.h"
+#include "../Entities/Projectile.h"
 
 namespace Stages
 {
@@ -43,7 +43,7 @@ namespace Stages
 
 		// Adds and removes entities from entity List
 		void addEntity(Entities::Entity *pEntity);
-		void removeEntity(Managers::uniqueId id);
+		void removeEntity(Entities::Entity* pEntity);
 		
 		//Stages::PhysicMachine *getPhysics();
 

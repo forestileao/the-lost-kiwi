@@ -5,6 +5,10 @@
 #ifndef PROJECTILE_H
 #define PROJECTILE_H
 
+#define PROJECTILE_TEXTURE_FILE "../assets/knife.png"
+#define KNIFE_FRAME_RIGHT 0, 0, 13, 4
+#define KNIFE_FRAME_LEFT 13, 0, -13, 4
+
 #include "Entity.h"
 
 namespace Entities

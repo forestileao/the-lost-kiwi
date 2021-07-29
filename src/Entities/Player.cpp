@@ -1,8 +1,9 @@
 //
 // Created by forestileao on 05/07/2021.
 //
-
+#include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Player.h"
+#include "../../include/Entities/Projectile.h"
 using namespace Entities;
 
 /*********************************** Player State Manegement Start *****************************/
@@ -235,10 +236,10 @@ Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::Grap
 	numRect(0)
 {
 	this->pGraphicManager = pGraphicManager;
-	this->pStage = pStage;
 
 	vel.x = 0;
 	vel.y = 0;
+
 	setWindow(pGraphicManager->getWindowPointer());
 	setControls(firstPlayer);
 
@@ -279,6 +280,19 @@ void Player::execute(float dt, Managers::EventManager* pEventManager)
 		vulnerabilityTimer += dt;
 	}
 
+	if (pEventManager->isKeyPressed(attackKey) && attackTimer > 0.1)
+	{
+		pStage->addEntity(new Projectile(
+			sf::Vector2f(body.getPosition().x,
+						 body.getPosition().y + 10),
+			pStage,
+			pGraphicManager,
+			isLookingToTheRight
+		));
+
+		attackTimer = 0;
+	}
+
 	attackTimer += dt;
 }
 void Player::setControls(bool isPlayerOne)
@@ -295,7 +309,7 @@ void Player::setControls(bool isPlayerOne)
 		leftKey = Managers::EventManager::keyCode::Left;
 		rightKey = Managers::EventManager::keyCode::Right;
 		jumpKey = Managers::EventManager::keyCode::Up;
-		attackKey = Managers::EventManager::keyCode::Num0;
+		attackKey = Managers::EventManager::keyCode::RShift;
 	}
 }
 /*

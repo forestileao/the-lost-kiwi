@@ -37,10 +37,6 @@
 
 #define VULNERABILITY_MAX_TIME 0.5f
 
-namespace Stages
-{
-class Stage;
-}
 namespace Entities
 {
 	class Player: public Character
@@ -113,8 +109,6 @@ namespace Entities
 		bool isLookingToTheRight;
 		bool double_jump;
 		int numRect;
-
-		Stages::Stage* pStage;
 
 		float frameTime;
 		float vulnerabilityTimer;

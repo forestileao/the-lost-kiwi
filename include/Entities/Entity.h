@@ -1,14 +1,14 @@
+namespace Stages
+{
+	class Stage;
+}
+
 #ifndef ENTITY_H
 #define ENTITY_H
 
 #include <SFML/Graphics.hpp>
 #include "../Managers/EventManager.h"
 #include "../Managers/GraphicManager.h"
-
-namespace Stages
-{
-	class Stage;
-}
 
 namespace Entities
 {
@@ -29,6 +29,9 @@ namespace Entities
 		Managers::spriteRect frame;
 
 	public:
+		static int entityCount;
+		static void decrementEntityCount();
+
 		Entity(Managers::GraphicManager* pGraphicsManager = nullptr,Stages::Stage* pStage = nullptr);
 		virtual ~Entity();
 
@@ -43,5 +46,5 @@ namespace Entities
 		virtual void execute(float dt, Managers::EventManager* pEventManager) = 0;
 	};
 }
-
+static int entityCount = 0;
 #endif //ENTITY_H

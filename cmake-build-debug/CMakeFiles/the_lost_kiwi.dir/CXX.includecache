@@ -32,6 +32,12 @@ Character.h
 Entity.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
 
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
+Element.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
+
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
 SFML/Graphics.hpp
 -
@@ -45,6 +51,26 @@ map
 -
 vector
 -
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
+../List/List.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/List.h
+../Entities/Entity.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
+EntityList.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
+../Entities/Entity.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+../Managers/GraphicManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
+../Managers/EventManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
+../Entities/Player.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Player.h
+../Entities/Projectile.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Projectile.h
 
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
 ../Managers/EventManager.h
@@ -64,11 +90,7 @@ map
 State.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Player.cpp
-../../include/Entities/Player.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Player.h
-
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Entities/Projectile.cpp
-../../include/Entities/Projectile.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Projectile.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/Stage.cpp
+../../include/Stages/Stage.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
 
