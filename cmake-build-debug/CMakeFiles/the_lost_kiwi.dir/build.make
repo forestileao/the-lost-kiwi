@@ -313,9 +313,9 @@ the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/build.make
-the_lost_kiwi: /usr/lib/libsfml-graphics.so.2.5.1
-the_lost_kiwi: /usr/lib/libsfml-window.so.2.5.1
-the_lost_kiwi: /usr/lib/libsfml-system.so.2.5.1
+the_lost_kiwi: /usr/lib64/libsfml-graphics.so.2.5.1
+the_lost_kiwi: /usr/lib64/libsfml-window.so.2.5.1
+the_lost_kiwi: /usr/lib64/libsfml-system.so.2.5.1
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable the_lost_kiwi"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/the_lost_kiwi.dir/link.txt --verbose=$(VERBOSE)
