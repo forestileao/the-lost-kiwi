@@ -11,7 +11,7 @@ namespace Entities
 	protected:
 		int lifePoints;
 
-		int isGrounded;
+		bool isGrounded;
 
 		bool vulnerability;
 

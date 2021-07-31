@@ -8,7 +8,8 @@ using namespace Entities;
 Character::Character(int life, Managers::GraphicManager* pGraphicsManager,Stages::Stage* pStage) :
 	Entity(pGraphicsManager, pStage),
 	lifePoints(life),
-	vulnerability(false)
+	vulnerability(false),
+	isGrounded(true)
 {
 
 }

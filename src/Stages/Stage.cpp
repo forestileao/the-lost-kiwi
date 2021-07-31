@@ -70,7 +70,7 @@ void Stage::applyGravity(float dt)
 	{
 		pTemp = dynamic_cast<Entities::Player*>(entities.mainList.getItem(i));
 
-		if(pTemp != nullptr && !pTemp->getGrounded())
+		if(pTemp != nullptr && !(pTemp->getGrounded()))
 			pTemp->setVel(pTemp->getVel().x, pTemp->getVel().y + 300.f*dt);
 
 	}

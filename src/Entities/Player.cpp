@@ -144,10 +144,6 @@ void Player::PlayerWalkState::update(float dt, Managers::EventManager* pEventMan
 {
 	if(pPlayer)
 	{
-		if (pPlayer->body.getPosition().y >= pPlayer->pGraphicManager->getWindowPointer()->getSize().y)
-			pPlayer->setGrounded(true);
-
-
 		if(pPlayer->vel.y*pPlayer->vel.y > 5.0f)
 			pPlayer->setGrounded(false);
 
@@ -262,6 +258,11 @@ Player::~Player()
 
 void Player::execute(float dt, Managers::EventManager* pEventManager)
 {
+    if (body.getPosition().y >= pGraphicManager->getWindowPointer()->getSize().y - 48) {
+        setGrounded(true);
+        vel.y = 0;
+    }
+
 	if(stateMachine)
 		stateMachine->update(dt, pEventManager);
 
