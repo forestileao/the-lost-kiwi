@@ -32,6 +32,7 @@ namespace Stages
 		int stageScore;
 
 		void initializeElements();
+		void applyGravity(float dt);
 
 	public:
 		Stage(Managers::GraphicManager *pGraphicManager);

@@ -12,6 +12,10 @@ Entity.h
 ../Managers/EventManager.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
 
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Enemy.h
+Character.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Character.h
+
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
 SFML/Graphics.hpp
 -
@@ -31,6 +35,24 @@ Character.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Projectile.h
 Entity.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Entity.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h
+SFML/Graphics.hpp
+-
+SFML/System.hpp
+-
+SFML/Window.hpp
+-
+Entities/Player.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Player.h
+Entities/Enemy.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Enemy.h
+Stages/EntityList.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/EntityList.h
+Stages/Stage.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
+States/StateMachine.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
 
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/List/Element.h
 
@@ -72,6 +94,12 @@ EntityList.h
 ../Entities/Projectile.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Entities/Projectile.h
 
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/GameStateMachine.h
+StateMachine.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/StateMachine.h
+../Managers/GraphicManager.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/GraphicManager.h
+
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
 ../Managers/EventManager.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Managers/EventManager.h
@@ -90,7 +118,13 @@ map
 State.h
 /home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/State.h
 
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Stages/Stage.cpp
-../../include/Stages/Stage.h
-/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Stages/Stage.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/Game.cpp
+../include/Game.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h
+../include/States/GameStateMachine.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/States/GameStateMachine.h
+
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/src/main.cpp
+../include/Game.h
+/home/forestileao/Documents/facul/tec-prog/the-lost-kiwi/include/Game.h
 

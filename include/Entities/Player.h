@@ -99,7 +99,7 @@ namespace Entities
 		Managers::EventManager::keyCode attackKey;
 
 		const float acceleration = 9;
-		const float JumpingAcceleration = 0.5;
+		const float JumpingAcceleration = 50;
 		const float maxVel = 100;
 		const float jumpVel = 300;
 

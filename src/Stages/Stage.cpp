@@ -46,6 +46,7 @@ void Stage::update(float dt, Managers::EventManager *pEvents)
 	{
 		entities.mainList.getItem(i)->execute(dt, pEvents);
 	}
+	applyGravity(dt);
 }
 
 void Stage::addEntity(Entities::Entity *pEntity)
@@ -61,4 +62,16 @@ void Stage::removeEntity(Entities::Entity* pEntity)
 Managers::GraphicManager *Stage::getGraphicManager()
 {
 	return pGraphicManager;
+}
+void Stage::applyGravity(float dt)
+{
+	Entities::Player* pTemp = nullptr;
+	for (int i = 0; i < entities.mainList.getLen(); ++i)
+	{
+		pTemp = dynamic_cast<Entities::Player*>(entities.mainList.getItem(i));
+
+		if(pTemp != nullptr && !pTemp->getGrounded())
+			pTemp->setVel(pTemp->getVel().x, pTemp->getVel().y + 300.f*dt);
+
+	}
 }

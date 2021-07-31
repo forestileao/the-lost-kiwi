@@ -46,7 +46,17 @@ void Character::setGrounded(bool ground)
 	isGrounded = ground;
 }
 
-bool Character::getGrounded()
+bool Character::getGrounded() const
 {
 	return isGrounded;
+}
+
+sf::Vector2<float> Character::getVel() const
+{
+	return vel;
+}
+void Character::setVel(const float x, const float y)
+{
+	vel.x = x;
+	vel.y = y;
 }

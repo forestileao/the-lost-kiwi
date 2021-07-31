@@ -25,7 +25,11 @@ namespace Entities
 		void move(float x, float y);
 
 		void setGrounded(bool ground);
-		bool getGrounded();
+		bool getGrounded() const;
+
+		sf::Vector2<float> getVel() const;
+		void setVel(const float x, const float y);
+
 
 		bool isAlive();
 		void setLife(int life);
