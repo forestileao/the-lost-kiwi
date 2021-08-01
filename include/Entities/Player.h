@@ -106,7 +106,6 @@ namespace Entities
 		States::StateMachine *stateMachine;
 		Managers::GraphicManager* pGraphicManager;
 
-		bool isLookingToTheRight;
 		bool double_jump;
 		int numRect;
 

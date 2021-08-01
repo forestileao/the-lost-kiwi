@@ -11,11 +11,13 @@ namespace Entities
 	protected:
 		int lifePoints;
 
+		bool isLookingToTheRight;
+
 		bool isGrounded;
 
 		bool vulnerability;
 
-		sf::Vector2<float> pos, vel;
+		sf::Vector2<float> vel;
 
 
 	public:

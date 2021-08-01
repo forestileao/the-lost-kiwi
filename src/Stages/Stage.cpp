@@ -1,4 +1,5 @@
 #include "../../include/Stages/Stage.h"
+#include "../../include/Entities/Archer.h"
 using namespace Stages;
 
 Stage::Stage(Managers::GraphicManager *pGraphicManager):
@@ -24,9 +25,13 @@ void Stage::initializeElements()
 	totalPlayers = players;
 
 	p1 = new Entities::Player(10, this, true, pGraphicManager);
-
 	p1->setPosition(100, 400);
+
+	Entities::Archer* archer = new Entities::Archer(10,10,p1, nullptr,pGraphicManager,this);
+	archer->setPosition(200, 400);
+
 	addEntity(p1);
+    addEntity(archer);
 }
 
 

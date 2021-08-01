@@ -224,7 +224,6 @@ void Player::PlayerWalkState::draw(Managers::GraphicManager* pGraphicManager)
 
 Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::GraphicManager* pGraphicManager):
 	Character(life, pGraphicManager, pStage),
-	isLookingToTheRight(true),
 	vulnerabilityTimer(),
 	attackTimer(),
 	double_jump(),

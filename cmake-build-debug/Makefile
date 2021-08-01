@@ -129,6 +129,30 @@ the_lost_kiwi/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/build
 .PHONY : the_lost_kiwi/fast
 
+src/Entities/Archer.o: src/Entities/Archer.cpp.o
+.PHONY : src/Entities/Archer.o
+
+# target to build an object file
+src/Entities/Archer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o
+.PHONY : src/Entities/Archer.cpp.o
+
+src/Entities/Archer.i: src/Entities/Archer.cpp.i
+.PHONY : src/Entities/Archer.i
+
+# target to preprocess a source file
+src/Entities/Archer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.i
+.PHONY : src/Entities/Archer.cpp.i
+
+src/Entities/Archer.s: src/Entities/Archer.cpp.s
+.PHONY : src/Entities/Archer.s
+
+# target to generate assembly for a file
+src/Entities/Archer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.s
+.PHONY : src/Entities/Archer.cpp.s
+
 src/Entities/Character.o: src/Entities/Character.cpp.o
 .PHONY : src/Entities/Character.o
 
@@ -522,6 +546,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... the_lost_kiwi"
+	@echo "... src/Entities/Archer.o"
+	@echo "... src/Entities/Archer.i"
+	@echo "... src/Entities/Archer.s"
 	@echo "... src/Entities/Character.o"
 	@echo "... src/Entities/Character.i"
 	@echo "... src/Entities/Character.s"

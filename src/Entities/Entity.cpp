@@ -31,6 +31,12 @@ void Entity::draw()
 	pGraphicManager->setSpritePosition(spriteId, body.getPosition().x, body.getPosition().y);
 	pGraphicManager->drawSprite(spriteId);
 }
+
+sf::Vector2f Entity::getPosition()
+{
+    return body.getPosition();
+}
+
 void Entity::decrementEntityCount()
 {
 	::entityCount--;
