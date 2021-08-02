@@ -15,6 +15,7 @@ namespace Managers
 	private:
 		std::map<const char*, uniqueId> loadedTextures;
 		sf::RenderWindow window;
+		sf::View view;
 		const int screenWidth, screenHeight;
 
 		std::vector<sf::Texture*> textures;
@@ -32,6 +33,8 @@ namespace Managers
 
 		const bool isWindowOpen()const;
 		void closeWindow();
+
+		sf::View* getView();
 
 		const uniqueId loadTexture(const char* file);
 

@@ -55,7 +55,7 @@ namespace Entities
 		class PlayerJumpState: public States::State
 		{
 		private:
-			Player *p;
+			Player *pPlayer;
 		public:
 			PlayerJumpState(States::StateMachine* pStateMachine = NULL, Player *p = NULL);
 			virtual ~PlayerJumpState();

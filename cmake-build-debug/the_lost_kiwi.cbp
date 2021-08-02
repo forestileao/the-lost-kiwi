@@ -94,6 +94,9 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -146,6 +149,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Entity.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Player.cpp">

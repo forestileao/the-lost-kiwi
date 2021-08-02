@@ -12,7 +12,7 @@ namespace Stages
 {
 	class Stage
 	{
-	private:
+    protected:
 		enum Stages
 		{
 			Hall,
@@ -22,8 +22,8 @@ namespace Stages
 		Managers::uniqueId backgroundSprite;
 		Managers::GraphicManager *pGraphicManager;
 		EntityList entities;
-		//Stages::PhysicMachine physics;
 		Entities::Player* p1;
+		Entities::Player* p2;
 
 		int currentLevel;
 		int players;
@@ -33,6 +33,7 @@ namespace Stages
 
 		void initializeElements();
 		void applyGravity(float dt);
+		void updateViewLocation();
 
 	public:
 		Stage(Managers::GraphicManager *pGraphicManager);

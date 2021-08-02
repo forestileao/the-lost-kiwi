@@ -38,6 +38,12 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Entity.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
+ /home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h

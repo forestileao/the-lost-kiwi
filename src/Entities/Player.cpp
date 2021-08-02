@@ -25,7 +25,7 @@ Player::PlayerStateMachine::~PlayerStateMachine()
 Player::PlayerJumpState::PlayerJumpState(States::StateMachine* pStateMachine, Player *p)
 :State(pStateMachine)
 {
-	this->p = p;
+	this->pPlayer = p;
 }
 
 Player::PlayerJumpState::~PlayerJumpState()
@@ -36,41 +36,41 @@ void Player::PlayerJumpState::init(void* arg)
 {
 	std::cout << "PLAYER: JUMPED\n";
 	//pPlayer->double_jump = (bool&&)arg;
-	p->vel.y = -p->jumpVel;
+	pPlayer->vel.y = -pPlayer->jumpVel;
 }
 
 void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventManager)
 {
-	if(p)
+	if(pPlayer)
 	{
-		if(pEventManager->isKeyDown(p->leftKey))
+		if(pEventManager->isKeyDown(pPlayer->leftKey))
 		{
-			p->isLookingToTheRight = false;
-			p->vel.x -= p->JumpingAcceleration;
-			if(p->vel.x < -p->maxVel)
-				p->vel.x = -p->maxVel;
+            pPlayer->isLookingToTheRight = false;
+            pPlayer->vel.x -= pPlayer->JumpingAcceleration;
+			if(pPlayer->vel.x < -pPlayer->maxVel)
+                pPlayer->vel.x = -pPlayer->maxVel;
 		}
 
-		if(pEventManager->isKeyDown(p->rightKey))
+		if(pEventManager->isKeyDown(pPlayer->rightKey))
 		{
-			p->isLookingToTheRight = true;
-			p->vel.x += p->JumpingAcceleration;
-			if(p->vel.x > p->maxVel)
-				p->vel.x = p->maxVel;
+            pPlayer->isLookingToTheRight = true;
+            pPlayer->vel.x += pPlayer->JumpingAcceleration;
+			if(pPlayer->vel.x > pPlayer->maxVel)
+                pPlayer->vel.x = pPlayer->maxVel;
 		}
 
-		p->frame = Managers::spriteRect((p->vel.x >= 0)?JUMP_X:JUMP_X+JUMP_SIZE_X,JUMP_Y,(p->vel.x >= 0)?JUMP_SIZE_X:JUMP_SIZE_X*(-1),JUMP_SIZE_Y);
+        pPlayer->frame = Managers::spriteRect((pPlayer->vel.x >= 0) ? JUMP_X : JUMP_X+JUMP_SIZE_X, JUMP_Y, (pPlayer->vel.x >= 0) ? JUMP_SIZE_X : JUMP_SIZE_X*(-1), JUMP_SIZE_Y);
 
-		if(p->getGrounded())
+		if(pPlayer->getGrounded())
 		{
 			pStateMachine->changeState(PLAYER_REST_STATE, NULL);
-			p->vel.x = 0;
+            pPlayer->vel.x = 0;
 
-			p->frame = Managers::spriteRect((p->isLookingToTheRight) ? REST_R : REST_L);
+            pPlayer->frame = Managers::spriteRect((pPlayer->isLookingToTheRight) ? REST_R : REST_L);
 		}
-		if(p->double_jump)
+		if(pPlayer->double_jump)
 		{
-			if(pEventManager->isKeyPressed(p->jumpKey))
+			if(pEventManager->isKeyPressed(pPlayer->jumpKey))
 			{
 				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
 			}
@@ -107,11 +107,6 @@ void Player::PlayerRestState::update(float dt, Managers::EventManager* pEventMan
 				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)true);
 
 				// Replaces to the jump State
-				p->frame = Managers::spriteRect(JUMP);
-			}
-			else
-			{
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
 				p->frame = Managers::spriteRect(JUMP);
 			}
 		}

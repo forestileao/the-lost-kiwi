@@ -25,13 +25,24 @@ void Stage::initializeElements()
 	totalPlayers = players;
 
 	p1 = new Entities::Player(10, this, true, pGraphicManager);
-	p1->setPosition(100, 400);
+	p1->setPosition(100, 440);
 
-	Entities::Archer* archer = new Entities::Archer(10,10,p1, nullptr,pGraphicManager,this);
-	archer->setPosition(200, 400);
+	p2 = new Entities::Player(10, this, false, pGraphicManager);
+	p2->setPosition(150, 440);
+
+
+	Entities::Archer* archer = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
+	Entities::Archer* archer2 = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
+	Entities::Archer* archer3 = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
+	archer->setPosition(200, 440);
+	archer2->setPosition(300, 440);
+	archer3->setPosition(400, 440);
 
 	addEntity(p1);
+	addEntity(p2);
     addEntity(archer);
+    addEntity(archer2);
+    addEntity(archer3);
 }
 
 
@@ -52,6 +63,7 @@ void Stage::update(float dt, Managers::EventManager *pEvents)
 		entities.mainList.getItem(i)->execute(dt, pEvents);
 	}
 	applyGravity(dt);
+	updateViewLocation();
 }
 
 void Stage::addEntity(Entities::Entity *pEntity)
@@ -79,4 +91,23 @@ void Stage::applyGravity(float dt)
 			pTemp->setVel(pTemp->getVel().x, pTemp->getVel().y + 300.f*dt);
 
 	}
+}
+void Stage::updateViewLocation()
+{
+    if (pGraphicManager)
+    {
+        sf::View* view = pGraphicManager->getView();
+
+        if (p1 && p2)
+        {
+            view->setCenter(sf::Vector2f((p1->getPosition().x + p2->getPosition().x)/2,
+                                         pGraphicManager->getWindowPointer()->getSize().y/2));
+        }
+        else if (p1)
+        {
+            view->setCenter(sf::Vector2f(p1->getPosition().x,
+                                         pGraphicManager->getWindowPointer()->getSize().y/2));
+        }
+        pGraphicManager->getWindowPointer()->setView(*view);
+    }
 }

@@ -6,21 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
-Enemy.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
-
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
 Entity.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
 ../Managers/EventManager.h
 /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
-
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
-Character.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
-Player.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
 
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
 SFML/Graphics.hpp
@@ -100,9 +90,9 @@ map
 State.h
 /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
 
-/home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp
+/home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp
 ../../include/Stages/Stage.h
 /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
-../../include/Entities/Archer.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
+../../include/Entities/Projectile.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h
 

@@ -51,6 +51,7 @@ void PlayState::update(float dt, Managers::EventManager* pEventManager)
 	std::string text = "Score: " + std::to_string(static_cast<unsigned long int>(score));
 
 	pGraphicManager->setString(scoreText, text);
+	pGraphicManager->setTextPosition(scoreText, pGraphicManager->getView()->getCenter().x, 20);
 }
 
 void PlayState::draw(Managers::GraphicManager* pGraphicsManager)

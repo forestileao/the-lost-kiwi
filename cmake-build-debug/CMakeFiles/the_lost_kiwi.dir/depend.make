@@ -38,6 +38,12 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../src/Entities/Entity.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o: \
+ ../include/Entities/Entity.h \
+ ../include/Entities/Obstacle.h \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../src/Entities/Obstacle.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: \
  ../include/Entities/Character.h \
  ../include/Entities/Entity.h \

@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Character.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Enemy.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Entity.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o"
+  "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Player.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Game.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o"
