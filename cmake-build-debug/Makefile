@@ -129,6 +129,30 @@ the_lost_kiwi/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/build
 .PHONY : the_lost_kiwi/fast
 
+include/Entities/Dracula.o: include/Entities/Dracula.cpp.o
+.PHONY : include/Entities/Dracula.o
+
+# target to build an object file
+include/Entities/Dracula.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o
+.PHONY : include/Entities/Dracula.cpp.o
+
+include/Entities/Dracula.i: include/Entities/Dracula.cpp.i
+.PHONY : include/Entities/Dracula.i
+
+# target to preprocess a source file
+include/Entities/Dracula.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.i
+.PHONY : include/Entities/Dracula.cpp.i
+
+include/Entities/Dracula.s: include/Entities/Dracula.cpp.s
+.PHONY : include/Entities/Dracula.s
+
+# target to generate assembly for a file
+include/Entities/Dracula.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.s
+.PHONY : include/Entities/Dracula.cpp.s
+
 src/Entities/Archer.o: src/Entities/Archer.cpp.o
 .PHONY : src/Entities/Archer.o
 
@@ -296,6 +320,30 @@ src/Entities/Projectile.s: src/Entities/Projectile.cpp.s
 src/Entities/Projectile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.s
 .PHONY : src/Entities/Projectile.cpp.s
+
+src/Entities/Warrior.o: src/Entities/Warrior.cpp.o
+.PHONY : src/Entities/Warrior.o
+
+# target to build an object file
+src/Entities/Warrior.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o
+.PHONY : src/Entities/Warrior.cpp.o
+
+src/Entities/Warrior.i: src/Entities/Warrior.cpp.i
+.PHONY : src/Entities/Warrior.i
+
+# target to preprocess a source file
+src/Entities/Warrior.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.i
+.PHONY : src/Entities/Warrior.cpp.i
+
+src/Entities/Warrior.s: src/Entities/Warrior.cpp.s
+.PHONY : src/Entities/Warrior.s
+
+# target to generate assembly for a file
+src/Entities/Warrior.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.s
+.PHONY : src/Entities/Warrior.cpp.s
 
 src/Game.o: src/Game.cpp.o
 .PHONY : src/Game.o
@@ -570,6 +618,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... the_lost_kiwi"
+	@echo "... include/Entities/Dracula.o"
+	@echo "... include/Entities/Dracula.i"
+	@echo "... include/Entities/Dracula.s"
 	@echo "... src/Entities/Archer.o"
 	@echo "... src/Entities/Archer.i"
 	@echo "... src/Entities/Archer.s"
@@ -591,6 +642,9 @@ help:
 	@echo "... src/Entities/Projectile.o"
 	@echo "... src/Entities/Projectile.i"
 	@echo "... src/Entities/Projectile.s"
+	@echo "... src/Entities/Warrior.o"
+	@echo "... src/Entities/Warrior.i"
+	@echo "... src/Entities/Warrior.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"

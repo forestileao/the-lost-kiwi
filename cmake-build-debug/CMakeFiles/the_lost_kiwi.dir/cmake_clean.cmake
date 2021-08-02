@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o"
@@ -6,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o"
+  "CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o"

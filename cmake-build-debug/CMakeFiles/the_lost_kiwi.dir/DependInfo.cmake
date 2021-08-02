@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Character.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Enemy.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o"
@@ -15,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Player.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o"
+  "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Warrior.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Game.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Managers/EventManager.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Managers/GraphicManager.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o"

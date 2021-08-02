@@ -50,7 +50,7 @@ void Enemy::chooseTarget()
             float distanceToP1 = ((p1Pos - enemyPos).x * (p1Pos - enemyPos).x) + ((p1Pos- enemyPos).y*(p1Pos- enemyPos).y);
             float distanceToP2 = ((p2Pos - enemyPos).x*(p2Pos - enemyPos).x) + ((p2Pos - enemyPos).y*(p2Pos - enemyPos).y);
             attackTarget = (distanceToP1 >= distanceToP2) ? pPlayer2 : pPlayer1;
-            targetDistance = (distanceToP1 >= distanceToP2) ?  std::sqrt(distanceToP1) :  std::sqrt(distanceToP2);
+            targetDistance = (distanceToP1 >= distanceToP2) ?  std::sqrt(distanceToP2) :  std::sqrt(distanceToP1);
         }
         isLookingToTheRight = (attackTarget->getPosition().x > getPosition().x);
     }

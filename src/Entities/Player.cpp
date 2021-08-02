@@ -307,24 +307,3 @@ void Player::setControls(bool isPlayerOne)
 		attackKey = Managers::EventManager::keyCode::RShift;
 	}
 }
-/*
-void Player::onCollide(sf::Sprite* other, float dt)
-{
-	if(vulnerability)
-	{
-		if(dynamic_cast<Projectile*>(other) != 0)
-		{
-			if(!dynamic_cast<Projectile*>(other)->fromPlayer())
-			{
-				lives -= 1;
-				vulnerability = false;
-			}
-		}
-		else if(dynamic_cast<Enemy*>(other) != 0)
-		{
-			lives -= 1;
-			vulnerability = false;
-		}
-	}
-}
-*/

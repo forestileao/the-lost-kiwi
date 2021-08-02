@@ -72,6 +72,17 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Entities/Projectile.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o: \
+ ../include/Entities/Character.h \
+ ../include/Entities/Enemy.h \
+ ../include/Entities/Entity.h \
+ ../include/Entities/Player.h \
+ ../include/Entities/Warrior.h \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../include/States/State.h \
+ ../include/States/StateMachine.h \
+ ../src/Entities/Warrior.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o: \
  ../include/Entities/Character.h \
  ../include/Entities/Enemy.h \
@@ -110,6 +121,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Entities/Entity.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
+ ../include/Entities/Warrior.h \
  ../include/List/Element.h \
  ../include/List/List.h \
  ../include/Managers/EventManager.h \

@@ -72,6 +72,17 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/src/Entities/Warrior.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
@@ -110,6 +121,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h
  /home/forestileao/Documents/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/the-lost-kiwi/include/List/List.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h

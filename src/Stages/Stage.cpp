@@ -1,5 +1,6 @@
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Archer.h"
+#include "../../include/Entities/Warrior.h"
 using namespace Stages;
 
 Stage::Stage(Managers::GraphicManager *pGraphicManager):
@@ -33,16 +34,16 @@ void Stage::initializeElements()
 
 	Entities::Archer* archer = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
 	Entities::Archer* archer2 = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
-	Entities::Archer* archer3 = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
+	Entities::Warrior* warrior = new Entities::Warrior(10,10,p1, p2,pGraphicManager,this);
 	archer->setPosition(200, 440);
 	archer2->setPosition(300, 440);
-	archer3->setPosition(400, 440);
+	warrior->setPosition(400, 440);
 
 	addEntity(p1);
 	addEntity(p2);
     addEntity(archer);
     addEntity(archer2);
-    addEntity(archer3);
+    addEntity(warrior);
 }
 
 
