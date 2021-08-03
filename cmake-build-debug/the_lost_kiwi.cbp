@@ -88,9 +88,6 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.cpp">
-			<Option target="the_lost_kiwi"/>
-		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -152,6 +149,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Character.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Enemy.cpp">

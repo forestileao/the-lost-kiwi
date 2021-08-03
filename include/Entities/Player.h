@@ -35,6 +35,9 @@
 #define PLAYER1_TEXTURE_FILE   "../assets/tileset_player.png"
 #define PLAYER2_TEXTURE_FILE  "../assets/tileset_player2.png"
 
+#define KNIFE_TEXTURE_FILE "../assets/knife.png"
+#define KNIFE_FRAME 0, 0, 13, 4
+
 #define VULNERABILITY_MAX_TIME 0.5f
 
 namespace Entities

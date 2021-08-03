@@ -23,6 +23,22 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../src/Entities/Character.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o: \
+ ../include/Entities/Character.h \
+ ../include/Entities/Dracula.h \
+ ../include/Entities/Enemy.h \
+ ../include/Entities/Entity.h \
+ ../include/Entities/Player.h \
+ ../include/Entities/Projectile.h \
+ ../include/List/Element.h \
+ ../include/List/List.h \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../include/Stages/EntityList.h \
+ ../include/Stages/Stage.h \
+ ../include/States/State.h \
+ ../include/States/StateMachine.h \
+ ../src/Entities/Dracula.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: \
  ../include/Entities/Character.h \
  ../include/Entities/Enemy.h \
@@ -117,6 +133,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: \
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Entities/Archer.h \
  ../include/Entities/Character.h \
+ ../include/Entities/Dracula.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
  ../include/Entities/Player.h \

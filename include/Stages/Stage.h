@@ -39,15 +39,9 @@ namespace Stages
 		Stage(Managers::GraphicManager *pGraphicManager);
 		~Stage();
 
-		// Adds and removes the Entity Body from the Physic Machine
-		//void addBody(sf::RectangleShape *pEntityBody);
-		//void removeBody(Managers::uniqueId id);
-
 		// Adds and removes entities from entity List
 		void addEntity(Entities::Entity *pEntity);
 		void removeEntity(Entities::Entity* pEntity);
-		
-		//Stages::PhysicMachine *getPhysics();
 
 		Managers::GraphicManager *getGraphicManager();
 

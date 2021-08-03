@@ -278,11 +278,13 @@ void Player::execute(float dt, Managers::EventManager* pEventManager)
 	if (pEventManager->isKeyPressed(attackKey) && attackTimer > 0.1)
 	{
 		pStage->addEntity(new Projectile(
-			sf::Vector2f(body.getPosition().x,
+            sf::Vector2f(body.getPosition().x,
 						 body.getPosition().y + 10),
-			pStage,
-			pGraphicManager,
-			isLookingToTheRight
+            KNIFE_TEXTURE_FILE,
+            sf::Rect<int>(KNIFE_FRAME),
+            pStage,
+            pGraphicManager,
+            isLookingToTheRight
 		));
 
 		attackTimer = 0;

@@ -45,7 +45,9 @@ void Archer::execute(float dt, Managers::EventManager *pEventManager)
         {
             pStage->addEntity(new Projectile(
                 sf::Vector2f(getPosition().x,
-                             getPosition().y + 10),
+                             getPosition().y + 16),
+                             ARROW_TEXTURE,
+                             sf::Rect<int>(ARROW_RECT),
                 pStage,
                 pGraphicManager,
                 isLookingToTheRight

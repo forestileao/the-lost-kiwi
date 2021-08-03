@@ -7,6 +7,8 @@
 
 
 #define ARROW_TEXTURE "../assets/arrow.png"
+#define ARROW_RECT 0, 0, 30, 4
+
 #define ARCHER_TEXTURE "../assets/archer.png"
 #define ARCHER_RECT_RIGHT 0, 0, 58, 35
 #define ARCHER_RECT_LEFT 58, 0, -58, 35
@@ -19,7 +21,6 @@ namespace Entities
     {
     private:
         float attackTimer;
-
         bool isAttacking;
 
     public:

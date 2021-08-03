@@ -313,18 +313,18 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/src/Entities/Warrior.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.s
 
-CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
-CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o: ../include/Entities/Dracula.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o -c /home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o: ../src/Entities/Dracula.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o -c /home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp
 
-CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.cpp > CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.i
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp > CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.i
 
-CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.cpp -o CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.s
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.s
 
 # Object files for target the_lost_kiwi
 the_lost_kiwi_OBJECTS = \
@@ -347,7 +347,7 @@ the_lost_kiwi_OBJECTS = \
 "CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o" \
-"CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o"
+"CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o"
 
 # External object files for target the_lost_kiwi
 the_lost_kiwi_EXTERNAL_OBJECTS =
@@ -371,7 +371,7 @@ the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o
-the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o
+the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/build.make
 the_lost_kiwi: /usr/lib64/libsfml-graphics.so.2.5.1
 the_lost_kiwi: /usr/lib64/libsfml-window.so.2.5.1

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o"
+  "CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o"

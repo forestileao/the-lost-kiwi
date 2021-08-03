@@ -5,7 +5,7 @@
 #ifndef OBSTACLE_H
 #define OBSTACLE_H
 
-#define OBSTALE_RECT 0, 0, 40, 40
+#define OBSTACLE_RECT 0, 0, 40, 40
 
 #define BASIC_BLOCK_TEXTURE "../assets/block.png"
 

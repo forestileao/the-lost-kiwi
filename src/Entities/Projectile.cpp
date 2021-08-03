@@ -5,20 +5,23 @@
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Projectile.h"
 
-Entities::Projectile::Projectile(sf::Vector2f origin, Stages::Stage *pStage, Managers::GraphicManager *pGraphicManager, bool positiveMovement):
+Entities::Projectile::Projectile(sf::Vector2f origin,char* textureFile, sf::Rect<int> frameRect, Stages::Stage *pStage, Managers::GraphicManager *pGraphicManager, bool positiveMovement):
 	Entity(pGraphicManager, pStage),
 	vel(200, 0),
 	positiveMovement(positiveMovement)
 {
 	setWindow(pGraphicManager->getWindowPointer());
 	setPosition(origin.x, origin.y);
-	textureId = pGraphicManager->loadTexture(PROJECTILE_TEXTURE_FILE);
+	textureId = pGraphicManager->loadTexture(textureFile);
 	spriteId = pGraphicManager->createSprite(textureId);
+	frame = sf::Rect<int>(frameRect);
 
-	if (positiveMovement)
-		frame = sf::Rect<int>(KNIFE_FRAME_RIGHT);
-	else
-		frame = sf::Rect<int>(KNIFE_FRAME_LEFT);
+	// inverts the frame Rect
+	if (!positiveMovement)
+	{
+        frame.left += frame.width;
+        frame.width *= -1;
+    }
 
 	pGraphicManager->setSpriteRect(spriteId, frame);
 

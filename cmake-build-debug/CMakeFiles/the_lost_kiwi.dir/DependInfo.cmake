@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/include/Entities/Dracula.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Character.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o"
+  "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Enemy.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Entity.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o"
