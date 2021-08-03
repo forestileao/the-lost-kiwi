@@ -33,6 +33,8 @@ namespace Stages
 
 		void initializeElements();
 		void applyGravity(float dt);
+		void loadMap(char* fileName);
+		void applyCollisions();
 		void updateViewLocation();
 
 	public:

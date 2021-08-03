@@ -6,8 +6,7 @@
 #define OBSTACLE_H
 
 #define OBSTACLE_RECT 0, 0, 40, 40
-
-#define BASIC_BLOCK_TEXTURE "../assets/block.png"
+#define OBSTACLE_TEXTURE "../assets/obstacles.png"
 
 #include "Entity.h"
 namespace Entities
@@ -15,13 +14,15 @@ namespace Entities
     class Obstacle : public Entity
     {
     private:
-        bool givesDamage;
+        int damage;
 
     public:
         Obstacle(Managers::GraphicManager* pGraphicsManager = nullptr, Stages::Stage* pStage = nullptr);
         ~Obstacle();
 
-
+        int getDamage() const;
+        void setDamage(int dam);
+        void execute(float dt, Managers::EventManager *pEventManager) override;
     };
 }
 

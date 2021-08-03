@@ -17,6 +17,9 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o: \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Entities/Archer.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.o: \
+ ../include/Entities/Block.h \
+ ../src/Entities/Block.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: \
  ../include/Entities/Character.h \
  ../include/Entities/Entity.h \
@@ -54,6 +57,9 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../src/Entities/Entity.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.o: \
+ ../include/Entities/Fire.h \
+ ../src/Entities/Fire.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o: \
  ../include/Entities/Entity.h \
  ../include/Entities/Obstacle.h \
@@ -88,6 +94,9 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Entities/Projectile.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Spike.cpp.o: \
+ ../include/Entities/Spike.h \
+ ../src/Entities/Spike.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o: \
  ../include/Entities/Character.h \
  ../include/Entities/Enemy.h \
@@ -136,6 +145,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Entities/Dracula.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
+ ../include/Entities/Obstacle.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
  ../include/Entities/Warrior.h \

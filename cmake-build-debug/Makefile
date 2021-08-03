@@ -153,6 +153,30 @@ src/Entities/Archer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.s
 .PHONY : src/Entities/Archer.cpp.s
 
+src/Entities/Block.o: src/Entities/Block.cpp.o
+.PHONY : src/Entities/Block.o
+
+# target to build an object file
+src/Entities/Block.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.o
+.PHONY : src/Entities/Block.cpp.o
+
+src/Entities/Block.i: src/Entities/Block.cpp.i
+.PHONY : src/Entities/Block.i
+
+# target to preprocess a source file
+src/Entities/Block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.i
+.PHONY : src/Entities/Block.cpp.i
+
+src/Entities/Block.s: src/Entities/Block.cpp.s
+.PHONY : src/Entities/Block.s
+
+# target to generate assembly for a file
+src/Entities/Block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.s
+.PHONY : src/Entities/Block.cpp.s
+
 src/Entities/Character.o: src/Entities/Character.cpp.o
 .PHONY : src/Entities/Character.o
 
@@ -249,6 +273,30 @@ src/Entities/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.s
 .PHONY : src/Entities/Entity.cpp.s
 
+src/Entities/Fire.o: src/Entities/Fire.cpp.o
+.PHONY : src/Entities/Fire.o
+
+# target to build an object file
+src/Entities/Fire.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.o
+.PHONY : src/Entities/Fire.cpp.o
+
+src/Entities/Fire.i: src/Entities/Fire.cpp.i
+.PHONY : src/Entities/Fire.i
+
+# target to preprocess a source file
+src/Entities/Fire.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.i
+.PHONY : src/Entities/Fire.cpp.i
+
+src/Entities/Fire.s: src/Entities/Fire.cpp.s
+.PHONY : src/Entities/Fire.s
+
+# target to generate assembly for a file
+src/Entities/Fire.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.s
+.PHONY : src/Entities/Fire.cpp.s
+
 src/Entities/Obstacle.o: src/Entities/Obstacle.cpp.o
 .PHONY : src/Entities/Obstacle.o
 
@@ -320,6 +368,30 @@ src/Entities/Projectile.s: src/Entities/Projectile.cpp.s
 src/Entities/Projectile.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.s
 .PHONY : src/Entities/Projectile.cpp.s
+
+src/Entities/Spike.o: src/Entities/Spike.cpp.o
+.PHONY : src/Entities/Spike.o
+
+# target to build an object file
+src/Entities/Spike.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Spike.cpp.o
+.PHONY : src/Entities/Spike.cpp.o
+
+src/Entities/Spike.i: src/Entities/Spike.cpp.i
+.PHONY : src/Entities/Spike.i
+
+# target to preprocess a source file
+src/Entities/Spike.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Spike.cpp.i
+.PHONY : src/Entities/Spike.cpp.i
+
+src/Entities/Spike.s: src/Entities/Spike.cpp.s
+.PHONY : src/Entities/Spike.s
+
+# target to generate assembly for a file
+src/Entities/Spike.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Spike.cpp.s
+.PHONY : src/Entities/Spike.cpp.s
 
 src/Entities/Warrior.o: src/Entities/Warrior.cpp.o
 .PHONY : src/Entities/Warrior.o
@@ -621,6 +693,9 @@ help:
 	@echo "... src/Entities/Archer.o"
 	@echo "... src/Entities/Archer.i"
 	@echo "... src/Entities/Archer.s"
+	@echo "... src/Entities/Block.o"
+	@echo "... src/Entities/Block.i"
+	@echo "... src/Entities/Block.s"
 	@echo "... src/Entities/Character.o"
 	@echo "... src/Entities/Character.i"
 	@echo "... src/Entities/Character.s"
@@ -633,6 +708,9 @@ help:
 	@echo "... src/Entities/Entity.o"
 	@echo "... src/Entities/Entity.i"
 	@echo "... src/Entities/Entity.s"
+	@echo "... src/Entities/Fire.o"
+	@echo "... src/Entities/Fire.i"
+	@echo "... src/Entities/Fire.s"
 	@echo "... src/Entities/Obstacle.o"
 	@echo "... src/Entities/Obstacle.i"
 	@echo "... src/Entities/Obstacle.s"
@@ -642,6 +720,9 @@ help:
 	@echo "... src/Entities/Projectile.o"
 	@echo "... src/Entities/Projectile.i"
 	@echo "... src/Entities/Projectile.s"
+	@echo "... src/Entities/Spike.o"
+	@echo "... src/Entities/Spike.i"
+	@echo "... src/Entities/Spike.s"
 	@echo "... src/Entities/Warrior.o"
 	@echo "... src/Entities/Warrior.i"
 	@echo "... src/Entities/Warrior.s"

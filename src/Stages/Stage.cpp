@@ -1,7 +1,9 @@
+#include <fstream>
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Archer.h"
 #include "../../include/Entities/Warrior.h"
 #include "../../include/Entities/Dracula.h"
+#include "../../include/Entities/Obstacle.h"
 using namespace Stages;
 
 Stage::Stage(Managers::GraphicManager *pGraphicManager):
@@ -115,4 +117,39 @@ void Stage::updateViewLocation()
         }
         pGraphicManager->getWindowPointer()->setView(*view);
     }
+}
+void Stage::applyCollisions()
+{
+
+}
+void Stage::loadMap(char* fileName)
+{
+    std::ifstream input;
+    string line;
+    int lineCount = 0;
+    input.open("input.txt");
+    while(input.good()){
+        getline(input,line);
+
+        for(int i = 0; i != line.length() && line[i] != '*'; i++)
+        {
+            switch (line[i])
+            {
+            case '0':
+                break;
+            case '1':
+                break;
+            case '2':
+                break;
+            case '3':
+                break;
+            case '&':
+                // set mob spawner position
+                break;
+            }
+            //addEntity(new Entities::Obstacle(pGraphicManager,this));
+        }
+        lineCount++;
+    }
+    input.close();
 }

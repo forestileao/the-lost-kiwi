@@ -16,7 +16,7 @@
 #include "States/StateMachine.h"
 
 #define WINDOW_HEIGHT   480
-#define WINDOW_WIDTH    640
+#define WINDOW_WIDTH    840
 
 class Game
 {
