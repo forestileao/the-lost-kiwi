@@ -13,13 +13,16 @@ namespace Entities
 {
     class Obstacle : public Entity
     {
-    private:
+    protected:
+        int obstableId;
         int damage;
 
+        void updateRect();
     public:
         Obstacle(Managers::GraphicManager* pGraphicsManager = nullptr, Stages::Stage* pStage = nullptr);
         ~Obstacle();
 
+        int getObstacleId() const;
         int getDamage() const;
         void setDamage(int dam);
         void execute(float dt, Managers::EventManager *pEventManager) override;

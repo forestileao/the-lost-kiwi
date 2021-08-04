@@ -4,6 +4,9 @@
 #include "../../include/Entities/Warrior.h"
 #include "../../include/Entities/Dracula.h"
 #include "../../include/Entities/Obstacle.h"
+#include "../../include/Entities/Block.h"
+#include "../../include/Entities/Spike.h"
+#include "../../include/Entities/Fire.h"
 using namespace Stages;
 
 Stage::Stage(Managers::GraphicManager *pGraphicManager):
@@ -39,11 +42,12 @@ void Stage::initializeElements()
 	Entities::Archer* archer2 = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
 	Entities::Warrior* warrior = new Entities::Warrior(10,10,p1, p2,pGraphicManager,this);
 	Entities::Dracula* dracula = new Entities::Dracula(10,10,p1, p2,pGraphicManager,this);
-	archer->setPosition(200, 440);
-	archer2->setPosition(300, 440);
-	warrior->setPosition(400, 440);
-	dracula->setPosition(500, 400);
+	archer->setPosition(200, 350);
+	archer2->setPosition(300, 350);
+	warrior->setPosition(400, 350);
+	dracula->setPosition(500, 300);
 
+    loadMap("../assets/cemiterio.txt");
 	addEntity(p1);
 	addEntity(p2);
     addEntity(archer);
@@ -127,27 +131,37 @@ void Stage::loadMap(char* fileName)
     std::ifstream input;
     string line;
     int lineCount = 0;
-    input.open("input.txt");
+    input.open(fileName);
+    Entities::Obstacle* tempObstacle = nullptr;
     while(input.good()){
         getline(input,line);
 
-        for(int i = 0; i != line.length() && line[i] != '*'; i++)
+        for(int i = 0; i != line.length(); i++)
         {
             switch (line[i])
             {
             case '0':
+                tempObstacle = new Entities::Block(true,pGraphicManager, this);
                 break;
             case '1':
+                tempObstacle = new Entities::Block(false,pGraphicManager, this);
                 break;
             case '2':
+                tempObstacle = new Entities::Spike(pGraphicManager, this);
                 break;
             case '3':
+                tempObstacle = new Entities::Fire(pGraphicManager, this);
                 break;
             case '&':
-                // set mob spawner position
+                // TODO: set mob spawner position
                 break;
             }
-            //addEntity(new Entities::Obstacle(pGraphicManager,this));
+            if (tempObstacle)
+            {
+                tempObstacle->setPosition(i*40,lineCount*40);
+                addEntity(tempObstacle);
+            }
+            tempObstacle = nullptr;
         }
         lineCount++;
     }

@@ -5,11 +5,16 @@
 #ifndef FIRE_H
 #define FIRE_H
 
-
-class Fire
+#include "Obstacle.h"
+namespace Entities
 {
+    class Fire : public Obstacle
+    {
+    public:
+        Fire(Managers::GraphicManager* pGraphicsManager = nullptr, Stages::Stage* pStage = nullptr);
+        ~Fire();
+    };
 
-};
-
+}
 
 #endif //FIRE_H

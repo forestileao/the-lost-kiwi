@@ -3,3 +3,14 @@
 //
 
 #include "../../include/Entities/Spike.h"
+Entities::Spike::Spike(Managers::GraphicManager *pGraphicsManager, Stages::Stage *pStage)
+    : Obstacle(pGraphicsManager, pStage)
+{
+    obstableId = 2;
+    updateRect();
+    setDamage(5);
+}
+Entities::Spike::~Spike()
+{
+
+}

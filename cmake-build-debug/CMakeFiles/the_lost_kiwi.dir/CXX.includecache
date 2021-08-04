@@ -10,6 +10,10 @@
 Enemy.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
 
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
+Obstacle.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
 Entity.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
@@ -36,6 +40,10 @@ SFML/Graphics.hpp
 ../Managers/GraphicManager.h
 /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
 
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
+Obstacle.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
 Entity.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
@@ -51,6 +59,10 @@ Character.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h
 Entity.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
+
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
+Obstacle.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
 
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h
 Enemy.h
@@ -127,4 +139,10 @@ fstream
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h
 ../../include/Entities/Obstacle.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+../../include/Entities/Block.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
+../../include/Entities/Spike.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
+../../include/Entities/Fire.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
 

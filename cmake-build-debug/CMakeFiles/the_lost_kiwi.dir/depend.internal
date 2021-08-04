@@ -19,6 +19,10 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Block.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
@@ -58,7 +62,11 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Entity.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Entity.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.o
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Fire.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
@@ -95,7 +103,11 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Spike.cpp.o
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Spike.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Warrior.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
@@ -141,13 +153,16 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/src/Stages/EntityList.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h
  /home/forestileao/Documents/the-lost-kiwi/include/List/Element.h
  /home/forestileao/Documents/the-lost-kiwi/include/List/List.h
