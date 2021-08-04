@@ -103,7 +103,7 @@ void Stage::addEntity(Entities::Entity *pEntity)
 	    entities.mainList.push(pEntity);
     else if (dynamic_cast<Entities::Enemy*>(pEntity))
         entities.enemyList.push(pEntity);
-    else if (dynamic_cast<Entities::Block*>(pEntity))
+    else if (dynamic_cast<Entities::Obstacle*>(pEntity))
         entities.blockList.push(pEntity);
     else if (dynamic_cast<Entities::Projectile*>(pEntity))
         entities.projectileList.push(pEntity);
@@ -115,7 +115,7 @@ void Stage::removeEntity(Entities::Entity* pEntity)
         entities.mainList.pop(pEntity);
     else if (dynamic_cast<Entities::Enemy*>(pEntity))
         entities.enemyList.pop(pEntity);
-    else if (dynamic_cast<Entities::Block*>(pEntity))
+    else if (dynamic_cast<Entities::Obstacle*>(pEntity))
         entities.blockList.pop(pEntity);
     else if (dynamic_cast<Entities::Projectile*>(pEntity))
         entities.projectileList.pop(pEntity);
@@ -159,29 +159,55 @@ void Stage::updateViewLocation()
 }
 void Stage::applyCollisions()
 {
+    Entities::Player* tempPlayer = nullptr;
+    Entities::Enemy* tempEnemy = nullptr;
+    Entities::Projectile* tempProj = nullptr;
+
     for (int i = 0; i < entities.mainList.getLen(); ++i)
     {
         // player collision with other entities
-        Entities::Player* tempPlayer = dynamic_cast<Entities::Player*>(entities.mainList.getItem(i));
+        tempPlayer = dynamic_cast<Entities::Player*>(entities.mainList.getItem(i));
         for (int j = 0; j < entities.enemyList.getLen(); ++j)
         {
-            Entities::Enemy* tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(j));
+            tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(j));
             if (tempPlayer->intersects(tempEnemy->getGlobalBounds()))
                std::cout << "COLIDIU CARA !!!!!!!!!!!\n";
         }
 
+        for (int j = 0; j < entities.projectileList.getLen(); ++j)
+        {
+            tempProj = dynamic_cast<Entities::Projectile*>(entities.projectileList.getItem(j));
+            if (tempProj->isFriendly()) continue;
+            if (tempPlayer->intersects(tempProj->getGlobalBounds()))
+            {
+                tempPlayer->decrementLifePoints(3);
+                std::cout << "VISH TOMO TIRO MEO\n";
+            }
+        }
+
+        bool setGrounded = false;
         for (int j = 0; j < entities.blockList.getLen(); ++j)
         {
-            if (tempPlayer->intersects(entities.blockList.getItem(j)->getGlobalBounds()))
+            sf::Rect<float> blockRect = entities.blockList.getItem(j)->getGlobalBounds();
+            if (!setGrounded)
             {
-                tempPlayer->setGrounded(true);
-                tempPlayer->setVel(tempPlayer->getVel().x, 0);
-                break;
-
+                if (tempPlayer->intersects(blockRect)) {
+                    tempPlayer->setGrounded(true);
+                    tempPlayer->setVel(tempPlayer->getVel().x, 0);
+                    setGrounded = true;
+                }
+                else {
+                    tempPlayer->setGrounded(false);
+                }
             }
-            else
-            {
-                tempPlayer->setGrounded(false);
+
+            blockRect.top+=10;
+            if (tempPlayer->intersects(blockRect)) {
+                if ((tempPlayer->getVel().x) > 0)
+                    tempPlayer->setPosition(tempPlayer->getPosition().x-(3), tempPlayer->getPosition().y);
+                else
+                    tempPlayer->setPosition(tempPlayer->getPosition().x+(3), tempPlayer->getPosition().y);
+                break;
             }
         }
 

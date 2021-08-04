@@ -39,6 +39,7 @@ void Character::addLifePoints(int points)
 void Character::decrementLifePoints(int points)
 {
 	lifePoints -= points;
+	vulnerability = false;
 }
 void Character::move(float x, float y)
 {
