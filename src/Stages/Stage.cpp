@@ -7,15 +7,17 @@
 #include "../../include/Entities/Block.h"
 #include "../../include/Entities/Spike.h"
 #include "../../include/Entities/Fire.h"
+#include "../../include/States/PlayState.h"
 using namespace Stages;
 
-Stage::Stage(Managers::GraphicManager *pGraphicManager):
+Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState):
 	entities(),
 	backgroundSprite(-1),
 	currentLevel(-1),
 	players(-1),
 	changeStage(false),
-	stageScore(0)
+	stageScore(0),
+	pState(pState)
 {
 	this->pGraphicManager = pGraphicManager;
 	initializeElements();
@@ -32,10 +34,10 @@ void Stage::initializeElements()
 	totalPlayers = players;
 
 	p1 = new Entities::Player(10, this, true, pGraphicManager);
-	p1->setPosition(100, 440);
+	p1->setPosition(100, 200);
 
 	p2 = new Entities::Player(10, this, false, pGraphicManager);
-	p2->setPosition(150, 440);
+	p2->setPosition(150, 200);
 
 
 	Entities::Archer* archer = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
@@ -60,31 +62,64 @@ void Stage::initializeElements()
 // Draws all Entities
 void Stage::draw()
 {
+	for (int i = 0; i < entities.enemyList.getLen(); ++i)
+	    entities.enemyList.getItem(i)->draw();
+
+	for (int i = 0; i < entities.blockList.getLen(); ++i)
+	    entities.blockList.getItem(i)->draw();
+
+	for (int i = 0; i < entities.projectileList.getLen(); ++i)
+	    entities.projectileList.getItem(i)->draw();
+
 	for (int i = 0; i < entities.mainList.getLen(); ++i)
-	{
-		entities.mainList.getItem(i)->draw();
-	}
+	    entities.mainList.getItem(i)->draw();
 }
 
 // Updates all entities
 void Stage::update(float dt, Managers::EventManager *pEvents)
 {
 	for (int i = 0; i < entities.mainList.getLen(); ++i)
-	{
 		entities.mainList.getItem(i)->execute(dt, pEvents);
-	}
+
+	for (int i = 0; i < entities.enemyList.getLen(); ++i)
+	    entities.enemyList.getItem(i)->execute(dt, pEvents);
+
+	for (int i = 0; i < entities.blockList.getLen(); ++i)
+	    entities.blockList.getItem(i)->execute(dt, pEvents);
+
+	for (int i = 0; i < entities.projectileList.getLen(); ++i)
+	    entities.projectileList.getItem(i)->execute(dt, pEvents);
+
+	applyCollisions();
 	applyGravity(dt);
 	updateViewLocation();
 }
 
 void Stage::addEntity(Entities::Entity *pEntity)
 {
-	entities.mainList.push(pEntity);
+    /* Dynamic Cast can be used to verify the Entity Type:
+     * Returns null if it is not instance of a type */
+    if (dynamic_cast<Entities::Player*>(pEntity))
+	    entities.mainList.push(pEntity);
+    else if (dynamic_cast<Entities::Enemy*>(pEntity))
+        entities.enemyList.push(pEntity);
+    else if (dynamic_cast<Entities::Block*>(pEntity))
+        entities.blockList.push(pEntity);
+    else if (dynamic_cast<Entities::Projectile*>(pEntity))
+        entities.projectileList.push(pEntity);
 }
 
 void Stage::removeEntity(Entities::Entity* pEntity)
 {
-	entities.mainList.pop(pEntity);
+    if (dynamic_cast<Entities::Player*>(pEntity))
+        entities.mainList.pop(pEntity);
+    else if (dynamic_cast<Entities::Enemy*>(pEntity))
+        entities.enemyList.pop(pEntity);
+    else if (dynamic_cast<Entities::Block*>(pEntity))
+        entities.blockList.pop(pEntity);
+    else if (dynamic_cast<Entities::Projectile*>(pEntity))
+        entities.projectileList.pop(pEntity);
+
 	Entities::Entity::decrementEntityCount();
 }
 Managers::GraphicManager *Stage::getGraphicManager()
@@ -124,7 +159,33 @@ void Stage::updateViewLocation()
 }
 void Stage::applyCollisions()
 {
+    for (int i = 0; i < entities.mainList.getLen(); ++i)
+    {
+        // player collision with other entities
+        Entities::Player* tempPlayer = dynamic_cast<Entities::Player*>(entities.mainList.getItem(i));
+        for (int j = 0; j < entities.enemyList.getLen(); ++j)
+        {
+            Entities::Enemy* tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(j));
+            if (tempPlayer->intersects(tempEnemy->getGlobalBounds()))
+               std::cout << "COLIDIU CARA !!!!!!!!!!!\n";
+        }
 
+        for (int j = 0; j < entities.blockList.getLen(); ++j)
+        {
+            if (tempPlayer->intersects(entities.blockList.getItem(j)->getGlobalBounds()))
+            {
+                tempPlayer->setGrounded(true);
+                tempPlayer->setVel(tempPlayer->getVel().x, 0);
+                break;
+
+            }
+            else
+            {
+                tempPlayer->setGrounded(false);
+            }
+        }
+
+    }
 }
 void Stage::loadMap(char* fileName)
 {

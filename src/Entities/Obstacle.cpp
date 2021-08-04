@@ -9,6 +9,7 @@ Obstacle::Obstacle(Managers::GraphicManager* pGraphicsManager, Stages::Stage* pS
     damage(0),
     obstableId(0)
 {
+    body.setSize(sf::Vector2f(40, 40));
     frame = sf::Rect<int>(OBSTACLE_RECT);
     textureId = pGraphicManager->loadTexture(OBSTACLE_TEXTURE);
     spriteId = pGraphicManager->createSprite(textureId);

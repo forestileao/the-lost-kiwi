@@ -35,9 +35,24 @@ void Entity::draw()
 sf::Vector2f Entity::getPosition()
 {
     return body.getPosition();
+
+}
+
+sf::Vector2f Entity::getSize()
+{
+    return body.getSize();
 }
 
 void Entity::decrementEntityCount()
 {
 	::entityCount--;
+}
+sf::Rect<float> Entity::getGlobalBounds() const
+{
+    return body.getGlobalBounds();
+}
+
+bool Entity::intersects(sf::Rect<float> rect) const
+{
+    return body.getGlobalBounds().intersects(rect);
 }

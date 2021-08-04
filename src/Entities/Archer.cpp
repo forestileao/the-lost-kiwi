@@ -15,6 +15,7 @@ Archer::Archer(int life,
     attackTimer(0),
     isAttacking(false)
 {
+    body.setSize(sf::Vector2f(35,35));
     frame = Managers::spriteRect(ARCHER_RECT_RIGHT);
 
     textureId = pGraphicManager->loadTexture(ARCHER_TEXTURE);
@@ -28,6 +29,7 @@ Archer::~Archer()
 
 void Archer::execute(float dt, Managers::EventManager *pEventManager)
 {
+    pGraphicManager->getWindowPointer()->draw(body);
     chooseTarget();
 
     if (isLookingToTheRight)

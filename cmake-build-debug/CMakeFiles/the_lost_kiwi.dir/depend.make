@@ -170,6 +170,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
  ../include/Stages/Stage.h \
+ ../include/States/PlayState.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Stages/Stage.cpp

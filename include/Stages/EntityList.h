@@ -10,6 +10,9 @@ namespace Stages
 	{
 	public:
 		List<Entities::Entity> mainList;
+		List<Entities::Entity> enemyList;
+		List<Entities::Entity> blockList;
+		List<Entities::Entity> projectileList;
 
 		EntityList();
 		~EntityList();

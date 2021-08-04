@@ -17,6 +17,7 @@ Dracula::Dracula(int life,
    attackTimer(0),
    isAttacking(false)
 {
+    body.setSize(sf::Vector2f(40,79));
     frame = Managers::spriteRect(DRACULA_REST_RECT_RIGHT);
 
     textureId = pGraphicManager->loadTexture(DRACULA_TEXTURE);
@@ -30,6 +31,7 @@ Dracula::~Dracula()
 }
 void Dracula::execute(float dt, Managers::EventManager *pEventManager)
 {
+    pGraphicManager->getWindowPointer()->draw(body);
     chooseTarget();
 
     if (isLookingToTheRight)

@@ -8,6 +8,7 @@
 #include "../Entities/Player.h"
 #include "../Entities/Projectile.h"
 
+class PlayState;
 namespace Stages
 {
 	class Stage
@@ -24,6 +25,7 @@ namespace Stages
 		EntityList entities;
 		Entities::Player* p1;
 		Entities::Player* p2;
+		PlayState* pState;
 
 		int currentLevel;
 		int players;
@@ -38,7 +40,7 @@ namespace Stages
 		void updateViewLocation();
 
 	public:
-		Stage(Managers::GraphicManager *pGraphicManager);
+		Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState);
 		~Stage();
 
 		// Adds and removes entities from entity List

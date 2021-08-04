@@ -5,11 +5,13 @@
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Projectile.h"
 
-Entities::Projectile::Projectile(sf::Vector2f origin,char* textureFile, sf::Rect<int> frameRect, Stages::Stage *pStage, Managers::GraphicManager *pGraphicManager, bool positiveMovement):
+Entities::Projectile::Projectile(sf::Vector2f origin,char* textureFile, sf::Rect<int> frameRect, Stages::Stage *pStage, Managers::GraphicManager *pGraphicManager, bool positiveMovement, bool isFriendly):
 	Entity(pGraphicManager, pStage),
 	vel(200, 0),
-	positiveMovement(positiveMovement)
+	positiveMovement(positiveMovement),
+	friendly(isFriendly)
 {
+    body.setSize(sf::Vector2f(12,4));
 	setWindow(pGraphicManager->getWindowPointer());
 	setPosition(origin.x, origin.y);
 	textureId = pGraphicManager->loadTexture(textureFile);
@@ -41,4 +43,8 @@ void Entities::Projectile::execute(float dt, Managers::EventManager *pEventManag
 		pStage->removeEntity(this);
 
 	body.move(vel.x*dt,vel.y*dt);
+}
+bool Entities::Projectile::isFriendly() const
+{
+    return friendly;
 }

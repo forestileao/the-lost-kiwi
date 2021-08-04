@@ -170,6 +170,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/PlayState.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/Stages/Stage.cpp

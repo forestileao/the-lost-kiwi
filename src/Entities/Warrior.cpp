@@ -14,6 +14,7 @@ Warrior::Warrior(int life,
 {
     frame = Managers::spriteRect(WARRIOR_RIGHT_RECT);
 
+    body.setSize(sf::Vector2f(20,40));
     vel.x = 50;
     vel.y = 0;
 
@@ -27,6 +28,7 @@ Warrior::~Warrior()
 }
 void Warrior::execute(float dt, Managers::EventManager *pEventManager)
 {
+    pGraphicManager->getWindowPointer()->draw(body);
     chooseTarget();
 
     if (isLookingToTheRight)

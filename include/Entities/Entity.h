@@ -40,6 +40,9 @@ namespace Entities
 		void setPosition(float x, float y)
 		{ body.setPosition(x, y);}
 		sf::Vector2f getPosition();
+		sf::Vector2f getSize();
+		sf::Rect<float> getGlobalBounds() const;
+		bool intersects(sf::Rect<float> rect) const;
 
 		void draw();
 

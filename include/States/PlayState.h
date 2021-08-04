@@ -14,7 +14,6 @@ private:
 	Managers::GraphicManager* pGraphicManager;
 	Stages::Stage* pStage;
 	Managers::uniqueId scoreText;
-
 	int score;
 
 public:
@@ -24,9 +23,9 @@ public:
 	void update(float dt, Managers::EventManager* eventManager);
 	void draw(Managers::GraphicManager* graphicsManager);
 
+	void incrementScore(int num);
+
 	void init(void* arg);
 	void exit();
 };
-
-
 #endif //PLAYSTATE_H

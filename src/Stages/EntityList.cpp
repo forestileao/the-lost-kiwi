@@ -2,7 +2,10 @@
 using namespace Stages;
 
 EntityList::EntityList():
-	mainList()
+	mainList(),
+	enemyList(),
+	blockList(),
+	projectileList()
 {
 
 }

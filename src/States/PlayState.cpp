@@ -3,9 +3,9 @@
 //
 
 #include "../../include/States/PlayState.h"
-
 PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManager* pGraphicsManager):
-	States::State(pStateMachine), score(0)
+	States::State(pStateMachine),
+	score(0)
 {
 	this->pGraphicManager = pGraphicsManager;
 	pStage = nullptr;
@@ -29,7 +29,7 @@ void PlayState::init(void* arg)
 
 		std::cout << "Stage is loading...\n";
 
-		pStage = new Stages::Stage(pGraphicManager);
+		pStage = new Stages::Stage(pGraphicManager, this);
 
 		// TODO: Implement Pause State
 	}
@@ -58,4 +58,9 @@ void PlayState::draw(Managers::GraphicManager* pGraphicsManager)
 {
 	pStage->draw();
 	pGraphicsManager->drawText(scoreText);
+}
+
+void PlayState::incrementScore(int num)
+{
+    PlayState::score += num;
 }
