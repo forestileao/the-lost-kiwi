@@ -15,8 +15,7 @@ namespace Entities
 	class Entity
 	{
 	protected:
-		sf::RectangleShape body;
-		sf::RenderWindow *window;
+        sf::RenderWindow *window;
 		Stages::Stage* pStage;
 
 		bool vulnerability;
@@ -28,7 +27,8 @@ namespace Entities
 		Managers::uniqueId spriteId;
 		Managers::spriteRect frame;
 
-	public:
+        sf::RectangleShape body;
+    public:
 		static int entityCount;
 		static void decrementEntityCount();
 
@@ -39,6 +39,10 @@ namespace Entities
 		{ this->window = window; }
 		void setPosition(float x, float y)
 		{ body.setPosition(x, y);}
+		sf::Vector2f getPosition();
+		sf::Vector2f getSize();
+		sf::Rect<float> getGlobalBounds() const;
+		bool intersects(sf::Rect<float> rect) const;
 
 		void draw();
 

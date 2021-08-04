@@ -25,7 +25,7 @@ Player::PlayerStateMachine::~PlayerStateMachine()
 Player::PlayerJumpState::PlayerJumpState(States::StateMachine* pStateMachine, Player *p)
 :State(pStateMachine)
 {
-	this->p = p;
+	this->pPlayer = p;
 }
 
 Player::PlayerJumpState::~PlayerJumpState()
@@ -36,41 +36,41 @@ void Player::PlayerJumpState::init(void* arg)
 {
 	std::cout << "PLAYER: JUMPED\n";
 	//pPlayer->double_jump = (bool&&)arg;
-	p->vel.y = -p->jumpVel;
+	pPlayer->vel.y = -pPlayer->jumpVel;
 }
 
 void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventManager)
 {
-	if(p)
+	if(pPlayer)
 	{
-		if(pEventManager->isKeyDown(p->leftKey))
+		if(pEventManager->isKeyDown(pPlayer->leftKey))
 		{
-			p->isLookingToTheRight = false;
-			p->vel.x -= p->JumpingAcceleration;
-			if(p->vel.x < -p->maxVel)
-				p->vel.x = -p->maxVel;
+            pPlayer->isLookingToTheRight = false;
+            pPlayer->vel.x -= pPlayer->JumpingAcceleration;
+			if(pPlayer->vel.x < -pPlayer->maxVel)
+                pPlayer->vel.x = -pPlayer->maxVel;
 		}
 
-		if(pEventManager->isKeyDown(p->rightKey))
+		if(pEventManager->isKeyDown(pPlayer->rightKey))
 		{
-			p->isLookingToTheRight = true;
-			p->vel.x += p->JumpingAcceleration;
-			if(p->vel.x > p->maxVel)
-				p->vel.x = p->maxVel;
+            pPlayer->isLookingToTheRight = true;
+            pPlayer->vel.x += pPlayer->JumpingAcceleration;
+			if(pPlayer->vel.x > pPlayer->maxVel)
+                pPlayer->vel.x = pPlayer->maxVel;
 		}
 
-		p->frame = Managers::spriteRect((p->vel.x >= 0)?JUMP_X:JUMP_X+JUMP_SIZE_X,JUMP_Y,(p->vel.x >= 0)?JUMP_SIZE_X:JUMP_SIZE_X*(-1),JUMP_SIZE_Y);
+        pPlayer->frame = Managers::spriteRect((pPlayer->vel.x >= 0) ? JUMP_X : JUMP_X+JUMP_SIZE_X, JUMP_Y, (pPlayer->vel.x >= 0) ? JUMP_SIZE_X : JUMP_SIZE_X*(-1), JUMP_SIZE_Y);
 
-		if(p->getGrounded())
+		if(pPlayer->getGrounded())
 		{
 			pStateMachine->changeState(PLAYER_REST_STATE, NULL);
-			p->vel.x = 0;
+            pPlayer->vel.x = 0;
 
-			p->frame = Managers::spriteRect((p->isLookingToTheRight) ? REST_R : REST_L);
+            pPlayer->frame = Managers::spriteRect((pPlayer->isLookingToTheRight) ? REST_R : REST_L);
 		}
-		if(p->double_jump)
+		if(pPlayer->double_jump)
 		{
-			if(pEventManager->isKeyPressed(p->jumpKey))
+			if(pEventManager->isKeyPressed(pPlayer->jumpKey))
 			{
 				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
 			}
@@ -107,11 +107,6 @@ void Player::PlayerRestState::update(float dt, Managers::EventManager* pEventMan
 				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)true);
 
 				// Replaces to the jump State
-				p->frame = Managers::spriteRect(JUMP);
-			}
-			else
-			{
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
 				p->frame = Managers::spriteRect(JUMP);
 			}
 		}
@@ -224,13 +219,15 @@ void Player::PlayerWalkState::draw(Managers::GraphicManager* pGraphicManager)
 
 Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::GraphicManager* pGraphicManager):
 	Character(life, pGraphicManager, pStage),
-	isLookingToTheRight(true),
 	vulnerabilityTimer(),
 	attackTimer(),
 	double_jump(),
 	frameTime(),
 	numRect(0)
 {
+    body.setSize(sf::Vector2f(15,48));
+    body.setFillColor(sf::Color::Red);
+
 	this->pGraphicManager = pGraphicManager;
 
 	vel.x = 0;
@@ -258,7 +255,9 @@ Player::~Player()
 
 void Player::execute(float dt, Managers::EventManager* pEventManager)
 {
-    if (body.getPosition().y >= pGraphicManager->getWindowPointer()->getSize().y - 48) {
+    pGraphicManager->getWindowPointer()->draw(body);
+    if (body.getPosition().y >= pGraphicManager->getWindowPointer()->getSize().y - 48)
+    {
         setGrounded(true);
         vel.y = 0;
     }
@@ -284,11 +283,14 @@ void Player::execute(float dt, Managers::EventManager* pEventManager)
 	if (pEventManager->isKeyPressed(attackKey) && attackTimer > 0.1)
 	{
 		pStage->addEntity(new Projectile(
-			sf::Vector2f(body.getPosition().x,
+            sf::Vector2f(body.getPosition().x,
 						 body.getPosition().y + 10),
-			pStage,
-			pGraphicManager,
-			isLookingToTheRight
+            KNIFE_TEXTURE_FILE,
+            sf::Rect<int>(KNIFE_FRAME),
+            pStage,
+            pGraphicManager,
+            isLookingToTheRight,
+            true
 		));
 
 		attackTimer = 0;
@@ -313,24 +315,3 @@ void Player::setControls(bool isPlayerOne)
 		attackKey = Managers::EventManager::keyCode::RShift;
 	}
 }
-/*
-void Player::onCollide(sf::Sprite* other, float dt)
-{
-	if(vulnerability)
-	{
-		if(dynamic_cast<Projectile*>(other) != 0)
-		{
-			if(!dynamic_cast<Projectile*>(other)->fromPlayer())
-			{
-				lives -= 1;
-				vulnerability = false;
-			}
-		}
-		else if(dynamic_cast<Enemy*>(other) != 0)
-		{
-			lives -= 1;
-			vulnerability = false;
-		}
-	}
-}
-*/

@@ -643,7 +643,7 @@
 											"top": 3668,
 											"width": 215,
 											"height": 11,
-											"text": "-player1: Player*",
+											"text": "-pPlayer1: Player*",
 											"horizontalAlignment": 0
 										},
 										{
@@ -11851,7 +11851,7 @@
 											"top": 1612,
 											"width": 215,
 											"height": 11,
-											"text": "-player1: Player*",
+											"text": "-pPlayer1: Player*",
 											"horizontalAlignment": 0
 										},
 										{
@@ -13414,7 +13414,7 @@
 							"_parent": {
 								"$ref": "lnmEeOvWxEGeGWwDLIc8QQAA"
 							},
-							"name": "player1",
+							"name": "pPlayer1",
 							"visibility": "private",
 							"type": "Player*"
 						},

@@ -5,20 +5,25 @@
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Projectile.h"
 
-Entities::Projectile::Projectile(sf::Vector2f origin, Stages::Stage *pStage, Managers::GraphicManager *pGraphicManager, bool positiveMovement):
+Entities::Projectile::Projectile(sf::Vector2f origin,char* textureFile, sf::Rect<int> frameRect, Stages::Stage *pStage, Managers::GraphicManager *pGraphicManager, bool positiveMovement, bool isFriendly):
 	Entity(pGraphicManager, pStage),
 	vel(200, 0),
-	positiveMovement(positiveMovement)
+	positiveMovement(positiveMovement),
+	friendly(isFriendly)
 {
+    body.setSize(sf::Vector2f(12,4));
 	setWindow(pGraphicManager->getWindowPointer());
 	setPosition(origin.x, origin.y);
-	textureId = pGraphicManager->loadTexture(PROJECTILE_TEXTURE_FILE);
+	textureId = pGraphicManager->loadTexture(textureFile);
 	spriteId = pGraphicManager->createSprite(textureId);
+	frame = sf::Rect<int>(frameRect);
 
-	if (positiveMovement)
-		frame = sf::Rect<int>(KNIFE_FRAME_RIGHT);
-	else
-		frame = sf::Rect<int>(KNIFE_FRAME_LEFT);
+	// inverts the frame Rect
+	if (!positiveMovement)
+	{
+        frame.left += frame.width;
+        frame.width *= -1;
+    }
 
 	pGraphicManager->setSpriteRect(spriteId, frame);
 
@@ -33,8 +38,13 @@ Entities::Projectile::~Projectile()
 
 void Entities::Projectile::execute(float dt, Managers::EventManager *pEventManager)
 {
-	if (body.getPosition().x > window->getSize().x || body.getPosition().x < 0)
+    sf::View* view = pGraphicManager->getView();
+    if (body.getPosition().x > view->getCenter().x + view->getSize().x/2 || body.getPosition().x < view->getCenter().x - view->getSize().x/2)
 		pStage->removeEntity(this);
 
 	body.move(vel.x*dt,vel.y*dt);
+}
+bool Entities::Projectile::isFriendly() const
+{
+    return friendly;
 }

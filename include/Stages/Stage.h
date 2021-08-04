@@ -8,11 +8,12 @@
 #include "../Entities/Player.h"
 #include "../Entities/Projectile.h"
 
+class PlayState;
 namespace Stages
 {
 	class Stage
 	{
-	private:
+    protected:
 		enum Stages
 		{
 			Hall,
@@ -22,8 +23,9 @@ namespace Stages
 		Managers::uniqueId backgroundSprite;
 		Managers::GraphicManager *pGraphicManager;
 		EntityList entities;
-		//Stages::PhysicMachine physics;
 		Entities::Player* p1;
+		Entities::Player* p2;
+		PlayState* pState;
 
 		int currentLevel;
 		int players;
@@ -33,20 +35,17 @@ namespace Stages
 
 		void initializeElements();
 		void applyGravity(float dt);
+		void loadMap(char* fileName);
+		void applyCollisions();
+		void updateViewLocation();
 
 	public:
-		Stage(Managers::GraphicManager *pGraphicManager);
+		Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState);
 		~Stage();
-
-		// Adds and removes the Entity Body from the Physic Machine
-		//void addBody(sf::RectangleShape *pEntityBody);
-		//void removeBody(Managers::uniqueId id);
 
 		// Adds and removes entities from entity List
 		void addEntity(Entities::Entity *pEntity);
 		void removeEntity(Entities::Entity* pEntity);
-		
-		//Stages::PhysicMachine *getPhysics();
 
 		Managers::GraphicManager *getGraphicManager();
 

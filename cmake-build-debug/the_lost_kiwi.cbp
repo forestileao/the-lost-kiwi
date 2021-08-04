@@ -82,7 +82,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h">
@@ -91,10 +100,22 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Game.h">
@@ -133,7 +154,16 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Block.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Character.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Enemy.cpp">
@@ -142,10 +172,22 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Entity.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Fire.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Player.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Spike.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Warrior.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Game.cpp">

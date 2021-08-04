@@ -9,7 +9,9 @@ Character::Character(int life, Managers::GraphicManager* pGraphicsManager,Stages
 	Entity(pGraphicsManager, pStage),
 	lifePoints(life),
 	vulnerability(false),
-	isGrounded(true)
+	isGrounded(true),
+	isLookingToTheRight(true),
+	vel(0, 0)
 {
 
 }
@@ -37,6 +39,7 @@ void Character::addLifePoints(int points)
 void Character::decrementLifePoints(int points)
 {
 	lifePoints -= points;
+	vulnerability = false;
 }
 void Character::move(float x, float y)
 {

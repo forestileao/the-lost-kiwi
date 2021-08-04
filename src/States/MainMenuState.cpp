@@ -9,14 +9,14 @@ MainMenuState::MainMenuState(States::StateMachine* pStateMachine, Managers::Grap
 	States::State(pStateMachine), selected(0)
 {
 	this->pGraphicManager = pGraphicManager;
-
+	sf::View* view = pGraphicManager->getView();
 	gameNameText = pGraphicManager->createText(0, "Nome Feliz Pro jogo :D", 40);
 	startGameText = pGraphicManager->createText(0, "Start Game", 20);
 	quitGameText = pGraphicManager->createText(0, "Quit Game", 20);
 
-	pGraphicManager->setTextPosition(gameNameText, 100, 20);
-	pGraphicManager->setTextPosition(startGameText, 255, 100);
-	pGraphicManager->setTextPosition(quitGameText, 255, 200);
+	pGraphicManager->setTextPosition(gameNameText, view->getCenter().x - 180, 20);
+	pGraphicManager->setTextPosition(startGameText, view->getCenter().x - 20, 100);
+	pGraphicManager->setTextPosition(quitGameText, view->getCenter().x - 20, 200);
 	pGraphicManager->setTextColor(gameNameText, 0xff0000ff);
 	pGraphicManager->setTextColor(startGameText, 0xffff00ff);
 	pGraphicManager->setTextColor(quitGameText, 0xffffffff);

@@ -5,10 +5,6 @@
 #ifndef PROJECTILE_H
 #define PROJECTILE_H
 
-#define PROJECTILE_TEXTURE_FILE "../assets/knife.png"
-#define KNIFE_FRAME_RIGHT 0, 0, 13, 4
-#define KNIFE_FRAME_LEFT 13, 0, -13, 4
-
 #include "Entity.h"
 
 namespace Entities
@@ -16,17 +12,16 @@ namespace Entities
 	class Projectile: public Entity
 	{
 	private:
-		const float acceleration = 15;
-		const float maxVel = 100;
-
+	    bool friendly;
 		// Movements
 		bool positiveMovement;
 		sf::Vector2f vel;
 
 	public:
-		Projectile(sf::Vector2f origin, Stages::Stage* pStage, Managers::GraphicManager* pGraphicManager, bool positiveMovement = true);
+	    Projectile(sf::Vector2f origin,char* textureFile, sf::Rect<int> frameRect, Stages::Stage* pStage, Managers::GraphicManager* pGraphicManager, bool positiveMovement = true, bool isFriendly = false);
 		~Projectile();
 
+		bool isFriendly() const;
 		void execute(float dt, Managers::EventManager *pEventManager);
 	};
 }

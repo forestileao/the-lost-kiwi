@@ -8,12 +8,14 @@ using namespace Managers;
 
 GraphicManager::GraphicManager(int screenWidth, int screenHeight, const char* windowTitle):
 	screenWidth(screenWidth), screenHeight(screenHeight)
-	{
+{
 	window.create(sf::VideoMode(screenWidth, screenHeight), windowTitle);
 	window.setFramerateLimit(60);
 
-	backgroundSprite = -1;
+	view = sf::View(sf::Vector2f(screenWidth/2,screenHeight/2), sf::Vector2f(screenWidth, screenHeight));
+	window.setView(view);
 
+	backgroundSprite = -1;
 }
 GraphicManager::~GraphicManager()
 {
@@ -50,7 +52,8 @@ const uniqueId GraphicManager::loadTexture(const char* file)
 	if(it != loadedTextures.end())
 		return it->second;
 
-	else{
+	else
+	{
 		sf::Texture* newTexture = new sf::Texture();
 
 		if(!newTexture->loadFromFile(file))
@@ -73,7 +76,8 @@ const uniqueId GraphicManager::createSprite(uniqueId baseTexture)
 		printf("ERROR: texture id out of range\n");
 		return -1;
 	}
-	else{
+	else
+	{
 		sf::Sprite* newSprite = new sf::Sprite(*textures[baseTexture]);
 
 		auto i = sprites.begin();
@@ -203,6 +207,13 @@ void GraphicManager::draw()
 		window.display();
 		window.clear();
 		if(backgroundSprite >= 0)
-			window.draw(*sprites[backgroundSprite]);
+		{
+		    (*sprites[backgroundSprite]).setPosition(sf::Vector2f(view.getCenter().x - view.getSize().x/2, 0));
+		    window.draw(*sprites[backgroundSprite]);
+		}
 	}
+}
+sf::View *GraphicManager::getView()
+{
+    return &view;
 }
