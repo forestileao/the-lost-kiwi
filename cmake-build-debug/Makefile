@@ -609,6 +609,30 @@ src/States/PlayState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.s
 .PHONY : src/States/PlayState.cpp.s
 
+src/States/ScoreboardState.o: src/States/ScoreboardState.cpp.o
+.PHONY : src/States/ScoreboardState.o
+
+# target to build an object file
+src/States/ScoreboardState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o
+.PHONY : src/States/ScoreboardState.cpp.o
+
+src/States/ScoreboardState.i: src/States/ScoreboardState.cpp.i
+.PHONY : src/States/ScoreboardState.i
+
+# target to preprocess a source file
+src/States/ScoreboardState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.i
+.PHONY : src/States/ScoreboardState.cpp.i
+
+src/States/ScoreboardState.s: src/States/ScoreboardState.cpp.s
+.PHONY : src/States/ScoreboardState.s
+
+# target to generate assembly for a file
+src/States/ScoreboardState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.s
+.PHONY : src/States/ScoreboardState.cpp.s
+
 src/States/State.o: src/States/State.cpp.o
 .PHONY : src/States/State.o
 
@@ -750,6 +774,9 @@ help:
 	@echo "... src/States/PlayState.o"
 	@echo "... src/States/PlayState.i"
 	@echo "... src/States/PlayState.s"
+	@echo "... src/States/ScoreboardState.o"
+	@echo "... src/States/ScoreboardState.i"
+	@echo "... src/States/ScoreboardState.s"
 	@echo "... src/States/State.o"
 	@echo "... src/States/State.i"
 	@echo "... src/States/State.s"

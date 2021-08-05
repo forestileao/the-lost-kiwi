@@ -17,7 +17,9 @@ private:
 	Managers::uniqueId gameNameText;
 	Managers::uniqueId startGameText;
 	Managers::uniqueId quitGameText;
+	Managers::uniqueId scoreboardText;
 
+	float timer;
 	int selected;
 
 public:

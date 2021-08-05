@@ -5,6 +5,7 @@
 #include "../../include/States/GameStateMachine.h"
 #include "../../include/States/PlayState.h"
 #include "../../include/States/MainMenuState.h"
+#include "../../include/States/ScoreboardState.h"
 
 GameStateMachine::GameStateMachine(Managers::GraphicManager *graphicManager)
 {
@@ -12,6 +13,8 @@ GameStateMachine::GameStateMachine(Managers::GraphicManager *graphicManager)
 	addState(state, "PlayState");
 	state = static_cast<States::State*>(new MainMenuState(static_cast<States::StateMachine*>(this), graphicManager));
 	addState(state, "MainMenu");
+	state = static_cast<States::State*>(new ScoreboardState(static_cast<States::StateMachine*>(this), graphicManager));
+	addState(state, "Scoreboard");
 	changeState("MainMenu", NULL);
 }
 

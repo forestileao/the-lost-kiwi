@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o"
+  "CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o"
   "CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o"

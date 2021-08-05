@@ -188,6 +188,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/MainMenuState.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/PlayState.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/ScoreboardState.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/States/GameStateMachine.cpp
@@ -214,6 +215,14 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/States/PlayState.cpp
+CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/ScoreboardState.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
+ /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/src/States/ScoreboardState.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
