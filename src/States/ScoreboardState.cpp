@@ -23,7 +23,8 @@ void ScoreboardState::loadScores()
     input.open(SCOREBOARD_FILE);
     int scr = 0;
     int lineCounter = 0;
-    while(input.good()){
+    while(input.good())
+    {
         getline(input,line);
         scr = pGraphicManager->createText(0, line, 20);
         pGraphicManager->setTextColor(scr, 0xffffffff);

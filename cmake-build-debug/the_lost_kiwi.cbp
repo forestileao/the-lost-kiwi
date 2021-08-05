@@ -139,6 +139,9 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/ChoosePlayerState.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -206,6 +209,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/Stage.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/ChoosePlayerState.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/GameStateMachine.cpp">
