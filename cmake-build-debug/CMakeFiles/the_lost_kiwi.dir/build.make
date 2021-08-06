@@ -365,9 +365,22 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/src/Entities/Fire.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.s
 
+CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
+CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o: ../src/Stages/PhysicsMachine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o -c /home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp
+
+CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp > CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.i
+
+CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.s
+
 CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
 CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o: ../src/States/ScoreboardState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o -c /home/forestileao/Documents/the-lost-kiwi/src/States/ScoreboardState.cpp
 
 CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.i: cmake_force
@@ -380,7 +393,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.s: cmake_force
 
 CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
 CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o: ../src/States/ChoosePlayerState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o -c /home/forestileao/Documents/the-lost-kiwi/src/States/ChoosePlayerState.cpp
 
 CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.i: cmake_force
@@ -416,6 +429,7 @@ the_lost_kiwi_OBJECTS = \
 "CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Entities/Spike.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.o" \
+"CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o"
 
@@ -445,6 +459,7 @@ the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Spike.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Entities/Fire.cpp.o
+the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/build.make
@@ -452,7 +467,7 @@ the_lost_kiwi: /usr/lib64/libsfml-graphics.so.2.5.1
 the_lost_kiwi: /usr/lib64/libsfml-window.so.2.5.1
 the_lost_kiwi: /usr/lib64/libsfml-system.so.2.5.1
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable the_lost_kiwi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable the_lost_kiwi"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/the_lost_kiwi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

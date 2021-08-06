@@ -1,5 +1,6 @@
 #include <fstream>
 #include "../../include/Stages/Stage.h"
+#include "../../include/Stages/PhysicsMachine.h"
 #include "../../include/Entities/Archer.h"
 #include "../../include/Entities/Warrior.h"
 #include "../../include/Entities/Dracula.h"
@@ -17,7 +18,8 @@ Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState):
 	players(-1),
 	changeStage(false),
 	stageScore(0),
-	pState(pState)
+	pState(pState),
+    physics(this)
 {
 	this->pGraphicManager = pGraphicManager;
 	initializeElements();
@@ -90,8 +92,8 @@ void Stage::update(float dt, Managers::EventManager *pEvents)
 	for (int i = 0; i < entities.projectileList.getLen(); ++i)
 	    entities.projectileList.getItem(i)->execute(dt, pEvents);
 
-	applyCollisions();
-	applyGravity(dt);
+	physics.applyCollisions(entities);
+	physics.applyGravity(dt, entities);
 	updateViewLocation();
 }
 
@@ -122,10 +124,16 @@ void Stage::removeEntity(Entities::Entity* pEntity)
 
 	Entities::Entity::decrementEntityCount();
 }
+EntityList Stage::getEntitylist()
+{
+	return entities;
+}
+
 Managers::GraphicManager *Stage::getGraphicManager()
 {
 	return pGraphicManager;
 }
+/*
 void Stage::applyGravity(float dt)
 {
 	Entities::Player* pTemp = nullptr;
@@ -138,25 +146,32 @@ void Stage::applyGravity(float dt)
 
 	}
 }
+*/
 void Stage::updateViewLocation()
 {
     if (pGraphicManager)
     {
         sf::View* view = pGraphicManager->getView();
 
-        if (p1 && p2)
+        if (p1 && p2 && p1->isAlive() && p2->isAlive())
         {
             view->setCenter(sf::Vector2f((p1->getPosition().x + p2->getPosition().x)/2,
                                          pGraphicManager->getWindowPointer()->getSize().y/2));
         }
-        else if (p1)
+        else if (p1 && p1->isAlive())
         {
             view->setCenter(sf::Vector2f(p1->getPosition().x,
                                          pGraphicManager->getWindowPointer()->getSize().y/2));
         }
+        else if (p2 && p2->isAlive())
+        {
+                view->setCenter(sf::Vector2f(p2->getPosition().x,
+                                             pGraphicManager->getWindowPointer()->getSize().y/2));
+        }
         pGraphicManager->getWindowPointer()->setView(*view);
     }
 }
+/*
 void Stage::applyCollisions()
 {
     Entities::Player* tempPlayer = nullptr;
@@ -213,6 +228,7 @@ void Stage::applyCollisions()
 
     }
 }
+*/
 void Stage::loadMap(char* fileName)
 {
     std::ifstream input;
@@ -253,4 +269,8 @@ void Stage::loadMap(char* fileName)
         lineCount++;
     }
     input.close();
+}
+PlayState *Stage::getPlayState() const
+{
+    return pState;
 }

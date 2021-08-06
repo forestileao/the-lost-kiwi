@@ -226,7 +226,6 @@ Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::Grap
 	numRect(0)
 {
     body.setSize(sf::Vector2f(15,48));
-    body.setFillColor(sf::Color::Red);
 
 	this->pGraphicManager = pGraphicManager;
 
@@ -255,7 +254,6 @@ Player::~Player()
 
 void Player::execute(float dt, Managers::EventManager* pEventManager)
 {
-    pGraphicManager->getWindowPointer()->draw(body);
     if (body.getPosition().y >= pGraphicManager->getWindowPointer()->getSize().y - 48)
     {
         setGrounded(true);
@@ -314,4 +312,14 @@ void Player::setControls(bool isPlayerOne)
 		jumpKey = Managers::EventManager::keyCode::Up;
 		attackKey = Managers::EventManager::keyCode::RShift;
 	}
+}
+
+void Player::setVulnerability(bool vuln)
+{
+    vulnerability = vuln;
+}
+
+bool Player::getVulnerability() const
+{
+    return vulnerability;
 }

@@ -34,6 +34,7 @@ namespace Entities
 
 
 		bool isAlive();
+		int getLife();
 		void setLife(int life);
 		void addLifePoints(int points);
 		void decrementLifePoints(int points);

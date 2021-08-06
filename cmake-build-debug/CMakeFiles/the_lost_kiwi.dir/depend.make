@@ -13,6 +13,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
@@ -42,6 +43,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
@@ -84,6 +86,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
@@ -98,6 +101,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
@@ -132,6 +136,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/GameStateMachine.h \
  ../include/States/State.h \
@@ -151,6 +156,30 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
  ../src/Stages/EntityList.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o: \
+ ../include/Entities/Archer.h \
+ ../include/Entities/Block.h \
+ ../include/Entities/Character.h \
+ ../include/Entities/Dracula.h \
+ ../include/Entities/Enemy.h \
+ ../include/Entities/Entity.h \
+ ../include/Entities/Fire.h \
+ ../include/Entities/Obstacle.h \
+ ../include/Entities/Player.h \
+ ../include/Entities/Projectile.h \
+ ../include/Entities/Spike.h \
+ ../include/Entities/Warrior.h \
+ ../include/List/Element.h \
+ ../include/List/List.h \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/Stage.h \
+ ../include/States/PlayState.h \
+ ../include/States/State.h \
+ ../include/States/StateMachine.h \
+ ../src/Stages/PhysicsMachine.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Entities/Archer.h \
  ../include/Entities/Block.h \
@@ -169,6 +198,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
  ../include/States/State.h \
@@ -192,6 +222,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/ChoosePlayerState.h \
  ../include/States/GameStateMachine.h \
@@ -219,6 +250,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
  ../include/States/State.h \
@@ -255,6 +287,7 @@ CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
+ ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \

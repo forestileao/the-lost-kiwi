@@ -29,7 +29,6 @@ Archer::~Archer()
 
 void Archer::execute(float dt, Managers::EventManager *pEventManager)
 {
-    pGraphicManager->getWindowPointer()->draw(body);
     chooseTarget();
 
     if (isLookingToTheRight)

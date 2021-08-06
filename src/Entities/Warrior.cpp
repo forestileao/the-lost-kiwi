@@ -28,7 +28,6 @@ Warrior::~Warrior()
 }
 void Warrior::execute(float dt, Managers::EventManager *pEventManager)
 {
-    pGraphicManager->getWindowPointer()->draw(body);
     chooseTarget();
 
     if (isLookingToTheRight)
