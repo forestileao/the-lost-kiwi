@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/carolsfer/TecProg/the-lost-kiwi/SFML_INCLUDE_DIR
+CXX_INCLUDES = -I/home/forestileao/Documents/the-lost-kiwi/SFML_INCLUDE_DIR -I/home/forestileao/Documents/the-lost-kiwi/include
 
 CXX_FLAGS = -g -std=gnu++14
 

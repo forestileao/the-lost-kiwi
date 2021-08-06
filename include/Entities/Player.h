@@ -123,6 +123,9 @@ namespace Entities
 		Player(int life, Stages::Stage* pStage = nullptr, bool firstPlayer = true, Managers::GraphicManager* pGraphicManager = nullptr);
 		~Player();
 
+		void setVulnerability(bool vuln);
+		bool getVulnerability() const;
+
 		void execute(float dt, Managers::EventManager *pEventManager);
 	};
 }

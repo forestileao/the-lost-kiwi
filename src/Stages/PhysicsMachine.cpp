@@ -14,7 +14,9 @@
 #include "../../include/States/PlayState.h"
 using namespace Stages;
 
-PhysicsMachine::PhysicsMachine(){
+PhysicsMachine::PhysicsMachine(Stages::Stage* pStage):
+    pt_stage(pStage)
+{
 }
 
 PhysicsMachine::~PhysicsMachine(){
@@ -35,7 +37,16 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
         {
             tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(j));
             if (tempPlayer->intersects(tempEnemy->getGlobalBounds()))
-                std::cout << "COLIDIU CARA !!!!!!!!!!!\n";
+            {
+                if (tempPlayer->getVulnerability())
+                {
+                    tempPlayer->decrementLifePoints(tempEnemy->getDamage());
+                    tempPlayer->setVulnerability(false);
+                    std::cout << "Player Life: " << tempPlayer->getLife() << '\n';
+                    if (!tempPlayer->isAlive())
+                        pt_stage->removeEntity(tempPlayer);
+                }
+            }
         }
 
         for (int j = 0; j < entities.projectileList.getLen(); ++j)
@@ -44,8 +55,13 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
             if (tempProj->isFriendly()) continue;
             if (tempPlayer->intersects(tempProj->getGlobalBounds()))
             {
-                tempPlayer->decrementLifePoints(3);
-                std::cout << "VISH TOMO TIRO MEO\n";
+                tempPlayer->decrementLifePoints(2);
+                std::cout << "Player Life: " << tempPlayer->getLife() << '\n';
+                pt_stage->removeEntity(tempProj);
+                if (!tempPlayer->isAlive())
+                {
+                    pt_stage->removeEntity(tempPlayer);
+                }
             }
         }
 
@@ -75,6 +91,22 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
             }
         }
 
+    }
+
+    for (int i = 0; i < entities.enemyList.getLen(); ++i)
+    {
+        tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(i));
+        for (int j = 0; j < entities.projectileList.getLen(); ++j)
+        {
+            tempProj = dynamic_cast<Entities::Projectile*>(entities.projectileList.getItem(j));
+            if (tempProj->isFriendly() && tempProj->intersects(tempEnemy->getGlobalBounds()))
+            {
+                tempEnemy->decrementLifePoints(3);
+                pt_stage->removeEntity(tempProj);
+                if (!tempEnemy->isAlive())
+                    pt_stage->removeEntity(tempEnemy);
+            }
+        }
     }
 }
 

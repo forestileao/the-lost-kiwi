@@ -19,7 +19,7 @@ Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState):
 	changeStage(false),
 	stageScore(0),
 	pState(pState),
-    physics()
+    physics(this)
 {
 	this->pGraphicManager = pGraphicManager;
 	initializeElements();

@@ -13,7 +13,8 @@ Enemy::Enemy(int life, int value, Player *p1, Player *p2, Managers::GraphicManag
     pPlayer2(p2),
     scoreValue(value),
     Character(life, pGraphicManager, pStage),
-    targetDistance(0)
+    targetDistance(0),
+    damage(2)
 {
     attackTarget = nullptr;
 }
@@ -75,4 +76,8 @@ float Enemy::getTargetDistance() const
 Player *Enemy::getTarget()
 {
     return attackTarget;
+}
+int Enemy::getDamage() const
+{
+    return damage;
 }

@@ -5,243 +5,249 @@
 		<Option title="the_lost_kiwi"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib64\;CMake Files\..\..\..\..\usr\lib64\cmake\;CMake Files\..\..\..\..\usr\lib64\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug"/>
+				<Option working_dir="/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug"/>
+				<Option working_dir="/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug"/>
+				<Option working_dir="/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="the_lost_kiwi">
-				<Option output="/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/the_lost_kiwi" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug"/>
+				<Option output="/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/the_lost_kiwi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/carolsfer/TecProg/the-lost-kiwi/SFML_INCLUDE_DIR"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/forestileao/Documents/the-lost-kiwi/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/forestileao/Documents/the-lost-kiwi/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 the_lost_kiwi"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 the_lost_kiwi"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="the_lost_kiwi/fast">
-				<Option output="/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/the_lost_kiwi" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug"/>
+				<Option output="/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/the_lost_kiwi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/carolsfer/TecProg/the-lost-kiwi/SFML_INCLUDE_DIR"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/home/forestileao/Documents/the-lost-kiwi/SFML_INCLUDE_DIR"/>
+					<Add directory="/home/forestileao/Documents/the-lost-kiwi/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/11/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 the_lost_kiwi/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/carolsfer/TecProg/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 the_lost_kiwi/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Archer.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Block.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Character.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Dracula.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Enemy.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Entity.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Fire.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Obstacle.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Player.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Projectile.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Spike.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Entities/Warrior.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Game.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Game.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/List/Element.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/List/Element.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/List/List.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/List/List.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Managers/EventManager.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Managers/GraphicManager.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Stages/EntityList.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/Stages/Stage.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/States/GameStateMachine.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/States/MainMenuState.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/States/PlayState.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/MainMenuState.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/States/State.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/PlayState.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/include/States/StateMachine.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/State.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Archer.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Block.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Character.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Block.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Dracula.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Character.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Enemy.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Entity.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Enemy.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Fire.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Entity.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Obstacle.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Fire.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Player.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Projectile.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Player.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Spike.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Entities/Warrior.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Spike.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Game.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Warrior.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Managers/EventManager.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Game.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Managers/GraphicManager.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Managers/EventManager.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Stages/EntityList.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Managers/GraphicManager.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/Stages/Stage.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/EntityList.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/States/GameStateMachine.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/States/MainMenuState.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/Stage.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/States/PlayState.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/GameStateMachine.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/States/State.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/MainMenuState.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/States/StateMachine.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/PlayState.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/src/main.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/State.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/CMakeLists.txt">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/StateMachine.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/main.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/../../../../usr/lib64/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/../../../../usr/lib64/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/../../../../usr/lib64/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/../../../../usr/lib64/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/carolsfer/TecProg/the-lost-kiwi/../../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/../../../../usr/lib64/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib64\cmake\SFML\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

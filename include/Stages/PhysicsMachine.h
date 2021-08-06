@@ -4,14 +4,16 @@
 
 #ifndef PHYSICSMACHINE_H
 #define PHYSICSMACHINE_H
-namespace Stages{
+#include "EntityList.h"
+namespace Stages
+{
     class Stage;
     class PhysicsMachine{
     private:
         Stage * pt_stage;
 
     public:
-        PhysicsMachine();
+        PhysicsMachine(Stages::Stage* pStage);
         ~PhysicsMachine();
         void applyCollisions(EntityList &entities);
         void applyGravity(float dt, EntityList &entities);
