@@ -6,7 +6,7 @@
 Entities::Spike::Spike(Managers::GraphicManager *pGraphicsManager, Stages::Stage *pStage)
     : Obstacle(pGraphicsManager, pStage)
 {
-    obstableId = 2;
+    obstacleId = 2;
     updateRect();
     setDamage(5);
 }
