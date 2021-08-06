@@ -15,12 +15,6 @@ namespace Stages
 	class Stage
 	{
     protected:
-		enum Stages
-		{
-			Hall,
-			Castle
-		};
-
 		Managers::uniqueId backgroundSprite;
 		Managers::GraphicManager *pGraphicManager;
 		EntityList entities;
@@ -29,11 +23,8 @@ namespace Stages
 		PlayState* pState;
 		PhysicsMachine physics;
 
-		int currentLevel;
 		int players;
-		int totalPlayers;
 		bool changeStage;
-		int stageScore;
 
 		void initializeElements();
 		//void applyGravity(float dt);

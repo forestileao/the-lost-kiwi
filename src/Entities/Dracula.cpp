@@ -14,8 +14,7 @@ Dracula::Dracula(int life,
                    Managers::GraphicManager *pGraphicManager,
                    Stages::Stage *pStage):
    Enemy(life, value, p1, p2, pGraphicManager, pStage),
-   attackTimer(0),
-   isAttacking(false)
+   attackTimer(0)
 {
     body.setSize(sf::Vector2f(40,79));
     frame = Managers::spriteRect(DRACULA_REST_RECT_RIGHT);

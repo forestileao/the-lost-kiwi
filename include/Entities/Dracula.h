@@ -23,7 +23,6 @@ namespace Entities
     {
     private:
         float attackTimer;
-        bool isAttacking;
 
     public:
         Dracula(

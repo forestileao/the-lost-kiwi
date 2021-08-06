@@ -14,10 +14,8 @@ using namespace Stages;
 Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState):
 	entities(),
 	backgroundSprite(-1),
-	currentLevel(-1),
 	players(-1),
 	changeStage(false),
-	stageScore(0),
 	pState(pState),
     physics(this)
 {
@@ -33,7 +31,6 @@ Stage::~Stage()
 void Stage::initializeElements()
 {
 	//currentLevel = n;
-	totalPlayers = players;
 
 	p1 = new Entities::Player(10, this, true, pGraphicManager);
 	p1->setPosition(100, 200);

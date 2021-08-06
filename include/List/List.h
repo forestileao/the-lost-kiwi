@@ -2,7 +2,10 @@
 #define LIST_H
 
 #include "Element.h"
-
+/*
+ *  List Based on Template List made by Jean Simão:
+ *  Website Link: https://pessoal.dainf.ct.utfpr.edu.br/jeansimao/
+ * */
 template <class T> class List
 {
 private:
