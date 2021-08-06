@@ -7,6 +7,7 @@
 #include "../Managers/EventManager.h"
 #include "../Entities/Player.h"
 #include "../Entities/Projectile.h"
+#include "PhysicsMachine.h"
 
 class PlayState;
 namespace Stages
@@ -26,6 +27,7 @@ namespace Stages
 		Entities::Player* p1;
 		Entities::Player* p2;
 		PlayState* pState;
+		PhysicsMachine physics;
 
 		int currentLevel;
 		int players;
@@ -34,9 +36,9 @@ namespace Stages
 		int stageScore;
 
 		void initializeElements();
-		void applyGravity(float dt);
+		//void applyGravity(float dt);
 		void loadMap(char* fileName);
-		void applyCollisions();
+		//void applyCollisions();
 		void updateViewLocation();
 
 	public:
@@ -46,6 +48,7 @@ namespace Stages
 		// Adds and removes entities from entity List
 		void addEntity(Entities::Entity *pEntity);
 		void removeEntity(Entities::Entity* pEntity);
+		EntityList getEntitylist();
 
 		Managers::GraphicManager *getGraphicManager();
 
