@@ -18,6 +18,8 @@ namespace Entities
 	    Player* pPlayer2;
 	    Player* attackTarget;
 
+	    int damage;
+
 	    float targetDistance;
 
 	    Stages::Stage* pStage;
@@ -38,6 +40,8 @@ namespace Entities
 
         int getScoreValue() const;
         void setScoreValue(int value);
+
+        int getDamage() const;
 
         virtual void execute(float dt, Managers::EventManager* pEventManager) = 0;
 	};

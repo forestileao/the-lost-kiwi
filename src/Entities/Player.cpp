@@ -315,3 +315,13 @@ void Player::setControls(bool isPlayerOne)
 		attackKey = Managers::EventManager::keyCode::RShift;
 	}
 }
+
+void Player::setVulnerability(bool vuln)
+{
+    vulnerability = vuln;
+}
+
+bool Player::getVulnerability() const
+{
+    return vulnerability;
+}

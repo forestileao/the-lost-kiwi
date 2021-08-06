@@ -64,3 +64,7 @@ void Character::setVel(const float x, const float y)
 	vel.x = x;
 	vel.y = y;
 }
+int Character::getLife()
+{
+    return lifePoints;
+}

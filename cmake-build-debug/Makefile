@@ -513,6 +513,30 @@ src/Stages/EntityList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.s
 .PHONY : src/Stages/EntityList.cpp.s
 
+src/Stages/PhysicsMachine.o: src/Stages/PhysicsMachine.cpp.o
+.PHONY : src/Stages/PhysicsMachine.o
+
+# target to build an object file
+src/Stages/PhysicsMachine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o
+.PHONY : src/Stages/PhysicsMachine.cpp.o
+
+src/Stages/PhysicsMachine.i: src/Stages/PhysicsMachine.cpp.i
+.PHONY : src/Stages/PhysicsMachine.i
+
+# target to preprocess a source file
+src/Stages/PhysicsMachine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.i
+.PHONY : src/Stages/PhysicsMachine.cpp.i
+
+src/Stages/PhysicsMachine.s: src/Stages/PhysicsMachine.cpp.s
+.PHONY : src/Stages/PhysicsMachine.s
+
+# target to generate assembly for a file
+src/Stages/PhysicsMachine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.s
+.PHONY : src/Stages/PhysicsMachine.cpp.s
+
 src/Stages/Stage.o: src/Stages/Stage.cpp.o
 .PHONY : src/Stages/Stage.o
 
@@ -738,6 +762,9 @@ help:
 	@echo "... src/Stages/EntityList.o"
 	@echo "... src/Stages/EntityList.i"
 	@echo "... src/Stages/EntityList.s"
+	@echo "... src/Stages/PhysicsMachine.o"
+	@echo "... src/Stages/PhysicsMachine.i"
+	@echo "... src/Stages/PhysicsMachine.s"
 	@echo "... src/Stages/Stage.o"
 	@echo "... src/Stages/Stage.i"
 	@echo "... src/Stages/Stage.s"
