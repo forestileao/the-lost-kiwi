@@ -7,7 +7,7 @@ using namespace Entities;
 Fire::Fire(Managers::GraphicManager *pGraphicsManager, Stages::Stage *pStage)
     : Obstacle(pGraphicsManager, pStage)
 {
-    obstableId = 3;
+    obstacleId = 3;
     updateRect();
     setDamage(3);
 }

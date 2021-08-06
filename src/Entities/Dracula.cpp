@@ -31,7 +31,6 @@ Dracula::~Dracula()
 }
 void Dracula::execute(float dt, Managers::EventManager *pEventManager)
 {
-    pGraphicManager->getWindowPointer()->draw(body);
     chooseTarget();
 
     if (isLookingToTheRight)

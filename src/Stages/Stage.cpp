@@ -153,15 +153,20 @@ void Stage::updateViewLocation()
     {
         sf::View* view = pGraphicManager->getView();
 
-        if (p1 && p2)
+        if (p1 && p2 && p1->isAlive() && p2->isAlive())
         {
             view->setCenter(sf::Vector2f((p1->getPosition().x + p2->getPosition().x)/2,
                                          pGraphicManager->getWindowPointer()->getSize().y/2));
         }
-        else if (p1)
+        else if (p1 && p1->isAlive())
         {
             view->setCenter(sf::Vector2f(p1->getPosition().x,
                                          pGraphicManager->getWindowPointer()->getSize().y/2));
+        }
+        else if (p2 && p2->isAlive())
+        {
+                view->setCenter(sf::Vector2f(p2->getPosition().x,
+                                             pGraphicManager->getWindowPointer()->getSize().y/2));
         }
         pGraphicManager->getWindowPointer()->setView(*view);
     }
@@ -264,4 +269,8 @@ void Stage::loadMap(char* fileName)
         lineCount++;
     }
     input.close();
+}
+PlayState *Stage::getPlayState() const
+{
+    return pState;
 }

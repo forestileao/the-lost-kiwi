@@ -7,7 +7,7 @@ using namespace Entities;
 Obstacle::Obstacle(Managers::GraphicManager* pGraphicsManager, Stages::Stage* pStage):
     Entity(pGraphicsManager, pStage),
     damage(0),
-    obstableId(0)
+    obstacleId(0)
 {
     body.setSize(sf::Vector2f(40, 40));
     frame = sf::Rect<int>(OBSTACLE_RECT);
@@ -34,7 +34,7 @@ void Obstacle::setDamage(int dam)
 
 int Obstacle::getObstacleId() const
 {
-    return obstableId;
+    return obstacleId;
 }
 
 void Obstacle::execute(float dt, Managers::EventManager *pEventManager)
@@ -43,5 +43,5 @@ void Obstacle::execute(float dt, Managers::EventManager *pEventManager)
 }
 void Obstacle::updateRect()
 {
-    frame.left += obstableId*frame.width;
+    frame.left += obstacleId*frame.width;
 }

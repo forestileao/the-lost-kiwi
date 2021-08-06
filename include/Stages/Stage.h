@@ -50,6 +50,7 @@ namespace Stages
 		void removeEntity(Entities::Entity* pEntity);
 		EntityList getEntitylist();
 
+		PlayState* getPlayState() const;
 		Managers::GraphicManager *getGraphicManager();
 
 		void update(float dt, Managers::EventManager *pEvents);

@@ -104,7 +104,10 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 tempEnemy->decrementLifePoints(3);
                 pt_stage->removeEntity(tempProj);
                 if (!tempEnemy->isAlive())
+                {
                     pt_stage->removeEntity(tempEnemy);
+                    pt_stage->getPlayState()->incrementScore(10);
+                }
             }
         }
     }

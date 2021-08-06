@@ -226,7 +226,6 @@ Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::Grap
 	numRect(0)
 {
     body.setSize(sf::Vector2f(15,48));
-    body.setFillColor(sf::Color::Red);
 
 	this->pGraphicManager = pGraphicManager;
 
@@ -255,7 +254,6 @@ Player::~Player()
 
 void Player::execute(float dt, Managers::EventManager* pEventManager)
 {
-    pGraphicManager->getWindowPointer()->draw(body);
     if (body.getPosition().y >= pGraphicManager->getWindowPointer()->getSize().y - 48)
     {
         setGrounded(true);

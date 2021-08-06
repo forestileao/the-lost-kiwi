@@ -204,6 +204,14 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Stages/Stage.cpp
+CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o: \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../include/States/ChoosePlayerState.h \
+ ../include/States/GameStateMachine.h \
+ ../include/States/State.h \
+ ../include/States/StateMachine.h \
+ ../src/States/ChoosePlayerState.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: \
  ../include/Entities/Character.h \
  ../include/Entities/Entity.h \
@@ -216,9 +224,11 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: \
  ../include/Stages/EntityList.h \
  ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
+ ../include/States/ChoosePlayerState.h \
  ../include/States/GameStateMachine.h \
  ../include/States/MainMenuState.h \
  ../include/States/PlayState.h \
+ ../include/States/ScoreboardState.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/States/GameStateMachine.cpp
@@ -246,6 +256,14 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o: \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/States/PlayState.cpp
+CMakeFiles/the_lost_kiwi.dir/src/States/ScoreboardState.cpp.o: \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../include/States/GameStateMachine.h \
+ ../include/States/ScoreboardState.h \
+ ../include/States/State.h \
+ ../include/States/StateMachine.h \
+ ../src/States/ScoreboardState.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/State.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \

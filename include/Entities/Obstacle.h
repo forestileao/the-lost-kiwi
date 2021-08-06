@@ -14,7 +14,7 @@ namespace Entities
     class Obstacle : public Entity
     {
     protected:
-        int obstableId;
+        int obstacleId;
         int damage;
 
         void updateRect();
