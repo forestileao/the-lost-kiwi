@@ -26,14 +26,12 @@ namespace Stages
 		int players;
 		bool changeStage;
 
-		void initializeElements();
-		//void applyGravity(float dt);
+		virtual void initializeElements() = 0;
 		void loadMap(char* fileName);
-		//void applyCollisions();
 		void updateViewLocation();
 
 	public:
-		Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState);
+	    Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int playersNum);
 		~Stage();
 
 		// Adds and removes entities from entity List

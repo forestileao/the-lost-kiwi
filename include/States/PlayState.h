@@ -8,12 +8,17 @@
 #include "State.h"
 #include "../Stages/Stage.h"
 
+#define GRAVEYARD_BACKGROUND "../assets/graveyard.png"
+#define CASTLE_BACKGROUND "../assets/castle.jpg"
+
 class PlayState : public States::State
 {
 private:
 	Managers::GraphicManager* pGraphicManager;
 	Stages::Stage* pStage;
 	Managers::uniqueId scoreText;
+	Managers::uniqueId graveyardBackground;
+	Managers::uniqueId castleBackground;
 	int score;
 
 public:
@@ -24,6 +29,7 @@ public:
 	void draw(Managers::GraphicManager* graphicsManager);
 
 	void incrementScore(int num);
+	int getScore();
 
 	void init(void* arg);
 	void exit();

@@ -23,13 +23,19 @@ void ScoreboardState::loadScores()
     input.open(SCOREBOARD_FILE);
     int scr = 0;
     int lineCounter = 0;
+    std::string showText;
     while(input.good())
     {
         getline(input,line);
-        scr = pGraphicManager->createText(0, line, 20);
-        pGraphicManager->setTextColor(scr, 0xffffffff);
-        scores.insert(std::make_pair(std::stoi(line.substr(4, line.size())),scr));
-        lineCounter++;
+        if (line.length() > 0)
+        {
+            showText = line;
+            std::replace(showText.begin(), showText.end(), ';', ' ');
+            scr = pGraphicManager->createText(0, showText, 20);
+            pGraphicManager->setTextColor(scr, 0xffffffff);
+            scores.insert(std::make_pair(std::stoi(line.substr(line.find(';') + 1, line.size())), scr));
+            lineCounter++;
+        }
     }
     input.close();
 }

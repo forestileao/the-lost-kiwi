@@ -489,6 +489,30 @@ src/Managers/GraphicManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.s
 .PHONY : src/Managers/GraphicManager.cpp.s
 
+src/Stages/Castle.o: src/Stages/Castle.cpp.o
+.PHONY : src/Stages/Castle.o
+
+# target to build an object file
+src/Stages/Castle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o
+.PHONY : src/Stages/Castle.cpp.o
+
+src/Stages/Castle.i: src/Stages/Castle.cpp.i
+.PHONY : src/Stages/Castle.i
+
+# target to preprocess a source file
+src/Stages/Castle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.i
+.PHONY : src/Stages/Castle.cpp.i
+
+src/Stages/Castle.s: src/Stages/Castle.cpp.s
+.PHONY : src/Stages/Castle.s
+
+# target to generate assembly for a file
+src/Stages/Castle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.s
+.PHONY : src/Stages/Castle.cpp.s
+
 src/Stages/EntityList.o: src/Stages/EntityList.cpp.o
 .PHONY : src/Stages/EntityList.o
 
@@ -512,6 +536,30 @@ src/Stages/EntityList.s: src/Stages/EntityList.cpp.s
 src/Stages/EntityList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.s
 .PHONY : src/Stages/EntityList.cpp.s
+
+src/Stages/Graveyard.o: src/Stages/Graveyard.cpp.o
+.PHONY : src/Stages/Graveyard.o
+
+# target to build an object file
+src/Stages/Graveyard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o
+.PHONY : src/Stages/Graveyard.cpp.o
+
+src/Stages/Graveyard.i: src/Stages/Graveyard.cpp.i
+.PHONY : src/Stages/Graveyard.i
+
+# target to preprocess a source file
+src/Stages/Graveyard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.i
+.PHONY : src/Stages/Graveyard.cpp.i
+
+src/Stages/Graveyard.s: src/Stages/Graveyard.cpp.s
+.PHONY : src/Stages/Graveyard.s
+
+# target to generate assembly for a file
+src/Stages/Graveyard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.s
+.PHONY : src/Stages/Graveyard.cpp.s
 
 src/Stages/PhysicsMachine.o: src/Stages/PhysicsMachine.cpp.o
 .PHONY : src/Stages/PhysicsMachine.o
@@ -584,6 +632,30 @@ src/States/ChoosePlayerState.s: src/States/ChoosePlayerState.cpp.s
 src/States/ChoosePlayerState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.s
 .PHONY : src/States/ChoosePlayerState.cpp.s
+
+src/States/GameOverState.o: src/States/GameOverState.cpp.o
+.PHONY : src/States/GameOverState.o
+
+# target to build an object file
+src/States/GameOverState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.o
+.PHONY : src/States/GameOverState.cpp.o
+
+src/States/GameOverState.i: src/States/GameOverState.cpp.i
+.PHONY : src/States/GameOverState.i
+
+# target to preprocess a source file
+src/States/GameOverState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.i
+.PHONY : src/States/GameOverState.cpp.i
+
+src/States/GameOverState.s: src/States/GameOverState.cpp.s
+.PHONY : src/States/GameOverState.s
+
+# target to generate assembly for a file
+src/States/GameOverState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.s
+.PHONY : src/States/GameOverState.cpp.s
 
 src/States/GameStateMachine.o: src/States/GameStateMachine.cpp.o
 .PHONY : src/States/GameStateMachine.o
@@ -807,9 +879,15 @@ help:
 	@echo "... src/Managers/GraphicManager.o"
 	@echo "... src/Managers/GraphicManager.i"
 	@echo "... src/Managers/GraphicManager.s"
+	@echo "... src/Stages/Castle.o"
+	@echo "... src/Stages/Castle.i"
+	@echo "... src/Stages/Castle.s"
 	@echo "... src/Stages/EntityList.o"
 	@echo "... src/Stages/EntityList.i"
 	@echo "... src/Stages/EntityList.s"
+	@echo "... src/Stages/Graveyard.o"
+	@echo "... src/Stages/Graveyard.i"
+	@echo "... src/Stages/Graveyard.s"
 	@echo "... src/Stages/PhysicsMachine.o"
 	@echo "... src/Stages/PhysicsMachine.i"
 	@echo "... src/Stages/PhysicsMachine.s"
@@ -819,6 +897,9 @@ help:
 	@echo "... src/States/ChoosePlayerState.o"
 	@echo "... src/States/ChoosePlayerState.i"
 	@echo "... src/States/ChoosePlayerState.s"
+	@echo "... src/States/GameOverState.o"
+	@echo "... src/States/GameOverState.i"
+	@echo "... src/States/GameOverState.s"
 	@echo "... src/States/GameStateMachine.o"
 	@echo "... src/States/GameStateMachine.i"
 	@echo "... src/States/GameStateMachine.s"

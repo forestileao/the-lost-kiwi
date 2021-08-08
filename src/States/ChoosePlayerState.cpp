@@ -41,7 +41,7 @@ void ChoosePlayerState::update(float dt, Managers::EventManager *eventManager)
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
         {
-            int playerArg = 1;
+            int playerArg = selected + 1;
             ((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&playerArg));
         }
     }

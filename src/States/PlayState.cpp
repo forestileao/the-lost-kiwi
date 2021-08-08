@@ -2,16 +2,19 @@
 // Created by forestileao on 18/07/2021.
 //
 
+#include <Stages/Graveyard.h>
+#include <Stages/Castle.h>
 #include "../../include/States/PlayState.h"
 PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManager* pGraphicsManager):
 	States::State(pStateMachine),
 	score(0)
 {
 	this->pGraphicManager = pGraphicsManager;
-	pStage = nullptr;
+    pStage = nullptr;
 	scoreText = pGraphicsManager->createText(0, "Score: 0", 20);
 	pGraphicsManager->setTextPosition(scoreText, 255, 20);
 	pGraphicsManager->setTextColor(scoreText, 0xffff00ff);
+	castleBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(CASTLE_BACKGROUND));
 }
 
 PlayState::~PlayState()
@@ -22,21 +25,15 @@ PlayState::~PlayState()
 void PlayState::init(void* arg)
 {
 	printf("Entrando no jogo\n");
-	if(arg)
-	{
-		if (pStage)
-			delete pStage;
 
-		std::cout << "Stage is loading...\n";
+	if (pStage)
+	    delete pStage;
 
-		pStage = new Stages::Stage(pGraphicManager, this);
+	std::cout << "Stage is loading...\n";
 
-		// TODO: Implement Pause State
-	}
-	else if(pStage)
-	{
-		//pGraphicManager->setBackground(pStage->getBackground());
-	}
+	graveyardBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(GRAVEYARD_BACKGROUND));
+	pStage = new Stages::Graveyard(pGraphicManager, this, *((int*)arg));
+	pGraphicManager->setBackground(graveyardBackground);
 }
 
 void PlayState::exit()
@@ -63,4 +60,8 @@ void PlayState::draw(Managers::GraphicManager* pGraphicsManager)
 void PlayState::incrementScore(int num)
 {
     PlayState::score += num;
+}
+int PlayState::getScore()
+{
+    return score;
 }
