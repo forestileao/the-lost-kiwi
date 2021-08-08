@@ -13,7 +13,6 @@ ScoreboardState::ScoreboardState(States::StateMachine *pStateMachine, Managers::
     titleText = pGraphicsManager->createText(0, "ScoreBoard\n Top 10", 20);
     pGraphicsManager->setTextPosition(titleText, 255, 20);
     pGraphicsManager->setTextColor(titleText, 0xffff00ff);
-    loadScores();
 }
 
 void ScoreboardState::loadScores()
@@ -68,7 +67,9 @@ void ScoreboardState::draw(Managers::GraphicManager *graphicsManager)
 
 void ScoreboardState::init(void *arg)
 {
+    scores.clear();
     printf("Current State: Scoreboard\n");
+    loadScores();
 }
 
 void ScoreboardState::exit()

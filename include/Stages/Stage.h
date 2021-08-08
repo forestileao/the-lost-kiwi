@@ -8,6 +8,7 @@
 #include "../Entities/Player.h"
 #include "../Entities/Projectile.h"
 #include "PhysicsMachine.h"
+#include "EnemySpawner.h"
 
 class PlayState;
 namespace Stages
@@ -22,6 +23,8 @@ namespace Stages
 		Entities::Player* p2;
 		PlayState* pState;
 		PhysicsMachine physics;
+
+		EnemySpawner spawner;
 
 		int players;
 		bool changeStage;
@@ -38,9 +41,13 @@ namespace Stages
 		void addEntity(Entities::Entity *pEntity);
 		void removeEntity(Entities::Entity* pEntity);
 		EntityList getEntitylist();
+		EnemySpawner* getEnemySpawner();
 
 		PlayState* getPlayState() const;
 		Managers::GraphicManager *getGraphicManager();
+
+		Entities::Player* getPlayer1();
+		Entities::Player* getPlayer2();
 
 		void update(float dt, Managers::EventManager *pEvents);
 		// Draws all entities

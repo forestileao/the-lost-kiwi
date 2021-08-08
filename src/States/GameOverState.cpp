@@ -61,6 +61,7 @@ void GameOverState::draw(Managers::GraphicManager *graphicsManager)
 
 void GameOverState::init(void *arg)
 {
+    playerName = "";
     score = (*(int*)arg);
     background = pGraphicManager->createSprite(pGraphicManager->loadTexture(GAME_OVER_BACKGROUND));
     pGraphicManager->setBackground(background);

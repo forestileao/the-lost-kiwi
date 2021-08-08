@@ -24,6 +24,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/forestileao/Documents/the-lost-kiwi/src/Managers/EventManager.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Managers/EventManager.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Managers/GraphicManager.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Stages/Castle.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o"
+  "/home/forestileao/Documents/the-lost-kiwi/src/Stages/EnemySpawner.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Stages/EntityList.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Stages/Graveyard.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o"
   "/home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp" "/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o"

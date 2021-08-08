@@ -513,6 +513,30 @@ src/Stages/Castle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.s
 .PHONY : src/Stages/Castle.cpp.s
 
+src/Stages/EnemySpawner.o: src/Stages/EnemySpawner.cpp.o
+.PHONY : src/Stages/EnemySpawner.o
+
+# target to build an object file
+src/Stages/EnemySpawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o
+.PHONY : src/Stages/EnemySpawner.cpp.o
+
+src/Stages/EnemySpawner.i: src/Stages/EnemySpawner.cpp.i
+.PHONY : src/Stages/EnemySpawner.i
+
+# target to preprocess a source file
+src/Stages/EnemySpawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.i
+.PHONY : src/Stages/EnemySpawner.cpp.i
+
+src/Stages/EnemySpawner.s: src/Stages/EnemySpawner.cpp.s
+.PHONY : src/Stages/EnemySpawner.s
+
+# target to generate assembly for a file
+src/Stages/EnemySpawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.s
+.PHONY : src/Stages/EnemySpawner.cpp.s
+
 src/Stages/EntityList.o: src/Stages/EntityList.cpp.o
 .PHONY : src/Stages/EntityList.o
 
@@ -882,6 +906,9 @@ help:
 	@echo "... src/Stages/Castle.o"
 	@echo "... src/Stages/Castle.i"
 	@echo "... src/Stages/Castle.s"
+	@echo "... src/Stages/EnemySpawner.o"
+	@echo "... src/Stages/EnemySpawner.i"
+	@echo "... src/Stages/EnemySpawner.s"
 	@echo "... src/Stages/EntityList.o"
 	@echo "... src/Stages/EntityList.i"
 	@echo "... src/Stages/EntityList.s"

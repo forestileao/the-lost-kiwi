@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
-SFML/Graphics.hpp
--
-SFML/Window.hpp
--
-
 /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
 SFML/Graphics.hpp
 -
@@ -20,37 +14,9 @@ map
 vector
 -
 
-/home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
-StateMachine.h
-/home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
-../Managers/GraphicManager.h
-/home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
-
-/home/forestileao/Documents/the-lost-kiwi/include/States/MainMenuState.h
-State.h
-/home/forestileao/Documents/the-lost-kiwi/include/States/State.h
-
-/home/forestileao/Documents/the-lost-kiwi/include/States/State.h
-../Managers/EventManager.h
-/home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
-../Managers/GraphicManager.h
-/home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
-vector
--
+/home/forestileao/Documents/the-lost-kiwi/src/Managers/GraphicManager.cpp
 iostream
 -
-
-/home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
-iostream
--
-map
--
-State.h
-/home/forestileao/Documents/the-lost-kiwi/include/States/State.h
-
-/home/forestileao/Documents/the-lost-kiwi/src/States/MainMenuState.cpp
-../../include/States/MainMenuState.h
-/home/forestileao/Documents/the-lost-kiwi/include/States/MainMenuState.h
-../../include/States/GameStateMachine.h
-/home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
+../../include/Managers/GraphicManager.h
+/home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
 

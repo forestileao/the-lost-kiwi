@@ -1,14 +1,13 @@
 #include <fstream>
 #include "../../include/Stages/Stage.h"
-#include "../../include/Stages/PhysicsMachine.h"
 #include "../../include/Entities/Archer.h"
-#include "../../include/Entities/Warrior.h"
-#include "../../include/Entities/Dracula.h"
 #include "../../include/Entities/Obstacle.h"
 #include "../../include/Entities/Block.h"
 #include "../../include/Entities/Spike.h"
 #include "../../include/Entities/Fire.h"
 #include "../../include/States/PlayState.h"
+
+
 using namespace Stages;
 
 Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int playersNum):
@@ -17,7 +16,8 @@ Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int p
 	players(playersNum),
 	changeStage(false),
 	pState(pState),
-    physics(this)
+    physics(this),
+    spawner(this)
 {
     p1 = nullptr;
     p2 = nullptr;
@@ -27,6 +27,7 @@ Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int p
 Stage::~Stage()
 {
 	delete p1;
+	delete p2;
 }
 
 // Draws all Entities
@@ -48,6 +49,7 @@ void Stage::draw()
 // Updates all entities
 void Stage::update(float dt, Managers::EventManager *pEvents)
 {
+    spawner.spawnEnemy();
 	for (int i = 0; i < entities.mainList.getLen(); ++i)
 		entities.mainList.getItem(i)->execute(dt, pEvents);
 
@@ -171,7 +173,7 @@ void Stage::loadMap(char* fileName)
                 tempObstacle = new Entities::Fire(pGraphicManager, this);
                 break;
             case '&':
-                // TODO: set mob spawner position
+                spawner.addSpawnPosition(sf::Vector2f(i*40, lineCount*40));
                 break;
             }
             if (tempObstacle)
@@ -188,4 +190,16 @@ void Stage::loadMap(char* fileName)
 PlayState *Stage::getPlayState() const
 {
     return pState;
+}
+Entities::Player *Stage::getPlayer1()
+{
+    return p1;
+}
+Entities::Player *Stage::getPlayer2()
+{
+    return p2;
+}
+EnemySpawner *Stage::getEnemySpawner()
+{
+    return &spawner;
 }

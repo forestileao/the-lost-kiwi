@@ -29,22 +29,8 @@ void Graveyard::initializeElements()
         p2->setPosition(150, 200);
     }
 
-
-    Entities::Archer* archer = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
-    Entities::Archer* archer2 = new Entities::Archer(10,10,p1, p2,pGraphicManager,this);
-    Entities::Warrior* warrior = new Entities::Warrior(10,10,p1, p2,pGraphicManager,this);
-    Entities::Dracula* dracula = new Entities::Dracula(10,10,p1, p2,pGraphicManager,this);
-    archer->setPosition(200, 350);
-    archer2->setPosition(300, 350);
-    warrior->setPosition(400, 350);
-    dracula->setPosition(500, 300);
-
     loadMap(GRAVEYARD_FILE);
     addEntity(p1);
     if (p2)
     addEntity(p2);
-    addEntity(archer);
-    addEntity(archer2);
-    addEntity(warrior);
-    addEntity(dracula);
 }

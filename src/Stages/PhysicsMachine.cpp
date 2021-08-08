@@ -106,6 +106,7 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 if (!tempEnemy->isAlive())
                 {
                     pt_stage->removeEntity(tempEnemy);
+                    pt_stage->getEnemySpawner()->decrementEnemiesCount();
                     pt_stage->getPlayState()->incrementScore(10);
                 }
             }

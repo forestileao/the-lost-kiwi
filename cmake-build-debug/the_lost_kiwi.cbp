@@ -140,6 +140,9 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/Castle.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/EnemySpawner.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -222,6 +225,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/Castle.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/EnemySpawner.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/EntityList.cpp">

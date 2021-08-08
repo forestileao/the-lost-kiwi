@@ -102,7 +102,8 @@ void GraphicManager::removeSprite(uniqueId sprite)
 	{
 		auto i = sprites.begin();
 		for(sprite; sprite > 0; i++, sprite--)
-			delete *i;
+		    if (*i)
+			    delete *(i);
 
 		if(sprite == sprites.size()-1)
 			sprites.erase(i);
@@ -138,7 +139,7 @@ void GraphicManager::drawSprite(uniqueId sprite)
 
 	if(sprite >= sprites.size())
 		printf("ERROR: sprite id out of range\n");
-	else
+	else if (sprites[sprite] != nullptr)
 		window.draw(*sprites[sprite]);
 }
 
