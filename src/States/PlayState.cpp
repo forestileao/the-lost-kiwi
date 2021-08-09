@@ -7,6 +7,8 @@
 #include "../../include/States/PlayState.h"
 PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManager* pGraphicsManager):
 	States::State(pStateMachine),
+	graveyardBackground(-1),
+	castleBackground(-1),
 	score(0)
 {
 	this->pGraphicManager = pGraphicsManager;
@@ -14,7 +16,6 @@ PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManag
 	scoreText = pGraphicsManager->createText(0, "Score: 0", 20);
 	pGraphicsManager->setTextPosition(scoreText, 255, 20);
 	pGraphicsManager->setTextColor(scoreText, 0xffff00ff);
-	castleBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(CASTLE_BACKGROUND));
 }
 
 PlayState::~PlayState()
@@ -25,15 +26,10 @@ PlayState::~PlayState()
 void PlayState::init(void* arg)
 {
 	printf("Entrando no jogo\n");
-
-	if (pStage)
-	    delete pStage;
+	changeStage(1, *((int*)arg));
 
 	std::cout << "Stage is loading...\n";
 
-	graveyardBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(GRAVEYARD_BACKGROUND));
-	pStage = new Stages::Graveyard(pGraphicManager, this, *((int*)arg));
-	pGraphicManager->setBackground(graveyardBackground);
 }
 
 void PlayState::exit()
@@ -64,4 +60,28 @@ void PlayState::incrementScore(int num)
 int PlayState::getScore()
 {
     return score;
+}
+
+void PlayState::changeStage(int stageNum, int playersNum)
+{
+    delete pStage;
+    switch (stageNum)
+    {
+        case 1:
+            graveyardBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(GRAVEYARD_BACKGROUND));
+            pStage = new Stages::Graveyard(pGraphicManager, this, playersNum);
+            pGraphicManager->setBackground(graveyardBackground);
+            break;
+
+        case 2:
+            castleBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(CASTLE_BACKGROUND));
+            pStage = new Stages::Castle(pGraphicManager, this, playersNum);
+            pGraphicManager->setBackground(castleBackground);
+            break;
+
+        default:
+            pStage = new Stages::Graveyard(pGraphicManager, this, playersNum);
+            pGraphicManager->setBackground(graveyardBackground);
+            break;
+    }
 }

@@ -31,6 +31,8 @@ public:
 	void incrementScore(int num);
 	int getScore();
 
+	void changeStage(int stageNum, int playersNum);
+
 	void init(void* arg);
 	void exit();
 };

@@ -26,8 +26,8 @@ Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int p
 
 Stage::~Stage()
 {
-	delete p1;
-	delete p2;
+	p1 = nullptr;
+	p2 = nullptr;
 }
 
 // Draws all Entities
@@ -49,6 +49,7 @@ void Stage::draw()
 // Updates all entities
 void Stage::update(float dt, Managers::EventManager *pEvents)
 {
+    finishStage();
     spawner.spawnEnemy();
 	for (int i = 0; i < entities.mainList.getLen(); ++i)
 		entities.mainList.getItem(i)->execute(dt, pEvents);

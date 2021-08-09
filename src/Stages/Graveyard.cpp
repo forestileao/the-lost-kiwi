@@ -3,9 +3,8 @@
 //
 
 #include <Entities/Archer.h>
-#include <Entities/Warrior.h>
-#include <Entities/Dracula.h>
 #include "Stages/Graveyard.h"
+#include "States/PlayState.h"
 using namespace Stages;
 
 Graveyard::Graveyard(Managers::GraphicManager *pGraphicManager, PlayState *pState, int playersNum)
@@ -20,12 +19,12 @@ Graveyard::~Graveyard()
 
 void Graveyard::initializeElements()
 {
-    p1 = new Entities::Player(10, this, true, pGraphicManager);
+    p1 = new Entities::Player(100, this, true, pGraphicManager);
     p1->setPosition(100, 200);
 
     if (players == 2)
     {
-        p2 = new Entities::Player(10, this, false, pGraphicManager);
+        p2 = new Entities::Player(20, this, false, pGraphicManager);
         p2->setPosition(150, 200);
     }
 
@@ -33,4 +32,19 @@ void Graveyard::initializeElements()
     addEntity(p1);
     if (p2)
     addEntity(p2);
+}
+void Graveyard::finishStage()
+{
+    if (p1)
+    {
+        //auto pastel = p1->getGlobalBounds();
+        //std::cout << pastel.left << " " << pastel.top << " " << pastel.width << " " << pastel.height << std::endl;
+        if (p1->intersects(sf::Rect<float>(80 * 40, 0, 20 * 40, 12 * 40)))
+            pState->changeStage(2, players);
+    }
+    if (p2)
+    {
+        if (p2->intersects(sf::Rect<float>(80 * 40, 12 * 40, 20 * 40, 12 * 40)))
+            pState->changeStage(2 , players);
+    }
 }

@@ -49,6 +49,8 @@ namespace Stages
 		Entities::Player* getPlayer1();
 		Entities::Player* getPlayer2();
 
+		virtual void finishStage() = 0;
+
 		void update(float dt, Managers::EventManager *pEvents);
 		// Draws all entities
 		void draw();

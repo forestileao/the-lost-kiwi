@@ -64,7 +64,7 @@ const uniqueId GraphicManager::loadTexture(const char* file)
 		textures.push_back(newTexture);
 
 		loadedTextures[file] = textures.size()-1;
-		return textures.size()-1;
+		return loadedTextures.size()-1;
 	}
 }
 
@@ -95,21 +95,21 @@ const uniqueId GraphicManager::createSprite(uniqueId baseTexture)
 
 void GraphicManager::removeSprite(uniqueId sprite)
 {
+    if(sprite >= sprites.size())
+    {
+        std::cout << "Sprite not inside range o sprites array\n";
+    }
+    else
+    {
+        auto i = sprites.begin();
+        for(sprite; sprite > 0; i++, sprite--);
+        delete *i;
 
-	if(sprite >= sprites.size())
-		printf("ERROR: sprite id out of range\n");
-	else
-	{
-		auto i = sprites.begin();
-		for(sprite; sprite > 0; i++, sprite--)
-		    if (*i)
-			    delete *(i);
-
-		if(sprite == sprites.size()-1)
-			sprites.erase(i);
-		else
-			*i = NULL;
-	}
+        if(sprite == sprites.size()-1)
+            sprites.erase(i);
+        else
+            *i = NULL;
+    }
 }
 
 void GraphicManager::setSpriteRect(uniqueId sprite, spriteRect& rect)

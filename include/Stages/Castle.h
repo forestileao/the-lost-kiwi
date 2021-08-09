@@ -18,6 +18,8 @@ namespace Stages
     public:
         Castle(Managers::GraphicManager *pGraphicManager, PlayState* pState, int playersNum);
         ~Castle();
+
+        void finishStage() override;
     };
 }
 

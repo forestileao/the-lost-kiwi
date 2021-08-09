@@ -156,12 +156,10 @@ CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o: \
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o: \
  ../include/Entities/Archer.h \
  ../include/Entities/Character.h \
- ../include/Entities/Dracula.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
- ../include/Entities/Warrior.h \
  ../include/List/Element.h \
  ../include/List/List.h \
  ../include/Managers/EventManager.h \
@@ -171,6 +169,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o: \
  ../include/Stages/EntityList.h \
  ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
+ ../include/States/PlayState.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Stages/Castle.cpp
@@ -204,12 +203,10 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/EntityList.cpp.o: \
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o: \
  ../include/Entities/Archer.h \
  ../include/Entities/Character.h \
- ../include/Entities/Dracula.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
- ../include/Entities/Warrior.h \
  ../include/List/Element.h \
  ../include/List/List.h \
  ../include/Managers/EventManager.h \
@@ -219,6 +216,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o: \
  ../include/Stages/Graveyard.h \
  ../include/Stages/PhysicsMachine.h \
  ../include/Stages/Stage.h \
+ ../include/States/PlayState.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Stages/Graveyard.cpp

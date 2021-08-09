@@ -19,6 +19,8 @@ namespace Stages
     public:
         Graveyard(Managers::GraphicManager *pGraphicManager, PlayState* pState, int playersNum);
         ~Graveyard();
+
+        void finishStage() override;
     };
 }
 

@@ -61,6 +61,7 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 if (!tempPlayer->isAlive())
                 {
                     pt_stage->removeEntity(tempPlayer);
+                    delete tempPlayer;
                 }
             }
         }

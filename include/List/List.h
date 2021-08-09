@@ -1,6 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include <clocale>
 #include "Element.h"
 /*
  *  List Based on Template List made by Jean Simão:

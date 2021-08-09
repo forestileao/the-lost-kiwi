@@ -64,7 +64,7 @@ void ChoosePlayerState::draw(Managers::GraphicManager *graphicsManager)
 }
 void ChoosePlayerState::init(void *arg)
 {
-    State::init(arg);
+    timer = 0;
 }
 void ChoosePlayerState::exit()
 {
