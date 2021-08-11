@@ -37,8 +37,6 @@ void Graveyard::finishStage()
 {
     if (p1)
     {
-        //auto pastel = p1->getGlobalBounds();
-        //std::cout << pastel.left << " " << pastel.top << " " << pastel.width << " " << pastel.height << std::endl;
         if (p1->intersects(sf::Rect<float>(80 * 40, 0, 20 * 40, 12 * 40)))
             pState->changeStage(2, players);
     }

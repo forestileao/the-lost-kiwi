@@ -3,6 +3,7 @@
 //
 
 #include <Entities/Archer.h>
+#include <Entities/Dracula.h>
 #include "Stages/Castle.h"
 #include "States/PlayState.h"
 using namespace Stages;
@@ -32,10 +33,16 @@ void Castle::initializeElements()
     if (p2)
         addEntity(p2);
 
+    boss = new Entities::Dracula(50, 100,p1,p2, pGraphicManager, this);
+    boss->setPosition(90*40, pGraphicManager->getView()->getSize().y - 150);
+    addEntity(boss);
 }
 
 void Castle::finishStage()
 {
-    //int score = pState->getScore();
-    //pState->getStateMachine()->changeState("GameOver", &score);
+    if (!boss->isAlive())
+    {
+        int score = pState->getScore();
+        pState->getStateMachine()->changeState("GameOver", static_cast<void *>(&score));
+    }
 }

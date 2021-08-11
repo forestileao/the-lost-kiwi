@@ -9,12 +9,18 @@
 
 #define CASTLE_FILE "../assets/castle.txt"
 
+namespace Entities
+{
+    class Dracula;
+}
+
 namespace Stages
 {
     class Castle: public Stage
     {
     private:
         void initializeElements() override;
+        Entities::Dracula* boss;
     public:
         Castle(Managers::GraphicManager *pGraphicManager, PlayState* pState, int playersNum);
         ~Castle();

@@ -156,6 +156,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Managers/GraphicManager.cpp.o: \
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o: \
  ../include/Entities/Archer.h \
  ../include/Entities/Character.h \
+ ../include/Entities/Dracula.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
  ../include/Entities/Player.h \

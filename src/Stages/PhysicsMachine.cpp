@@ -76,19 +76,43 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                     tempPlayer->setGrounded(true);
                     tempPlayer->setVel(tempPlayer->getVel().x, 0);
                     setGrounded = true;
+
+
+
                 }
                 else {
                     tempPlayer->setGrounded(false);
                 }
             }
 
+            if (tempPlayer->intersects(blockRect))
+            {
+                Entities::Obstacle* tempObstacle = (Entities::Obstacle*)entities.blockList.getItem(j);
+                if (tempObstacle->getDamage() > 0)
+                {
+                    if (tempPlayer->getVulnerability())
+                        tempPlayer->decrementLifePoints(tempObstacle->getDamage());
+                    tempPlayer->setVulnerability(false);
+                    if (!tempPlayer->isAlive())
+                    {
+                        pt_stage->removeEntity(tempPlayer);
+                        delete tempPlayer;
+                        break;
+                    }
+                }
+            }
+
             blockRect.top+=10;
+            Entities::Obstacle* tempObstacle = (Entities::Obstacle*)entities.blockList.getItem(j);
             if (tempPlayer->intersects(blockRect)) {
+
                 if ((tempPlayer->getVel().x) > 0)
                     tempPlayer->setPosition(tempPlayer->getPosition().x-(3), tempPlayer->getPosition().y);
                 else
                     tempPlayer->setPosition(tempPlayer->getPosition().x+(3), tempPlayer->getPosition().y);
                 break;
+
+
             }
         }
 
