@@ -26,6 +26,8 @@ Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int p
 
 Stage::~Stage()
 {
+    delete p1;
+    delete p2;
 }
 
 // Draws all Entities
@@ -99,14 +101,18 @@ void Stage::addEntity(Entities::Entity *pEntity)
 
 void Stage::removeEntity(Entities::Entity* pEntity)
 {
-    if (dynamic_cast<Entities::Player*>(pEntity))
-        entities.mainList.pop(pEntity);
-    else if (dynamic_cast<Entities::Enemy*>(pEntity))
+    bool isPlayer = false;
+    if (dynamic_cast<Entities::Enemy*>(pEntity))
         entities.enemyList.pop(pEntity);
     else if (dynamic_cast<Entities::Obstacle*>(pEntity))
         entities.blockList.pop(pEntity);
     else if (dynamic_cast<Entities::Projectile*>(pEntity))
         entities.projectileList.pop(pEntity);
+    else if (dynamic_cast<Entities::Player*>(pEntity))
+    { entities.mainList.pop(pEntity); isPlayer = true; }
+
+    if (!isPlayer)
+        delete pEntity;
 
 	Entities::Entity::decrementEntityCount();
 }

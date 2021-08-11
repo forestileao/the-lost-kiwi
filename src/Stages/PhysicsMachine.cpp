@@ -61,7 +61,6 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 if (!tempPlayer->isAlive())
                 {
                     pt_stage->removeEntity(tempPlayer);
-                    delete tempPlayer;
                 }
             }
         }
@@ -76,9 +75,6 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                     tempPlayer->setGrounded(true);
                     tempPlayer->setVel(tempPlayer->getVel().x, 0);
                     setGrounded = true;
-
-
-
                 }
                 else {
                     tempPlayer->setGrounded(false);
@@ -96,23 +92,20 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                     if (!tempPlayer->isAlive())
                     {
                         pt_stage->removeEntity(tempPlayer);
-                        delete tempPlayer;
+                        tempPlayer = nullptr;
                         break;
                     }
                 }
             }
 
             blockRect.top+=10;
-            Entities::Obstacle* tempObstacle = (Entities::Obstacle*)entities.blockList.getItem(j);
-            if (tempPlayer->intersects(blockRect)) {
-
+            if (tempPlayer->intersects(blockRect))
+            {
                 if ((tempPlayer->getVel().x) > 0)
                     tempPlayer->setPosition(tempPlayer->getPosition().x-(3), tempPlayer->getPosition().y);
                 else
                     tempPlayer->setPosition(tempPlayer->getPosition().x+(3), tempPlayer->getPosition().y);
                 break;
-
-
             }
         }
 
@@ -121,6 +114,8 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
     for (int i = 0; i < entities.enemyList.getLen(); ++i)
     {
         tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(i));
+        if (!tempEnemy)
+            continue;
         for (int j = 0; j < entities.projectileList.getLen(); ++j)
         {
             tempProj = dynamic_cast<Entities::Projectile*>(entities.projectileList.getItem(j));
@@ -133,6 +128,8 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                     pt_stage->removeEntity(tempEnemy);
                     pt_stage->getEnemySpawner()->decrementEnemiesCount();
                     pt_stage->getPlayState()->incrementScore(10);
+                    tempEnemy = nullptr;
+                    break;
                 }
             }
         }

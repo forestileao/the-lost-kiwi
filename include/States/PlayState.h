@@ -24,6 +24,8 @@ private:
 	Managers::GraphicManager* pGraphicManager;
 	Stages::Stage* pStage;
 	Managers::uniqueId scoreText;
+	Managers::uniqueId playerOneLifeText;
+	Managers::uniqueId playerTwoLifeText;
 	Managers::uniqueId graveyardBackground;
 	Managers::uniqueId castleBackground;
 	Managers::uniqueId currentBackground;
