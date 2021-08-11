@@ -30,6 +30,7 @@ void Game::update(float dt)
 	if (eventManager->isWindowClosing())
 		graphicManager->closeWindow();
 
+
 	stateMachine->update(dt, eventManager);
 }
 

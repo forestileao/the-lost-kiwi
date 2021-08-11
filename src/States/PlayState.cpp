@@ -9,7 +9,9 @@ PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManag
 	States::State(pStateMachine),
 	graveyardBackground(-1),
 	castleBackground(-1),
-	score(0)
+	currentBackground(-1),
+	score(0),
+    gameData()
 {
 	this->pGraphicManager = pGraphicsManager;
     pStage = nullptr;
@@ -25,11 +27,20 @@ PlayState::~PlayState()
 
 void PlayState::init(void* arg)
 {
+    gameData = *((GameData *)arg);
 	printf("Entrando no jogo\n");
-	changeStage(1, *((int*)arg));
 
-	std::cout << "Stage is loading...\n";
-
+	if (gameData.isLoading)
+	{
+        return;
+	}
+	else if (!gameData.isResuming)
+	{
+	    changeStage(1, gameData.players);
+	    std::cout << "Stage is loading...\n";
+        return;
+	}
+	pGraphicManager->setBackground(currentBackground);
 }
 
 void PlayState::exit()
@@ -40,11 +51,15 @@ void PlayState::exit()
 void PlayState::update(float dt, Managers::EventManager* pEventManager)
 {
 	pStage->update(dt, pEventManager);
-	// score = pStage->getScore();
 	std::string text = "Score: " + std::to_string(static_cast<unsigned long int>(score));
 
 	pGraphicManager->setString(scoreText, text);
 	pGraphicManager->setTextPosition(scoreText, pGraphicManager->getView()->getCenter().x, 20);
+	
+	if(pEventManager->isKeyPressed(sf::Keyboard::P))
+	{
+	    pStateMachine->changeState("PauseState", static_cast<void*>(pStage));
+	}
 }
 
 void PlayState::draw(Managers::GraphicManager* pGraphicsManager)
@@ -71,17 +86,20 @@ void PlayState::changeStage(int stageNum, int playersNum)
             graveyardBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(GRAVEYARD_BACKGROUND));
             pStage = new Stages::Graveyard(pGraphicManager, this, playersNum);
             pGraphicManager->setBackground(graveyardBackground);
+            currentBackground = graveyardBackground;
             break;
 
         case 2:
             castleBackground = pGraphicManager->createSprite(pGraphicManager->loadTexture(CASTLE_BACKGROUND));
             pStage = new Stages::Castle(pGraphicManager, this, playersNum);
             pGraphicManager->setBackground(castleBackground);
+            currentBackground = castleBackground;
             break;
 
         default:
             pStage = new Stages::Graveyard(pGraphicManager, this, playersNum);
             pGraphicManager->setBackground(graveyardBackground);
+            currentBackground = graveyardBackground;
             break;
     }
 }

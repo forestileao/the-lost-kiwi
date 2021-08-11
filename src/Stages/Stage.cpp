@@ -26,8 +26,6 @@ Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int p
 
 Stage::~Stage()
 {
-	p1 = nullptr;
-	p2 = nullptr;
 }
 
 // Draws all Entities
@@ -131,17 +129,17 @@ void Stage::updateViewLocation()
         if (p1 && p2 && p1->isAlive() && p2->isAlive())
         {
             view->setCenter(sf::Vector2f((p1->getPosition().x + p2->getPosition().x)/2,
-                                         pGraphicManager->getWindowPointer()->getSize().y/2));
+                                         480/2));
         }
         else if (p1 && p1->isAlive())
         {
             view->setCenter(sf::Vector2f(p1->getPosition().x,
-                                         pGraphicManager->getWindowPointer()->getSize().y/2));
+                                         480/2));
         }
         else if (p2 && p2->isAlive())
         {
                 view->setCenter(sf::Vector2f(p2->getPosition().x,
-                                             pGraphicManager->getWindowPointer()->getSize().y/2));
+                                             480/2));
         }
         pGraphicManager->getWindowPointer()->setView(*view);
     }

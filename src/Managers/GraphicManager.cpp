@@ -9,7 +9,7 @@ using namespace Managers;
 GraphicManager::GraphicManager(int screenWidth, int screenHeight, const char* windowTitle):
 	screenWidth(screenWidth), screenHeight(screenHeight)
 {
-    window.create(sf::VideoMode(screenWidth, screenHeight), windowTitle, sf::Style::Titlebar | sf::Style::Close);
+    window.create(sf::VideoMode(screenWidth, screenHeight), windowTitle);
 	window.setFramerateLimit(60);
 
 	view = sf::View(sf::Vector2f(screenWidth/2,screenHeight/2), sf::Vector2f(screenWidth, screenHeight));

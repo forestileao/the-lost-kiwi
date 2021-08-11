@@ -32,6 +32,7 @@ MainMenuState::~MainMenuState()
 
 void MainMenuState::init(void* arg)
 {
+    timer = 0;
     background = pGraphicManager->createSprite(pGraphicManager->loadTexture(MENU_BACKGROUND_FILE));
 	printf("Entrando no Menu\n");
 	pGraphicManager->setBackground(background);
@@ -44,6 +45,14 @@ void MainMenuState::exit()
 
 void MainMenuState::update(float dt, Managers::EventManager* pEventManager)
 {
+
+    sf::View *view = pGraphicManager->getView();
+    pGraphicManager->setTextPosition(gameNameText, view->getCenter().x - 180, 20);
+    pGraphicManager->setTextPosition(startGameText, view->getCenter().x - 20, 100);
+    pGraphicManager->setTextPosition(scoreboardText, view->getCenter().x - 20, 200);
+    pGraphicManager->setTextPosition(quitGameText, view->getCenter().x - 20, 300);
+
+
     pGraphicManager->getView()->setCenter((pGraphicManager->getWindowPointer()->getSize().x)/2, pGraphicManager->getView()->getSize().y/2);
     pGraphicManager->getWindowPointer()->setView(*pGraphicManager->getView());
     if (timer > 0.05)
@@ -56,7 +65,10 @@ void MainMenuState::update(float dt, Managers::EventManager* pEventManager)
         timer = 0;
     }
     else
+    {
         timer += dt;
+        return;
+    }
 	if (selected == 0)
 	{
 		pGraphicManager->setTextColor(startGameText, 0xffff00ff);

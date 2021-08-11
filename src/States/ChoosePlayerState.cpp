@@ -2,6 +2,7 @@
 // Created by forestileao on 8/5/21.
 //
 
+#include <States/PlayState.h>
 #include "../../include/States/ChoosePlayerState.h"
 #include "../../include/States/GameStateMachine.h"
 
@@ -15,8 +16,8 @@ ChoosePlayerState::ChoosePlayerState(States::StateMachine *pStateMachine, Manage
     view->setCenter((pGraphicManager->getView()->getSize().x)*0.5, pGraphicManager->getView()->getSize().y);
     onePlayerText = pGraphicManager->createText(0, "1 Player", 20);
     twoPlayerText = pGraphicManager->createText(0, "2 Players", 20);
-    pGraphicsManager->setTextPosition(onePlayerText,view->getCenter().x-20,view->getCenter().y/2-60);
-    pGraphicsManager->setTextPosition(twoPlayerText,view->getCenter().x-20,view->getCenter().y/2+20);
+    pGraphicsManager->setTextPosition(onePlayerText,view->getCenter().x-20,view->getCenter().y/2-30);
+    pGraphicsManager->setTextPosition(twoPlayerText,view->getCenter().x-20,view->getCenter().y/2+50);
 }
 ChoosePlayerState::~ChoosePlayerState()
 {
@@ -26,6 +27,10 @@ ChoosePlayerState::~ChoosePlayerState()
 
 void ChoosePlayerState::update(float dt, Managers::EventManager *eventManager)
 {
+    sf::View *view = pGraphicManager->getView();
+    pGraphicManager->setTextPosition(onePlayerText, view->getCenter().x-20,view->getCenter().y/2-30);
+    pGraphicManager->setTextPosition(twoPlayerText, view->getCenter().x-20,view->getCenter().y/2+50);
+
     if (!(timer > 0.1))
         timer += dt;
 
@@ -41,8 +46,11 @@ void ChoosePlayerState::update(float dt, Managers::EventManager *eventManager)
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
         {
-            int playerArg = selected + 1;
-            ((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&playerArg));
+            GameData gameData;
+            gameData.players = 1;
+            gameData.isResuming = false;
+            gameData.isLoading = false;
+            ((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&gameData));
         }
     }
     else if ( selected == 1 && timer > 0.1)
@@ -52,8 +60,11 @@ void ChoosePlayerState::update(float dt, Managers::EventManager *eventManager)
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
         {
-            int playerArg = 2;
-            ((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&playerArg));
+            GameData gameData;
+            gameData.players = 2;
+            gameData.isResuming = false;
+            gameData.isLoading = false;
+            ((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&gameData));
         }
     }
 }

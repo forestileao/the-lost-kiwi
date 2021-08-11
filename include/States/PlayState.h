@@ -11,6 +11,13 @@
 #define GRAVEYARD_BACKGROUND "../assets/graveyard.png"
 #define CASTLE_BACKGROUND "../assets/castle.jpg"
 
+typedef struct
+{
+    bool isResuming;
+    bool isLoading;
+    int players;
+} GameData;
+
 class PlayState : public States::State
 {
 private:
@@ -19,7 +26,10 @@ private:
 	Managers::uniqueId scoreText;
 	Managers::uniqueId graveyardBackground;
 	Managers::uniqueId castleBackground;
+	Managers::uniqueId currentBackground;
 	int score;
+
+	GameData gameData;
 
 public:
 	PlayState(States::StateMachine* pStateMachine = nullptr, Managers::GraphicManager* pGraphicsManager = nullptr);
