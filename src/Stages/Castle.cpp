@@ -34,7 +34,7 @@ void Castle::initializeElements()
         addEntity(p2);
 
     boss = new Entities::Dracula(50, 100,p1,p2, pGraphicManager, this);
-    boss->setPosition(90*40, pGraphicManager->getView()->getSize().y - 150);
+    boss->setPosition(90*40, pGraphicManager->getView()->getSize().y - 160);
     addEntity(boss);
 }
 

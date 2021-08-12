@@ -50,7 +50,8 @@ void Stage::draw()
 // Updates all entities
 void Stage::update(float dt, Managers::EventManager *pEvents)
 {
-    finishStage();
+    if (!spawner.didObstaclesSpawned())
+        spawner.spawnObstacles();
     spawner.spawnEnemy();
 	for (int i = 0; i < entities.mainList.getLen(); ++i)
 		entities.mainList.getItem(i)->execute(dt, pEvents);
@@ -84,6 +85,7 @@ void Stage::update(float dt, Managers::EventManager *pEvents)
 	        pState->getStateMachine()->changeState("GameOver", static_cast<void *>(&score));
 	    }
 	}
+	finishStage();
 }
 
 void Stage::addEntity(Entities::Entity *pEntity)

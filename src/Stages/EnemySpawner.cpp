@@ -5,15 +5,21 @@
 #include <Entities/Enemy.h>
 #include <Entities/Archer.h>
 #include <Entities/Warrior.h>
+#include <Entities/Obstacle.h>
+#include <Entities/Fire.h>
+#include <Entities/Spike.h>
 #include "Stages/EnemySpawner.h"
 #include "Stages/Stage.h"
 using namespace Stages;
 
 EnemySpawner::EnemySpawner(Stage *pStage):
     enemiesSpawned(0),
+    obstaclesSpawned(0),
     spawnPositions(),
-    pStage(pStage)
+    pStage(pStage),
+    didSpawnedObstacles(false)
 {
+    srand(time(NULL));
     srand(time(NULL));
 }
 
@@ -63,4 +69,38 @@ void EnemySpawner::decrementEnemiesCount()
 void EnemySpawner::setEnemiesCount(unsigned int num)
 {
     enemiesSpawned = num;
+}
+void EnemySpawner::spawnObstacles()
+{
+    if (obstaclesSpawned < maxObstacles)
+    {
+        obstaclesSpawned++;
+        spawnObstacles();
+    }
+    else
+    {
+        didSpawnedObstacles = true;
+        return;
+    }
+
+    int enemyType = (rand() % 2), positionIndex;
+    Entities::Obstacle* newObstacle;
+    if (enemyType)
+        newObstacle = new Entities::Fire(pStage->getGraphicManager(), pStage);
+    else
+        newObstacle = new Entities::Spike(pStage->getGraphicManager(), pStage);
+
+    positionIndex = rand()%spawnPositions.size();
+    sf::Vector2f randomPosition = spawnPositions[positionIndex];
+    newObstacle->setPosition(randomPosition.x, randomPosition.y);
+    spawnPositions.erase(spawnPositions.begin() + positionIndex);
+    pStage->addEntity(newObstacle);
+}
+void EnemySpawner::setObstaclesCount(unsigned int num)
+{
+    obstaclesSpawned = num;
+}
+bool EnemySpawner::didObstaclesSpawned() const
+{
+    return didSpawnedObstacles;
 }

@@ -160,9 +160,9 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 pt_stage->removeEntity(tempProj);
                 if (!tempEnemy->isAlive())
                 {
+                    pt_stage->getPlayState()->incrementScore(tempEnemy->getScoreValue());
                     pt_stage->removeEntity(tempEnemy);
                     pt_stage->getEnemySpawner()->decrementEnemiesCount();
-                    pt_stage->getPlayState()->incrementScore(10);
                     tempEnemy = nullptr;
                     break;
                 }

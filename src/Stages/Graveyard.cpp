@@ -31,7 +31,7 @@ void Graveyard::initializeElements()
     loadMap(GRAVEYARD_FILE);
     addEntity(p1);
     if (p2)
-    addEntity(p2);
+        addEntity(p2);
 }
 void Graveyard::finishStage()
 {
