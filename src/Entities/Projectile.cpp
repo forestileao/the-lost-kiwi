@@ -40,7 +40,7 @@ void Entities::Projectile::execute(float dt, Managers::EventManager *pEventManag
 {
     sf::View* view = pGraphicManager->getView();
     if (body.getPosition().x > view->getCenter().x + view->getSize().x/2 || body.getPosition().x < view->getCenter().x - view->getSize().x/2)
-		pStage->removeEntity(this);
+        pStage->removeEntity(this);
 
 	body.move(vel.x*dt,vel.y*dt);
 }

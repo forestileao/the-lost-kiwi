@@ -31,6 +31,7 @@ void EventManager::resetLoopKeys()
 		keysReleased[i] = false;
 		keysPressed[i] = false;
 	}
+	resizeEvent = false;
 }
 
 EventManager::~EventManager()
@@ -68,6 +69,10 @@ void EventManager::pollAll()
 			keysPressed[events.key.code] = true;
 			keysDown[events.key.code] = true;
 		}
+		else if (events.type == sf::Event::Resized)
+		{
+		    resizeEvent = true;
+		}
 	}
 }
 
@@ -100,4 +105,9 @@ const std::string EventManager::getStringInput()
 const bool EventManager::isWindowClosing() const
 {
 	return closeEvent;
+}
+
+const bool EventManager::DidWindowResized() const
+{
+    return resizeEvent;
 }

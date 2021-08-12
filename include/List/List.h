@@ -1,6 +1,7 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include <clocale>
 #include "Element.h"
 /*
  *  List Based on Template List made by Jean Simão:
@@ -80,7 +81,7 @@ void List<T>::pop(T* item)
 	Element<T>* temp = pFirst;
 	Element<T>* tempBack = nullptr;
 
-	while (temp->getItem() != item)
+	while (temp && temp->getItem() != item)
 	{
 		tempBack = temp;
 		temp = temp->getPNext();
@@ -95,11 +96,12 @@ void List<T>::pop(T* item)
 		tempBack->setNext(nullptr);
 		pLast = tempBack;
 	} // In the middle of the list
-	else
+	else if (temp)
 		tempBack->setNext(temp->getPNext());
 
+	if (temp)
+	    len--;
 	delete temp;
-	len--;
 }
 
 template<class T>

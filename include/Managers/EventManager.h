@@ -22,7 +22,7 @@ namespace Managers
 		bool keysPressed[sf::Keyboard::KeyCount]; // Marks all keys that where pressed
 		bool keysReleased[sf::Keyboard::KeyCount]; // Mark all released keys of last verification
 		bool keysDown[sf::Keyboard::KeyCount]; // Marks all keys that are still pressed
-
+        bool resizeEvent;
 		bool closeEvent; // Marks if the used tried to close the window
 
 		void initKeysDown();
@@ -46,6 +46,7 @@ namespace Managers
 
 		const std::string getStringInput();
 		const bool isWindowClosing() const;
+		const bool DidWindowResized() const;
 	};
 }
 

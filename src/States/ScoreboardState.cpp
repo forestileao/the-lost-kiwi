@@ -13,7 +13,6 @@ ScoreboardState::ScoreboardState(States::StateMachine *pStateMachine, Managers::
     titleText = pGraphicsManager->createText(0, "ScoreBoard\n Top 10", 20);
     pGraphicsManager->setTextPosition(titleText, 255, 20);
     pGraphicsManager->setTextColor(titleText, 0xffff00ff);
-    loadScores();
 }
 
 void ScoreboardState::loadScores()
@@ -23,13 +22,19 @@ void ScoreboardState::loadScores()
     input.open(SCOREBOARD_FILE);
     int scr = 0;
     int lineCounter = 0;
+    std::string showText;
     while(input.good())
     {
         getline(input,line);
-        scr = pGraphicManager->createText(0, line, 20);
-        pGraphicManager->setTextColor(scr, 0xffffffff);
-        scores.insert(std::make_pair(std::stoi(line.substr(4, line.size())),scr));
-        lineCounter++;
+        if (line.length() > 0)
+        {
+            showText = line;
+            std::replace(showText.begin(), showText.end(), ';', ' ');
+            scr = pGraphicManager->createText(0, showText, 20);
+            pGraphicManager->setTextColor(scr, 0xffffffff);
+            scores.insert(std::make_pair(std::stoi(line.substr(line.find(';') + 1, line.size())), scr));
+            lineCounter++;
+        }
     }
     input.close();
 }
@@ -62,7 +67,9 @@ void ScoreboardState::draw(Managers::GraphicManager *graphicsManager)
 
 void ScoreboardState::init(void *arg)
 {
+    scores.clear();
     printf("Current State: Scoreboard\n");
+    loadScores();
 }
 
 void ScoreboardState::exit()

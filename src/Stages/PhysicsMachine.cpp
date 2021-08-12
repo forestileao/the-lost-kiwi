@@ -44,7 +44,10 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                     tempPlayer->setVulnerability(false);
                     std::cout << "Player Life: " << tempPlayer->getLife() << '\n';
                     if (!tempPlayer->isAlive())
+                    {
                         pt_stage->removeEntity(tempPlayer);
+                        break;
+                    }
                 }
             }
         }
@@ -61,6 +64,7 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 if (!tempPlayer->isAlive())
                 {
                     pt_stage->removeEntity(tempPlayer);
+                    break;
                 }
             }
         }
@@ -81,8 +85,26 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 }
             }
 
+            if (tempPlayer->intersects(blockRect))
+            {
+                Entities::Obstacle* tempObstacle = (Entities::Obstacle*)entities.blockList.getItem(j);
+                if (tempObstacle->getDamage() > 0)
+                {
+                    if (tempPlayer->getVulnerability())
+                        tempPlayer->decrementLifePoints(tempObstacle->getDamage());
+                    tempPlayer->setVulnerability(false);
+                    if (!tempPlayer->isAlive())
+                    {
+                        pt_stage->removeEntity(tempPlayer);
+                        tempPlayer = nullptr;
+                        break;
+                    }
+                }
+            }
+
             blockRect.top+=10;
-            if (tempPlayer->intersects(blockRect)) {
+            if (tempPlayer->intersects(blockRect))
+            {
                 if ((tempPlayer->getVel().x) > 0)
                     tempPlayer->setPosition(tempPlayer->getPosition().x-(3), tempPlayer->getPosition().y);
                 else
@@ -96,6 +118,8 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
     for (int i = 0; i < entities.enemyList.getLen(); ++i)
     {
         tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(i));
+        if (!tempEnemy)
+            continue;
         for (int j = 0; j < entities.projectileList.getLen(); ++j)
         {
             tempProj = dynamic_cast<Entities::Projectile*>(entities.projectileList.getItem(j));
@@ -106,7 +130,10 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 if (!tempEnemy->isAlive())
                 {
                     pt_stage->removeEntity(tempEnemy);
+                    pt_stage->getEnemySpawner()->decrementEnemiesCount();
                     pt_stage->getPlayState()->incrementScore(10);
+                    tempEnemy = nullptr;
+                    break;
                 }
             }
         }

@@ -9,7 +9,7 @@ using namespace Managers;
 GraphicManager::GraphicManager(int screenWidth, int screenHeight, const char* windowTitle):
 	screenWidth(screenWidth), screenHeight(screenHeight)
 {
-    window.create(sf::VideoMode(screenWidth, screenHeight), windowTitle, sf::Style::Titlebar | sf::Style::Close);
+    window.create(sf::VideoMode(screenWidth, screenHeight), windowTitle);
 	window.setFramerateLimit(60);
 
 	view = sf::View(sf::Vector2f(screenWidth/2,screenHeight/2), sf::Vector2f(screenWidth, screenHeight));
@@ -64,7 +64,7 @@ const uniqueId GraphicManager::loadTexture(const char* file)
 		textures.push_back(newTexture);
 
 		loadedTextures[file] = textures.size()-1;
-		return textures.size()-1;
+		return loadedTextures.size()-1;
 	}
 }
 
@@ -95,20 +95,21 @@ const uniqueId GraphicManager::createSprite(uniqueId baseTexture)
 
 void GraphicManager::removeSprite(uniqueId sprite)
 {
+    if(sprite >= sprites.size())
+    {
+        std::cout << "Sprite not inside range o sprites array\n";
+    }
+    else
+    {
+        auto i = sprites.begin();
+        for(sprite; sprite > 0; i++, sprite--);
+        delete *i;
 
-	if(sprite >= sprites.size())
-		printf("ERROR: sprite id out of range\n");
-	else
-	{
-		auto i = sprites.begin();
-		for(sprite; sprite > 0; i++, sprite--)
-			delete *i;
-
-		if(sprite == sprites.size()-1)
-			sprites.erase(i);
-		else
-			*i = NULL;
-	}
+        if(sprite == sprites.size()-1)
+            sprites.erase(i);
+        else
+            *i = NULL;
+    }
 }
 
 void GraphicManager::setSpriteRect(uniqueId sprite, spriteRect& rect)
@@ -138,7 +139,7 @@ void GraphicManager::drawSprite(uniqueId sprite)
 
 	if(sprite >= sprites.size())
 		printf("ERROR: sprite id out of range\n");
-	else
+	else if (sprites[sprite] != nullptr)
 		window.draw(*sprites[sprite]);
 }
 
