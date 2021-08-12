@@ -112,17 +112,20 @@ void PauseState::saveGame()
 {
     std::string filePath = "../saves/stage.txt";
     std::ofstream newFile(filePath, std::ios_base::trunc | std::ios_base::out);
+
+    newFile << pStage->getPlayState()->getScore() << '\n';
+
     List<Entities::Entity> enemyList = pStage->getEntitylist().enemyList;
     List<Entities::Entity> mainList = pStage->getEntitylist().mainList;
 
     if (dynamic_cast<Stages::Graveyard*>(pStage) == NULL)
-        newFile << 0 << '\n';
+        newFile << 2 << '\n';
     else newFile << 1 << '\n';
 
     newFile << mainList.getLen() << '\n';
     for (int i = 0; i < mainList.getLen(); i ++)
     {
-        Entities::Player* pPlayer = (Entities::Player*)(enemyList.getItem(i));
+        Entities::Player* pPlayer = (Entities::Player*)(mainList.getItem(i));
         newFile << ((Entities::Character*)pPlayer)->getLife() << ' '
         << pPlayer->getPosition().x << ' ' << pPlayer->getPosition().y << '\n';
     }

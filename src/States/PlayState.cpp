@@ -4,6 +4,7 @@
 
 #include <Stages/Graveyard.h>
 #include <Stages/Castle.h>
+#include <fstream>
 #include "../../include/States/PlayState.h"
 PlayState::PlayState(States::StateMachine* pStateMachine, Managers::GraphicManager* pGraphicsManager):
 	States::State(pStateMachine),
@@ -37,6 +38,17 @@ void PlayState::init(void* arg)
 
 	if (gameData.isLoading)
 	{
+	    char fileName[] = "../saves/stage.txt";
+	    std::ifstream input;
+	    string line;
+	    int stageNumber;
+
+	    input.open(fileName);
+        getline(input, line) >> stageNumber;
+        score = std::stoi(line);
+        changeStage(stageNumber, 1);
+        pStage->loadGame(fileName);
+        input.close();
         return;
 	}
 	else if (!gameData.isResuming)

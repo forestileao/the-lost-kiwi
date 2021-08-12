@@ -60,3 +60,7 @@ void EnemySpawner::decrementEnemiesCount()
 {
     enemiesSpawned--;
 }
+void EnemySpawner::setEnemiesCount(unsigned int num)
+{
+    enemiesSpawned = num;
+}

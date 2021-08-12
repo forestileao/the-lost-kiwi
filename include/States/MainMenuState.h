@@ -16,6 +16,7 @@ private:
 	Managers::GraphicManager* pGraphicManager;
 	Managers::uniqueId gameNameText;
 	Managers::uniqueId startGameText;
+	Managers::uniqueId loadGameText;
 	Managers::uniqueId quitGameText;
 	Managers::uniqueId scoreboardText;
 

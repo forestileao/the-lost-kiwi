@@ -120,6 +120,37 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
         tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(i));
         if (!tempEnemy)
             continue;
+
+        bool setGrounded = false;
+        for (int j = 0; j < entities.blockList.getLen(); ++j)
+        {
+            sf::Rect<float> blockRect = entities.blockList.getItem(j)->getGlobalBounds();
+            blockRect.height += 5;
+            blockRect.top -= 10;
+            if (!setGrounded)
+            {
+                if (tempEnemy->intersects(blockRect)) {
+                    tempEnemy->setGrounded(true);
+                    tempEnemy->setVel(tempEnemy->getVel().x, 0);
+                    setGrounded = true;
+                }
+                else {
+                    tempEnemy->setGrounded(false);
+                }
+            }
+
+            blockRect.top+= 10;
+            blockRect.width+= 10;
+            if (tempEnemy->intersects(blockRect))
+            {
+                if ((tempEnemy->getVel().x) < 0)
+                    tempEnemy->setPosition(tempEnemy->getPosition().x-(5), tempEnemy->getPosition().y);
+                else
+                    tempEnemy->setPosition(tempEnemy->getPosition().x+(5), tempEnemy->getPosition().y);
+                break;
+            }
+        }
+
         for (int j = 0; j < entities.projectileList.getLen(); ++j)
         {
             tempProj = dynamic_cast<Entities::Projectile*>(entities.projectileList.getItem(j));
@@ -149,6 +180,16 @@ void PhysicsMachine::applyGravity(float dt, EntityList &entities){
 
         if(pTemp != nullptr && !(pTemp->getGrounded()))
             pTemp->setVel(pTemp->getVel().x, pTemp->getVel().y + 300.f*dt);
+
+    }
+
+    Entities::Warrior* pTempEnemy = nullptr;
+    for (int i = 0; i < entities.enemyList.getLen(); ++i)
+    {
+        pTempEnemy = dynamic_cast<Entities::Warrior*>(entities.enemyList.getItem(i));
+
+        if(pTempEnemy != nullptr && !(pTempEnemy->getGrounded()))
+            pTempEnemy->setVel(pTempEnemy->getVel().x, pTempEnemy->getVel().y + 300.f*dt);
 
     }
 }

@@ -103,7 +103,7 @@ namespace Entities
 
 		const float acceleration = 9;
 		const float JumpingAcceleration = 50;
-		const float maxVel = 200;
+		const float maxVel = 180;
 		const float jumpVel = 300;
 
 		States::StateMachine *stateMachine;
