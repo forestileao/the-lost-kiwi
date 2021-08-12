@@ -247,10 +247,12 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
+ ../include/Entities/Character.h
+ ../include/Entities/Enemy.h
+ ../include/Entities/Player.h
+ ../include/Entities/Warrior.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
- /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
- /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
@@ -323,11 +325,23 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/States/GameStateMachine.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o
- /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ ../include/Entities/Character.h
+ ../include/Entities/Entity.h
+ ../include/Entities/Player.h
+ ../include/Entities/Projectile.h
+ ../include/List/Element.h
+ ../include/List/List.h
+ ../include/Managers/EventManager.h
+ ../include/Stages/EnemySpawner.h
+ ../include/Stages/EntityList.h
+ ../include/Stages/PhysicsMachine.h
+ ../include/Stages/Stage.h
+ ../include/States/PlayState.h
+ ../include/States/State.h
+ ../include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/MainMenuState.h
- /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/States/MainMenuState.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o

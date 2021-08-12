@@ -22,6 +22,7 @@ namespace Stages
         void addSpawnPosition(sf::Vector2f spawnPos);
         void spawnEnemy();
         void decrementEnemiesCount();
+        void setEnemiesCount(unsigned int num);
     };
 }
 

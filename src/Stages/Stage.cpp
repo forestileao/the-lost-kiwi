@@ -1,4 +1,5 @@
 #include <fstream>
+#include <Entities/Warrior.h>
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Archer.h"
 #include "../../include/Entities/Obstacle.h"
@@ -207,4 +208,62 @@ Entities::Player *Stage::getPlayer2()
 EnemySpawner *Stage::getEnemySpawner()
 {
     return &spawner;
+}
+void Stage::loadGame(char* fileName)
+{
+    removeEntity(p1);
+    delete p1;
+    delete p2;
+    p1 = nullptr;
+    p2 = nullptr;
+
+    std::ifstream input;
+    string line;
+
+    int entitiesNum, entityType, entityLife;
+    float entityPosX, entityPosY;
+
+    input.open(fileName);
+    Entities::Enemy* tempEnemy = nullptr;
+
+    getline(input,line); // skips line
+
+    getline(input,line) >> entitiesNum;
+    players = entitiesNum;
+
+    getline(input,line) >> entityLife
+                                >> entityPosX >> entityPosY;
+    p1 = new Entities::Player(entityLife, this, true, pGraphicManager);
+    p1->setPosition(entityPosX, entityPosY);
+    p1->setGrounded(false);
+    addEntity(p1);
+
+    if (entitiesNum == 2)
+    {
+        getline(input,line) >> entityLife
+                                    >> entityPosX >> entityPosY;
+        p2 = new Entities::Player(entityLife, this, false, pGraphicManager);
+        p2->setPosition(entityPosX, entityPosY);
+        p2->setGrounded(false);
+        addEntity(p2);
+    }
+
+    getline(input,line) >> entitiesNum;
+    spawner.setEnemiesCount(entitiesNum);
+
+    for (int i = 0; i < entitiesNum; i ++)
+    {
+        getline(input,line) >> entityType >> entityLife
+                                    >> entityPosX >> entityPosY;
+
+        if (entityType)
+            tempEnemy = new Entities::Warrior(entityLife, 20, p1, p2, pGraphicManager, this);
+        else
+            tempEnemy = new Entities::Archer(entityLife, 15, p1, p2, pGraphicManager, this);
+
+        tempEnemy->setLife(entityLife);
+        tempEnemy->setPosition(entityPosX, entityPosY);
+        addEntity(tempEnemy);
+    }
+    input.close();
 }
