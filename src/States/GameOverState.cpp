@@ -31,6 +31,12 @@ GameOverState::~GameOverState()
 
 void GameOverState::update(float dt, Managers::EventManager *eventManager)
 {
+    sf::View *view = pGraphicManager->getView();
+    pGraphicManager->setTextPosition(titleText, view->getCenter().x-360,view->getCenter().y-200);
+    pGraphicManager->setTextPosition(scoreText, view->getCenter().x-360,view->getCenter().y-180);
+    pGraphicManager->setTextPosition(nameText, view->getCenter().x-360,view->getCenter().y-160);
+    pGraphicManager->setTextPosition(exitText, view->getCenter().x-360,view->getCenter().y-140);
+
     pGraphicManager->getView()->setCenter((pGraphicManager->getWindowPointer()->getSize().x)/2, pGraphicManager->getView()->getSize().y/2);
     pGraphicManager->getWindowPointer()->setView(*pGraphicManager->getView());
     if(eventManager->isKeyPressed(Managers::EventManager::keyCode::Enter) && playerName.length() > 0)

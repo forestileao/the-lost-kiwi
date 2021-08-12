@@ -19,7 +19,7 @@ Graveyard::~Graveyard()
 
 void Graveyard::initializeElements()
 {
-    p1 = new Entities::Player(100, this, true, pGraphicManager);
+    p1 = new Entities::Player(50, this, true, pGraphicManager);
     p1->setPosition(100, 200);
 
     if (players == 2)

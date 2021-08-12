@@ -44,7 +44,10 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                     tempPlayer->setVulnerability(false);
                     std::cout << "Player Life: " << tempPlayer->getLife() << '\n';
                     if (!tempPlayer->isAlive())
+                    {
                         pt_stage->removeEntity(tempPlayer);
+                        break;
+                    }
                 }
             }
         }
@@ -61,6 +64,7 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 if (!tempPlayer->isAlive())
                 {
                     pt_stage->removeEntity(tempPlayer);
+                    break;
                 }
             }
         }
