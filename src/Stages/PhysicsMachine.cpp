@@ -139,14 +139,19 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 }
             }
 
-            blockRect.top+= 10;
-            blockRect.width+= 10;
+            blockRect.top+= 20;
+            blockRect.width-= 10;
+            blockRect.left-= 5;
             if (tempEnemy->intersects(blockRect))
             {
-                if ((tempEnemy->getVel().x) < 0)
-                    tempEnemy->setPosition(tempEnemy->getPosition().x-(5), tempEnemy->getPosition().y);
-                else
-                    tempEnemy->setPosition(tempEnemy->getPosition().x+(5), tempEnemy->getPosition().y);
+                if ((tempEnemy->getVel().x) > 0)
+                {
+                    tempEnemy->setPosition(tempEnemy->getPosition().x + (2), tempEnemy->getPosition().y);
+                }
+                else if ((tempEnemy->getVel().x) < 0)
+                {
+                    tempEnemy->setPosition(tempEnemy->getPosition().x - (2), tempEnemy->getPosition().y);
+                }
                 break;
             }
         }

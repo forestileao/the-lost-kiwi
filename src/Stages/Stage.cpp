@@ -227,6 +227,7 @@ void Stage::loadGame(char* fileName)
 
     input.open(fileName);
     Entities::Enemy* tempEnemy = nullptr;
+    Entities::Obstacle* tempObstacle = nullptr;
 
     getline(input,line); // skips line
 
@@ -267,5 +268,22 @@ void Stage::loadGame(char* fileName)
         tempEnemy->setPosition(entityPosX, entityPosY);
         addEntity(tempEnemy);
     }
+
+    getline(input,line) >> entitiesNum;
+    spawner.setObstaclesCount(entitiesNum);
+
+    for (int i = 0; i < entitiesNum; i ++)
+    {
+        getline(input,line) >> entityType >> entityPosX >> entityPosY;
+
+        if (entityType == 2)
+            tempObstacle = new Entities::Spike(pGraphicManager,this);
+        else
+            tempObstacle = new Entities::Fire(pGraphicManager,this);
+
+        tempObstacle->setPosition(entityPosX, entityPosY);
+        addEntity(tempObstacle);
+    }
+
     input.close();
 }

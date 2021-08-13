@@ -348,11 +348,16 @@ CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o: \
  ../include/States/StateMachine.h \
  ../src/States/MainMenuState.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o: \
+ ../include/Entities/Archer.h \
+ ../include/Entities/Block.h \
  ../include/Entities/Character.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
+ ../include/Entities/Fire.h \
+ ../include/Entities/Obstacle.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
+ ../include/Entities/Spike.h \
  ../include/Entities/Warrior.h \
  ../include/List/Element.h \
  ../include/List/List.h \

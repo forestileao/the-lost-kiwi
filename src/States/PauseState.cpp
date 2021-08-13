@@ -7,6 +7,10 @@
 #include <fstream>
 #include <Entities/Warrior.h>
 #include <Stages/Graveyard.h>
+#include <Entities/Fire.h>
+#include <Entities/Spike.h>
+#include <Entities/Block.h>
+#include <Entities/Archer.h>
 #include "States/PauseState.h"
 PauseState::PauseState(States::StateMachine *pStateMachine, Managers::GraphicManager *pGraphicsManager):
 States::State(pStateMachine),
@@ -117,7 +121,9 @@ void PauseState::saveGame()
 
     List<Entities::Entity> enemyList = pStage->getEntitylist().enemyList;
     List<Entities::Entity> mainList = pStage->getEntitylist().mainList;
+    List<Entities::Entity> obstacleList = pStage->getEntitylist().blockList;
 
+    // saving players
     if (dynamic_cast<Stages::Graveyard*>(pStage) == NULL)
         newFile << 2 << '\n';
     else newFile << 1 << '\n';
@@ -129,19 +135,57 @@ void PauseState::saveGame()
         newFile << ((Entities::Character*)pPlayer)->getLife() << ' '
         << pPlayer->getPosition().x << ' ' << pPlayer->getPosition().y << '\n';
     }
-
+    // saving enemies
     newFile << enemyList.getLen() << '\n';
     for (int i = 0; i < enemyList.getLen(); i++)
     {
         int enemyType = 0;
         Entities::Entity* pTemp = enemyList.getItem(i);
 
-        if (dynamic_cast<Entities::Warrior*>(pTemp) == NULL)
+        if (dynamic_cast<Entities::Warrior*>(pTemp) != NULL)
+        {
+            enemyType = 0;
+        }
+        else if(dynamic_cast<Entities::Archer*>(pTemp) != NULL)
         {
             enemyType = 1;
         }
+        else
+            continue;
+
         newFile << enemyType << ' ' << ((Entities::Character*)pTemp)->getLife() << ' '
         << pTemp->getPosition().x << ' ' << pTemp->getPosition().y << '\n';
+    }
+
+    int obstacleCounter = 0;
+    Entities::Entity* pTempObstacle;
+    for (int i = 0; i < obstacleList.getLen(); i++)
+    {
+        pTempObstacle = obstacleList.getItem(i);
+        if (dynamic_cast<Entities::Block*>(pTempObstacle) == nullptr)
+        {
+            obstacleCounter++;
+        }
+    }
+    // saving obstacles
+    newFile << obstacleCounter << '\n';
+    for (int i = 0; i < obstacleList.getLen(); i++)
+    {
+        int obstacleType = 0;
+        pTempObstacle = obstacleList.getItem(i);
+
+        if (dynamic_cast<Entities::Fire*>(pTempObstacle) != nullptr)
+        {
+            obstacleType = 3;
+        }
+        else if (dynamic_cast<Entities::Spike*>(pTempObstacle) != nullptr)
+        {
+            obstacleType = 2;
+        }
+        else
+            continue;
+        newFile << obstacleType << ' '
+        << pTempObstacle->getPosition().x << ' ' << pTempObstacle->getPosition().y << '\n';
     }
 
     newFile.close();
