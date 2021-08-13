@@ -124,8 +124,12 @@ void PauseState::saveGame()
     List<Entities::Entity> obstacleList = *(pStage->getObstacleList()->getList());
 
     // saving players
+    int removeDraculaCount = 0;
     if (dynamic_cast<Stages::Graveyard*>(pStage) == NULL)
+    {
         newFile << 2 << '\n';
+        removeDraculaCount = 1;
+    }
     else newFile << 1 << '\n';
 
     newFile << mainList.getLen() << '\n';
@@ -136,7 +140,7 @@ void PauseState::saveGame()
         << pPlayer->getPosition().x << ' ' << pPlayer->getPosition().y << '\n';
     }
     // saving enemies
-    newFile << enemyList.getLen() << '\n';
+    newFile << enemyList.getLen() - removeDraculaCount << '\n';
     for (int i = 0; i < enemyList.getLen(); i++)
     {
         int enemyType = 0;

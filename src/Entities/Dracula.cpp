@@ -43,7 +43,7 @@ void Dracula::execute(float dt, Managers::EventManager *pEventManager)
 
     if (getTargetDistance() <= 400)
     {
-        if (attackTimer >= 3)
+        if (attackTimer >= 2)
         {
             pStage->addEntity(new Projectile(
                 sf::Vector2f(getPosition().x,

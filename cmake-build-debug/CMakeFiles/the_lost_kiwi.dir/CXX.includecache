@@ -18,25 +18,11 @@ map
 vector
 -
 
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
-Enemy.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
-
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
-Obstacle.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
-
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
 Entity.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
 ../Managers/EventManager.h
 /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
-
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h
-Player.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
-Enemy.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
 
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
 Character.h
@@ -54,14 +40,6 @@ Ente.h
 ../Managers/GraphicManager.h
 /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
 
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
-Obstacle.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
-
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
-Entity.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
-
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
 Entity.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
@@ -74,13 +52,23 @@ Character.h
 Entity.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
 
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
-Obstacle.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
-
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h
-Enemy.h
+/home/forestileao/Documents/the-lost-kiwi/include/Game.h
+SFML/Graphics.hpp
+-
+SFML/System.hpp
+-
+SFML/Window.hpp
+-
+Entities/Player.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
+Entities/Enemy.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
+Stages/EntityList.h
+/home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
+Stages/Stage.h
+/home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
+States/StateMachine.h
+/home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
 
 /home/forestileao/Documents/the-lost-kiwi/include/List/Element.h
 
@@ -136,11 +124,11 @@ PhysicsMachine.h
 EnemySpawner.h
 /home/forestileao/Documents/the-lost-kiwi/include/Stages/EnemySpawner.h
 
-/home/forestileao/Documents/the-lost-kiwi/include/States/PlayState.h
-State.h
-/home/forestileao/Documents/the-lost-kiwi/include/States/State.h
-../Stages/Stage.h
-/home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
+/home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
+StateMachine.h
+/home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
+../Managers/GraphicManager.h
+/home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
 
 /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
 ../Managers/EventManager.h
@@ -160,27 +148,13 @@ map
 State.h
 /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
 
-/home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp
-../../include/Stages/PhysicsMachine.h
-/home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
-../../include/Stages/Stage.h
-/home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
-../../include/Stages/EntityList.h
-/home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
-../../include/Entities/Archer.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
-../../include/Entities/Warrior.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h
-../../include/Entities/Dracula.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h
-../../include/Entities/Obstacle.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
-../../include/Entities/Block.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
-../../include/Entities/Spike.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
-../../include/Entities/Fire.h
-/home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
-../../include/States/PlayState.h
-/home/forestileao/Documents/the-lost-kiwi/include/States/PlayState.h
+/home/forestileao/Documents/the-lost-kiwi/src/Game.cpp
+../include/Game.h
+/home/forestileao/Documents/the-lost-kiwi/include/Game.h
+../include/States/GameStateMachine.h
+/home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
+
+/home/forestileao/Documents/the-lost-kiwi/src/main.cpp
+../include/Game.h
+/home/forestileao/Documents/the-lost-kiwi/include/Game.h
 
