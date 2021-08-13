@@ -119,9 +119,9 @@ void PauseState::saveGame()
 
     newFile << pStage->getPlayState()->getScore() << '\n';
 
-    List<Entities::Entity> enemyList = pStage->getEntitylist().enemyList;
-    List<Entities::Entity> mainList = pStage->getEntitylist().mainList;
-    List<Entities::Entity> obstacleList = pStage->getEntitylist().blockList;
+    List<Entities::Entity> enemyList = *(pStage->getEnemyList()->getList());
+    List<Entities::Entity> mainList = *(pStage->getPlayerList()->getList());
+    List<Entities::Entity> obstacleList = *(pStage->getObstacleList()->getList());
 
     // saving players
     if (dynamic_cast<Stages::Graveyard*>(pStage) == NULL)

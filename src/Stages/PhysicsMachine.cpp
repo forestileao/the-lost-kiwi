@@ -22,20 +22,20 @@ PhysicsMachine::PhysicsMachine(Stages::Stage* pStage):
 PhysicsMachine::~PhysicsMachine(){
 }
 
-void PhysicsMachine::applyCollisions(EntityList &entities){
+void PhysicsMachine::applyCollisions(){
 
     Entities::Player* tempPlayer = nullptr;
     Entities::Enemy* tempEnemy = nullptr;
     Entities::Projectile* tempProj = nullptr;
 
 
-    for (int i = 0; i < entities.mainList.getLen(); ++i)
+    for (int i = 0; i < pt_stage->getPlayerList()->getList()->getLen(); ++i)
     {
         // player collision with other entities
-        tempPlayer = dynamic_cast<Entities::Player*>(entities.mainList.getItem(i));
-        for (int j = 0; j < entities.enemyList.getLen(); ++j)
+        tempPlayer = dynamic_cast<Entities::Player*>(pt_stage->getPlayerList()->getList()->getItem(i));
+        for (int j = 0; j < pt_stage->getEnemyList()->getList()->getLen(); ++j)
         {
-            tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(j));
+            tempEnemy = dynamic_cast<Entities::Enemy*>(pt_stage->getEnemyList()->getList()->getItem(j));
             if (tempPlayer->intersects(tempEnemy->getGlobalBounds()))
             {
                 if (tempPlayer->getVulnerability())
@@ -46,15 +46,17 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                     if (!tempPlayer->isAlive())
                     {
                         pt_stage->removeEntity(tempPlayer);
+                        tempPlayer = nullptr;
                         break;
                     }
                 }
             }
         }
-
-        for (int j = 0; j < entities.projectileList.getLen(); ++j)
+        if (!tempPlayer)
+            continue;
+        for (int j = 0; j < pt_stage->getProjectileList()->getList()->getLen(); ++j)
         {
-            tempProj = dynamic_cast<Entities::Projectile*>(entities.projectileList.getItem(j));
+            tempProj = dynamic_cast<Entities::Projectile*>(pt_stage->getProjectileList()->getList()->getItem(j));
             if (tempProj->isFriendly()) continue;
             if (tempPlayer->intersects(tempProj->getGlobalBounds()))
             {
@@ -64,15 +66,17 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
                 if (!tempPlayer->isAlive())
                 {
                     pt_stage->removeEntity(tempPlayer);
+                    tempPlayer = nullptr;
                     break;
                 }
             }
         }
-
+        if (!tempPlayer)
+            continue;
         bool setGrounded = false;
-        for (int j = 0; j < entities.blockList.getLen(); ++j)
+        for (int j = 0; j < pt_stage->getObstacleList()->getList()->getLen(); ++j)
         {
-            sf::Rect<float> blockRect = entities.blockList.getItem(j)->getGlobalBounds();
+            sf::Rect<float> blockRect = pt_stage->getObstacleList()->getList()->getItem(j)->getGlobalBounds();
             if (!setGrounded)
             {
                 if (tempPlayer->intersects(blockRect)) {
@@ -87,7 +91,7 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
 
             if (tempPlayer->intersects(blockRect))
             {
-                Entities::Obstacle* tempObstacle = (Entities::Obstacle*)entities.blockList.getItem(j);
+                Entities::Obstacle* tempObstacle = (Entities::Obstacle*)pt_stage->getObstacleList()->getList()->getItem(j);
                 if (tempObstacle->getDamage() > 0)
                 {
                     if (tempPlayer->getVulnerability())
@@ -106,25 +110,25 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
             if (tempPlayer->intersects(blockRect))
             {
                 if ((tempPlayer->getVel().x) > 0)
-                    tempPlayer->setPosition(tempPlayer->getPosition().x-(3), tempPlayer->getPosition().y);
+                    tempPlayer->setPosition(tempPlayer->getPosition().x-(4), tempPlayer->getPosition().y);
                 else
-                    tempPlayer->setPosition(tempPlayer->getPosition().x+(3), tempPlayer->getPosition().y);
+                    tempPlayer->setPosition(tempPlayer->getPosition().x+(4), tempPlayer->getPosition().y);
                 break;
             }
         }
 
     }
 
-    for (int i = 0; i < entities.enemyList.getLen(); ++i)
+    for (int i = 0; i < pt_stage->getEnemyList()->getList()->getLen(); ++i)
     {
-        tempEnemy = dynamic_cast<Entities::Enemy*>(entities.enemyList.getItem(i));
+        tempEnemy = dynamic_cast<Entities::Enemy*>(pt_stage->getEnemyList()->getList()->getItem(i));
         if (!tempEnemy)
             continue;
 
         bool setGrounded = false;
-        for (int j = 0; j < entities.blockList.getLen(); ++j)
+        for (int j = 0; j < pt_stage->getObstacleList()->getList()->getLen(); ++j)
         {
-            sf::Rect<float> blockRect = entities.blockList.getItem(j)->getGlobalBounds();
+            sf::Rect<float> blockRect = pt_stage->getObstacleList()->getList()->getItem(j)->getGlobalBounds();
             blockRect.height += 5;
             blockRect.top -= 10;
             if (!setGrounded)
@@ -140,25 +144,37 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
             }
 
             blockRect.top+= 20;
-            blockRect.width-= 10;
-            blockRect.left-= 5;
+            blockRect.height /= 20;
+
+            if ((tempEnemy->getVel().x) > 0)
+            {
+                blockRect.left-= 10;
+            }
+            else if ((tempEnemy->getVel().x) < 0)
+            {
+                blockRect.left+= 10;
+            }
+            else
+            {
+                continue;
+            }
             if (tempEnemy->intersects(blockRect))
             {
                 if ((tempEnemy->getVel().x) > 0)
                 {
-                    tempEnemy->setPosition(tempEnemy->getPosition().x + (2), tempEnemy->getPosition().y);
-                }
-                else if ((tempEnemy->getVel().x) < 0)
-                {
                     tempEnemy->setPosition(tempEnemy->getPosition().x - (2), tempEnemy->getPosition().y);
+                }
+                else
+                {
+                    tempEnemy->setPosition(tempEnemy->getPosition().x +2, tempEnemy->getPosition().y);
                 }
                 break;
             }
         }
 
-        for (int j = 0; j < entities.projectileList.getLen(); ++j)
+        for (int j = 0; j < pt_stage->getProjectileList()->getList()->getLen(); ++j)
         {
-            tempProj = dynamic_cast<Entities::Projectile*>(entities.projectileList.getItem(j));
+            tempProj = dynamic_cast<Entities::Projectile*>(pt_stage->getProjectileList()->getList()->getItem(j));
             if (tempProj->isFriendly() && tempProj->intersects(tempEnemy->getGlobalBounds()))
             {
                 tempEnemy->decrementLifePoints(3);
@@ -176,12 +192,12 @@ void PhysicsMachine::applyCollisions(EntityList &entities){
     }
 }
 
-void PhysicsMachine::applyGravity(float dt, EntityList &entities){
+void PhysicsMachine::applyGravity(float dt){
 
     Entities::Player* pTemp = nullptr;
-    for (int i = 0; i < entities.mainList.getLen(); ++i)
+    for (int i = 0; i < pt_stage->getPlayerList()->getList()->getLen(); ++i)
     {
-        pTemp = dynamic_cast<Entities::Player*>(entities.mainList.getItem(i));
+        pTemp = dynamic_cast<Entities::Player*>(pt_stage->getPlayerList()->getList()->getItem(i));
 
         if(pTemp != nullptr && !(pTemp->getGrounded()))
             pTemp->setVel(pTemp->getVel().x, pTemp->getVel().y + 300.f*dt);
@@ -189,9 +205,9 @@ void PhysicsMachine::applyGravity(float dt, EntityList &entities){
     }
 
     Entities::Warrior* pTempEnemy = nullptr;
-    for (int i = 0; i < entities.enemyList.getLen(); ++i)
+    for (int i = 0; i < pt_stage->getEnemyList()->getList()->getLen(); ++i)
     {
-        pTempEnemy = dynamic_cast<Entities::Warrior*>(entities.enemyList.getItem(i));
+        pTempEnemy = dynamic_cast<Entities::Warrior*>(pt_stage->getEnemyList()->getList()->getItem(i));
 
         if(pTempEnemy != nullptr && !(pTempEnemy->getGrounded()))
             pTempEnemy->setVel(pTempEnemy->getVel().x, pTempEnemy->getVel().y + 300.f*dt);

@@ -15,8 +15,8 @@ namespace Stages
     public:
         PhysicsMachine(Stages::Stage* pStage);
         ~PhysicsMachine();
-        void applyCollisions(EntityList &entities);
-        void applyGravity(float dt, EntityList &entities);
+        void applyCollisions();
+        void applyGravity(float dt);
 
     };
 }

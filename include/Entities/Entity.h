@@ -7,12 +7,13 @@ namespace Stages
 #define ENTITY_H
 
 #include <SFML/Graphics.hpp>
+#include <Ente.h>
 #include "../Managers/EventManager.h"
 #include "../Managers/GraphicManager.h"
 
 namespace Entities
 {
-	class Entity
+	class Entity: public Ente
 	{
 	protected:
         sf::RenderWindow *window;

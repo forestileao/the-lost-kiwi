@@ -9,7 +9,8 @@ Entity::Entity(Managers::GraphicManager* pGraphicsManager, Stages::Stage* pStage
 	body(),
 	pGraphicManager(pGraphicsManager),
 	vulnerability(false),
-	id(::entityCount++)
+	id(::entityCount++),
+    Ente(pGraphicsManager)
 {
 	this->pStage = pStage;
 	spriteId = -1;

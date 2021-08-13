@@ -48,7 +48,7 @@ void ScoreboardState::update(float dt, Managers::EventManager *eventManager)
 {
     pGraphicManager->setTextPosition(titleText, pGraphicManager->getView()->getCenter().x-20, 20);
 
-    if (eventManager->isKeyPressed(sf::Keyboard::Space))
+    if (eventManager->isKeyPressed(sf::Keyboard::Enter))
         ((GameStateMachine*)getStateMachine())->changeState("MainMenu", nullptr);
 }
 

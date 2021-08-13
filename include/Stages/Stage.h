@@ -13,12 +13,15 @@
 class PlayState;
 namespace Stages
 {
-	class Stage
+	class Stage : public Ente
 	{
     protected:
 		Managers::uniqueId backgroundSprite;
 		Managers::GraphicManager *pGraphicManager;
-		EntityList entities;
+		EntityList playerList;
+		EntityList enemyList;
+		EntityList projectileList;
+		EntityList obstacleList;
 		Entities::Player* p1;
 		Entities::Player* p2;
 		PlayState* pState;
@@ -40,7 +43,10 @@ namespace Stages
 		// Adds and removes entities from entity List
 		void addEntity(Entities::Entity *pEntity);
 		void removeEntity(Entities::Entity* pEntity);
-		EntityList getEntitylist();
+		EntityList* getPlayerList();
+		EntityList* getEnemyList();
+		EntityList* getProjectileList();
+		EntityList* getObstacleList();
 		EnemySpawner* getEnemySpawner();
 
 		PlayState* getPlayState() const;
