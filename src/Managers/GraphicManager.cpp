@@ -37,7 +37,8 @@ sf::RenderWindow* GraphicManager::getWindowPointer()
 	return &window;
 }
 
-const bool GraphicManager::isWindowOpen()const{
+const bool GraphicManager::isWindowOpen()const
+{
 	return window.isOpen();
 }
 

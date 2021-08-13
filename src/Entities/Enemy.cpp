@@ -56,14 +56,14 @@ void Enemy::chooseTarget()
             isLookingToTheRight = (attackTarget->getPosition().x > getPosition().x);
 
         }
-        else if (pPlayer1->isAlive() && !pPlayer2->isAlive())
+        else if (pPlayer1 && pPlayer1->isAlive())
         {
             attackTarget = pPlayer1;
             sf::Vector2f p1Pos = pPlayer1->getPosition();
             targetDistance = std::sqrt(((p1Pos - enemyPos).x * (p1Pos - enemyPos).x) + ((p1Pos- enemyPos).y*(p1Pos- enemyPos).y));
             isLookingToTheRight = (attackTarget->getPosition().x > getPosition().x);
         }
-        else if (!pPlayer1->isAlive() && pPlayer2->isAlive())
+        else if (pPlayer2 && pPlayer2->isAlive())
         {
             sf::Vector2f p2Pos = pPlayer2->getPosition();
             attackTarget = pPlayer2;

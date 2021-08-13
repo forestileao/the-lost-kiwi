@@ -49,7 +49,6 @@ void EventManager::pollAll()
 
 	// reinitilize all keys from the loop for new interactions
 	resetLoopKeys();
-
 	while (window->pollEvent(events))
 	{
 		// Check if the user Closed the window

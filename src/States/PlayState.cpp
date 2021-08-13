@@ -53,6 +53,7 @@ void PlayState::init(void* arg)
 	}
 	else if (!gameData.isResuming)
 	{
+	    score = 0;
 	    changeStage(1, gameData.players);
 	    std::cout << "Stage is loading...\n";
         return;
@@ -73,14 +74,14 @@ void PlayState::update(float dt, Managers::EventManager* pEventManager)
 	pGraphicManager->setString(scoreText, text);
 
 	if (pStage->getPlayer1())
-	    pGraphicManager->setString(playerOneLifeText,  std::to_string(pStage->getPlayer1()->getLife()));
+	    pGraphicManager->setString(playerOneLifeText,  "Player 1: " + std::to_string(pStage->getPlayer1()->getLife()));
 	if (pStage->getPlayer2())
-	    pGraphicManager->setString(playerOneLifeText,  std::to_string(pStage->getPlayer2()->getLife()));
+	    pGraphicManager->setString(playerTwoLifeText,  "Player 2: " +std::to_string(pStage->getPlayer2()->getLife()));
 
 	pGraphicManager->setTextPosition(scoreText, pGraphicManager->getView()->getCenter().x, 20);
-	pGraphicManager->setTextPosition(playerOneLifeText, pGraphicManager->getView()->getCenter().x + 40, 20);
+	pGraphicManager->setTextPosition(playerOneLifeText, pGraphicManager->getView()->getCenter().x - 300, 20);
 	if (gameData.players == 2)
-	    pGraphicManager->setTextPosition(playerTwoLifeText, pGraphicManager->getView()->getCenter().x + 600, 20);
+	    pGraphicManager->setTextPosition(playerTwoLifeText, pGraphicManager->getView()->getCenter().x + 300, 20);
 
 	if(pEventManager->isKeyPressed(sf::Keyboard::P))
 	    pStateMachine->changeState("PauseState", static_cast<void*>(pStage));
@@ -91,8 +92,9 @@ void PlayState::draw(Managers::GraphicManager* pGraphicsManager)
 	pStage->draw();
 	pGraphicsManager->drawText(scoreText);
 
-	pGraphicsManager->drawText(playerOneLifeText);
-	if (gameData.players == 2)
+	if (pStage->getPlayer1()->isAlive())
+	    pGraphicsManager->drawText(playerOneLifeText);
+	if (gameData.players == 2 && pStage->getPlayer2()->isAlive())
 	    pGraphicsManager->drawText(playerTwoLifeText);
 }
 
