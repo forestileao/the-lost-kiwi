@@ -129,6 +129,30 @@ the_lost_kiwi/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/build
 .PHONY : the_lost_kiwi/fast
 
+src/Ente.o: src/Ente.cpp.o
+.PHONY : src/Ente.o
+
+# target to build an object file
+src/Ente.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Ente.cpp.o
+.PHONY : src/Ente.cpp.o
+
+src/Ente.i: src/Ente.cpp.i
+.PHONY : src/Ente.i
+
+# target to preprocess a source file
+src/Ente.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Ente.cpp.i
+.PHONY : src/Ente.cpp.i
+
+src/Ente.s: src/Ente.cpp.s
+.PHONY : src/Ente.s
+
+# target to generate assembly for a file
+src/Ente.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Ente.cpp.s
+.PHONY : src/Ente.cpp.s
+
 src/Entities/Archer.o: src/Entities/Archer.cpp.o
 .PHONY : src/Entities/Archer.o
 
@@ -882,6 +906,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... the_lost_kiwi"
+	@echo "... src/Ente.o"
+	@echo "... src/Ente.i"
+	@echo "... src/Ente.s"
 	@echo "... src/Entities/Archer.o"
 	@echo "... src/Entities/Archer.i"
 	@echo "... src/Entities/Archer.s"

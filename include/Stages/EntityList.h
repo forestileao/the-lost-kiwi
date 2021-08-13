@@ -8,14 +8,12 @@ namespace Stages
 {
 	class EntityList
 	{
+    protected:
+	    List<Entities::Entity> mainList;
 	public:
-		List<Entities::Entity> mainList;
-		List<Entities::Entity> enemyList;
-		List<Entities::Entity> blockList;
-		List<Entities::Entity> projectileList;
-
 		EntityList();
 		~EntityList();
+		List<Entities::Entity>* getList();
 	};
 }
 

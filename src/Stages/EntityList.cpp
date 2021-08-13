@@ -2,10 +2,7 @@
 using namespace Stages;
 
 EntityList::EntityList():
-	mainList(),
-	enemyList(),
-	blockList(),
-	projectileList()
+	mainList()
 {
 
 }
@@ -13,5 +10,9 @@ EntityList::EntityList():
 EntityList::~EntityList()
 {
 
+}
+List<Entities::Entity> *EntityList::getList()
+{
+    return &mainList;
 }
 
