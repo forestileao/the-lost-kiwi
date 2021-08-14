@@ -207,7 +207,7 @@ Entities::Player *Stage::getPlayer2()
 {
     return p2;
 }
-EnemySpawner *Stage::getEnemySpawner()
+Spawner *Stage::getEnemySpawner()
 {
     return &spawner;
 }

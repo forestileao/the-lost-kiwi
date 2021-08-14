@@ -443,18 +443,18 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/src/States/GameOverState.cpp -o CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.s
 
-CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
-CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o: ../src/Stages/EnemySpawner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o -c /home/forestileao/Documents/the-lost-kiwi/src/Stages/EnemySpawner.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
+CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o: ../src/Stages/Spawner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o -c /home/forestileao/Documents/the-lost-kiwi/src/Stages/Spawner.cpp
 
-CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/the-lost-kiwi/src/Stages/EnemySpawner.cpp > CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.i
+CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/forestileao/Documents/the-lost-kiwi/src/Stages/Spawner.cpp > CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.i
 
-CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/src/Stages/EnemySpawner.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.s
+CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/forestileao/Documents/the-lost-kiwi/src/Stages/Spawner.cpp -o CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.s
 
 CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o: CMakeFiles/the_lost_kiwi.dir/flags.make
 CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o: ../src/States/PauseState.cpp
@@ -513,7 +513,7 @@ the_lost_kiwi_OBJECTS = \
 "CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.o" \
-"CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o" \
+"CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o" \
 "CMakeFiles/the_lost_kiwi.dir/src/Ente.cpp.o"
 
@@ -549,7 +549,7 @@ the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.o
-the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o
+the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/src/Ente.cpp.o
 the_lost_kiwi: CMakeFiles/the_lost_kiwi.dir/build.make

@@ -8,11 +8,11 @@
 #include <Entities/Obstacle.h>
 #include <Entities/Fire.h>
 #include <Entities/Spike.h>
-#include "Stages/EnemySpawner.h"
+#include "Stages/Spawner.h"
 #include "Stages/Stage.h"
 using namespace Stages;
 
-EnemySpawner::EnemySpawner(Stage *pStage):
+Spawner::Spawner(Stage *pStage):
     enemiesSpawned(0),
     obstaclesSpawned(0),
     spawnPositions(),
@@ -23,17 +23,17 @@ EnemySpawner::EnemySpawner(Stage *pStage):
     srand(time(NULL));
 }
 
-EnemySpawner::~EnemySpawner()
+Spawner::~Spawner()
 {
 
 }
 
-void EnemySpawner::addSpawnPosition(sf::Vector2f spawnPos)
+void Spawner::addSpawnPosition(sf::Vector2f spawnPos)
 {
     spawnPositions.push_back(spawnPos);
 }
 
-void EnemySpawner::spawnEnemy()
+void Spawner::spawnEnemy()
 {
     Entities::Enemy* newEnemy = nullptr;
     if (enemiesSpawned < maxEnemies && spawnPositions.size() > 0)
@@ -62,15 +62,15 @@ void EnemySpawner::spawnEnemy()
     }
 }
 
-void EnemySpawner::decrementEnemiesCount()
+void Spawner::decrementEnemiesCount()
 {
     enemiesSpawned--;
 }
-void EnemySpawner::setEnemiesCount(unsigned int num)
+void Spawner::setEnemiesCount(unsigned int num)
 {
     enemiesSpawned = num;
 }
-void EnemySpawner::spawnObstacles()
+void Spawner::spawnObstacles()
 {
     if (obstaclesSpawned < maxObstacles)
     {
@@ -96,11 +96,11 @@ void EnemySpawner::spawnObstacles()
     spawnPositions.erase(spawnPositions.begin() + positionIndex);
     pStage->addEntity(newObstacle);
 }
-void EnemySpawner::setObstaclesCount(unsigned int num)
+void Spawner::setObstaclesCount(unsigned int num)
 {
     obstaclesSpawned = num;
 }
-bool EnemySpawner::didObstaclesSpawned() const
+bool Spawner::didObstaclesSpawned() const
 {
     return didSpawnedObstacles;
 }

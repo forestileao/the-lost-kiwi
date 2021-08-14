@@ -537,30 +537,6 @@ src/Stages/Castle.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.s
 .PHONY : src/Stages/Castle.cpp.s
 
-src/Stages/EnemySpawner.o: src/Stages/EnemySpawner.cpp.o
-.PHONY : src/Stages/EnemySpawner.o
-
-# target to build an object file
-src/Stages/EnemySpawner.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.o
-.PHONY : src/Stages/EnemySpawner.cpp.o
-
-src/Stages/EnemySpawner.i: src/Stages/EnemySpawner.cpp.i
-.PHONY : src/Stages/EnemySpawner.i
-
-# target to preprocess a source file
-src/Stages/EnemySpawner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.i
-.PHONY : src/Stages/EnemySpawner.cpp.i
-
-src/Stages/EnemySpawner.s: src/Stages/EnemySpawner.cpp.s
-.PHONY : src/Stages/EnemySpawner.s
-
-# target to generate assembly for a file
-src/Stages/EnemySpawner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/EnemySpawner.cpp.s
-.PHONY : src/Stages/EnemySpawner.cpp.s
-
 src/Stages/EntityList.o: src/Stages/EntityList.cpp.o
 .PHONY : src/Stages/EntityList.o
 
@@ -632,6 +608,30 @@ src/Stages/PhysicsMachine.s: src/Stages/PhysicsMachine.cpp.s
 src/Stages/PhysicsMachine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.s
 .PHONY : src/Stages/PhysicsMachine.cpp.s
+
+src/Stages/Spawner.o: src/Stages/Spawner.cpp.o
+.PHONY : src/Stages/Spawner.o
+
+# target to build an object file
+src/Stages/Spawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o
+.PHONY : src/Stages/Spawner.cpp.o
+
+src/Stages/Spawner.i: src/Stages/Spawner.cpp.i
+.PHONY : src/Stages/Spawner.i
+
+# target to preprocess a source file
+src/Stages/Spawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.i
+.PHONY : src/Stages/Spawner.cpp.i
+
+src/Stages/Spawner.s: src/Stages/Spawner.cpp.s
+.PHONY : src/Stages/Spawner.s
+
+# target to generate assembly for a file
+src/Stages/Spawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.s
+.PHONY : src/Stages/Spawner.cpp.s
 
 src/Stages/Stage.o: src/Stages/Stage.cpp.o
 .PHONY : src/Stages/Stage.o
@@ -957,9 +957,6 @@ help:
 	@echo "... src/Stages/Castle.o"
 	@echo "... src/Stages/Castle.i"
 	@echo "... src/Stages/Castle.s"
-	@echo "... src/Stages/EnemySpawner.o"
-	@echo "... src/Stages/EnemySpawner.i"
-	@echo "... src/Stages/EnemySpawner.s"
 	@echo "... src/Stages/EntityList.o"
 	@echo "... src/Stages/EntityList.i"
 	@echo "... src/Stages/EntityList.s"
@@ -969,6 +966,9 @@ help:
 	@echo "... src/Stages/PhysicsMachine.o"
 	@echo "... src/Stages/PhysicsMachine.i"
 	@echo "... src/Stages/PhysicsMachine.s"
+	@echo "... src/Stages/Spawner.o"
+	@echo "... src/Stages/Spawner.i"
+	@echo "... src/Stages/Spawner.s"
 	@echo "... src/Stages/Stage.o"
 	@echo "... src/Stages/Stage.i"
 	@echo "... src/Stages/Stage.s"

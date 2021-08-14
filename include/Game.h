@@ -33,7 +33,7 @@ private:
 
 public:
 	// Constructors / Destructors
-	Game();
+	    Game();
 	~Game();
 
 	// Functions

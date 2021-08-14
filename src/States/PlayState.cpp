@@ -94,7 +94,7 @@ void PlayState::draw(Managers::GraphicManager* pGraphicsManager)
 
 	if (pStage->getPlayer1()->isAlive())
 	    pGraphicsManager->drawText(playerOneLifeText);
-	if (gameData.players == 2 && pStage->getPlayer2()->isAlive())
+	if (pStage->getPlayer2() && pStage->getPlayer2()->isAlive())
 	    pGraphicsManager->drawText(playerTwoLifeText);
 }
 
