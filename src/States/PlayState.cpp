@@ -35,7 +35,6 @@ void PlayState::init(void* arg)
 {
     gameData = *((GameData *)arg);
 	printf("Entrando no jogo\n");
-
 	if (gameData.isLoading)
 	{
 	    char fileName[] = "../saves/stage.txt";
@@ -54,7 +53,7 @@ void PlayState::init(void* arg)
 	else if (!gameData.isResuming)
 	{
 	    score = 0;
-	    changeStage(1, gameData.players);
+	    changeStage(gameData.stageNum, gameData.players);
 	    std::cout << "Stage is loading...\n";
         return;
 	}
@@ -80,7 +79,7 @@ void PlayState::update(float dt, Managers::EventManager* pEventManager)
 
 	pGraphicManager->setTextPosition(scoreText, pGraphicManager->getView()->getCenter().x, 20);
 	pGraphicManager->setTextPosition(playerOneLifeText, pGraphicManager->getView()->getCenter().x - 300, 20);
-	if (gameData.players == 2)
+	if (pStage->getPlayer2())
 	    pGraphicManager->setTextPosition(playerTwoLifeText, pGraphicManager->getView()->getCenter().x + 300, 20);
 
 	if(pEventManager->isKeyPressed(sf::Keyboard::P))

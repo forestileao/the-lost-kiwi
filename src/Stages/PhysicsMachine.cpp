@@ -17,6 +17,10 @@ using namespace Stages;
 PhysicsMachine::PhysicsMachine(Stages::Stage* pStage):
     pt_stage(pStage)
 {
+    playerList = pt_stage->getPlayerList();
+    enemyList = pt_stage->getEnemyList();
+    obstacleList = pt_stage->getObstacleList();
+    projectileList = pt_stage->getProjectileList();
 }
 
 PhysicsMachine::~PhysicsMachine(){
@@ -29,13 +33,13 @@ void PhysicsMachine::applyCollisions(){
     Entities::Projectile* tempProj = nullptr;
 
 
-    for (int i = 0; i < pt_stage->getPlayerList()->getList()->getLen(); ++i)
+    for (int i = 0; i < playerList->getList()->getLen(); ++i)
     {
         // player collision with other entities
-        tempPlayer = dynamic_cast<Entities::Player*>(pt_stage->getPlayerList()->getList()->getItem(i));
-        for (int j = 0; j < pt_stage->getEnemyList()->getList()->getLen(); ++j)
+        tempPlayer = dynamic_cast<Entities::Player*>((*playerList->getList())[i]);
+        for (int j = 0; j < enemyList->getList()->getLen(); ++j)
         {
-            tempEnemy = dynamic_cast<Entities::Enemy*>(pt_stage->getEnemyList()->getList()->getItem(j));
+            tempEnemy = dynamic_cast<Entities::Enemy*>(enemyList->getList()->getItem(j));
             if (tempPlayer->intersects(tempEnemy->getGlobalBounds()))
             {
                 if (tempPlayer->getVulnerability())
@@ -54,9 +58,9 @@ void PhysicsMachine::applyCollisions(){
         }
         if (!tempPlayer)
             continue;
-        for (int j = 0; j < pt_stage->getProjectileList()->getList()->getLen(); ++j)
+        for (int j = 0; j < projectileList->getList()->getLen(); ++j)
         {
-            tempProj = dynamic_cast<Entities::Projectile*>(pt_stage->getProjectileList()->getList()->getItem(j));
+            tempProj = dynamic_cast<Entities::Projectile*>((*projectileList->getList())[j]);
             if (tempProj->isFriendly()) continue;
             if (tempPlayer->intersects(tempProj->getGlobalBounds()))
             {
@@ -74,9 +78,9 @@ void PhysicsMachine::applyCollisions(){
         if (!tempPlayer)
             continue;
         bool setGrounded = false;
-        for (int j = 0; j < pt_stage->getObstacleList()->getList()->getLen(); ++j)
+        for (int j = 0; j < obstacleList->getList()->getLen(); ++j)
         {
-            sf::Rect<float> blockRect = pt_stage->getObstacleList()->getList()->getItem(j)->getGlobalBounds();
+            sf::Rect<float> blockRect = (*obstacleList->getList())[j]->getGlobalBounds();
             if (!setGrounded)
             {
                 if (tempPlayer->intersects(blockRect)) {
@@ -91,7 +95,7 @@ void PhysicsMachine::applyCollisions(){
 
             if (tempPlayer->intersects(blockRect))
             {
-                Entities::Obstacle* tempObstacle = (Entities::Obstacle*)pt_stage->getObstacleList()->getList()->getItem(j);
+                Entities::Obstacle* tempObstacle = (Entities::Obstacle*)(*obstacleList->getList())[j];
                 if (tempObstacle->getDamage() > 0)
                 {
                     if (tempPlayer->getVulnerability())
@@ -119,16 +123,16 @@ void PhysicsMachine::applyCollisions(){
 
     }
 
-    for (int i = 0; i < pt_stage->getEnemyList()->getList()->getLen(); ++i)
+    for (int i = 0; i < enemyList->getList()->getLen(); ++i)
     {
-        tempEnemy = dynamic_cast<Entities::Enemy*>(pt_stage->getEnemyList()->getList()->getItem(i));
+        tempEnemy = dynamic_cast<Entities::Enemy*>((*enemyList->getList())[i]);
         if (!tempEnemy)
             continue;
 
         bool setGrounded = false;
-        for (int j = 0; j < pt_stage->getObstacleList()->getList()->getLen(); ++j)
+        for (int j = 0; j < obstacleList->getList()->getLen(); ++j)
         {
-            sf::Rect<float> blockRect = pt_stage->getObstacleList()->getList()->getItem(j)->getGlobalBounds();
+            sf::Rect<float> blockRect = (*obstacleList->getList())[j]->getGlobalBounds();
             blockRect.height += 5;
             blockRect.top -= 10;
             if (!setGrounded)
@@ -172,9 +176,9 @@ void PhysicsMachine::applyCollisions(){
             }
         }
 
-        for (int j = 0; j < pt_stage->getProjectileList()->getList()->getLen(); ++j)
+        for (int j = 0; j < projectileList->getList()->getLen(); ++j)
         {
-            tempProj = dynamic_cast<Entities::Projectile*>(pt_stage->getProjectileList()->getList()->getItem(j));
+            tempProj = dynamic_cast<Entities::Projectile*>((*projectileList->getList())[j]);
             if (tempProj->isFriendly() && tempProj->intersects(tempEnemy->getGlobalBounds()))
             {
                 tempEnemy->decrementLifePoints(3);
@@ -197,7 +201,7 @@ void PhysicsMachine::applyGravity(float dt){
     Entities::Player* pTemp = nullptr;
     for (int i = 0; i < pt_stage->getPlayerList()->getList()->getLen(); ++i)
     {
-        pTemp = dynamic_cast<Entities::Player*>(pt_stage->getPlayerList()->getList()->getItem(i));
+        pTemp = dynamic_cast<Entities::Player*>((*playerList->getList())[i]);
 
         if(pTemp != nullptr && !(pTemp->getGrounded()))
             pTemp->setVel(pTemp->getVel().x, pTemp->getVel().y + 300.f*dt);
@@ -205,9 +209,9 @@ void PhysicsMachine::applyGravity(float dt){
     }
 
     Entities::Warrior* pTempEnemy = nullptr;
-    for (int i = 0; i < pt_stage->getEnemyList()->getList()->getLen(); ++i)
+    for (int i = 0; i < enemyList->getList()->getLen(); ++i)
     {
-        pTempEnemy = dynamic_cast<Entities::Warrior*>(pt_stage->getEnemyList()->getList()->getItem(i));
+        pTempEnemy = dynamic_cast<Entities::Warrior*>((*enemyList->getList())[i]);
 
         if(pTempEnemy != nullptr && !(pTempEnemy->getGrounded()))
             pTempEnemy->setVel(pTempEnemy->getVel().x, pTempEnemy->getVel().y + 300.f*dt);

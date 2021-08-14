@@ -11,6 +11,10 @@ namespace Stages
     class PhysicsMachine{
     private:
         Stage * pt_stage;
+        EntityList* playerList;
+        EntityList* enemyList;
+        EntityList* obstacleList;
+        EntityList* projectileList;
 
     public:
         PhysicsMachine(Stages::Stage* pStage);

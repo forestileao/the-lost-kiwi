@@ -62,6 +62,9 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o: \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Entities/Dracula.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/DraculaThread.cpp.o: \
+ ../include/Entities/DraculaThread.h \
+ ../src/Entities/DraculaThread.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: \
  ../include/Ente.h \
  ../include/Managers/GraphicManager.h \
@@ -335,6 +338,14 @@ CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o: \
  ../include/States/GameStateMachine.h \
  ../include/States/StateMachine.h \
  ../src/States/ChoosePlayerState.cpp
+CMakeFiles/the_lost_kiwi.dir/src/States/ChooseStageState.cpp.o: \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../include/States/ChooseStageState.h \
+ ../include/States/GameStateMachine.h \
+ ../include/States/State.h \
+ ../include/States/StateMachine.h \
+ ../src/States/ChooseStageState.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/GameOverState.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
@@ -346,8 +357,10 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: \
  ../include/Ente.h \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
+ ../include/States/ChooseStageState.h \
  ../include/States/GameOverState.h \
  ../include/States/PauseState.h \
+ ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../include/Entities/Character.h \
  ../include/Entities/Entity.h \
@@ -355,7 +368,6 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: \
  ../include/Entities/Projectile.h \
  ../include/List/Element.h \
  ../include/List/List.h \
- ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
  ../include/Stages/PhysicsMachine.h \
@@ -366,7 +378,6 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: \
  ../include/States/MainMenuState.h \
  ../include/States/PlayState.h \
  ../include/States/ScoreboardState.h \
- ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/States/GameStateMachine.cpp
 CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o: \

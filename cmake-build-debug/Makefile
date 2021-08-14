@@ -249,6 +249,30 @@ src/Entities/Dracula.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.s
 .PHONY : src/Entities/Dracula.cpp.s
 
+src/Entities/DraculaThread.o: src/Entities/DraculaThread.cpp.o
+.PHONY : src/Entities/DraculaThread.o
+
+# target to build an object file
+src/Entities/DraculaThread.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/DraculaThread.cpp.o
+.PHONY : src/Entities/DraculaThread.cpp.o
+
+src/Entities/DraculaThread.i: src/Entities/DraculaThread.cpp.i
+.PHONY : src/Entities/DraculaThread.i
+
+# target to preprocess a source file
+src/Entities/DraculaThread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/DraculaThread.cpp.i
+.PHONY : src/Entities/DraculaThread.cpp.i
+
+src/Entities/DraculaThread.s: src/Entities/DraculaThread.cpp.s
+.PHONY : src/Entities/DraculaThread.s
+
+# target to generate assembly for a file
+src/Entities/DraculaThread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/Entities/DraculaThread.cpp.s
+.PHONY : src/Entities/DraculaThread.cpp.s
+
 src/Entities/Enemy.o: src/Entities/Enemy.cpp.o
 .PHONY : src/Entities/Enemy.o
 
@@ -681,6 +705,30 @@ src/States/ChoosePlayerState.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.s
 .PHONY : src/States/ChoosePlayerState.cpp.s
 
+src/States/ChooseStageState.o: src/States/ChooseStageState.cpp.o
+.PHONY : src/States/ChooseStageState.o
+
+# target to build an object file
+src/States/ChooseStageState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ChooseStageState.cpp.o
+.PHONY : src/States/ChooseStageState.cpp.o
+
+src/States/ChooseStageState.i: src/States/ChooseStageState.cpp.i
+.PHONY : src/States/ChooseStageState.i
+
+# target to preprocess a source file
+src/States/ChooseStageState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ChooseStageState.cpp.i
+.PHONY : src/States/ChooseStageState.cpp.i
+
+src/States/ChooseStageState.s: src/States/ChooseStageState.cpp.s
+.PHONY : src/States/ChooseStageState.s
+
+# target to generate assembly for a file
+src/States/ChooseStageState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/src/States/ChooseStageState.cpp.s
+.PHONY : src/States/ChooseStageState.cpp.s
+
 src/States/GameOverState.o: src/States/GameOverState.cpp.o
 .PHONY : src/States/GameOverState.o
 
@@ -921,6 +969,9 @@ help:
 	@echo "... src/Entities/Dracula.o"
 	@echo "... src/Entities/Dracula.i"
 	@echo "... src/Entities/Dracula.s"
+	@echo "... src/Entities/DraculaThread.o"
+	@echo "... src/Entities/DraculaThread.i"
+	@echo "... src/Entities/DraculaThread.s"
 	@echo "... src/Entities/Enemy.o"
 	@echo "... src/Entities/Enemy.i"
 	@echo "... src/Entities/Enemy.s"
@@ -975,6 +1026,9 @@ help:
 	@echo "... src/States/ChoosePlayerState.o"
 	@echo "... src/States/ChoosePlayerState.i"
 	@echo "... src/States/ChoosePlayerState.s"
+	@echo "... src/States/ChooseStageState.o"
+	@echo "... src/States/ChooseStageState.i"
+	@echo "... src/States/ChooseStageState.s"
 	@echo "... src/States/GameOverState.o"
 	@echo "... src/States/GameOverState.i"
 	@echo "... src/States/GameOverState.s"

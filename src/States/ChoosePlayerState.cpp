@@ -10,7 +10,8 @@ ChoosePlayerState::ChoosePlayerState(States::StateMachine *pStateMachine, Manage
     States::State(pStateMachine),
     pGraphicManager(pGraphicsManager),
     selected(0),
-    timer(0)
+    timer(0),
+    stageNum(0)
 {
     sf::View* view = pGraphicManager->getView();
     view->setCenter((pGraphicManager->getView()->getSize().x)*0.5, pGraphicManager->getView()->getSize().y);
@@ -50,6 +51,7 @@ void ChoosePlayerState::update(float dt, Managers::EventManager *eventManager)
             gameData.players = 1;
             gameData.isResuming = false;
             gameData.isLoading = false;
+            gameData.stageNum = stageNum;
             ((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&gameData));
         }
     }
@@ -64,6 +66,7 @@ void ChoosePlayerState::update(float dt, Managers::EventManager *eventManager)
             gameData.players = 2;
             gameData.isResuming = false;
             gameData.isLoading = false;
+            gameData.stageNum = stageNum;
             ((GameStateMachine *)getStateMachine())->changeState("PlayState", static_cast<void *>(&gameData));
         }
     }
@@ -76,6 +79,7 @@ void ChoosePlayerState::draw(Managers::GraphicManager *graphicsManager)
 void ChoosePlayerState::init(void *arg)
 {
     timer = 0;
+    stageNum = *((int*)arg);
 }
 void ChoosePlayerState::exit()
 {

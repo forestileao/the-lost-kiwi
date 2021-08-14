@@ -84,7 +84,7 @@ void MainMenuState::update(float dt, Managers::EventManager* pEventManager)
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
 		{
 			int loadingArg = 1;
-			((GameStateMachine *)getStateMachine())->changeState("ChoosePlayer", static_cast<void *>(&loadingArg));
+			((GameStateMachine *)getStateMachine())->changeState("ChooseStage", static_cast<void *>(&loadingArg));
 		}
 	}
 	else if ( selected == 1)

@@ -4,6 +4,7 @@
 
 #include <States/GameOverState.h>
 #include <States/PauseState.h>
+#include <States/ChooseStageState.h>
 #include "../../include/States/GameStateMachine.h"
 #include "../../include/States/PlayState.h"
 #include "../../include/States/MainMenuState.h"
@@ -20,6 +21,8 @@ GameStateMachine::GameStateMachine(Managers::GraphicManager *graphicManager)
 	addState(state, "Scoreboard");
 	state = static_cast<States::State*>(new ChoosePlayerState(static_cast<States::StateMachine*>(this), graphicManager));
 	addState(state, "ChoosePlayer");
+	state = static_cast<States::State*>(new ChooseStageState(static_cast<States::StateMachine*>(this), graphicManager));
+	addState(state, "ChooseStage");
 	state = static_cast<States::State*>(new PauseState(static_cast<States::StateMachine*>(this), graphicManager));
 	addState(state, "PauseState");
 	state = static_cast<States::State*>(new GameOverState(static_cast<States::StateMachine*>(this), graphicManager));
