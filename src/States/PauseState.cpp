@@ -122,6 +122,7 @@ void PauseState::saveGame()
     List<Entities::Entity> enemyList = *(pStage->getEnemyList()->getList());
     List<Entities::Entity> mainList = *(pStage->getPlayerList()->getList());
     List<Entities::Entity> obstacleList = *(pStage->getObstacleList()->getList());
+    List<Entities::Entity> projectileList = *(pStage->getProjectileList()->getList());
 
     // saving players
     int removeDraculaCount = 0;
@@ -191,5 +192,11 @@ void PauseState::saveGame()
         pTempObstacle->save(newFile);
     }
 
+    //saving projectiles
+    newFile << projectileList.getLen() << '\n';
+    for (int i = 0; i < projectileList.getLen(); i++)
+    {
+        projectileList[i]->save(newFile);
+    }
     newFile.close();
 }

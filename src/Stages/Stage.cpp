@@ -294,6 +294,35 @@ void Stage::loadGame(char* fileName)
         addEntity(tempObstacle);
     }
 
+    int isFriendly, positiveMovement;
+    getline(input,line) >> entitiesNum;
+    for (int i = 0; i < entitiesNum; i ++)
+    {
+        getline(input,line) >> isFriendly >> positiveMovement >> entityPosX >> entityPosY;
+
+        if (isFriendly)
+            addEntity(new Entities::Projectile(
+                sf::Vector2f(entityPosX,
+                             entityPosY),
+                             KNIFE_TEXTURE_FILE,
+                             sf::Rect<int>(KNIFE_FRAME),
+                             this,
+                             pGraphicManager,
+                             positiveMovement,
+                             isFriendly));
+        else
+            addEntity(new Entities::Projectile(
+                sf::Vector2f(entityPosX,
+                             entityPosY),
+                             ARROW_TEXTURE,
+                             sf::Rect<int>(ARROW_RECT),
+                             this,
+                             pGraphicManager,
+                             positiveMovement,
+                             isFriendly));
+
+    }
+
     input.close();
 }
 EntityList* Stage::getPlayerList()

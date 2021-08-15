@@ -48,5 +48,7 @@ public:
 
 	void init(void* arg);
 	void exit();
+
+	void operator+=(int score);
 };
 #endif //PLAYSTATE_H

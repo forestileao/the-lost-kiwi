@@ -2,6 +2,7 @@
 // Created by forestileao on 28/07/2021.
 //
 
+#include <fstream>
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Projectile.h"
 
@@ -50,5 +51,6 @@ bool Entities::Projectile::isFriendly() const
 }
 void Entities::Projectile::save(std::ofstream &stream)
 {
-
+    stream << isFriendly() << ' ' << positiveMovement << ' '
+    << body.getPosition().x << ' ' << body.getPosition().y << '\n';
 }

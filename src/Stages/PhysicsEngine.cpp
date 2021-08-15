@@ -185,7 +185,7 @@ void PhysicsEngine::applyCollisions(){
                 pt_stage->removeEntity(tempProj);
                 if (!tempEnemy->isAlive())
                 {
-                    pt_stage->getPlayState()->incrementScore(tempEnemy->getScoreValue());
+                    (*pt_stage->getPlayState()) += tempEnemy->getScoreValue();
                     pt_stage->removeEntity(tempEnemy);
                     pt_stage->getEnemySpawner()->decrementEnemiesCount();
                     tempEnemy = nullptr;
