@@ -3,7 +3,7 @@
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Archer.h"
 #include "../../include/Entities/Obstacle.h"
-#include "../../include/Entities/Block.h"
+#include "../../include/Entities/Platform.h"
 #include "../../include/Entities/Spike.h"
 #include "../../include/Entities/Fire.h"
 #include "../../include/States/PlayState.h"
@@ -33,6 +33,15 @@ Stage::~Stage()
 {
     delete p1;
     delete p2;
+
+    for (int i = 0; i < enemyList.getList()->getLen(); ++i)
+        delete enemyList.getList()->getItem(i);
+
+    for (int i = 0; i < obstacleList.getList()->getLen(); ++i)
+        delete obstacleList.getList()->getItem(i);
+
+    for (int i = 0; i < projectileList.getList()->getLen(); ++i)
+        delete projectileList.getList()->getItem(i);
 }
 
 // Draws all Entities
@@ -169,10 +178,10 @@ void Stage::loadMap(char* fileName)
             switch (line[i])
             {
             case '0':
-                tempObstacle = new Entities::Block(true,pGraphicManager, this);
+                tempObstacle = new Entities::Platform(true,pGraphicManager, this);
                 break;
             case '1':
-                tempObstacle = new Entities::Block(false,pGraphicManager, this);
+                tempObstacle = new Entities::Platform(false,pGraphicManager, this);
                 break;
             case '2':
                 tempObstacle = new Entities::Spike(pGraphicManager, this);
@@ -259,7 +268,7 @@ void Stage::loadGame(char* fileName)
         getline(input,line) >> entityType >> entityLife
                                     >> entityPosX >> entityPosY;
 
-        if (entityType)
+        if (!entityType)
             tempEnemy = new Entities::Warrior(entityLife, 20, p1, p2, pGraphicManager, this);
         else
             tempEnemy = new Entities::Archer(entityLife, 15, p1, p2, pGraphicManager, this);

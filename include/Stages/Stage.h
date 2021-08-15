@@ -7,7 +7,7 @@
 #include "../Managers/EventManager.h"
 #include "../Entities/Player.h"
 #include "../Entities/Projectile.h"
-#include "PhysicsMachine.h"
+#include "PhysicsEngine.h"
 #include "Spawner.h"
 
 class PlayState;
@@ -25,7 +25,7 @@ namespace Stages
 		Entities::Player* p1;
 		Entities::Player* p2;
 		PlayState* pState;
-		PhysicsMachine physics;
+		PhysicsEngine physics;
 
 		Spawner spawner;
 

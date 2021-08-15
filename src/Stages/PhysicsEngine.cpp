@@ -1,20 +1,20 @@
 //
 // Created by carolsfer on 05/08/2021.
 //
-#include "../../include/Stages/PhysicsMachine.h"
+#include "../../include/Stages/PhysicsEngine.h"
 #include "../../include/Stages/Stage.h"
 #include "../../include/Stages/EntityList.h"
 #include "../../include/Entities/Archer.h"
 #include "../../include/Entities/Warrior.h"
 #include "../../include/Entities/Dracula.h"
 #include "../../include/Entities/Obstacle.h"
-#include "../../include/Entities/Block.h"
+#include "../../include/Entities/Platform.h"
 #include "../../include/Entities/Spike.h"
 #include "../../include/Entities/Fire.h"
 #include "../../include/States/PlayState.h"
 using namespace Stages;
 
-PhysicsMachine::PhysicsMachine(Stages::Stage* pStage):
+PhysicsEngine::PhysicsEngine(Stages::Stage* pStage):
     pt_stage(pStage)
 {
     playerList = pt_stage->getPlayerList();
@@ -23,10 +23,10 @@ PhysicsMachine::PhysicsMachine(Stages::Stage* pStage):
     projectileList = pt_stage->getProjectileList();
 }
 
-PhysicsMachine::~PhysicsMachine(){
+PhysicsEngine::~PhysicsEngine(){
 }
 
-void PhysicsMachine::applyCollisions(){
+void PhysicsEngine::applyCollisions(){
 
     Entities::Player* tempPlayer = nullptr;
     Entities::Enemy* tempEnemy = nullptr;
@@ -196,7 +196,7 @@ void PhysicsMachine::applyCollisions(){
     }
 }
 
-void PhysicsMachine::applyGravity(float dt){
+void PhysicsEngine::applyGravity(float dt){
 
     Entities::Player* pTemp = nullptr;
     for (int i = 0; i < pt_stage->getPlayerList()->getList()->getLen(); ++i)

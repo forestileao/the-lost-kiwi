@@ -9,7 +9,7 @@
 #include <Stages/Graveyard.h>
 #include <Entities/Fire.h>
 #include <Entities/Spike.h>
-#include <Entities/Block.h>
+#include <Entities/Platform.h>
 #include <Entities/Archer.h>
 #include "States/PauseState.h"
 PauseState::PauseState(States::StateMachine *pStateMachine, Managers::GraphicManager *pGraphicsManager):
@@ -136,8 +136,7 @@ void PauseState::saveGame()
     for (int i = 0; i < mainList.getLen(); i ++)
     {
         Entities::Player* pPlayer = (Entities::Player*)(mainList.getItem(i));
-        newFile << ((Entities::Character*)pPlayer)->getLife() << ' '
-        << pPlayer->getPosition().x << ' ' << pPlayer->getPosition().y << '\n';
+        pPlayer->save(newFile);
     }
     // saving enemies
     newFile << enemyList.getLen() - removeDraculaCount << '\n';
@@ -157,8 +156,8 @@ void PauseState::saveGame()
         else
             continue;
 
-        newFile << enemyType << ' ' << ((Entities::Character*)pTemp)->getLife() << ' '
-        << pTemp->getPosition().x << ' ' << pTemp->getPosition().y << '\n';
+        newFile << enemyType << ' ';
+        pTemp->save(newFile);
     }
 
     int obstacleCounter = 0;
@@ -166,7 +165,7 @@ void PauseState::saveGame()
     for (int i = 0; i < obstacleList.getLen(); i++)
     {
         pTempObstacle = obstacleList.getItem(i);
-        if (dynamic_cast<Entities::Block*>(pTempObstacle) == nullptr)
+        if (dynamic_cast<Entities::Platform*>(pTempObstacle) == nullptr)
         {
             obstacleCounter++;
         }
@@ -188,8 +187,8 @@ void PauseState::saveGame()
         }
         else
             continue;
-        newFile << obstacleType << ' '
-        << pTempObstacle->getPosition().x << ' ' << pTempObstacle->getPosition().y << '\n';
+        newFile << obstacleType << ' ';
+        pTempObstacle->save(newFile);
     }
 
     newFile.close();

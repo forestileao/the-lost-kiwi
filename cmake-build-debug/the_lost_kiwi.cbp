@@ -92,9 +92,6 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h">
-			<Option target="the_lost_kiwi"/>
-		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
@@ -114,6 +111,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Platform.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h">
@@ -152,7 +152,7 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/Graveyard.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h">
@@ -191,13 +191,13 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/include/Thread.h">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Ente.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp">
-			<Option target="the_lost_kiwi"/>
-		</Unit>
-		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Block.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Character.cpp">
@@ -219,6 +219,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Platform.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Entities/Player.cpp">
@@ -251,7 +254,7 @@
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/Graveyard.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
-		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp">
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsEngine.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Stages/Spawner.cpp">
@@ -288,6 +291,9 @@
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/States/StateMachine.cpp">
+			<Option target="the_lost_kiwi"/>
+		</Unit>
+		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/Thread.cpp">
 			<Option target="the_lost_kiwi"/>
 		</Unit>
 		<Unit filename="/home/forestileao/Documents/the-lost-kiwi/src/main.cpp">

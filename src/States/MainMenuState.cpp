@@ -11,13 +11,13 @@ MainMenuState::MainMenuState(States::StateMachine* pStateMachine, Managers::Grap
 {
 	this->pGraphicManager = pGraphicManager;
 	sf::View* view = pGraphicManager->getView();
-	gameNameText = pGraphicManager->createText(0, "Nome Feliz Pro jogo :D", 40);
+	gameNameText = pGraphicManager->createText(0, "TecDracula", 40);
 	startGameText = pGraphicManager->createText(0, "Start Game", 20);
 	loadGameText = pGraphicManager->createText(0, "Load Game", 20);
 	scoreboardText = pGraphicManager->createText(0, "Scoreboard", 20);
 	quitGameText = pGraphicManager->createText(0, "Quit Game", 20);
 
-	pGraphicManager->setTextPosition(gameNameText, view->getCenter().x - 180, 20);
+	pGraphicManager->setTextPosition(gameNameText, view->getCenter().x - 60, 20);
 	pGraphicManager->setTextPosition(startGameText, view->getCenter().x - 20, 100);
 	pGraphicManager->setTextPosition(loadGameText, view->getCenter().x - 20, 200);
 	pGraphicManager->setTextPosition(scoreboardText, view->getCenter().x - 20, 300);
@@ -51,7 +51,7 @@ void MainMenuState::update(float dt, Managers::EventManager* pEventManager)
 {
 
     sf::View *view = pGraphicManager->getView();
-    pGraphicManager->setTextPosition(gameNameText, view->getCenter().x - 180, 20);
+    pGraphicManager->setTextPosition(gameNameText, view->getCenter().x - 60, 20);
     pGraphicManager->setTextPosition(startGameText, view->getCenter().x - 20, 100);
     pGraphicManager->setTextPosition(loadGameText, view->getCenter().x - 20, 200);
     pGraphicManager->setTextPosition(scoreboardText, view->getCenter().x - 20, 300);

@@ -19,21 +19,12 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Archer.cpp
-CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.o
- ../include/Ente.h
- ../include/Managers/GraphicManager.h
- /home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
- /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
- /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
- /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
- /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
- /home/forestileao/Documents/the-lost-kiwi/src/Entities/Block.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o
  ../include/Ente.h
  ../include/Managers/GraphicManager.h
@@ -56,7 +47,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
@@ -64,6 +55,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Dracula.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/DraculaThread.cpp.o
  ../include/Entities/DraculaThread.h
+ ../include/Thread.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/DraculaThread.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o
  ../include/Ente.h
@@ -101,6 +93,15 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/src/Entities/Obstacle.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Platform.cpp.o
+ ../include/Ente.h
+ ../include/Managers/GraphicManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Platform.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
+ /home/forestileao/Documents/the-lost-kiwi/src/Entities/Platform.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o
  ../include/Ente.h
  ../include/Managers/GraphicManager.h
@@ -113,7 +114,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
@@ -131,7 +132,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
@@ -173,7 +174,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/GameStateMachine.h
@@ -201,7 +202,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o
  ../include/Managers/GraphicManager.h
  ../include/Stages/Castle.h
  ../include/Stages/EntityList.h
- ../include/Stages/PhysicsMachine.h
+ ../include/Stages/PhysicsEngine.h
  ../include/Stages/Spawner.h
  ../include/Stages/Stage.h
  ../include/States/PlayState.h
@@ -232,24 +233,24 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o
  ../include/Managers/GraphicManager.h
  ../include/Stages/EntityList.h
  ../include/Stages/Graveyard.h
- ../include/Stages/PhysicsMachine.h
+ ../include/Stages/PhysicsEngine.h
  ../include/Stages/Spawner.h
  ../include/Stages/Stage.h
  ../include/States/PlayState.h
  ../include/States/State.h
  ../include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/Stages/Graveyard.cpp
-CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o
+CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsEngine.cpp.o
  ../include/Ente.h
  ../include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
- /home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Character.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Dracula.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Platform.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
@@ -259,13 +260,13 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/PlayState.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
- /home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsMachine.cpp
+ /home/forestileao/Documents/the-lost-kiwi/src/Stages/PhysicsEngine.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o
  ../include/Ente.h
  ../include/Entities/Archer.h
@@ -283,7 +284,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o
  ../include/Managers/EventManager.h
  ../include/Managers/GraphicManager.h
  ../include/Stages/EntityList.h
- ../include/Stages/PhysicsMachine.h
+ ../include/Stages/PhysicsEngine.h
  ../include/Stages/Spawner.h
  ../include/Stages/Stage.h
  ../include/States/State.h
@@ -297,10 +298,10 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
  ../include/Entities/Warrior.h
  ../include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Archer.h
- /home/forestileao/Documents/the-lost-kiwi/include/Entities/Block.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Entity.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Fire.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Obstacle.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Entities/Platform.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Player.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h
  /home/forestileao/Documents/the-lost-kiwi/include/Entities/Spike.h
@@ -309,7 +310,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/PlayState.h
@@ -327,7 +328,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o
  ../include/Managers/EventManager.h
  ../include/Managers/GraphicManager.h
  ../include/Stages/EntityList.h
- ../include/Stages/PhysicsMachine.h
+ ../include/Stages/PhysicsEngine.h
  ../include/Stages/Spawner.h
  ../include/Stages/Stage.h
  ../include/States/PlayState.h
@@ -370,7 +371,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/List/List.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/ChoosePlayerState.h
@@ -391,7 +392,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o
  ../include/Managers/EventManager.h
  ../include/Managers/GraphicManager.h
  ../include/Stages/EntityList.h
- ../include/Stages/PhysicsMachine.h
+ ../include/Stages/PhysicsEngine.h
  ../include/Stages/Spawner.h
  ../include/Stages/Stage.h
  ../include/States/PlayState.h
@@ -405,12 +406,12 @@ CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o
 CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o
  ../include/Ente.h
  ../include/Entities/Archer.h
- ../include/Entities/Block.h
  ../include/Entities/Character.h
  ../include/Entities/Enemy.h
  ../include/Entities/Entity.h
  ../include/Entities/Fire.h
  ../include/Entities/Obstacle.h
+ ../include/Entities/Platform.h
  ../include/Entities/Player.h
  ../include/Entities/Projectile.h
  ../include/Entities/Spike.h
@@ -421,7 +422,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o
  ../include/Managers/GraphicManager.h
  ../include/Stages/EntityList.h
  ../include/Stages/Graveyard.h
- ../include/Stages/PhysicsMachine.h
+ ../include/Stages/PhysicsEngine.h
  ../include/Stages/Spawner.h
  ../include/Stages/Stage.h
  ../include/States/GameStateMachine.h
@@ -443,7 +444,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o
  ../include/Stages/Castle.h
  ../include/Stages/EntityList.h
  ../include/Stages/Graveyard.h
- ../include/Stages/PhysicsMachine.h
+ ../include/Stages/PhysicsEngine.h
  ../include/Stages/Spawner.h
  ../include/Stages/Stage.h
  ../include/States/StateMachine.h
@@ -470,6 +471,9 @@ CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/StateMachine.h
  /home/forestileao/Documents/the-lost-kiwi/src/States/StateMachine.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Thread.cpp.o
+ ../include/Thread.h
+ /home/forestileao/Documents/the-lost-kiwi/src/Thread.cpp
 CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o
  ../include/Ente.h
  ../include/Managers/GraphicManager.h
@@ -484,7 +488,7 @@ CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/EventManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Managers/GraphicManager.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/EntityList.h
- /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsMachine.h
+ /home/forestileao/Documents/the-lost-kiwi/include/Stages/PhysicsEngine.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Spawner.h
  /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
  /home/forestileao/Documents/the-lost-kiwi/include/States/State.h

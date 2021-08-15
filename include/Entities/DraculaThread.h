@@ -6,9 +6,14 @@
 #define DRACULATHREAD_H
 
 
-class DraculaThread
+#include <Thread.h>
+class DraculaThread : public Thread
 {
+private:
+    void run()
+    {
 
+    }
 };
 
 

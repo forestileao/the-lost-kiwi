@@ -2,13 +2,13 @@
 // Created by carolsfer on 05/08/2021.
 //
 
-#ifndef PHYSICSMACHINE_H
-#define PHYSICSMACHINE_H
+#ifndef PHYSICSENGINE_H
+#define PHYSICSENGINE_H
 #include "EntityList.h"
 namespace Stages
 {
     class Stage;
-    class PhysicsMachine{
+    class PhysicsEngine{
     private:
         Stage * pt_stage;
         EntityList* playerList;
@@ -17,11 +17,11 @@ namespace Stages
         EntityList* projectileList;
 
     public:
-        PhysicsMachine(Stages::Stage* pStage);
-        ~PhysicsMachine();
+        PhysicsEngine(Stages::Stage* pStage);
+        ~PhysicsEngine();
         void applyCollisions();
         void applyGravity(float dt);
 
     };
 }
-#endif //PHYSICSMACHINE_H
+#endif //PHYSICSENGINE_H

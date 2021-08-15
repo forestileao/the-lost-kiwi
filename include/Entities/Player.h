@@ -126,6 +126,7 @@ namespace Entities
 		void setVulnerability(bool vuln);
 		bool getVulnerability() const;
 
+		void save(std::ofstream& stream);
 		void execute(float dt, Managers::EventManager *pEventManager);
 	};
 }

@@ -19,21 +19,12 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Archer.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Entities/Archer.cpp
-CMakeFiles/the_lost_kiwi.dir/src/Entities/Block.cpp.o: \
- ../include/Ente.h \
- ../include/Managers/GraphicManager.h \
- ../include/Entities/Block.h \
- ../include/Entities/Entity.h \
- ../include/Entities/Obstacle.h \
- ../include/Managers/EventManager.h \
- ../include/Managers/GraphicManager.h \
- ../src/Entities/Block.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Character.cpp.o: \
  ../include/Ente.h \
  ../include/Managers/GraphicManager.h \
@@ -56,7 +47,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
@@ -64,6 +55,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Dracula.cpp.o: \
  ../src/Entities/Dracula.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/DraculaThread.cpp.o: \
  ../include/Entities/DraculaThread.h \
+ ../include/Thread.h \
  ../src/Entities/DraculaThread.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Enemy.cpp.o: \
  ../include/Ente.h \
@@ -101,6 +93,15 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Obstacle.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../src/Entities/Obstacle.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Entities/Platform.cpp.o: \
+ ../include/Ente.h \
+ ../include/Managers/GraphicManager.h \
+ ../include/Entities/Entity.h \
+ ../include/Entities/Obstacle.h \
+ ../include/Entities/Platform.h \
+ ../include/Managers/EventManager.h \
+ ../include/Managers/GraphicManager.h \
+ ../src/Entities/Platform.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: \
  ../include/Ente.h \
  ../include/Managers/GraphicManager.h \
@@ -113,7 +114,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Player.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
@@ -131,7 +132,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Entities/Projectile.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
@@ -173,7 +174,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Game.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/GameStateMachine.h \
@@ -201,7 +202,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Castle.cpp.o: \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/Castle.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
@@ -232,24 +233,24 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Graveyard.cpp.o: \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
  ../include/Stages/Graveyard.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/Stages/Graveyard.cpp
-CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o: \
+CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsEngine.cpp.o: \
  ../include/Ente.h \
  ../include/Managers/GraphicManager.h \
  ../include/Entities/Archer.h \
- ../include/Entities/Block.h \
  ../include/Entities/Character.h \
  ../include/Entities/Dracula.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
  ../include/Entities/Fire.h \
  ../include/Entities/Obstacle.h \
+ ../include/Entities/Platform.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
  ../include/Entities/Spike.h \
@@ -259,13 +260,13 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/PhysicsMachine.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
- ../src/Stages/PhysicsMachine.cpp
+ ../src/Stages/PhysicsEngine.cpp
 CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o: \
  ../include/Ente.h \
  ../include/Entities/Archer.h \
@@ -283,7 +284,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Spawner.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \
@@ -297,10 +298,10 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Entities/Warrior.h \
  ../include/Managers/GraphicManager.h \
  ../include/Entities/Archer.h \
- ../include/Entities/Block.h \
  ../include/Entities/Entity.h \
  ../include/Entities/Fire.h \
  ../include/Entities/Obstacle.h \
+ ../include/Entities/Platform.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
  ../include/Entities/Spike.h \
@@ -309,7 +310,7 @@ CMakeFiles/the_lost_kiwi.dir/src/Stages/Stage.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
@@ -327,7 +328,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/ChoosePlayerState.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
@@ -370,7 +371,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/GameStateMachine.cpp.o: \
  ../include/List/List.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/ChoosePlayerState.h \
@@ -391,7 +392,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/PlayState.h \
@@ -405,12 +406,12 @@ CMakeFiles/the_lost_kiwi.dir/src/States/MainMenuState.cpp.o: \
 CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o: \
  ../include/Ente.h \
  ../include/Entities/Archer.h \
- ../include/Entities/Block.h \
  ../include/Entities/Character.h \
  ../include/Entities/Enemy.h \
  ../include/Entities/Entity.h \
  ../include/Entities/Fire.h \
  ../include/Entities/Obstacle.h \
+ ../include/Entities/Platform.h \
  ../include/Entities/Player.h \
  ../include/Entities/Projectile.h \
  ../include/Entities/Spike.h \
@@ -421,7 +422,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PauseState.cpp.o: \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
  ../include/Stages/Graveyard.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/GameStateMachine.h \
@@ -443,7 +444,7 @@ CMakeFiles/the_lost_kiwi.dir/src/States/PlayState.cpp.o: \
  ../include/Stages/Castle.h \
  ../include/Stages/EntityList.h \
  ../include/Stages/Graveyard.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/StateMachine.h \
@@ -470,6 +471,9 @@ CMakeFiles/the_lost_kiwi.dir/src/States/StateMachine.cpp.o: \
  ../include/States/State.h \
  ../include/States/StateMachine.h \
  ../src/States/StateMachine.cpp
+CMakeFiles/the_lost_kiwi.dir/src/Thread.cpp.o: \
+ ../include/Thread.h \
+ ../src/Thread.cpp
 CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o: \
  ../include/Ente.h \
  ../include/Managers/GraphicManager.h \
@@ -484,7 +488,7 @@ CMakeFiles/the_lost_kiwi.dir/src/main.cpp.o: \
  ../include/Managers/EventManager.h \
  ../include/Managers/GraphicManager.h \
  ../include/Stages/EntityList.h \
- ../include/Stages/PhysicsMachine.h \
+ ../include/Stages/PhysicsEngine.h \
  ../include/Stages/Spawner.h \
  ../include/Stages/Stage.h \
  ../include/States/State.h \

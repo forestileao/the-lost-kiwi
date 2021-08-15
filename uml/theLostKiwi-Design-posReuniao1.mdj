@@ -1172,7 +1172,7 @@
 											"top": 3016,
 											"width": 339.66796875,
 											"height": 11,
-											"text": "#physics: PhysicsMachine",
+											"text": "#physics: PhysicsEngine",
 											"horizontalAlignment": 0
 										},
 										{
@@ -7260,7 +7260,7 @@
 											"top": 3501,
 											"width": 407.20849609375,
 											"height": 11,
-											"text": "Block"
+											"text": "Platform"
 										},
 										{
 											"_type": "LabelView",
@@ -7351,7 +7351,7 @@
 											"top": 3532,
 											"width": 407.20849609375,
 											"height": 11,
-											"text": "«create»+Block(pGraphicManager: GraphicManager*, pStage: Stage*)",
+											"text": "«create»+Platform(pGraphicManager: GraphicManager*, pStage: Stage*)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -7369,7 +7369,7 @@
 											"top": 3545,
 											"width": 407.20849609375,
 											"height": 11,
-											"text": "«destroy»+Block()",
+											"text": "«destroy»+Platform()",
 											"horizontalAlignment": 0
 										}
 									],
@@ -22056,7 +22056,7 @@
 							},
 							"name": "physics",
 							"visibility": "protected",
-							"type": "PhysicsMachine"
+							"type": "PhysicsEngine"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -23430,7 +23430,7 @@
 					"_parent": {
 						"$ref": "IoH8RzmxEE6xOc9zvj2jawAA"
 					},
-					"name": "Block",
+					"name": "Platform",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -23454,7 +23454,7 @@
 							"_parent": {
 								"$ref": "T9DTyL2ff0aCaORFgFOdKgAA"
 							},
-							"name": "Block",
+							"name": "Platform",
 							"stereotype": "create",
 							"parameters": [
 								{
@@ -23483,7 +23483,7 @@
 							"_parent": {
 								"$ref": "T9DTyL2ff0aCaORFgFOdKgAA"
 							},
-							"name": "Block",
+							"name": "Platform",
 							"stereotype": "destroy"
 						}
 					]

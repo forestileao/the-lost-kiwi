@@ -42,7 +42,7 @@ namespace Entities
         void setScoreValue(int value);
 
         int getDamage() const;
-
+        void save(std::ofstream& stream);
         virtual void execute(float dt, Managers::EventManager* pEventManager) = 0;
 	};
 }

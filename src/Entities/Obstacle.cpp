@@ -2,6 +2,7 @@
 // Created by forestileao on 8/1/21.
 //
 
+#include <fstream>
 #include "../../include/Entities/Obstacle.h"
 using namespace Entities;
 Obstacle::Obstacle(Managers::GraphicManager* pGraphicsManager, Stages::Stage* pStage):
@@ -44,4 +45,8 @@ void Obstacle::execute(float dt, Managers::EventManager *pEventManager)
 void Obstacle::updateRect()
 {
     frame.left += obstacleId*frame.width;
+}
+void Obstacle::save(std::ofstream &stream)
+{
+    stream << getPosition().x << ' ' << getPosition().y << '\n';
 }

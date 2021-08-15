@@ -21,6 +21,7 @@ namespace Entities
 	    Projectile(sf::Vector2f origin,char* textureFile, sf::Rect<int> frameRect, Stages::Stage* pStage, Managers::GraphicManager* pGraphicManager, bool positiveMovement = true, bool isFriendly = false);
 		~Projectile();
 
+		void save(std::ofstream& stream);
 		bool isFriendly() const;
 		void execute(float dt, Managers::EventManager *pEventManager);
 	};
