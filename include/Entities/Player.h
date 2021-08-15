@@ -109,7 +109,6 @@ namespace Entities
 		States::StateMachine *stateMachine;
 		Managers::GraphicManager* pGraphicManager;
 
-		bool double_jump;
 		int numRect;
 
 		float frameTime;

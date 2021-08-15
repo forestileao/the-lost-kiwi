@@ -36,7 +36,6 @@ Player::PlayerJumpState::~PlayerJumpState()
 void Player::PlayerJumpState::init(void* arg)
 {
 	std::cout << "PLAYER: JUMPED\n";
-	//pPlayer->double_jump = (bool&&)arg;
 	pPlayer->vel.y = -pPlayer->jumpVel;
 }
 
@@ -68,13 +67,6 @@ void Player::PlayerJumpState::update(float dt, Managers::EventManager* pEventMan
             pPlayer->vel.x = 0;
 
             pPlayer->frame = Managers::spriteRect((pPlayer->isLookingToTheRight) ? REST_R : REST_L);
-		}
-		if(pPlayer->double_jump)
-		{
-			if(pEventManager->isKeyPressed(pPlayer->jumpKey))
-			{
-				pStateMachine->changeState(PLAYER_JUMP_STATE, (void*)(bool&&)false);
-			}
 		}
 	}
 }
@@ -222,7 +214,6 @@ Player::Player(int life, Stages::Stage* pStage, bool firstPlayer, Managers::Grap
 	Character(life, pGraphicManager, pStage),
 	vulnerabilityTimer(),
 	attackTimer(),
-	double_jump(),
 	frameTime(),
 	numRect(0)
 {

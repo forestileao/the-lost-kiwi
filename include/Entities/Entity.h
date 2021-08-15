@@ -34,7 +34,7 @@ namespace Entities
 		static void decrementEntityCount();
 
 		Entity(Managers::GraphicManager* pGraphicsManager = nullptr,Stages::Stage* pStage = nullptr);
-		virtual ~Entity();
+		~Entity();
 
 		void setWindow(sf::RenderWindow *window)
 		{ this->window = window; }

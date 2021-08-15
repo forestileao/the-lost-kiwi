@@ -132,3 +132,7 @@ void PlayState::changeStage(int stageNum, int playersNum)
             break;
     }
 }
+void PlayState::operator+=(int score)
+{
+    incrementScore(score);
+}

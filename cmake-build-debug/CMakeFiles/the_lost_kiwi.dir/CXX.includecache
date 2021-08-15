@@ -376,6 +376,14 @@ State.h
 ../../include/Stages/Stage.h
 /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
 
+/home/forestileao/Documents/the-lost-kiwi/src/Entities/Enemy.cpp
+cmath
+-
+fstream
+-
+../../include/Entities/Enemy.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Enemy.h
+
 /home/forestileao/Documents/the-lost-kiwi/src/Entities/Player.cpp
 ../../include/Stages/Stage.h
 /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
@@ -387,10 +395,16 @@ fstream
 -
 
 /home/forestileao/Documents/the-lost-kiwi/src/Entities/Projectile.cpp
+fstream
+-
 ../../include/Stages/Stage.h
 /home/forestileao/Documents/the-lost-kiwi/include/Stages/Stage.h
 ../../include/Entities/Projectile.h
 /home/forestileao/Documents/the-lost-kiwi/include/Entities/Projectile.h
+
+/home/forestileao/Documents/the-lost-kiwi/src/Entities/Warrior.cpp
+../../include/Entities/Warrior.h
+/home/forestileao/Documents/the-lost-kiwi/include/Entities/Warrior.h
 
 /home/forestileao/Documents/the-lost-kiwi/src/Game.cpp
 ../include/Game.h
