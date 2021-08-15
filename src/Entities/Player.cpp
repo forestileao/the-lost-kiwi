@@ -4,6 +4,7 @@
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Player.h"
 #include "../../include/Entities/Projectile.h"
+#include <fstream>
 using namespace Entities;
 
 /*********************************** Player State Manegement Start *****************************/
@@ -322,4 +323,9 @@ void Player::setVulnerability(bool vuln)
 bool Player::getVulnerability() const
 {
     return vulnerability;
+}
+void Player::save(std::ofstream &stream)
+{
+    stream << getLife() << ' '
+    << getPosition().x << ' ' << getPosition().y << '\n';
 }

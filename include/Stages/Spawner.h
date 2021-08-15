@@ -2,14 +2,14 @@
 // Created by forestileao on 08/08/2021.
 //
 
-#ifndef ENEMYSPAWNER_H
-#define ENEMYSPAWNER_H
+#ifndef SPAWNER_H
+#define SPAWNER_H
 
 #include <vector>
 
 namespace Stages
 {
-    class EnemySpawner
+    class Spawner
     {
     private:
         std::vector<sf::Vector2f> spawnPositions;
@@ -20,8 +20,8 @@ namespace Stages
         bool didSpawnedObstacles;
         Stage *pStage;
     public:
-        EnemySpawner(Stage* pStage);
-        ~EnemySpawner();
+        Spawner(Stage* pStage);
+        ~Spawner();
         void addSpawnPosition(sf::Vector2f spawnPos);
         void spawnObstacles();
         void spawnEnemy();
@@ -32,4 +32,4 @@ namespace Stages
     };
 }
 
-#endif //ENEMYSPAWNER_H
+#endif //SPAWNER_H

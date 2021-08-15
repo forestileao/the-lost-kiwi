@@ -48,3 +48,7 @@ bool Entities::Projectile::isFriendly() const
 {
     return friendly;
 }
+void Entities::Projectile::save(std::ofstream &stream)
+{
+
+}

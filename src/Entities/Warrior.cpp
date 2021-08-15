@@ -42,9 +42,15 @@ void Warrior::execute(float dt, Managers::EventManager *pEventManager)
     if (getTargetDistance() <= 200)
     {
         if (isLookingToTheRight)
-            move(vel.x*dt, vel.y*dt);
+        {
+            vel.x = 50;
+            move(vel.x * dt, vel.y * dt);
+        }
         else
-            move(-vel.x*dt,vel.y*dt);
+        {
+            vel.x = -50;
+            move(vel.x * dt, vel.y * dt);
+        }
     }
 
     if(pGraphicManager)

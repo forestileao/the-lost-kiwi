@@ -7,12 +7,13 @@ namespace Stages
 #define ENTITY_H
 
 #include <SFML/Graphics.hpp>
+#include <Ente.h>
 #include "../Managers/EventManager.h"
 #include "../Managers/GraphicManager.h"
 
 namespace Entities
 {
-	class Entity
+	class Entity: public Ente
 	{
 	protected:
         sf::RenderWindow *window;
@@ -45,7 +46,7 @@ namespace Entities
 		bool intersects(sf::Rect<float> rect) const;
 
 		void draw();
-
+		virtual void save(std::ofstream& stream) = 0;
 		// Pure virtual function to execute entity action (if it exists)
 		virtual void execute(float dt, Managers::EventManager* pEventManager) = 0;
 	};

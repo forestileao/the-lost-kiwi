@@ -14,6 +14,7 @@ private:
     Managers::uniqueId onePlayerText;
     Managers::uniqueId twoPlayerText;
     int selected;
+    int stageNum;
     float timer;
 
 public:

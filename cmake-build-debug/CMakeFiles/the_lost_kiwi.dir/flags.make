@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/forestileao/Documents/the-lost-kiwi/SFML_INCLUDE_DIR -I/home/forestileao/Documents/the-lost-kiwi/include
 
-CXX_FLAGS = -g -std=gnu++14
+CXX_FLAGS = -g -pthread -std=gnu++14
 

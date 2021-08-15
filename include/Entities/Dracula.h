@@ -35,6 +35,7 @@ namespace Entities
         ~Dracula();
 
         void execute(float dt, Managers::EventManager* pEventManager);
+
     };
 }
 

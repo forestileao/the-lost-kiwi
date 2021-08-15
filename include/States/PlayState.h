@@ -16,6 +16,7 @@ typedef struct
     bool isResuming;
     bool isLoading;
     int players;
+    int stageNum;
 } GameData;
 
 class PlayState : public States::State

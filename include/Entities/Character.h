@@ -38,6 +38,7 @@ namespace Entities
 		void setLife(int life);
 		void addLifePoints(int points);
 		void decrementLifePoints(int points);
+		virtual void save(std::ofstream& stream) = 0;
 	};
 }
 

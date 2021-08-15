@@ -3,7 +3,7 @@
 #include "../../include/Stages/Stage.h"
 #include "../../include/Entities/Archer.h"
 #include "../../include/Entities/Obstacle.h"
-#include "../../include/Entities/Block.h"
+#include "../../include/Entities/Platform.h"
 #include "../../include/Entities/Spike.h"
 #include "../../include/Entities/Fire.h"
 #include "../../include/States/PlayState.h"
@@ -12,7 +12,11 @@
 using namespace Stages;
 
 Stage::Stage(Managers::GraphicManager *pGraphicManager, PlayState* pState, int playersNum):
-	entities(),
+    Ente(pGraphicManager),
+	playerList(),
+	enemyList(),
+	obstacleList(),
+	projectileList(),
 	backgroundSprite(-1),
 	players(playersNum),
 	changeStage(false),
@@ -29,22 +33,31 @@ Stage::~Stage()
 {
     delete p1;
     delete p2;
+
+    for (int i = 0; i < enemyList.getList()->getLen(); ++i)
+        delete enemyList.getList()->getItem(i);
+
+    for (int i = 0; i < obstacleList.getList()->getLen(); ++i)
+        delete obstacleList.getList()->getItem(i);
+
+    for (int i = 0; i < projectileList.getList()->getLen(); ++i)
+        delete projectileList.getList()->getItem(i);
 }
 
 // Draws all Entities
 void Stage::draw()
 {
-	for (int i = 0; i < entities.enemyList.getLen(); ++i)
-	    entities.enemyList.getItem(i)->draw();
+	for (int i = 0; i < enemyList.getList()->getLen(); ++i)
+	    enemyList.getList()->getItem(i)->draw();
 
-	for (int i = 0; i < entities.blockList.getLen(); ++i)
-	    entities.blockList.getItem(i)->draw();
+	for (int i = 0; i < obstacleList.getList()->getLen(); ++i)
+	    obstacleList.getList()->getItem(i)->draw();
 
-	for (int i = 0; i < entities.projectileList.getLen(); ++i)
-	    entities.projectileList.getItem(i)->draw();
+	for (int i = 0; i < projectileList.getList()->getLen(); ++i)
+	    projectileList.getList()->getItem(i)->draw();
 
-	for (int i = 0; i < entities.mainList.getLen(); ++i)
-	    entities.mainList.getItem(i)->draw();
+	for (int i = 0; i < playerList.getList()->getLen(); ++i)
+	    playerList.getList()->getItem(i)->draw();
 }
 
 // Updates all entities
@@ -53,20 +66,20 @@ void Stage::update(float dt, Managers::EventManager *pEvents)
     if (!spawner.didObstaclesSpawned())
         spawner.spawnObstacles();
     spawner.spawnEnemy();
-	for (int i = 0; i < entities.mainList.getLen(); ++i)
-		entities.mainList.getItem(i)->execute(dt, pEvents);
+	for (int i = 0; i < playerList.getList()->getLen(); ++i)
+		playerList.getList()->getItem(i)->execute(dt, pEvents);
 
-	for (int i = 0; i < entities.enemyList.getLen(); ++i)
-	    entities.enemyList.getItem(i)->execute(dt, pEvents);
+	for (int i = 0; i < enemyList.getList()->getLen(); ++i)
+	    enemyList.getList()->getItem(i)->execute(dt, pEvents);
 
-	for (int i = 0; i < entities.blockList.getLen(); ++i)
-	    entities.blockList.getItem(i)->execute(dt, pEvents);
+	for (int i = 0; i < obstacleList.getList()->getLen(); ++i)
+	    obstacleList.getList()->getItem(i)->execute(dt, pEvents);
 
-	for (int i = 0; i < entities.projectileList.getLen(); ++i)
-	    entities.projectileList.getItem(i)->execute(dt, pEvents);
+	for (int i = 0; i < projectileList.getList()->getLen(); ++i)
+	    projectileList.getList()->getItem(i)->execute(dt, pEvents);
 
-	physics.applyCollisions(entities);
-	physics.applyGravity(dt, entities);
+	physics.applyGravity(dt);
+	physics.applyCollisions();
 	updateViewLocation();
 
 	if (p1 && p2)
@@ -93,35 +106,31 @@ void Stage::addEntity(Entities::Entity *pEntity)
     /* Dynamic Cast can be used to verify the Entity Type:
      * Returns null if it is not instance of a type */
     if (dynamic_cast<Entities::Player*>(pEntity))
-	    entities.mainList.push(pEntity);
+	    playerList.getList()->push(pEntity);
     else if (dynamic_cast<Entities::Enemy*>(pEntity))
-        entities.enemyList.push(pEntity);
+        enemyList.getList()->push(pEntity);
     else if (dynamic_cast<Entities::Obstacle*>(pEntity))
-        entities.blockList.push(pEntity);
+        obstacleList.getList()->push(pEntity);
     else if (dynamic_cast<Entities::Projectile*>(pEntity))
-        entities.projectileList.push(pEntity);
+        projectileList.getList()->push(pEntity);
 }
 
 void Stage::removeEntity(Entities::Entity* pEntity)
 {
     bool isPlayer = false;
     if (dynamic_cast<Entities::Enemy*>(pEntity))
-        entities.enemyList.pop(pEntity);
+        enemyList.getList()->pop(pEntity);
     else if (dynamic_cast<Entities::Obstacle*>(pEntity))
-        entities.blockList.pop(pEntity);
+        obstacleList.getList()->pop(pEntity);
     else if (dynamic_cast<Entities::Projectile*>(pEntity))
-        entities.projectileList.pop(pEntity);
+        projectileList.getList()->pop(pEntity);
     else if (dynamic_cast<Entities::Player*>(pEntity))
-    { entities.mainList.pop(pEntity); isPlayer = true; }
+    { playerList.getList()->pop(pEntity); isPlayer = true; }
 
     if (!isPlayer)
         delete pEntity;
 
 	Entities::Entity::decrementEntityCount();
-}
-EntityList Stage::getEntitylist()
-{
-	return entities;
 }
 
 Managers::GraphicManager *Stage::getGraphicManager()
@@ -169,10 +178,10 @@ void Stage::loadMap(char* fileName)
             switch (line[i])
             {
             case '0':
-                tempObstacle = new Entities::Block(true,pGraphicManager, this);
+                tempObstacle = new Entities::Platform(true,pGraphicManager, this);
                 break;
             case '1':
-                tempObstacle = new Entities::Block(false,pGraphicManager, this);
+                tempObstacle = new Entities::Platform(false,pGraphicManager, this);
                 break;
             case '2':
                 tempObstacle = new Entities::Spike(pGraphicManager, this);
@@ -207,7 +216,7 @@ Entities::Player *Stage::getPlayer2()
 {
     return p2;
 }
-EnemySpawner *Stage::getEnemySpawner()
+Spawner *Stage::getEnemySpawner()
 {
     return &spawner;
 }
@@ -259,7 +268,7 @@ void Stage::loadGame(char* fileName)
         getline(input,line) >> entityType >> entityLife
                                     >> entityPosX >> entityPosY;
 
-        if (entityType)
+        if (!entityType)
             tempEnemy = new Entities::Warrior(entityLife, 20, p1, p2, pGraphicManager, this);
         else
             tempEnemy = new Entities::Archer(entityLife, 15, p1, p2, pGraphicManager, this);
@@ -286,4 +295,20 @@ void Stage::loadGame(char* fileName)
     }
 
     input.close();
+}
+EntityList* Stage::getPlayerList()
+{
+    return &playerList;
+}
+EntityList *Stage::getEnemyList()
+{
+    return &enemyList;
+}
+EntityList *Stage::getProjectileList()
+{
+    return &projectileList;
+}
+EntityList *Stage::getObstacleList()
+{
+    return &obstacleList;
 }

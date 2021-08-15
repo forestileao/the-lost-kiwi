@@ -24,7 +24,7 @@ public:
 	void push(T* item);
 	void pop(T* item);
 
-	Element<T>* operator[](int i);
+	T* operator[](int i);
 };
 
 template<class T>
@@ -105,7 +105,7 @@ void List<T>::pop(T* item)
 }
 
 template<class T>
-Element<T>* List<T>::operator[](int i)
+T* List<T>::operator[](int i)
 {
 	return this->getItem(i);
 }

@@ -3,6 +3,7 @@
 //
 
 #include <cmath>
+#include <fstream>
 #include "../../include/Entities/Enemy.h"
 using namespace Entities;
 
@@ -96,4 +97,9 @@ Player *Enemy::getTarget()
 int Enemy::getDamage() const
 {
     return damage;
+}
+void Enemy::save(std::ofstream &stream)
+{
+    stream << getLife() << ' '
+    << getPosition().x << ' ' << getPosition().y << '\n';
 }

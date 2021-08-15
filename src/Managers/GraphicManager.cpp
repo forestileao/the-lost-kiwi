@@ -102,14 +102,21 @@ void GraphicManager::removeSprite(uniqueId sprite)
     }
     else
     {
-        auto i = sprites.begin();
-        for(sprite; sprite > 0; i++, sprite--);
-        delete *i;
+        try
+        {
+            auto i = sprites.begin();
+            for(sprite; sprite > 0; i++, sprite--);
+            delete *i;
 
-        if(sprite == sprites.size()-1)
-            sprites.erase(i);
-        else
-            *i = NULL;
+            if(sprite == sprites.size()-1)
+                sprites.erase(i);
+            else
+                *i = NULL;
+        }
+        catch (std::exception e)
+        {
+
+        }
     }
 }
 

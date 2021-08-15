@@ -7,24 +7,27 @@
 #include "../Managers/EventManager.h"
 #include "../Entities/Player.h"
 #include "../Entities/Projectile.h"
-#include "PhysicsMachine.h"
-#include "EnemySpawner.h"
+#include "PhysicsEngine.h"
+#include "Spawner.h"
 
 class PlayState;
 namespace Stages
 {
-	class Stage
+	class Stage : public Ente
 	{
     protected:
 		Managers::uniqueId backgroundSprite;
 		Managers::GraphicManager *pGraphicManager;
-		EntityList entities;
+		EntityList playerList;
+		EntityList enemyList;
+		EntityList projectileList;
+		EntityList obstacleList;
 		Entities::Player* p1;
 		Entities::Player* p2;
 		PlayState* pState;
-		PhysicsMachine physics;
+		PhysicsEngine physics;
 
-		EnemySpawner spawner;
+		Spawner spawner;
 
 		int players;
 		bool changeStage;
@@ -40,8 +43,11 @@ namespace Stages
 		// Adds and removes entities from entity List
 		void addEntity(Entities::Entity *pEntity);
 		void removeEntity(Entities::Entity* pEntity);
-		EntityList getEntitylist();
-		EnemySpawner* getEnemySpawner();
+		EntityList* getPlayerList();
+		EntityList* getEnemyList();
+		EntityList* getProjectileList();
+		EntityList* getObstacleList();
+		Spawner* getEnemySpawner();
 
 		PlayState* getPlayState() const;
 		Managers::GraphicManager *getGraphicManager();

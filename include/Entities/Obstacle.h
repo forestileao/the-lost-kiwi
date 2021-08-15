@@ -26,6 +26,7 @@ namespace Entities
         int getDamage() const;
         void setDamage(int dam);
         void execute(float dt, Managers::EventManager *pEventManager) override;
+        void save(std::ofstream& stream);
     };
 }
 

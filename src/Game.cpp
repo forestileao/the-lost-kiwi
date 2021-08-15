@@ -7,7 +7,7 @@
 
 Game::Game()
 {
-	graphicManager = new Managers::GraphicManager(WINDOW_WIDTH, WINDOW_HEIGHT, "The Lost Kiwi");
+	graphicManager = new Managers::GraphicManager(WINDOW_WIDTH, WINDOW_HEIGHT, "TecDracula");
 
 	eventManager = new Managers::EventManager(graphicManager->getWindowPointer());
 	graphicManager->loadFont("../assets/fonts/seagram-tfb.ttf");

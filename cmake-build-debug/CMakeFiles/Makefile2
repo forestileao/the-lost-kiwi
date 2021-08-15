@@ -81,12 +81,12 @@ clean: CMakeFiles/the_lost_kiwi.dir/clean
 CMakeFiles/the_lost_kiwi.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/the_lost_kiwi.dir/build.make CMakeFiles/the_lost_kiwi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 "Built target the_lost_kiwi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36 "Built target the_lost_kiwi"
 .PHONY : CMakeFiles/the_lost_kiwi.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/the_lost_kiwi.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles 36
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/the_lost_kiwi.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/the_lost_kiwi.dir/rule
