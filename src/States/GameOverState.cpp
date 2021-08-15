@@ -20,7 +20,7 @@ playerName("")
     nameText = pGraphicManager->createText(0, "Digite seu nome: ", 15);
     pGraphicManager->setTextPosition(nameText, 70, 70);
 
-    exitText = pGraphicManager->createText(0, "Pressione ENTER para inserir", 15);
+    exitText = pGraphicManager->createText(0, "Press ENTER to Insert", 15);
     pGraphicManager->setTextPosition(exitText, 70, 110);
 }
 
