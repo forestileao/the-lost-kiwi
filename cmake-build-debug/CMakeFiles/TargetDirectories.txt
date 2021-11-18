@@ -1,3 +1,0 @@
-/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/forestileao/Documents/the-lost-kiwi/cmake-build-debug/CMakeFiles/the_lost_kiwi.dir
